@@ -3,30 +3,12 @@
 by 绝 2019.4.15
 
 所需模块：
-    pip install bs4
     pip install requests
-
-常用指令：
-    指定下载源
-        pip install 库名 -i pip源
-
-    卸载库
-        pip uninstall 库名
-
-    第三方库目录
-        Lib -> site-packages
-        
-    代码检测 pylint
-        python.exe -m pip install -U pylint --user
-
 '''
-
-# from bs4 import BeautifulSoup
-
 import urllib.parse
 from AirCom import *
 
-
+# 用作参考 已在AirCom中用类实现了
 def 吉儿不放假(页数):
     # 提交地址 不要这么明显
     url = base64.b64decode(
@@ -50,22 +32,31 @@ def 吉儿不放假(页数):
             data["id"] = v["id"]
             data["date"] = v["shijian"]
             data["name"] = v["name"]
+            # datas.append(data.copy())
+
             # 生成器
             yield data
 
 
 def init():
+    # 生成保存路径
     日期 = datetime.now().strftime("%Y%m%d")
-    路径 = AirFile("/json/%s.json" % 日期)
+    路径 = AirFile("/json/%s_H.json" % 日期)
     路径.创建目录Ex()
 
-    for num in range(1, 20):
+    # 类实现
+    jj = 吉吉儿不放假().返回数据
 
-        datas = 吉儿不放假(num)
-        if not datas:
-            break
-        for d in datas:
-            写出文件(路径.绝对路径, d)
+    写出文件(路径.绝对路径, jj)
+
+    # 面向过程的实现方法 可以配合yield生成器
+    # for num in range(1, 20):
+
+    #     datas = 吉儿不放假(num)
+    #     if not datas:
+    #         break
+    #     for d in datas:
+    #         写出文件(路径.绝对路径, d)
 
 
 if __name__ == '__main__':

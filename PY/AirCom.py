@@ -5,6 +5,7 @@ import requests
 import json
 from datetime import datetime
 import base64
+import urllib.parse
 
 
 class AirFile:
@@ -59,24 +60,28 @@ class AirFile:
         os.makedirs(绝对目录.取路径)
 
 # dsfdsf
-def 写出文件(路径, data, 读写方式 = "a"):
+
+
+def 写出文件(路径, data, 读写方式="a"):
     """`参数1` 写出路径
 
     `参数2` 写出的数据
 
     `参数3` 读写方式 默认为追加模式
     """
+    # 如果不是字符串就转码
+    if not isinstance(data, str):
+        data = json.dumps(data, ensure_ascii=False)+"\n"
+
     # 打开文件
     with open(路径, 读写方式, encoding="utf-8") as f:
-        # 转到字符串
-        data = json.dumps(data, ensure_ascii=False)+"\n"
         # 写到文件
         f.write(data)
 
 
 def 爬取(提交地址, 请求数据, 返回格式="str", 是否使用代理=0):
     """`参数1` 提交地址
-    
+
     `参数2` 请求数据
 
     `参数3` 返回格式 `str`返回文本格式，`json`返回字典对象  `默认为返回文本`
@@ -107,3 +112,63 @@ def 爬取(提交地址, 请求数据, 返回格式="str", 是否使用代理=0)
         sTmp = r.json()
 
     return sTmp
+
+
+class 吉吉儿不放假:
+    返回数据 = []
+    页数 = 0
+    i = 0
+    @property
+    def __递增页数(self):
+        self.页数 += 1
+        return self.页数
+
+    @property
+    def __递增(self):
+        self.i += 1
+        return self.i
+
+    @property
+    def 提交数据(self):
+        return {'page': self.__递增页数, 'userid': 10029, 'ddh': 'vA8RVMNwA2'}
+
+    @property
+    def url(self):
+        # 提交地址 不要那么明显
+        url = base64.b64decode(
+            b'aHR0cCUzQS8vbi4yeHd0NzUuY24vaW5kZXgucGhwL2luZGV4L2luZGV4L2hlemkuaHRtbA==')
+        url = str(url, 'utf8')
+        url = urllib.parse.unquote(url)
+        return url
+
+    def __init__(self):
+        self.获取()
+
+    def __str__(self):
+        return json.dumps(self.返回数据, ensure_ascii=False)
+
+    # def data(self, *data):
+    #     print(data)
+
+    def 获取(self):
+        # 访问网站
+        返回数据 = 爬取(self.url, self.提交数据, "json")
+
+        # 如果数据不存在返回  自动提取所有数据为止
+        if not 返回数据:
+            return
+
+        # 用来保存需要的数据
+        data = {}
+        for v in 返回数据:
+            print(v["id"])
+            # 关联需要的数据
+            data["序号"] = self.__递增
+            data["url"] = v["url"]
+            data["id"] = v["id"]
+            data["date"] = v["shijian"]
+            data["name"] = v["name"]
+
+            self.返回数据.append(data.copy())
+        # 递归
+        self.获取()

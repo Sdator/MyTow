@@ -36,20 +36,19 @@ i = 0
 
 # https://www.ixigua.com/item/6675509335797269005/
 
-def 李老师(用户名ID, 下一页=0, 页数=20):
+def 李老师(用户名ID, 下一页=0, 加载的页数=20):
     # 提交地址 不要这么明显
     url = "https://www.ixigua.com/c/user/article/"
 
     请求数据 = {
         "user_id": 用户名ID,
         "max_behot_time": 下一页,
-        "count": 页数,
+        "count": 加载的页数,
         "max_repin_time": 0,
         "page_type": 0
     }
 
     # 访问网站
-    # r = requests.get(url, params=请求数据, headers=请求头)
     返回数据 = 爬取(url, 请求数据, "json")
 
     # 用来保存需要的数据
