@@ -5,36 +5,19 @@ by 绝 2019.4.16
 所需模块：
     pip install requests
 
-常用指令：
-    指定下载源
-        pip install 库名 -i pip源
-
-    卸载库
-        pip uninstall 库名
-
-    第三方库目录
-        Lib -> site-packages
-        
-    代码检测 pylint
-        python.exe -m pip install -U pylint --user
-
 '''
-
-# from bs4 import BeautifulSoup
 
 
 from AirCom import *
 
 
+# https://www.ixigua.com/c/user/article/?user_id=50351072776&max_behot_time=0&max_repin_time=0&count=20&page_type=0
+# https://www.ixigua.com/item/6675509335797269005/
+
+
 # 用来保存所有数据
 dataG = []
-S = set()
 i = 0
-
-
-# https://www.ixigua.com/c/user/article/?user_id=50351072776&max_behot_time=0&max_repin_time=0&count=20&page_type=0
-
-# https://www.ixigua.com/item/6675509335797269005/
 
 def 李老师(用户名ID, 下一页=0, 加载的页数=20):
     # 提交地址 不要这么明显
@@ -74,11 +57,12 @@ def 李老师(用户名ID, 下一页=0, 加载的页数=20):
 
 
 def init():
-
+    # 老师有两个账户发布视频
     用户名id = [50351072776, 4234740937]
     for ID in 用户名id:
         李老师(ID)
 
+    # 生成路径写出文件
     日期 = datetime.now().strftime("%Y%m%d")
     路径 = AirFile("/json/%s_李永乐老师视频.json" % 日期)
     路径.创建目录Ex()
