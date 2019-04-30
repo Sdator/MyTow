@@ -1,0 +1,25 @@
+{
+    "telemetry.machineId": "a305edc2d019e93415dc90bff0e7476bb8afe911ffb1724a54074f23a78dd6d3",
+    "openedPathsList": {
+        "workspaces3": [
+            "file:///d%3A/OneDrive/Date"
+        ],
+        "files2": []
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#1e1e1e",
+    "windowsState": {
+        "lastActiveWindow": {
+            "folder": "file:///d%3A/OneDrive/Date",
+            "backupPath": "D:\\OneDrive\\Date\\.vscode\\Code\\Backups\\83917913123f50c93b896d39116ba823",
+            "uiState": {
+                "mode": 0,
+                "x": -8,
+                "y": 22,
+                "width": 1936,
+                "height": 1066
+            }
+        },
+        "openedWindows": []
+    }
+}
