@@ -1,0 +1,23 @@
+{
+    // 有关 tasks.json 格式的文档，请参见
+    // https://go.microsoft.com/fwlink/?LinkId=733558
+    "version": "2.0.0",
+    "type":"shell",
+    "tasks": [
+        {
+            "label": "控制台输出",
+            "command": "echo ${workspaceRoot}"
+        },
+        {
+            "label": "py",
+            "command": "python",
+            "args": [
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
