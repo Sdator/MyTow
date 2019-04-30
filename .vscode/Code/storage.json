@@ -4,7 +4,9 @@
         "workspaces3": [
             "file:///d%3A/OneDrive/Date"
         ],
-        "files2": []
+        "files2": [
+            "file:///d%3A/OneDrive/Date/.vscode/Code/.gitignore"
+        ]
     },
     "theme": "vs-dark",
     "themeBackground": "#1e1e1e",
