@@ -1,0 +1,5476 @@
+untitled:Untitled-6
+aload_0_0
+getfield g/bh Lh;
+pop
+getstatic h/cz Z
+ifeq 22
+invokestatic java/lang/System/currentTimeMillis()J
+lstore_1
+lload_1
+aload_0
+getfield g/lN J
+lsub
+ldc2_w 60000
+lcmp
+iflt 22
+aload_0
+lload_1
+putfield g/lN J
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+invokevirtual q/new()V
+aload_0
+getfield g/bh Lh;
+getfield h/fK Z
+ifeq 121
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+iconst_0
+invokevirtual javax/microedition/lcdui/Graphics/setColor(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+invokevirtual javax/microedition/lcdui/Graphics/fillRect(IIII)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/b2 [[I
+aload_0
+getfield g/bh Lh;
+pop
+iconst_5
+aaload
+iconst_0
+iaload
+invokevirtual javax/microedition/lcdui/Graphics/setColor(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+new java/lang/StringBuffer
+dup
+invokespecial java/lang/StringBuffer/<init>()V
+aload_0
+getfield g/bh Lh;
+getfield h/dp B
+ifne 72
+ldc_w ">>"
+goto 73
+ldc ""
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+ldc_w "暂停游戏"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield g/bh Lh;
+getfield h/dp B
+ifne 82
+ldc_w "<<"
+goto 83
+ldc ""
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+invokevirtual java/lang/StringBuffer/toString()Ljava/lang/String;
+bipush 50
+bipush 20
+bipush 17
+invokevirtual javax/microedition/lcdui/Graphics/drawString(Ljava/lang/String;III)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+new java/lang/StringBuffer
+dup
+invokespecial java/lang/StringBuffer/<init>()V
+aload_0
+getfield g/bh Lh;
+getfield h/dp B
+iconst_1
+if_icmpne 102
+ldc_w ">>"
+goto 103
+ldc ""
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+ldc_w "继续游戏"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield g/bh Lh;
+getfield h/dp B
+iconst_1
+if_icmpne 113
+ldc_w "<<"
+goto 114
+ldc ""
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+invokevirtual java/lang/StringBuffer/toString()Ljava/lang/String;
+bipush 50
+bipush 45
+bipush 17
+invokevirtual javax/microedition/lcdui/Graphics/drawString(Ljava/lang/String;III)V
+return
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fZ [[I
+ifnull 152
+iconst_0
+istore_1
+iload_1
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fZ [[I
+arraylength
+if_icmpge 152
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/a5 Lx;
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fZ [[I
+iload_1
+aaload
+invokevirtual x/a([I)V
+iload_1
+iconst_1
+iadd
+i2b
+istore_1
+goto 128
+aload_0
+getfield g/bh Lh;
+iconst_0
+putfield h/fK Z
+aload_0
+dup
+getfield g/kp I
+iconst_1
+iadd
+putfield g/kp I
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/he Z
+ifeq 182
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/ii S
+sipush 2000
+if_icmpge 182
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+dup
+getfield ag/ii S
+iconst_1
+iadd
+i2s
+putfield ag/ii S
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield a3/a8 Z
+ifne 255
+aload_0
+getfield ap/do S
+iconst_1
+if_icmpeq 231
+aload_0
+getfield ap/do S
+iconst_2
+if_icmpeq 231
+aload_0
+getfield ap/do S
+bipush 26
+if_icmpeq 231
+aload_0
+getfield ap/do S
+bipush 27
+if_icmpeq 231
+aload_0
+getfield ap/do S
+bipush 74
+if_icmpeq 231
+aload_0
+getfield ap/do S
+bipush 15
+if_icmpeq 231
+aload_0
+getfield ap/do S
+bipush 93
+if_icmpeq 231
+aload_0
+getfield ap/do S
+bipush 29
+if_icmpeq 231
+aload_0
+getfield ap/do S
+bipush 13
+if_icmpeq 231
+aload_0
+getfield ap/do S
+bipush 109
+if_icmpeq 231
+aload_0
+getfield ap/do S
+bipush 50
+if_icmpne 255
+aload_0
+getfield g/bh Lh;
+getfield h/fG LSFMIDlet;
+invokestatic javax/microedition/lcdui/Display/getDisplay(Ljavax/microedition/midlet/MIDlet;)Ljavax/microedition/lcdui/Display;
+invokevirtual javax/microedition/lcdui/Display/getCurrent()Ljavax/microedition/lcdui/Displayable;
+aload_0
+getfield g/bh Lh;
+if_acmpne 255
+aload_0
+dup
+getfield g/g1 S
+iconst_1
+iadd
+i2s
+putfield g/g1 S
+aload_0
+getfield g/g1 S
+sipush 2000
+if_icmple 258
+aload_0
+getfield g/bh Lh;
+getfield h/i Lah;
+invokevirtual ah/case()V
+goto 258
+aload_0
+iconst_0
+putfield g/g1 S
+aload_0
+getfield g/bh Lh;
+invokevirtual h/r()V
+aload_0
+getfield ap/do S
+iconst_5
+if_icmpeq 366
+aload_0
+getfield g/bh Lh;
+invokevirtual h/w()Z
+ifeq 366
+aload_0
+getfield g/bh Lh;
+invokevirtual h/I()Z
+ifeq 298
+aload_0
+getfield g/int I
+iconst_5
+bipush 6
+invokestatic h/if(II)I
+irem
+ifne 298
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/co [Ljava/lang/String;
+dup
+astore_1
+monitorenter
+aload_0
+getfield g/bh Lh;
+invokevirtual h/d()V
+aload_1
+monitorexit
+goto 298
+astore_3
+aload_1
+monitorexit
+aload_3
+athrow
+aload_0
+getfield g/bh Lh;
+invokevirtual h/goto()Z
+ifeq 366
+aload_0
+getfield g/int I
+iconst_5
+bipush 6
+invokestatic h/if(II)I
+irem
+ifne 366
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/bG [Ljava/lang/String;
+dup
+astore_1
+monitorenter
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/bG [Ljava/lang/String;
+iconst_0
+aaload
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/ds [S
+iconst_0
+saload
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/ej [B
+iconst_0
+baload
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/cy [B
+iconst_0
+baload
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/ec [S
+iconst_0
+saload
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/aa [B
+iconst_0
+baload
+invokevirtual h/if(Ljava/lang/String;SBBSB)V
+aload_1
+monitorexit
+goto 363
+astore 4
+aload_1
+monitorexit
+aload 4
+athrow
+aload_0
+getfield g/bh Lh;
+invokevirtual h/int()V
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield a3/a4 B
+bipush 10
+if_icmpne 392
+aload_0
+getfield g/ki Z
+ifne 392
+getstatic g/dD B
+iconst_1
+if_icmpeq 381
+getstatic g/dD B
+iconst_4
+if_icmpne 392
+getstatic g/dZ B
+ifne 392
+aload_0
+getfield g/int I
+bipush 10
+irem
+ifne 392
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+invokevirtual ag/A()V
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ad Z
+ifeq 543
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+getstatic ag/hF S
+iconst_2
+aload_0
+getfield g/int I
+iconst_2
+irem
+ifne 410
+iconst_m1
+goto 411
+iconst_1
+imul
+iadd
+i2s
+putstatic ag/hF S
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+getstatic ag/hE S
+iconst_3
+aload_0
+getfield g/int I
+iconst_2
+irem
+ifne 436
+aload_0
+getfield g/int I
+iconst_5
+irem
+iconst_3
+if_icmpge 434
+iconst_1
+goto 445
+iconst_m1
+goto 445
+aload_0
+getfield g/int I
+iconst_5
+irem
+iconst_3
+if_icmpge 444
+iconst_m1
+goto 445
+iconst_1
+imul
+iadd
+i2s
+putstatic ag/hE S
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+getstatic ag/hF S
+ifge 462
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+iconst_0
+putstatic ag/hF S
+goto 496
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+getstatic ag/hF S
+getstatic h/dU S
+iadd
+aload_0
+getfield g/bh Lh;
+getfield h/ad S
+if_icmplt 496
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+aload_0
+getfield g/bh Lh;
+getfield h/ad S
+getstatic h/dU S
+isub
+i2s
+putstatic ag/hF S
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+getstatic ag/hF S
+ifge 496
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+iconst_0
+putstatic ag/hF S
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+getstatic ag/hE S
+ifge 509
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+iconst_0
+putstatic ag/hE S
+goto 543
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+getstatic ag/hE S
+getstatic h/fp S
+iadd
+aload_0
+getfield g/bh Lh;
+getfield h/dz S
+if_icmple 543
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+aload_0
+getfield g/bh Lh;
+getfield h/dz S
+getstatic h/fp S
+isub
+i2s
+putstatic ag/hE S
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+getstatic ag/hE S
+ifge 543
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+iconst_0
+putstatic ag/hE S
+aload_0
+dup
+getfield g/int I
+iconst_1
+iadd
+dup_x1
+putfield g/int I
+ldc_w 2147483647
+if_icmpne 555
+aload_0
+iconst_0
+putfield g/int I
+aload_0
+getfield ap/do S
+tableswitch -125: 1004, -124: 1037, -123: 2642, -122: 2753, -121: 2753, -120: 2738, -119: 5118, -118: 5118, -117: 5118, -116: 5118, -115: 5118, -114: 5118, -113: 5118, -112: 5118, -111: 5118, -110: 5118, -109: 2724, -108: 2710, -107: 2676, -106: 2628, -105: 2616, -104: 1095, -103: 2826, -102: 1375, -101: 1222, -100: 1239, -99: 1239, -98: 1239, -97: 1239, -96: 1239, -95: 1239, -94: 1293, -93: 1248, -92: 1243, -91: 5118, -90: 1248, -89: 5118, -88: 1248, -87: 1248, -86: 1302, -85: 1253, -84: 1347, -83: 1691, -82: 2852, -81: 2841, -80: 2862, -79: 2883, -78: 2877, -77: 2883, -76: 2893, -75: 1311, -74: 1319, -73: 1347, -72: 2392, -71: 1334, -70: 2530, -69: 1380, -68: 1380, -67: 1380, -66: 1380, -65: 1380, -64: 5118, -63: 1380, -62: 1380, -61: 1380, -60: 1380, -59: 1380, -58: 1380, -57: 1380, -56: 1380, -55: 1380, -54: 1380, -53: 1380, -52: 1380, -51: 1329, -50: 1440, -49: 5118, -48: 1355, -47: 1339, -46: 2535, -45: 1440, -44: 1343, -43: 1343, -42: 1343, -41: 1347, -40: 1343, -39: 1363, -38: 1375, -37: 1375, -36: 1375, -35: 1380, -34: 1380, -33: 3850, -32: 5118, -31: 5118, -30: 1506, -29: 947, -28: 5118, -27: 2936, -26: 1489, -25: 1489, -24: 1489, -23: 1474, -22: 1479, -21: 1484, -20: 1489, -19: 572, -18: 590, -17: 5118, -16: 558, -15: 5118, -14: 1489, -13: 784, -12: 2941, -11: 4227, -10: 1489, -9: 1499, -8: 2774, -7: 2796, -6: 1765, -5: 1803, -4: 1832, -3: 1859, -2: 1873, -1: 1887, 0: 4559, 1: 5016, 2: 5047, 3: 2597, 4: 4558, 5: 4288, 6: 2893, 7: 868, 8: 2883, 9: 2877, 10: 2862, 11: 2064, 12: 1691, 13: 4249, 14: 5118, 15: 4223, 16: 5118, 17: 5118, 18: 1440, 19: 4174, 20: 4170, 21: 2768, 22: 2576, 23: 5118, 24: 5118, 25: 4233, 26: 2501, 27: 2433, 28: 5118, 29: 5118, 30: 2387, 31: 2387, 32: 2387, 33: 2387, 34: 993, 35: 5118, 36: 4024, 37: 4030, 38: 4114, 39: 1416, 40: 1384, 41: 3973, 42: 2370, 43: 3864, 44: 3859, 45: 2387, 46: 2841, 47: 1499, 48: 1499, 49: 1499, 50: 3855, 51: 2852, 52: 5118, 53: 2473, 54: 1499, 55: 877, 56: 4981, 57: 3649, 58: 3607, 59: 924, 60: 744, 61: 3366, 62: 3197, 63: 3624, 64: 3902, 65: 1187, 66: 1499, 67: 2064, 68: 1494, 69: 5118, 70: 3103, 71: 2941, 72: 2883, 73: 3084, 74: 2429, 75: 2397, 76: 3044, 77: 3064, 78: 604, 79: 3421, 80: 3845, 81: 2064, 82: 2941, 83: 2941, 84: 1494, 85: 1494, 86: 1740, 87: 5118, 88: 2064, 89: 3026, 90: 5118, 91: 1761, 92: 1987, 93: 3008, 94: 2989, 95: 2936, 96: 2936, 97: 2936, 98: 2908, 99: 2946, 100: 2064, 101: 1945, 102: 2941, 103: 2773, 104: 5118, 105: 5118, 106: 2825, 107: 836, 108: 2816, 109: 2821, 110: 2801, 111: 2936, 112: 2936, 113: 2353, 114: 2348, 115: 2253, 116: 2069, 117: 5118, 118: 2539, 119: 1916, 120: 1906, 121: 1895, 122: 4911, 123: 4227, 124: 2253, 125: 2597, 126: 1499, 127: 4946, default: 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+ldc_w "确认提交宠物?"
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/lr Ljava/lang/String;
+getstatic g/gf B
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+aload_0
+getfield g/ip Ljava/util/Vector;
+iconst_1
+invokevirtual g/a(Ljava/util/Vector;Z)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/gj B
+tableswitch 1: 609, 2: 743, 3: 652, 4: 695, default: 743
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+new java/lang/StringBuffer
+dup
+invokespecial java/lang/StringBuffer/<init>()V
+ldc_w "输入"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/dN B
+ifne 625
+ldc_w "买1手金"
+goto 626
+ldc_w "卖1手金"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+ldc_w "的单价(1手金=100星币)."
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+invokevirtual java/lang/StringBuffer/toString()Ljava/lang/String;
+iconst_m1
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/gj B
+iconst_1
+if_icmpne 645
+aload_0
+getfield g/bh Lh;
+getfield h/d9 Lw;
+invokevirtual w/a()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 743
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+new java/lang/StringBuffer
+dup
+invokespecial java/lang/StringBuffer/<init>()V
+ldc_w "输入"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/dN B
+ifne 668
+ldc_w "买1手金"
+goto 669
+ldc_w "卖1手金"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+ldc_w "的数量(1手金=100星币)."
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+invokevirtual java/lang/StringBuffer/toString()Ljava/lang/String;
+iconst_m1
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/gj B
+iconst_3
+if_icmpne 688
+aload_0
+getfield g/bh Lh;
+getfield h/d9 Lw;
+invokevirtual w/a()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 743
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+new java/lang/StringBuffer
+dup
+invokespecial java/lang/StringBuffer/<init>()V
+ldc_w "您的交易信息为:"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/dN B
+ifne 711
+ldc "买"
+goto 712
+ldc "卖"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/dP I
+getstatic a/C I
+invokestatic a3/do(II)I
+invokevirtual java/lang/StringBuffer/append(I)Ljava/lang/StringBuffer;
+ldc_w "手金,单价"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/gF I
+getstatic a/C I
+invokestatic a3/do(II)I
+invokevirtual java/lang/StringBuffer/append(I)Ljava/lang/StringBuffer;
+ldc_w "游戏币.是否缴纳押金10星币提交交易请求? (交易不限时长,在线有效)成交则押金不予退还,撤单将扣除2星币平台使用费."
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+invokevirtual java/lang/StringBuffer/toString()Ljava/lang/String;
+getstatic g/gf B
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+ldc_w "请选择要进行的操作?"
+iconst_m1
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+bipush 50
+isub
+iconst_2
+idiv
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+bipush 70
+isub
+iconst_2
+idiv
+aload_0
+getfield g/gd B
+aload_0
+getfield g/c9 [Ljava/lang/String;
+invokevirtual h/a(IIB[Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+new java/lang/StringBuffer
+dup
+invokespecial java/lang/StringBuffer/<init>()V
+ldc_w "选择完成["
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield g/bh Lh;
+getfield h/bR Lak;
+getfield ak/case Ljava/lang/String;
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+ldc_w "]提交的宠物?"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+invokevirtual java/lang/StringBuffer/toString()Ljava/lang/String;
+iconst_m1
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+bipush 50
+isub
+iconst_2
+idiv
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+bipush 70
+isub
+iconst_2
+idiv
+aload_0
+getfield g/gd B
+aload_0
+getfield g/c9 [Ljava/lang/String;
+invokevirtual h/a(IIB[Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+iconst_2
+iconst_0
+iconst_0
+aload_0
+getfield g/dt Ljavax/microedition/lcdui/Image;
+invokevirtual javax/microedition/lcdui/Image/getWidth()I
+iconst_4
+iadd
+aload_0
+getfield g/dt Ljavax/microedition/lcdui/Image;
+invokevirtual javax/microedition/lcdui/Image/getHeight()I
+iconst_4
+iadd
+iconst_1
+invokevirtual h/a(BIIIIZ)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+aload_0
+getfield g/dt Ljavax/microedition/lcdui/Image;
+iconst_2
+iconst_2
+iconst_0
+invokevirtual javax/microedition/lcdui/Graphics/drawImage(Ljavax/microedition/lcdui/Image;III)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+aload_0
+getfield g/fA Ljava/lang/String;
+ldc_w "查看"
+ldc "返回"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/nt [Ljava/lang/String;
+aload_0
+getfield g/fF B
+aaload
+iconst_m1
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+bipush 50
+isub
+iconst_2
+idiv
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+bipush 70
+isub
+iconst_2
+idiv
+aload_0
+getfield g/d7 B
+aload_0
+getfield g/fx [[Ljava/lang/String;
+aload_0
+getfield g/fF B
+aaload
+invokevirtual h/a(IIB[Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/m7 Ljava/lang/String;
+getstatic g/gf B
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 943
+aload_0
+iconst_4
+putfield g/cJ S
+aload_0
+sipush 168
+putfield g/hv S
+aload_0
+invokevirtual g/j()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield a3/bo B
+aload_0
+getfield g/dF B
+invokevirtual ag/int(BI)I
+istore_1
+iconst_1
+iload_1
+invokestatic java/lang/Math/max(II)I
+istore_1
+iload_1
+iconst_1
+iadd
+iload_1
+iconst_1
+iadd
+imul
+iload_1
+iconst_1
+iadd
+imul
+bipush 100
+imul
+istore_2
+aload_0
+new java/lang/StringBuffer
+dup
+invokespecial java/lang/StringBuffer/<init>()V
+ldc_w "是否消耗职业熟练值"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+iload_2
+invokevirtual java/lang/StringBuffer/append(I)Ljava/lang/StringBuffer;
+ldc_w "提升本技能?"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+invokevirtual java/lang/StringBuffer/toString()Ljava/lang/String;
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+getfield g/kH B
+lookupswitch 0: 996, 1: 996, default: 1003
+aload_0
+invokevirtual g/E()V
+aload_0
+ldc_w "新物质融合器:"是否已准备好启动融合?""
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/gP Z
+ifeq 1024
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/i7 Ljava/lang/String;
+getstatic g/gf B
+aload_0
+pop
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 5118
+aload_0
+iconst_0
+putfield g/gP Z
+goto 5118
+aload_0
+aload_0
+getfield g/i7 Ljava/lang/String;
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+new java/lang/StringBuffer
+dup
+invokespecial java/lang/StringBuffer/<init>()V
+ldc_w "欢迎回到充满未知与激情的星战世界!您已离线超过"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield g/bh Lh;
+getfield h/bD I
+invokevirtual java/lang/StringBuffer/append(I)Ljava/lang/StringBuffer;
+ldc_w "小时,每小时可获得"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield g/bh Lh;
+getfield h/ey I
+invokevirtual java/lang/StringBuffer/append(I)Ljava/lang/StringBuffer;
+ldc_w "点离线经验(等级越高,获得越多),点击确认VIP用户即可获得总计"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield g/bh Lh;
+getfield h/dl I
+invokevirtual java/lang/StringBuffer/append(I)Ljava/lang/StringBuffer;
+ldc_w "点离线经验."
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+invokevirtual java/lang/StringBuffer/toString()Ljava/lang/String;
+astore_3
+aload_0
+getfield g/bh Lh;
+getfield h/dL Z
+ifeq 1083
+aload_0
+getfield g/bh Lh;
+aload_3
+getstatic g/gf B
+aload_0
+pop
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 5118
+aload_0
+getfield g/bh Lh;
+iconst_0
+putfield h/dL Z
+goto 5118
+aload_0
+aload_3
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/dy Ljava/lang/String;
+getstatic g/gf B
+aload_0
+pop
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 1108
+aload_0
+getfield g/bh Lh;
+aload_0
+pop
+iconst_2
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+bipush 22
+isub
+bipush 45
+bipush 22
+iconst_1
+invokevirtual h/a(BIIIIZ)V
+aload_0
+getfield g/bh Lh;
+aload_0
+pop
+iconst_2
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+bipush 45
+isub
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+bipush 22
+isub
+bipush 45
+bipush 22
+iconst_1
+invokevirtual h/a(BIIIIZ)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+iconst_0
+invokevirtual javax/microedition/lcdui/Graphics/setColor(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+ldc_w "购买"
+bipush 22
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_3
+isub
+bipush 33
+invokevirtual javax/microedition/lcdui/Graphics/drawString(Ljava/lang/String;III)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+iconst_0
+invokevirtual javax/microedition/lcdui/Graphics/setColor(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+ldc "取消"
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+bipush 22
+isub
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_3
+isub
+bipush 33
+invokevirtual javax/microedition/lcdui/Graphics/drawString(Ljava/lang/String;III)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/fA Ljava/lang/String;
+getstatic g/gf B
+aload_0
+pop
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 5118
+aload_0
+getfield g/gI B
+ifne 1215
+aload_0
+aconst_null
+putfield g/fA Ljava/lang/String;
+aload_0
+aconst_null
+putfield g/fL Ljava/lang/String;
+aload_0
+aload_0
+pop
+iconst_0
+putfield ap/do S
+goto 5118
+aload_0
+iconst_0
+putfield g/e3 B
+aload_0
+bipush 7
+putfield ap/do S
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+getfield h/ck Lai;
+invokevirtual ai/int()V
+aload_0
+aload_0
+getfield g/iN Z
+ifeq 1234
+ldc_w "查看下一页?"
+goto 1235
+ldc_w "查看上一页?"
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+getfield g/ea Laf;
+invokevirtual af/new()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/bS Lau;
+invokevirtual au/a()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/fm Lan;
+invokevirtual an/do()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+ldc_w "设置什么职位?(可通过:系统->帮助->公会->职位 查看管理职位任命要求)"
+iconst_m1
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+bipush 50
+isub
+iconst_2
+idiv
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+bipush 70
+isub
+iconst_2
+idiv
+aload_0
+getfield g/gd B
+aload_0
+getfield g/c9 [Ljava/lang/String;
+invokevirtual h/a(IIB[Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+aload_0
+getfield g/bu Ljava/lang/String;
+ldc_w "确定"
+ldc "取消"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+aload_0
+getfield g/bu Ljava/lang/String;
+ldc_w "确定"
+ldc "取消"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+ldc_w "确定使用该颜色?"
+ldc_w "确定"
+ldc "取消"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+getfield g/mM Lm;
+invokevirtual m/a()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/bf Lv;
+invokevirtual v/a()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/ct Lam;
+invokevirtual am/if()V
+goto 5118
+aload_0
+getfield g/iZ Lat;
+invokevirtual at/a()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+invokevirtual h/b()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+ldc_w "确定使用?"
+ldc_w "确定"
+ldc "取消"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+ldc_w "确定兑换?"
+ldc_w "确定"
+ldc "取消"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/long()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/bv Le;
+invokevirtual e/do()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+invokevirtual h/y()V
+goto 5118
+aload_0
+new java/lang/StringBuffer
+dup
+invokespecial java/lang/StringBuffer/<init>()V
+ldc_w "使用唤醒模组?("
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+bipush 10
+aload_0
+getfield g/int I
+bipush 10
+idiv
+bipush 10
+irem
+isub
+invokevirtual java/lang/StringBuffer/append(I)Ljava/lang/StringBuffer;
+ldc_w ")"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+invokevirtual java/lang/StringBuffer/toString()Ljava/lang/String;
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+aload_0
+getfield g/int I
+bipush 100
+if_icmple 5118
+aload_0
+iconst_1
+putfield g/e3 B
+aload_0
+iconst_5
+invokevirtual g/if(I)V
+goto 5118
+aload_0
+getfield g/bh Lh;
+ldc_w "使用唤醒模组?"
+iconst_m1
+aload_0
+pop
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+aload_0
+getfield g/int I
+bipush 10
+if_icmple 5118
+aload_0
+bipush 40
+putfield ap/do S
+aload_0
+iconst_0
+putfield g/int I
+aload_0
+iconst_0
+putfield g/e3 B
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+iconst_2
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_0
+invokevirtual h/a(BIIIIZ)V
+aload_0
+getfield g/bh Lh;
+getfield h/i Lah;
+iconst_1
+invokevirtual ah/do(Z)V
+aload_0
+aload_0
+getfield ap/do S
+bipush 206
+if_icmpne 1469
+ldc_w "装备位上是极品装备,强制卸下将导致装备丢弃,确定丢弃?(可使用特殊道具解除绑定)"
+goto 1470
+ldc_w "确定丢弃?"
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+getfield g/bh Lh;
+ldc_w "公会战结束,请稍候..."
+invokevirtual h/k(Ljava/lang/String;)V
+goto 5118
+aload_0
+getfield g/bh Lh;
+ldc_w "公会战即将开始..."
+invokevirtual h/k(Ljava/lang/String;)V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/dy Lr;
+invokevirtual r/a()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/ez Lal;
+invokevirtual al/a()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/long Lz;
+invokevirtual z/a()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/e0 Lav;
+aload_0
+getfield ap/do S
+invokevirtual av/if(S)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/mZ B
+ifne 1551
+aload_0
+getfield g/bh Lh;
+ldc_w "选择要进行的操作?"
+iconst_m1
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+bipush 50
+isub
+iconst_2
+idiv
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+bipush 70
+isub
+iconst_2
+idiv
+bipush 20
+iadd
+aload_0
+getfield g/gd B
+aload_0
+getfield g/cM [Ljava/lang/String;
+invokevirtual h/a(IIB[Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+getfield g/mZ B
+iconst_1
+if_icmpne 1569
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/eJ Ljava/lang/String;
+getstatic g/gf B
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+aload_0
+ldc_w "升级"
+ldc "返回"
+invokevirtual g/do(Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+getfield g/mZ B
+iconst_2
+if_icmpne 1583
+aload_0
+aload_0
+getfield g/ip Ljava/util/Vector;
+iconst_1
+invokevirtual g/a(Ljava/util/Vector;Z)V
+aload_0
+ldc_w "选择"
+ldc "返回"
+invokevirtual g/do(Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+getfield g/mZ B
+iconst_3
+if_icmpne 1597
+aload_0
+aload_0
+getfield g/ip Ljava/util/Vector;
+iconst_1
+invokevirtual g/a(Ljava/util/Vector;Z)V
+aload_0
+ldc_w "使用"
+ldc "返回"
+invokevirtual g/do(Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+getfield g/mZ B
+iconst_4
+if_icmpne 1623
+aload_0
+aload_0
+getfield g/ip Ljava/util/Vector;
+iconst_0
+invokevirtual g/a(Ljava/util/Vector;Z)V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/lG [Ljava/lang/String;
+aload_0
+getfield g/hZ S
+aaload
+getstatic g/gf B
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+aload_0
+ldc_w "研发"
+ldc "返回"
+invokevirtual g/do(Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+getfield g/mZ B
+bipush 6
+if_icmpne 1650
+aload_0
+aload_0
+getfield g/ip Ljava/util/Vector;
+iconst_0
+invokevirtual g/a(Ljava/util/Vector;Z)V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/ee Ljava/util/Vector;
+aload_0
+getfield g/hZ S
+invokevirtual java/util/Vector/elementAt(I)Ljava/lang/Object;
+checkcast java/lang/String
+getstatic g/gf B
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+aload_0
+ldc_w "使用"
+ldc "返回"
+invokevirtual g/do(Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+getfield g/mZ B
+iconst_5
+if_icmpne 1665
+aload_0
+aload_0
+getfield g/ip Ljava/util/Vector;
+iconst_0
+invokevirtual g/a(Ljava/util/Vector;Z)V
+aload_0
+ldc_w "确定要研发此科技?"
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+getfield g/mZ B
+bipush 7
+if_icmpne 5118
+aload_0
+aload_0
+getfield g/ip Ljava/util/Vector;
+iconst_0
+invokevirtual g/a(Ljava/util/Vector;Z)V
+ldc_w "激活科技需消耗公会贡献度1,是否要激活?(同时只能激活1种科技,若已激活其他科技,将自动解除)"
+astore 4
+aload_0
+getfield g/fG [B
+aload_0
+getfield g/hZ S
+baload
+iconst_5
+if_icmple 1685
+ldc_w "确定使用该科技?"
+astore 4
+aload_0
+aload 4
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/long()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+bipush 50
+isub
+iconst_2
+idiv
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+bipush 70
+isub
+iconst_2
+idiv
+bipush 20
+iadd
+aload_0
+getfield g/gd B
+iconst_3
+anewarray java/lang/String
+dup
+iconst_0
+ldc_w "购买"
+aastore
+dup
+iconst_1
+ldc_w "查看"
+aastore
+dup
+iconst_2
+ldc "返回"
+aastore
+invokevirtual h/a(IIB[Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+getfield g/md Lae;
+invokevirtual ae/if()V
+aload_0
+getfield g/bh Lh;
+bipush 22
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/eA I
+iconst_2
+imul
+iconst_2
+iadd
+aload_0
+getfield g/gd B
+aload_0
+getfield g/md Lae;
+getfield ae/if [Ljava/lang/String;
+invokevirtual h/a(IIB[Ljava/lang/String;)V
+goto 5118
+aload_0
+getfield g/md Lae;
+invokevirtual ae/if()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+iconst_2
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_0
+invokevirtual h/a(BIIIIZ)V
+aload_0
+aload_0
+getfield g/ip Ljava/util/Vector;
+iconst_0
+invokevirtual g/a(Ljava/util/Vector;Z)V
+aload_0
+new java/lang/StringBuffer
+dup
+invokespecial java/lang/StringBuffer/<init>()V
+ldc_w "确认会长转移给"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield g/b5 Ljava/lang/String;
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+ldc_w "?"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+invokevirtual java/lang/StringBuffer/toString()Ljava/lang/String;
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+iconst_2
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_0
+invokevirtual h/a(BIIIIZ)V
+aload_0
+aload_0
+getfield g/ip Ljava/util/Vector;
+iconst_1
+invokevirtual g/a(Ljava/util/Vector;Z)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/mf B
+ifne 1853
+aload_0
+new java/lang/StringBuffer
+dup
+invokespecial java/lang/StringBuffer/<init>()V
+ldc_w "强制退会需扣除金钱"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield g/eb I
+invokevirtual java/lang/StringBuffer/append(I)Ljava/lang/StringBuffer;
+ldc_w ",且将导致公会贡献度清0.确认操作？"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+invokevirtual java/lang/StringBuffer/toString()Ljava/lang/String;
+ldc_w "确认"
+ldc "返回"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+ldc_w "退出公会会将公会贡献度清0,确认退会?"
+ldc_w "确认"
+ldc "返回"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+ldc_w "选择退会方式?"
+ldc_w "申请退会"
+ldc_w "强制退会"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+ldc_w "选择退会方式?"
+ldc_w "会长转移"
+ldc_w "强制退会"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+ldc_w "公会只有你一人,解散公会?"
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/s()V
+aload_0
+ldc_w "确定开始合成?"
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/s()V
+aload_0
+getfield g/bh Lh;
+getfield h/d9 Lw;
+invokevirtual w/a()V
+goto 5118
+aload_0
+getfield g/int I
+iconst_1
+if_icmpne 1930
+aload_0
+getfield g/dx S
+ifne 1930
+aload_0
+ldc_w "请选择合成主材料"
+bipush 119
+iconst_0
+bipush 20
+invokevirtual g/a(Ljava/lang/String;SZI)V
+return
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/s()V
+aload_0
+getfield g/dx S
+ifle 1941
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+ldc_w "任务失败!"
+iconst_m1
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+aload_0
+getfield g/int I
+bipush 15
+if_icmple 5118
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+iconst_0
+putfield a3/T Z
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+iconst_0
+putfield a3/ao Z
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+iconst_0
+putfield ag/hU Z
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+iconst_0
+putfield a3/a4 B
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+bipush 16
+iconst_1
+invokevirtual a3/if(BI)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/o()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/g6 [Ljava/lang/String;
+arraylength
+ifle 2057
+aload_0
+getfield g/eq B
+aload_0
+getfield g/g6 [Ljava/lang/String;
+arraylength
+iconst_1
+isub
+if_icmple 2009
+aload_0
+aload_0
+getfield g/g6 [Ljava/lang/String;
+arraylength
+iconst_1
+isub
+i2b
+putfield g/eq B
+aload_0
+getfield g/bh Lh;
+bipush 27
+aload_0
+getfield g/int I
+iconst_5
+irem
+ifne 2019
+iconst_2
+goto 2020
+iconst_0
+iadd
+bipush 22
+aload_0
+getfield g/eq B
+bipush 6
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/a9 B
+ifne 2032
+iconst_3
+goto 2033
+getstatic h/eA I
+iadd
+imul
+iadd
+aload_0
+getfield g/bh Lh;
+getfield h/aH [Ljavax/microedition/lcdui/Image;
+bipush 6
+aaload
+invokevirtual javax/microedition/lcdui/Image/getWidth()I
+aload_0
+getfield g/bh Lh;
+getfield h/aH [Ljavax/microedition/lcdui/Image;
+bipush 6
+aaload
+invokevirtual javax/microedition/lcdui/Image/getHeight()I
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+getfield h/aH [Ljavax/microedition/lcdui/Image;
+bipush 6
+aaload
+iconst_2
+invokevirtual h/a(IIIIIILjavax/microedition/lcdui/Image;I)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/ck Lai;
+invokevirtual ai/if()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+iconst_0
+invokevirtual javax/microedition/lcdui/Graphics/setColor(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+invokevirtual javax/microedition/lcdui/Graphics/fillRect(IIII)V
+bipush 8
+istore 4
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+iconst_2
+idiv
+bipush 72
+iconst_4
+iload 4
+imul
+iadd
+iconst_2
+idiv
+isub
+istore 5
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_2
+idiv
+bipush 72
+iconst_4
+iload 4
+imul
+iadd
+iconst_2
+idiv
+isub
+istore 6
+iconst_0
+istore 7
+iload 7
+bipush 6
+if_icmpge 2173
+iconst_0
+istore 8
+iload 8
+bipush 6
+if_icmpge 2167
+aload_0
+getfield g/bh Lh;
+iload 5
+iload 7
+bipush 12
+iload 4
+iadd
+imul
+iadd
+iload 6
+iload 8
+bipush 12
+iload 4
+iadd
+imul
+iadd
+bipush 12
+bipush 12
+iload 7
+bipush 12
+imul
+iload 8
+bipush 12
+imul
+aload_0
+getfield g/bh Lh;
+getfield h/aH [Ljavax/microedition/lcdui/Image;
+bipush 8
+aaload
+iconst_0
+invokevirtual h/a(IIIIIILjavax/microedition/lcdui/Image;I)V
+iload 8
+iconst_1
+iadd
+i2b
+istore 8
+goto 2127
+iload 7
+iconst_1
+iadd
+i2b
+istore 7
+goto 2122
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/b2 [[I
+aload_0
+getfield g/bh Lh;
+pop
+iconst_5
+aaload
+iconst_0
+iaload
+invokevirtual javax/microedition/lcdui/Graphics/setColor(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+iload 5
+aload_0
+getfield g/hq B
+bipush 12
+iload 4
+iadd
+imul
+iadd
+iconst_4
+isub
+aload_0
+getfield g/int I
+iconst_2
+idiv
+iconst_2
+irem
+iadd
+iload 6
+aload_0
+getfield g/hp B
+bipush 12
+iload 4
+iadd
+imul
+iadd
+iconst_4
+isub
+aload_0
+getfield g/int I
+iconst_2
+idiv
+iconst_2
+irem
+iadd
+bipush 18
+iconst_2
+aload_0
+getfield g/int I
+iconst_2
+idiv
+iconst_2
+irem
+imul
+isub
+bipush 18
+iconst_2
+aload_0
+getfield g/int I
+iconst_2
+idiv
+iconst_2
+irem
+imul
+isub
+invokevirtual javax/microedition/lcdui/Graphics/drawRect(IIII)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+getfield g/int I
+bipush 11
+if_icmpgt 2328
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+iconst_0
+invokevirtual javax/microedition/lcdui/Graphics/setColor(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+invokevirtual javax/microedition/lcdui/Graphics/fillRect(IIII)V
+aload_0
+getfield g/int I
+iconst_5
+if_icmplt 2308
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+ldc_w 16777215
+invokevirtual javax/microedition/lcdui/Graphics/setColor(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_2
+idiv
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+iconst_4
+idiv
+aload_0
+getfield g/int I
+iconst_5
+isub
+imul
+iconst_2
+invokevirtual javax/microedition/lcdui/Graphics/fillRect(IIII)V
+aload_0
+getfield g/int I
+bipush 11
+if_icmpne 5118
+aload_0
+getfield ap/do S
+bipush 124
+if_icmpne 2322
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+bipush 12
+putfield a3/a4 B
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+bipush 11
+putfield a3/a4 B
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/int I
+aload_0
+getfield ap/do S
+bipush 124
+if_icmpne 2338
+bipush 18
+goto 2339
+bipush 40
+if_icmple 5118
+aload_0
+aload_0
+getfield g/bl Ljava/lang/String;
+iconst_0
+iconst_1
+sipush 9999
+invokevirtual g/a(Ljava/lang/String;SZI)V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/du Li;
+invokevirtual i/a()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bu Ljava/lang/String;
+getstatic g/gf B
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 5118
+aload_0
+getfield g/bh Lh;
+aload_0
+aload_0
+getfield g/bh Lh;
+getfield h/s Ly;
+invokevirtual h/a(Lap;Lap;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bu Ljava/lang/String;
+getstatic g/gf B
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 5118
+aload_0
+aload_0
+pop
+iconst_0
+putfield ap/do S
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/br Lac;
+invokevirtual ac/a()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/ct Lam;
+invokevirtual am/if()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+iconst_2
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_0
+invokevirtual h/a(BIIIIZ)V
+aload_0
+getfield g/e0 Lc;
+invokevirtual c/a()V
+aload_0
+getfield g/bh Lh;
+bipush 72
+iconst_0
+aload_0
+getfield g/gd B
+getstatic g/f1 [[Ljava/lang/String;
+aload_0
+getfield g/gS B
+aaload
+invokevirtual h/a(IIB[Ljava/lang/String;)V
+goto 5118
+aload_0
+getfield g/e0 Lc;
+invokevirtual c/a()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+aload_0
+getfield g/ip Ljava/util/Vector;
+iconst_0
+invokevirtual g/a(Ljava/util/Vector;Z)V
+aload_0
+getfield g/hu Z
+iconst_1
+if_icmpne 2449
+aload_0
+aload_0
+getfield g/nk Ljava/util/Vector;
+iconst_1
+invokevirtual g/a(Ljava/util/Vector;Z)V
+aload_0
+getfield g/dN Z
+iconst_1
+if_icmpne 2458
+aload_0
+aload_0
+getfield g/j8 Ljava/util/Vector;
+iconst_1
+invokevirtual g/a(Ljava/util/Vector;Z)V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+bipush 46
+isub
+iconst_0
+aload_0
+getfield g/gd B
+aload_0
+getfield g/c9 [Ljava/lang/String;
+invokevirtual h/a(IIB[Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+iconst_2
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_0
+invokevirtual h/a(BIIIIZ)V
+aload_0
+aload_0
+getfield g/ip Ljava/util/Vector;
+iconst_1
+invokevirtual g/a(Ljava/util/Vector;Z)V
+aload_0
+ldc_w "确定遗忘吗？"
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+iconst_2
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_0
+invokevirtual h/a(BIIIIZ)V
+aload_0
+aload_0
+getfield g/ip Ljava/util/Vector;
+iconst_1
+invokevirtual g/a(Ljava/util/Vector;Z)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/ct Lam;
+invokevirtual am/if()V
+goto 5118
+aload_0
+getfield g/iZ Lat;
+invokevirtual at/a()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bu Ljava/lang/String;
+getstatic g/gf B
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 5118
+aload_0
+getfield g/bK B
+iconst_1
+if_icmpne 2570
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/fL I
+ifge 2564
+aload_0
+getfield g/bh Lh;
+getfield h/i Lah;
+invokevirtual ah/else()V
+goto 5118
+aload_0
+aload_0
+pop
+iconst_0
+putfield ap/do S
+goto 5118
+aload_0
+aload_0
+pop
+iconst_0
+putfield ap/do S
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bu Ljava/lang/String;
+getstatic g/gf B
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 5118
+aload_0
+getfield g/bh Lh;
+getfield h/fG LSFMIDlet;
+invokestatic javax/microedition/lcdui/Display/getDisplay(Ljavax/microedition/midlet/MIDlet;)Ljavax/microedition/lcdui/Display;
+aload_0
+getfield g/bh Lh;
+getfield h/i Lah;
+getfield ah/h Ljavax/microedition/lcdui/Form;
+invokevirtual javax/microedition/lcdui/Display/setCurrent(Ljavax/microedition/lcdui/Displayable;)V
+goto 5118
+aload_0
+getfield g/bh Lh;
+ldc_w "请稍候..."
+invokevirtual h/k(Ljava/lang/String;)V
+aload_0
+getfield g/int I
+sipush 2400
+if_icmple 5118
+aload_0
+getfield ap/do S
+iconst_3
+if_icmpne 5118
+aload_0
+ldc_w "打开商店失败."
+iconst_0
+iconst_0
+bipush 30
+invokevirtual g/a(Ljava/lang/String;SZI)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/hz Ljava/lang/String;
+getstatic g/gf B
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+aload_0
+getfield g/c8 Ljava/util/Vector;
+iconst_1
+invokevirtual g/a(Ljava/util/Vector;Z)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+ldc_w "您当前还不是VIP用户.VIP用户可获得使用游戏币购买商城道具,登陆获得离线经验,增加现金背包等特权.是否申请成为VIP用户(最低仅需5元/月)?"
+astore_3
+aload_0
+getfield g/bH Z
+ifeq 2664
+aload_0
+getfield g/bh Lh;
+aload_3
+getstatic g/gf B
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 5118
+aload_0
+iconst_0
+putfield g/e3 B
+aload_0
+iconst_0
+putfield g/bH Z
+goto 5118
+aload_0
+aload_3
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/lz B
+ifne 2697
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/na Ljava/lang/String;
+getstatic g/gf B
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 2693
+aload_0
+iconst_0
+putfield ap/do S
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+aload_0
+getfield g/na Ljava/lang/String;
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+aload_0
+getfield g/j8 Ljava/util/Vector;
+iconst_1
+invokevirtual g/a(Ljava/util/Vector;Z)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+aload_0
+getfield g/nk Ljava/util/Vector;
+iconst_1
+invokevirtual g/a(Ljava/util/Vector;Z)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/na Ljava/lang/String;
+getstatic g/gf B
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 5118
+aload_0
+iconst_0
+putfield ap/do S
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+aload_0
+getfield g/f9 Ljava/lang/String;
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+ldc_w "请稍候..."
+invokevirtual h/k(Ljava/lang/String;)V
+goto 5118
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/k2 Ljava/lang/String;
+getstatic g/gf B
+aload_0
+pop
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 5118
+aload_0
+aconst_null
+putfield g/k2 Ljava/lang/String;
+aload_0
+aload_0
+pop
+iconst_0
+putfield ap/do S
+goto 5118
+aload_0
+getfield g/bh Lh;
+ldc_w "请稍候..."
+invokevirtual h/k(Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+ldc_w "等候超时!"
+getstatic g/gf B
+aload_0
+pop
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 5118
+aload_0
+invokevirtual g/J()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+ldc_w "请稍候..."
+invokevirtual h/k(Ljava/lang/String;)V
+goto 5118
+aload_0
+getfield g/c7 Lk;
+invokevirtual k/a()V
+goto 5118
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+aload_0
+getfield g/lt Ljava/lang/String;
+ldc_w "确定"
+ldc "取消"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/long()V
+aload_0
+ldc_w "确定购买?"
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/long()V
+aload_0
+getfield g/bh Lh;
+getfield h/d9 Lw;
+invokevirtual w/a()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/long()V
+aload_0
+getfield g/dx S
+ifle 2873
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+ldc_w "确定摆摊?"
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/s()V
+aload_0
+getfield g/bh Lh;
+getfield h/d9 Lw;
+invokevirtual w/a()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/s()V
+aload_0
+getfield g/dx S
+ifle 2904
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/lt Ljava/lang/String;
+getstatic g/gf B
+aload_0
+pop
+iconst_4
+aload_0
+getfield g/new Z
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifne 2927
+aload_0
+getfield g/int I
+aload_0
+getfield g/eP I
+if_icmple 5118
+aload_0
+getfield g/bh Lh;
+aconst_null
+putfield h/dk [Ljava/lang/String;
+aload_0
+aload_0
+getfield g/lb S
+putfield ap/do S
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/as Laa;
+invokevirtual aa/a()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/aI Lb;
+invokevirtual b/if()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/F Ljava/lang/String;
+getstatic g/gf B
+iconst_1
+isub
+aload_0
+pop
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+bipush 50
+isub
+iconst_2
+idiv
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+bipush 70
+isub
+iconst_2
+idiv
+bipush 20
+iadd
+aload_0
+getfield g/gd B
+aload_0
+getfield g/cW [Ljava/lang/String;
+invokevirtual h/a(IIB[Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/F Ljava/lang/String;
+getstatic g/gf B
+aload_0
+pop
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 5118
+aload_0
+bipush 99
+putfield ap/do S
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+new java/lang/StringBuffer
+dup
+invokespecial java/lang/StringBuffer/<init>()V
+ldc_w "进入 "
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield g/ez Ljava/lang/String;
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+ldc_w "?"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+invokevirtual java/lang/StringBuffer/toString()Ljava/lang/String;
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+getfield g/md Lae;
+invokevirtual ae/for()V
+aload_0
+getfield g/bh Lh;
+bipush 20
+aload_0
+getfield g/md Lae;
+getfield ae/null S
+bipush 20
+iadd
+aload_0
+getfield g/gd B
+aload_0
+getfield g/md Lae;
+getfield ae/case [Ljava/lang/String;
+invokevirtual h/a(IIB[Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+ldc_w "添加新任务!"
+iconst_m1
+aload_0
+pop
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+aload_0
+getfield g/int I
+bipush 20
+if_icmple 5118
+aload_0
+iconst_5
+invokevirtual g/if(I)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+ldc_w "该任务结束!"
+iconst_m1
+aload_0
+pop
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+aload_0
+getfield g/int I
+bipush 20
+if_icmple 5118
+aload_0
+iconst_5
+invokevirtual g/if(I)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/jK Ljava/lang/String;
+getstatic g/gf B
+aload_0
+pop
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 5118
+aload_0
+aload_0
+pop
+iconst_0
+putfield ap/do S
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/fA Ljava/lang/String;
+getstatic g/gf B
+aload_0
+pop
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 3118
+iconst_0
+putstatic g/gf B
+aload_0
+getfield g/bh Lh;
+aload_0
+pop
+iconst_2
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+bipush 22
+isub
+bipush 45
+bipush 22
+iconst_1
+invokevirtual h/a(BIIIIZ)V
+aload_0
+getfield g/bh Lh;
+aload_0
+pop
+iconst_2
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+bipush 45
+isub
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+bipush 22
+isub
+bipush 45
+bipush 22
+iconst_1
+invokevirtual h/a(BIIIIZ)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+iconst_0
+invokevirtual javax/microedition/lcdui/Graphics/setColor(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+ldc_w "查看"
+bipush 22
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_3
+isub
+bipush 33
+invokevirtual javax/microedition/lcdui/Graphics/drawString(Ljava/lang/String;III)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+iconst_0
+invokevirtual javax/microedition/lcdui/Graphics/setColor(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+ldc_w "退出"
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+bipush 22
+isub
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_3
+isub
+bipush 33
+invokevirtual javax/microedition/lcdui/Graphics/drawString(Ljava/lang/String;III)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aB S
+ifeq 3347
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/W B
+tableswitch 0: 3209, 1: 3278, 2: 3209, 3: 3278, default: 3346
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aB S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ac B
+isub
+ifgt 3245
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aD Ll;
+dup
+getfield l/new S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aB S
+getstatic a3/bp [B
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/W B
+baload
+imul
+iadd
+i2s
+putfield l/new S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+iconst_0
+putfield as/aB S
+goto 3346
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aD Ll;
+dup
+getfield l/new S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ac B
+getstatic a3/bp [B
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/W B
+baload
+imul
+iadd
+i2s
+putfield l/new S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+dup
+getfield as/aB S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ac B
+isub
+i2s
+putfield as/aB S
+goto 3346
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aB S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ac B
+isub
+ifgt 3314
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aD Ll;
+dup
+getfield l/try S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aB S
+getstatic a3/bq [B
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/W B
+baload
+imul
+iadd
+i2s
+putfield l/try S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+iconst_0
+putfield as/aB S
+goto 3346
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aD Ll;
+dup
+getfield l/try S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ac B
+getstatic a3/bq [B
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/W B
+baload
+imul
+iadd
+i2s
+putfield l/try S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+dup
+getfield as/aB S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ac B
+isub
+i2s
+putfield as/aB S
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/bV Lx;
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ar B
+iconst_0
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aD Ll;
+getfield l/a [I
+invokevirtual x/a(II[I)V
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+invokevirtual as/a()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aD Ll;
+getfield l/a [I
+iconst_4
+iaload
+ifne 5118
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aD Ll;
+getfield l/a [I
+iconst_4
+iconst_1
+iastore
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+dup
+getfield as/G B
+iconst_1
+iadd
+i2b
+putfield as/G B
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/G B
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aQ B
+if_icmplt 5118
+aload_0
+getfield g/bh Lh;
+getfield h/bV Lx;
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ar B
+iconst_0
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aD Ll;
+getfield l/a [I
+invokevirtual x/a(II[I)V
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+invokevirtual as/a()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aB S
+ifeq 3588
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ac B
+ifle 3588
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/W B
+tableswitch 0: 3438, 1: 3507, 2: 3438, 3: 3507, default: 3575
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aB S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ac B
+isub
+ifgt 3474
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aD Ll;
+dup
+getfield l/new S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aB S
+getstatic a3/bp [B
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/W B
+baload
+imul
+iadd
+i2s
+putfield l/new S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+iconst_0
+putfield as/aB S
+goto 3575
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aD Ll;
+dup
+getfield l/new S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ac B
+getstatic a3/bp [B
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/W B
+baload
+imul
+iadd
+i2s
+putfield l/new S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+dup
+getfield as/aB S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ac B
+isub
+i2s
+putfield as/aB S
+goto 3575
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aB S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ac B
+isub
+ifgt 3543
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aD Ll;
+dup
+getfield l/try S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aB S
+getstatic a3/bq [B
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/W B
+baload
+imul
+iadd
+i2s
+putfield l/try S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+iconst_0
+putfield as/aB S
+goto 3575
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aD Ll;
+dup
+getfield l/try S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ac B
+getstatic a3/bq [B
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/W B
+baload
+imul
+iadd
+i2s
+putfield l/try S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+dup
+getfield as/aB S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ac B
+isub
+i2s
+putfield as/aB S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+dup
+getfield as/ac B
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/S B
+iadd
+i2b
+putfield as/ac B
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/bV Lx;
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ar B
+iconst_0
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aD Ll;
+getfield l/a [I
+invokevirtual x/a(II[I)V
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+invokevirtual as/a()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/C Ljava/lang/String;
+getstatic g/gf B
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 5118
+aload_0
+bipush 63
+putfield ap/do S
+goto 5118
+aload_0
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/av B
+putfield g/e3 B
+aload_0
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/C Ljava/lang/String;
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ai [Ljava/lang/String;
+iconst_0
+aaload
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/ai [Ljava/lang/String;
+iconst_1
+aaload
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+getstatic ag/hF S
+iflt 3689
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+getstatic ag/hE S
+iflt 3689
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+getstatic ag/hF S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+iadd
+aload_0
+getfield g/bh Lh;
+getfield h/ad S
+if_icmpgt 3689
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+getstatic ag/hE S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iadd
+aload_0
+getfield g/bh Lh;
+getfield h/dz S
+if_icmple 3694
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+iconst_0
+putfield as/aC S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aC S
+ifeq 3840
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/eO B
+tableswitch 0: 3704, 1: 3771, 2: 3704, 3: 3771, default: 3837
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aC S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/D B
+isub
+ifle 3746
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+getstatic ag/hE S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/D B
+getstatic a3/bp [B
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/A B
+baload
+imul
+iadd
+i2s
+putstatic ag/hE S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+dup
+getfield as/aC S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/D B
+isub
+i2s
+putfield as/aC S
+goto 3837
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+getstatic ag/hE S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aC S
+getstatic a3/bp [B
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/A B
+baload
+imul
+iadd
+i2s
+putstatic ag/hE S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+iconst_0
+putfield as/aC S
+goto 3837
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aC S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/D B
+isub
+ifle 3813
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+getstatic ag/hF S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/D B
+getstatic a3/bq [B
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/A B
+baload
+imul
+iadd
+i2s
+putstatic ag/hF S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+dup
+getfield as/aC S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/D B
+isub
+i2s
+putfield as/aC S
+goto 3837
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+pop
+getstatic ag/hF S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/aC S
+getstatic a3/bq [B
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+getfield as/A B
+baload
+imul
+iadd
+i2s
+putstatic ag/hF S
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+iconst_0
+putfield as/aC S
+aload_0
+invokevirtual g/E()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+invokevirtual as/a()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/ex Laj;
+invokevirtual aj/a()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/dJ Lo;
+invokevirtual o/a()V
+goto 5118
+aload_0
+getfield g/jj Ln;
+invokevirtual n/a()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+ldc_w "退出中,请稍候..."
+invokevirtual h/k(Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/h7 Ljava/lang/String;
+getstatic g/gf B
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 5118
+aload_0
+getfield ap/if S
+iconst_2
+if_icmpne 3894
+aload_0
+getfield g/h7 Ljava/lang/String;
+ldc_w "疾冲"
+invokevirtual java/lang/String/indexOf(Ljava/lang/String;)I
+iconst_m1
+if_icmpeq 3894
+aload_0
+iconst_2
+putfield g/je B
+aload_0
+iconst_0
+putfield g/kc B
+aload_0
+iconst_0
+putfield g/int I
+aload_0
+aconst_null
+putfield g/h7 Ljava/lang/String;
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+invokevirtual as/a()V
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/b2 [[I
+aload_0
+getfield g/bh Lh;
+pop
+iconst_3
+aaload
+iconst_1
+iaload
+invokevirtual javax/microedition/lcdui/Graphics/setColor(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+invokevirtual javax/microedition/lcdui/Graphics/fillRect(IIII)V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/fS Ljava/lang/String;
+getstatic g/gf B
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 5118
+aload_0
+getfield g/ns B
+ifne 3947
+aload_0
+iconst_0
+putfield ap/do S
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/fG LSFMIDlet;
+new java/lang/StringBuffer
+dup
+invokespecial java/lang/StringBuffer/<init>()V
+ldc_w "http://gameta.cn/sot_bill_index.jsp?owner=1&user="
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield g/bh Lh;
+getfield h/dv Ljava/lang/String;
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+ldc_w "&zone="
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield g/bh Lh;
+getfield h/fA B
+invokevirtual java/lang/StringBuffer/append(I)Ljava/lang/StringBuffer;
+invokevirtual java/lang/StringBuffer/toString()Ljava/lang/String;
+invokevirtual javax/microedition/midlet/MIDlet/platformRequest(Ljava/lang/String;)Z
+pop
+aload_0
+invokevirtual g/J()V
+goto 5118
+astore 7
+goto 5118
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/b2 [[I
+aload_0
+getfield g/bh Lh;
+pop
+iconst_3
+aaload
+iconst_1
+iaload
+invokevirtual javax/microedition/lcdui/Graphics/setColor(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+invokevirtual javax/microedition/lcdui/Graphics/fillRect(IIII)V
+aload_0
+getfield g/bh Lh;
+ldc_w "网络超时!请重新登录."
+getstatic g/gf B
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+ifeq 5118
+aload_0
+getfield g/gz Z
+ifeq 4021
+aload_0
+getfield g/bh Lh;
+aload_0
+aload_0
+getfield g/bh Lh;
+getfield h/s Ly;
+invokevirtual h/a(Lap;Lap;)V
+goto 5118
+aload_0
+invokevirtual g/J()V
+goto 5118
+aload_0
+ldc_w "需要休息?"
+ldc_w "是"
+ldc_w "否"
+invokevirtual g/a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+goto 5118
+aload_0
+dup
+getfield g/c3 B
+iconst_1
+iadd
+i2b
+putfield g/c3 B
+aload_0
+getfield g/c3 B
+bipush 15
+if_icmple 4080
+aload_0
+iconst_0
+putfield g/c3 B
+iconst_0
+istore 7
+iload 7
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+if_icmpge 4059
+aload_0
+getfield g/bZ [I
+iload 7
+ldc_w -16777216
+iastore
+iinc 7 1
+goto 4046
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+invokevirtual ag/N()V
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getstatic ag/g2 I
+getstatic a/t I
+invokestatic a3/new(II)I
+putfield ag/hh I
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+invokevirtual ag/d()V
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+iconst_2
+putfield a3/try B
+return
+iconst_0
+istore 7
+iload 7
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+if_icmpge 4098
+aload_0
+getfield g/bZ [I
+iload 7
+dup2
+iaload
+ldc_w 285212672
+iadd
+iastore
+iinc 7 1
+goto 4082
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bZ [I
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+invokevirtual h/a([IIIII)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+dup
+getfield g/c3 B
+iconst_1
+iadd
+i2b
+putfield g/c3 B
+aload_0
+getfield g/c3 B
+bipush 6
+if_icmple 4136
+aload_0
+aload_0
+pop
+iconst_0
+putfield ap/do S
+aload_0
+aconst_null
+putfield g/bZ [I
+return
+iconst_0
+istore 7
+iload 7
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+if_icmpge 4154
+aload_0
+getfield g/bZ [I
+iload 7
+dup2
+iaload
+ldc_w 570425344
+isub
+iastore
+iinc 7 1
+goto 4138
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bZ [I
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+invokevirtual h/a([IIIII)V
+goto 5118
+aload_0
+getfield g/g7 Ls;
+invokevirtual s/if()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+ldc_w 16777215
+invokevirtual javax/microedition/lcdui/Graphics/setColor(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_2
+idiv
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+bipush 20
+invokevirtual javax/microedition/lcdui/Graphics/fillRect(IIII)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+iconst_0
+invokevirtual javax/microedition/lcdui/Graphics/setColor(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+ldc_w "任务失败"
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+iconst_2
+idiv
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_2
+idiv
+iconst_1
+iadd
+bipush 17
+invokevirtual javax/microedition/lcdui/Graphics/drawString(Ljava/lang/String;III)V
+goto 5118
+aload_0
+getfield g/md Lae;
+invokevirtual ae/for()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/eZ Lt;
+invokevirtual t/a()V
+aload_0
+getfield g/bh Lh;
+bipush 72
+iconst_0
+aload_0
+getfield g/gd B
+aload_0
+pop
+getstatic g/b2 [Ljava/lang/String;
+invokevirtual h/a(IIB[Ljava/lang/String;)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+iconst_2
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_0
+invokevirtual h/a(BIIIIZ)V
+aload_0
+getfield g/eZ Lt;
+invokevirtual t/a()V
+aload_0
+getfield g/mz B
+ifne 4284
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+bipush 36
+invokevirtual a3/a(B)I
+ifgt 4281
+aload_0
+getfield g/gn Ljavax/microedition/lcdui/Image;
+ifnull 4284
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+getfield g/j0 B
+ifne 4297
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/kh Ljava/lang/String;
+invokevirtual h/k(Ljava/lang/String;)V
+goto 4310
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/kh Ljava/lang/String;
+iconst_m1
+aload_0
+pop
+iconst_4
+iconst_0
+invokevirtual h/a(Ljava/lang/String;IBZ)Z
+pop
+aload_0
+getfield g/j5 Z
+ifne 4506
+aload_0
+iconst_m1
+putfield g/ca B
+aload_0
+iconst_0
+putfield g/gR I
+aload_0
+iconst_1
+putfield g/j5 Z
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dc Z
+ifeq 4338
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield ap/if S
+invokevirtual h/F(S)I
+iconst_m1
+if_icmple 4338
+aload_0
+iconst_1
+putfield g/jl Z
+goto 4350
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield ap/if S
+invokevirtual h/c(S)Z
+ifeq 4350
+aload_0
+iconst_1
+putfield g/mY Z
+aload_0
+iconst_1
+putfield g/jl Z
+aload_0
+getfield g/bh Lh;
+pop
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield ap/if S
+invokevirtual h/A(S)S
+istore 7
+iload 7
+iconst_m1
+if_icmpeq 4414
+aload_0
+getfield g/bh Lh;
+getfield h/d8 [B
+aload_0
+getfield ap/if S
+baload
+iload 7
+if_icmpne 4414
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield ap/if S
+invokevirtual h/else(S)S
+putfield h/am S
+aload_0
+getfield g/bh Lh;
+getfield h/am S
+iconst_m1
+if_icmpeq 4414
+aload_0
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bh Lh;
+getfield h/am S
+invokevirtual h/i(S)[B
+putfield g/lR [B
+aload_0
+getfield g/lR [B
+ifnull 4411
+aload_0
+getfield g/lR [B
+iconst_0
+aload_0
+getfield g/lR [B
+arraylength
+invokestatic q/a([BII)I
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield ap/if S
+invokevirtual h/P(S)I
+if_icmpne 4411
+aload_0
+iconst_1
+putfield g/bo Z
+goto 4414
+aload_0
+aconst_null
+putfield g/lR [B
+aload_0
+getfield ap/if S
+iconst_4
+if_icmpge 4442
+new java/io/DataInputStream
+dup
+aload_0
+invokevirtual java/lang/Object/getClass()Ljava/lang/Class;
+new java/lang/StringBuffer
+dup
+invokespecial java/lang/StringBuffer/<init>()V
+ldc_w "scene"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield ap/if S
+invokevirtual java/lang/StringBuffer/append(I)Ljava/lang/StringBuffer;
+ldc_w ".pak"
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+invokevirtual java/lang/StringBuffer/toString()Ljava/lang/String;
+invokevirtual java/lang/Class/getResourceAsStream(Ljava/lang/String;)Ljava/io/InputStream;
+invokespecial java/io/DataInputStream/<init>(Ljava/io/InputStream;)V
+astore 7
+aload_0
+sipush 2508
+iconst_0
+aload 7
+invokevirtual g/a(IILjava/io/DataInputStream;)V
+goto 5118
+aload_0
+getfield g/jl Z
+ifeq 4478
+aload_0
+getfield g/bo Z
+ifeq 4456
+aload_0
+getfield g/bh Lh;
+getfield h/d7 Z
+ifne 4456
+aload_0
+iconst_0
+putfield g/ca B
+goto 4500
+aload_0
+iconst_0
+putfield g/bo Z
+aload_0
+aconst_null
+putfield g/lR [B
+aload_0
+aload_0
+aload_0
+getfield ap/if S
+invokevirtual g/a(S)Z
+dup_x1
+putfield g/l0 Z
+ifeq 4474
+aload_0
+iconst_5
+putfield g/ca B
+goto 4500
+aload_0
+iconst_2
+putfield g/ca B
+goto 4500
+aload_0
+getfield g/bo Z
+ifeq 4485
+aload_0
+iconst_3
+putfield g/ca B
+goto 4500
+aload_0
+aload_0
+aload_0
+getfield ap/if S
+invokevirtual g/a(S)Z
+dup_x1
+putfield g/l0 Z
+ifeq 4497
+aload_0
+iconst_4
+putfield g/ca B
+goto 4500
+aload_0
+iconst_1
+putfield g/ca B
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/ca B
+invokevirtual h/x(B)V
+goto 5118
+aload_0
+dup
+getfield g/gR I
+iconst_1
+iadd
+putfield g/gR I
+aload_0
+getfield g/gR I
+ldc_w 120000
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/bn I
+idiv
+if_icmple 4535
+iconst_0
+putstatic g/gf B
+aload_0
+iconst_0
+putfield g/int I
+aload_0
+iconst_0
+putfield g/gz Z
+aload_0
+aload_0
+pop
+bipush 41
+putfield ap/do S
+return
+aload_0
+getfield g/ca B
+ifne 4551
+aload_0
+getfield g/bh Lh;
+getfield h/d7 Z
+ifne 4551
+aload_0
+getfield g/bh Lh;
+iconst_1
+putfield h/d7 Z
+aload_0
+sipush 2508
+iconst_0
+aconst_null
+invokevirtual g/a(IILjava/io/DataInputStream;)V
+aload_0
+getfield ap/for Z
+ifeq 5118
+aload_0
+iconst_0
+invokevirtual g/int(B)V
+goto 5118
+goto 5118
+getstatic h/cz Z
+ifeq 4622
+aload_0
+getfield ap/if S
+iconst_1
+if_icmpne 4622
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+sipush 1002
+invokevirtual q/int(I)Z
+ifeq 4611
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+ldc ""
+invokevirtual q/if(Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+ldc ""
+invokevirtual q/if(Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+ldc ""
+invokevirtual q/if(Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+iconst_0
+invokevirtual q/do(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+iconst_0
+invokevirtual q/do(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+ldc_w "13000000000"
+invokestatic java/lang/Long/parseLong(Ljava/lang/String;)J
+invokevirtual q/a(J)V
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+ldc_w "getInitName"
+invokevirtual q/if(Ljava/lang/String;)V
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+invokevirtual q/if()V
+aload_0
+bipush 21
+putfield ap/do S
+aload_0
+getfield g/bh Lh;
+getfield h/fG LSFMIDlet;
+invokestatic javax/microedition/lcdui/Display/getDisplay(Ljavax/microedition/midlet/MIDlet;)Ljavax/microedition/lcdui/Display;
+aload_0
+getfield g/bh Lh;
+invokevirtual javax/microedition/lcdui/Display/setCurrent(Ljavax/microedition/lcdui/Displayable;)V
+return
+aload_0
+getfield g/hV Ljava/util/Vector;
+dup
+astore 7
+monitorenter
+aload_0
+getfield g/hV Ljava/util/Vector;
+invokevirtual java/util/Vector/isEmpty()Z
+ifne 4656
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/hU Z
+ifne 4656
+aload_0
+aload_0
+getfield g/hV Ljava/util/Vector;
+invokevirtual java/util/Vector/firstElement()Ljava/lang/Object;
+checkcast java/lang/String
+putfield g/jK Ljava/lang/String;
+aload_0
+getfield g/hV Ljava/util/Vector;
+iconst_0
+invokevirtual java/util/Vector/removeElementAt(I)V
+iconst_0
+putstatic g/gf B
+aload_0
+aload_0
+pop
+bipush 73
+putfield ap/do S
+aload 7
+monitorexit
+return
+aload 7
+monitorexit
+goto 4664
+astore 9
+aload 7
+monitorexit
+aload 9
+athrow
+aload_0
+getfield g/nh Z
+ifeq 4676
+aload_0
+iconst_0
+putfield g/nh Z
+iconst_0
+putstatic g/gf B
+aload_0
+bipush 152
+putfield ap/do S
+return
+aload_0
+getfield g/ho Z
+ifne 4689
+aload_0
+iconst_1
+putfield g/ho Z
+iconst_0
+putstatic g/gf B
+aload_0
+aload_0
+pop
+bipush 65
+putfield ap/do S
+aload_0
+getfield g/bh Lh;
+getfield h/bq Z
+ifeq 4710
+aload_0
+getfield g/bh Lh;
+iconst_1
+putfield h/dL Z
+aload_0
+getfield g/bh Lh;
+iconst_0
+putfield h/bq Z
+iconst_0
+putstatic g/gf B
+aload_0
+iconst_0
+putfield g/e3 B
+aload_0
+bipush 132
+putfield ap/do S
+return
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dc Z
+ifeq 4731
+aload_0
+getfield g/bh Lh;
+getfield h/q Z
+ifne 4731
+aload_0
+getfield g/int I
+bipush 10
+irem
+ifne 4731
+aload_0
+getfield g/bh Lh;
+getfield h/dM Lkava/lang/Threak;
+ifnonnull 4731
+aload_0
+getfield g/bh Lh;
+invokevirtual h/S()V
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield a3/a4 B
+bipush 13
+if_icmpeq 4779
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield a3/a4 B
+bipush 14
+if_icmpeq 4779
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield a3/a4 B
+bipush 15
+if_icmpeq 4779
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield a3/a4 B
+bipush 16
+if_icmpeq 4779
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/eT Z
+ifne 4779
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/fE Z
+ifne 4779
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/hv Z
+ifne 4779
+aload_0
+getfield g/int I
+getstatic a/T I
+irem
+ifne 4779
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+invokevirtual ag/A()V
+aload_0
+invokevirtual g/o()V
+aload_0
+getfield ap/do S
+aload_0
+pop
+iconst_0
+if_icmpne 4805
+aload_0
+getfield g/jB S
+iconst_m1
+if_icmpeq 4805
+aload_0
+getfield g/eL Z
+ifne 4805
+aload_0
+iconst_1
+putfield g/eL Z
+aload_0
+getfield g/bh Lh;
+getfield h/S Las;
+aload_0
+getfield g/jB S
+aload_0
+invokevirtual as/a(ILap;)V
+goto 5118
+aload_0
+getfield ap/if S
+iconst_2
+if_icmpne 5118
+aload_0
+getfield g/int I
+sipush 200
+irem
+ifne 4829
+aload_0
+getfield g/je B
+iconst_1
+if_icmpne 4822
+aload_0
+ldc_w "按住确认键或数字5键发动连续攻击，点击数字1、3键使用技能."
+invokevirtual g/do(Ljava/lang/String;)V
+goto 4829
+aload_0
+getfield g/je B
+iconst_2
+if_icmpne 4829
+aload_0
+ldc_w "向同一个方向快速点击两次方向键启动疾冲."
+invokevirtual g/do(Ljava/lang/String;)V
+aload_0
+getfield g/je B
+iconst_2
+if_icmpne 5118
+iconst_5
+istore 7
+bipush 30
+istore 8
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+ldc_w 15724527
+invokevirtual javax/microedition/lcdui/Graphics/setColor(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+ldc_w "完成"
+iload 7
+iload 8
+bipush 20
+invokevirtual javax/microedition/lcdui/Graphics/drawString(Ljava/lang/String;III)V
+iload 7
+getstatic h/eA I
+iconst_2
+imul
+iconst_1
+iadd
+iadd
+i2s
+istore 7
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+ldc_w 16711680
+invokevirtual javax/microedition/lcdui/Graphics/setColor(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+new java/lang/StringBuffer
+dup
+invokespecial java/lang/StringBuffer/<init>()V
+ldc ""
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield g/kc B
+invokevirtual java/lang/StringBuffer/append(I)Ljava/lang/StringBuffer;
+invokevirtual java/lang/StringBuffer/toString()Ljava/lang/String;
+iload 7
+iload 8
+bipush 20
+invokevirtual javax/microedition/lcdui/Graphics/drawString(Ljava/lang/String;III)V
+iload 7
+getstatic h/dA Ljavax/microedition/lcdui/Font;
+new java/lang/StringBuffer
+dup
+invokespecial java/lang/StringBuffer/<init>()V
+ldc ""
+invokevirtual java/lang/StringBuffer/append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+aload_0
+getfield g/kc B
+invokevirtual java/lang/StringBuffer/append(I)Ljava/lang/StringBuffer;
+invokevirtual java/lang/StringBuffer/toString()Ljava/lang/String;
+invokevirtual javax/microedition/lcdui/Font/stringWidth(Ljava/lang/String;)I
+iconst_1
+iadd
+iadd
+i2s
+istore 7
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+ldc_w 15724527
+invokevirtual javax/microedition/lcdui/Graphics/setColor(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/fj Ljavax/microedition/lcdui/Graphics;
+ldc_w "次"
+iload 7
+iload 8
+bipush 20
+invokevirtual javax/microedition/lcdui/Graphics/drawString(Ljava/lang/String;III)V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+iconst_2
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_0
+invokevirtual h/a(BIIIIZ)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/F()V
+aload_0
+getfield g/bh Lh;
+iconst_1
+invokevirtual h/do(Z)V
+aload_0
+getfield g/bh Lh;
+iconst_1
+invokevirtual h/if(Z)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+iconst_2
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_0
+invokevirtual h/a(BIIIIZ)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/F()V
+aload_0
+getfield g/bh Lh;
+iconst_1
+invokevirtual h/do(Z)V
+aload_0
+getfield g/bh Lh;
+iconst_1
+invokevirtual h/for(Z)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+iconst_2
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_0
+invokevirtual h/a(BIIIIZ)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/F()V
+aload_0
+getfield g/bh Lh;
+iconst_1
+invokevirtual h/do(Z)V
+aload_0
+getfield g/bh Lh;
+iconst_1
+invokevirtual h/int(Z)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+iconst_2
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_0
+invokevirtual h/a(BIIIIZ)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/F()V
+aload_0
+getfield g/bh Lh;
+iconst_0
+invokevirtual h/do(Z)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+goto 5118
+aload_0
+invokevirtual g/E()V
+aload_0
+getfield g/bh Lh;
+iconst_2
+iconst_0
+iconst_0
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/dU S
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/fp S
+iconst_0
+invokevirtual h/a(BIIIIZ)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/F()V
+aload_0
+getfield g/bh Lh;
+iconst_1
+invokevirtual h/do(Z)V
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/gE Z
+ifeq 5088
+aload_0
+getfield g/fQ B
+iconst_2
+if_icmpne 5088
+aload_0
+getfield g/f3 B
+iconst_1
+if_icmpne 5088
+aload_0
+getfield g/bh Lh;
+iconst_0
+invokevirtual h/int(Z)V
+aload_0
+getfield g/fQ B
+iconst_2
+if_icmpne 5100
+aload_0
+getfield g/f3 B
+iconst_2
+if_icmpne 5100
+aload_0
+getfield g/bh Lh;
+iconst_0
+invokevirtual h/if(Z)V
+aload_0
+getfield g/fQ B
+iconst_2
+if_icmpne 5112
+aload_0
+getfield g/f3 B
+iconst_5
+if_icmpne 5112
+aload_0
+getfield g/bh Lh;
+iconst_0
+invokevirtual h/for(Z)V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/x()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/c()V
+aload_0
+getfield ap/do S
+bipush 20
+if_icmpeq 5126
+aload_0
+getfield ap/do S
+iconst_5
+if_icmpne 5134
+aload_0
+getfield ap/do S
+iconst_5
+if_icmpne 5140
+aload_0
+getfield g/j0 B
+iconst_1
+if_icmpne 5140
+aload_0
+getfield g/bh Lh;
+invokevirtual h/h()V
+aload_0
+getfield g/bh Lh;
+invokevirtual h/k()V
+aload_0
+getfield g/lm Z
+ifeq 5166
+aload_0
+dup
+getfield g/ja I
+iconst_1
+iadd
+putfield g/ja I
+aload_0
+getfield g/ja I
+ldc_w 40000
+getstatic h/bn I
+idiv
+if_icmplt 5166
+aload_0
+getfield g/bh Lh;
+aload_0
+aload_0
+getfield g/bh Lh;
+getfield h/s Ly;
+invokevirtual h/a(Lap;Lap;)V
+aload_0
+iconst_0
+putfield g/lm Z
+return
+iconst_0
+aload_0
+getfield g/int I
+bipush 40
+irem
+if_icmpne 5391
+aload_0
+getfield g/lm Z
+ifeq 5176
+return
+aload_0
+getfield ap/do S
+aload_0
+pop
+iconst_5
+if_icmpeq 5391
+aload_0
+getfield ap/if S
+iconst_2
+if_icmple 5391
+aload_0
+aload_0
+getfield ap/if S
+putfield g/gO I
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+sipush 2507
+invokevirtual q/int(I)Z
+ifeq 5391
+iconst_0
+istore_1
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+invokevirtual ag/else()Z
+ifeq 5208
+iload_1
+iconst_1
+ior
+i2s
+istore_1
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield a3/a8 Z
+ifeq 5218
+iload_1
+bipush 8
+ior
+i2s
+istore_1
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/dU Z
+ifeq 5228
+iload_1
+bipush 16
+ior
+i2s
+istore_1
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/fL I
+iflt 5244
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/fj B
+bipush 17
+if_icmpne 5244
+iload_1
+bipush 32
+ior
+i2s
+istore_1
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/he Z
+ifeq 5254
+iload_1
+bipush 64
+ior
+i2s
+istore_1
+aload_0
+getfield g/bh Lh;
+getfield h/fI Z
+ifne 5263
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/he Z
+ifeq 5268
+iload_1
+sipush 128
+ior
+i2s
+istore_1
+aload_0
+getfield g/e7 Z
+ifeq 5276
+iload_1
+sipush 256
+ior
+i2s
+istore_1
+aload_0
+getfield g/ki Z
+ifeq 5284
+iload_1
+sipush 512
+ior
+i2s
+istore_1
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield a3/a8 Z
+ifeq 5300
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield a3/d B
+iconst_1
+if_icmpne 5300
+iload_1
+sipush 1024
+ior
+i2s
+istore_1
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+iload_1
+invokevirtual q/new(I)V
+aload_0
+pop
+getstatic g/dZ B
+ifne 5344
+aload_0
+pop
+getstatic g/dD B
+iconst_2
+if_icmpne 5320
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+iconst_1
+invokevirtual q/do(I)V
+goto 5349
+aload_0
+pop
+getstatic g/dD B
+iconst_4
+if_icmpne 5331
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+iconst_0
+invokevirtual q/do(I)V
+goto 5349
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+aload_0
+getfield g/bh Lh;
+getfield h/cv B
+iconst_2
+if_icmpne 5341
+iconst_1
+goto 5342
+iconst_0
+invokevirtual q/do(I)V
+goto 5349
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+iconst_0
+invokevirtual q/do(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+aload_0
+getfield g/bh Lh;
+getfield h/b3 B
+invokevirtual q/do(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/gR La3;
+ifnull 5382
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+aload_0
+getfield g/bh Lh;
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/gR La3;
+invokevirtual h/if(La3;)B
+invokevirtual q/do(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/gR La3;
+getfield a3/O Ljava/lang/String;
+invokevirtual q/if(Ljava/lang/String;)V
+goto 5387
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+iconst_m1
+invokevirtual q/do(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+invokevirtual q/if()V
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/gE Z
+ifeq 5426
+aload_0
+getfield g/int I
+aload_0
+getfield g/bh Lh;
+pop
+getstatic h/ff Z
+ifeq 5405
+bipush 100
+goto 5406
+bipush 100
+irem
+ifne 5426
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+sipush 3505
+invokevirtual q/int(I)Z
+ifeq 5426
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+aload_0
+getfield g/bh Lh;
+getfield h/cZ Lag;
+getfield ag/gz I
+invokevirtual q/for(I)V
+aload_0
+getfield g/bh Lh;
+getfield h/aG Lq;
+invokevirtual q/if()V
+aload_0
+getfield ap/if S
+iconst_2
+if_icmple 5436
+aload_0
+dup
+getfield g/b4 I
+iconst_1
+iadd
+putfield g/b4 I
+aload_0
+getfield g/b4 I
+sipush 8000
+if_icmple 5452
+aload_0
+iconst_0
+putfield g/int I
+iconst_0
+putstatic g/gf B
+aload_0
+iconst_1
+putfield g/gz Z
+aload_0
+bipush 41
+putfield ap/do S
+return
+iconst_0
+istore_1
+iload_1
+aload_0
+getfield g/bh Lh;
+getfield h/dS [[I
+arraylength
+if_icmpge 5475
+aload_0
+getfield g/bh Lh;
+getfield h/c0 Lx;
+aload_0
+getfield g/bh Lh;
+getfield h/dS [[I
+iload_1
+aaload
+invokevirtual x/a([I)V
+iload_1
+iconst_1
+iadd
+i2b
+istore_1
+goto 5454
+return
