@@ -2,9 +2,12 @@
     "telemetry.machineId": "a305edc2d019e93415dc90bff0e7476bb8afe911ffb1724a54074f23a78dd6d3",
     "openedPathsList": {
         "workspaces3": [
-            "file:///d%3A/OneDrive/Date"
+            "file:///d%3A/Git/MyCode"
         ],
         "files2": [
+            "file:///c%3A/App/Java/halo_V2.20/games/XingZhan/src/a0.class",
+            "file:///d%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E5%AE%A2%E6%88%B7%E7%AB%AFSOT%E8%A7%89%E9%86%92%E8%80%85%20-%20%E5%89%AF%E6%9C%AC.jar.src/a5.java",
+            "file:///d%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E5%AE%A2%E6%88%B7%E7%AB%AFSOT%E8%A7%89%E9%86%92%E8%80%85/a2.class",
             "file:///g%3A/%E5%AD%98%E6%94%BE%E7%9B%AE%E5%BD%95/%E5%A1%9E%E7%8F%AD%E6%97%B6%E4%BB%A3%E6%B8%B8%E6%88%8F/b%E5%AE%9D%E8%B4%9D%E5%9B%BD%E5%BA%A6/Baby/Halo/GWAutoHalo.cmd",
             "file:///d%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E5%AE%A2%E6%88%B7%E7%AB%AFSOT%E8%A7%89%E9%86%92%E8%80%85%20-%20%E5%89%AF%E6%9C%AC.jar.src/g.java",
             "file:///d%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E5%AE%A2%E6%88%B7%E7%AB%AFSOT%E8%A7%89%E9%86%92%E8%80%85%20-%20%E5%89%AF%E6%9C%AC.jar.src/a3.java",
@@ -17,14 +20,13 @@
     "themeBackground": "#1e1e1e",
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///d%3A/OneDrive/Date",
-            "backupPath": "D:\\OneDrive\\Date\\.vscode\\Code\\Backups\\83917913123f50c93b896d39116ba823",
+            "backupPath": "D:\\Git\\MyCode\\.vscode\\Code\\Backups\\1556809227534",
             "uiState": {
-                "mode": 0,
-                "x": -8,
-                "y": 22,
-                "width": 1936,
-                "height": 1066
+                "mode": 1,
+                "x": 629,
+                "y": 274,
+                "width": 1024,
+                "height": 765
             }
         },
         "openedWindows": []

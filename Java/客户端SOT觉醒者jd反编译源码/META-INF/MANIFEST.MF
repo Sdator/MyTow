@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+MicroEdition-Configuration: CLDC-1.0
+MIDlet-Name: XingZhan
+MIDlet-Vendor: SilentFire
+MIDlet-Permissions: javax.microedition.io.Connector.http, javax.microe
+ dition.io.Connector.socket
+MIDlet-1: XingZhan, /icon.png, SFMIDlet
+MIDlet-Version: 1.1.5
+MicroEdition-Profile: MIDP-1.0
+
