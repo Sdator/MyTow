@@ -2826,6 +2826,8 @@ public class g
             //读入地图存档
             this.lR = this.bh.i(this.bh.am);
             //如果存档数据不为空 并且 可能是验证存档
+            //已经确认使 this.bo=true 就不会验证存档 可以实现本地修改
+            //修改方法让此处判断为真或者去掉
             if ((this.lR != null) && (q.a(this.lR, 0, this.lR.length) == this.bh.P(this.jdField_if))) {
               this.bo = true;
             } else {

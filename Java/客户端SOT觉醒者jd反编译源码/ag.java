@@ -3206,6 +3206,8 @@ public class ag
       {
         jdMethod_if((byte)16, 1);
         str1 = "重伤倒地...损失经验";
+        //计算要丢失的经验
+        //如果把i1的值改为0可能就不会掉经验
         int i1 = h.jdMethod_if(1, a((byte)14));
         jdMethod_for((byte)4, i1);
         if (a3.bE.aG.jdMethod_int(4013))

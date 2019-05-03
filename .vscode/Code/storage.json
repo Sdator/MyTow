@@ -5,6 +5,11 @@
             "file:///d%3A/Git/MyCode"
         ],
         "files2": [
+            "file:///d%3A/OneDrive/%E6%B8%B8%E6%88%8F/POE/%E5%B7%A5%E5%85%B7/%E4%B8%80%E9%94%AE%E5%96%9D%E8%8D%AF/WindowSpy.ahk",
+            "file:///d%3A/OneDrive/%E6%B8%B8%E6%88%8F/POE/%E5%B7%A5%E5%85%B7/%E4%B8%80%E9%94%AE%E5%96%9D%E8%8D%AF/POE.ahk",
+            "file:///d%3A/OneDrive/%E6%B8%B8%E6%88%8F/POE/%E5%B7%A5%E5%85%B7/%E4%B8%80%E9%94%AE%E5%96%9D%E8%8D%AF/%E6%98%9F%E6%88%98.ahk",
+            "file:///d%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E6%96%87%E4%BB%B6%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B5%81%E5%88%86%E6%9E%90/rms%E5%9C%B0%E5%9B%BE%E5%AD%98%E6%A1%A3.bt",
+            "file:///d%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E6%96%87%E4%BB%B6%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B5%81%E5%88%86%E6%9E%90/%E6%98%9F%E6%88%98%E5%AD%98%E6%A1%A3%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90.bt",
             "file:///c%3A/App/Java/halo_V2.20/games/XingZhan/src/a0.class",
             "file:///d%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E5%AE%A2%E6%88%B7%E7%AB%AFSOT%E8%A7%89%E9%86%92%E8%80%85%20-%20%E5%89%AF%E6%9C%AC.jar.src/a5.java",
             "file:///d%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E5%AE%A2%E6%88%B7%E7%AB%AFSOT%E8%A7%89%E9%86%92%E8%80%85/a2.class",
@@ -20,13 +25,14 @@
     "themeBackground": "#1e1e1e",
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "D:\\Git\\MyCode\\.vscode\\Code\\Backups\\1556809227534",
+            "folder": "file:///d%3A/Git/MyCode",
+            "backupPath": "D:\\Git\\MyCode\\.vscode\\Code\\Backups\\c4cf72caa735cd1986d8f8dff32a1eb1",
             "uiState": {
-                "mode": 1,
-                "x": 629,
-                "y": 274,
-                "width": 1024,
-                "height": 765
+                "mode": 0,
+                "x": -8,
+                "y": 22,
+                "width": 1936,
+                "height": 1066
             }
         },
         "openedWindows": []

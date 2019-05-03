@@ -578,12 +578,12 @@ class h
     //
     int i1 = localRandom.nextInt();
     localRandom = null;
-    // 如果随机数小于0则 取反变成整数>=0
+    // 如果随机数小于0则 取反变成整数>=0  很大的整数
     if (i1 < 0) {
         i1 = -i1;
     }
     // 取余数后加a 让最终值保持在a的值左右  大概就是最低都会扣1个数值的经验或金钱
-    //i1是一个很大的基数 当角色等级越大的时候 相除后得出的数值就越大
+    //i1是一个很大的基数 当角色等级越大的时候 相除后得出的余数数值就越大
     // 可能是一个扣除经验或金钱的算法 
     i1 = i1 % (paramInt2 + 1 - paramInt1) + paramInt1;
     return i1;
@@ -3272,13 +3272,21 @@ class h
     return a3.jdMethod_new(i1, a.C);
   }
   
+  //读取技能消耗  参数应该是技能代码
   public static short jdMethod_null(byte paramByte)
   {
+    //可能是获取技能类型?
     long l1 = (d3[jdMethod_try(paramByte)] >> a.g & 0xF) + a.char;
+    //获取消耗的魔法值?
+    //l1*常量5+（paramByte/12）
     int i1 = (short)(int)(l1 * a.J + s(paramByte) * a.n);
+    //如果大于常量10 就乘以常量2
+    //也就是说大于10魔法消耗会加倍
+    //应该是判断技能类型
     if (l1 > a.n) {
       i1 = (short)(i1 * a.t);
     }
+    //返回魔法值
     return i1;
   }
   
