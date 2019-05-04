@@ -41,8 +41,22 @@ untitled:Untitled-5
             4405	invokevirtual	a3/if(BI)V
 
 
-HELO相关指令 搜索用
+//********HELO相关指令 搜索技巧*********** */
     invokevirtual h/a       搜索调用了 h类中的a方法的文件
+    invokevirtual h/i(S)[B        S 表示short参数 [B 表示返回类型是字节数组byte[]
+     
+    invokevirtual h/a(Ljava.lang.StringIII)V
+
+    参数类型对照表 括号后面的是返回值
+    short       S
+    byte        B
+    byte[]      [B    
+    V           void
+    字符串      Ljava.lang.String       L代表长字节
+
+
+    调用参考
+    invokevirtual foo/bar/bla()Ljava/lang/String;
 
 
 h.class

@@ -3067,6 +3067,7 @@ public class a3
   
   public static int jdMethod_int(int paramInt1, int paramInt2)
   {
+   // paramInt1+9999/2
     return (paramInt1 + a.V) / a.t;
   }
 }

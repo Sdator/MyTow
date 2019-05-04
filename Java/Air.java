@@ -1,19 +1,28 @@
-import java.io.DataInputStream;
+import java.io;
 import java.util.Random;
 
+
+
 public class Air {
-    private static Random A = new Random();
-
     public static void main(String[] args) {
-        DataInputStream foo = new DataInputStream();
-        
-        
-        // System.out.println(123132);
-        System.out.println(jdMethod_if(1, 3));
+  
+        File file = new File("123.txt");
+        // DataInputStream in = new DataInputStream();
 
+
+        // DataInputStream localDataInputStream = new DataInputStream("123.txt");
+
+
+        // System.out.println(new FileInputStream(file));
+
+        System.out.println(file);
+
+        // System.arraycopy(gj, 0, arrayOfByte1, 0, gj.length);
+
+        // byte[] arr = new byte[10];
+
+        // System.out.println(jdMethod_if(1, 3));
 
     }
-
-
 
 }

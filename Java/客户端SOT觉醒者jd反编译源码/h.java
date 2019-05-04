@@ -1247,6 +1247,7 @@ class h
     Runtime.getRuntime().gc();
   }
   
+  //读取MANIFEST.MF文件
   public String jdMethod_if()
   {
     try
@@ -1267,18 +1268,30 @@ class h
     return null;
   }
   
+  //生成图片
+  //可能是解密函数
+  //参数1 路径
   Image h(String paramString)
   {
     InputStream localInputStream = getClass().getResourceAsStream(paramString);
     byte[] arrayOfByte1 = null;
     try
     {
+      //打开文件
       DataInputStream localDataInputStream = new DataInputStream(localInputStream);
       int i1 = 0;
+      //读取文件前4个字节 到i1  应该是长度
       i1 = localDataInputStream.readInt();
+      //创建一个i1大的字节流
       byte[] arrayOfByte2 = new byte[i1];
+      //读取文件流存到arrayOfByte2变量中
+      //参数1 存放变量
+      //参数2 开始读取位置
+      //参数3 读取长度
       localInputStream.read(arrayOfByte2, 0, arrayOfByte2.length);
+      //创建一个新的数据流 大小加上gj.length    gj应该是一个标识
       arrayOfByte1 = new byte[i1 + gj.length];
+      //把gj中的数据拷贝到arrayOfByte1中
       System.arraycopy(gj, 0, arrayOfByte1, 0, gj.length);
       System.arraycopy(arrayOfByte2, 0, arrayOfByte1, gj.length, arrayOfByte2.length);
       if (localInputStream != null)
@@ -1498,6 +1511,10 @@ class h
     this.bj.a(paramInt1, paramInt2, paramDataInputStream);
   }
   
+  //出现绘制函数
+  // 参数1 绘制文字
+  // 参数2 状态?
+  // 参数34  绘制位置xy？
   public void a(String paramString, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     if ((this.fj == null) || (paramString == null)) {
@@ -1505,7 +1522,9 @@ class h
     }
     if (aL)
     {
+      //设置字体颜色
       this.fj.setColor(0);
+      //绘制到屏幕中
       this.fj.drawString(paramString, paramInt1 + 1, paramInt2 + 1, paramInt3);
     }
     this.fj.setColor(paramInt4);
@@ -3001,6 +3020,7 @@ class h
     return paramInt;
   }
   
+  //游戏素材动画操作
   private void a(Image paramImage, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     int i2 = paramInt2 * b8 % eS;
@@ -3009,6 +3029,7 @@ class h
       int i1 = paramInt1 * u % eT;
       for (int i3 = paramInt1; i3 <= paramInt3; i3++)
       {
+        //切图
         this.ei.setClip(i1, i2, u, b8);
         short s1 = (short)jdMethod_int(i3, i4);
         if (s1 != -1) {
@@ -3026,6 +3047,7 @@ class h
     }
   }
   
+  //绘制图形到屏幕
   private void a(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5, int paramInt6)
   {
     this.fj.setClip(paramInt5, paramInt6, paramInt3, paramInt4);

@@ -182,6 +182,11 @@ public class t
     this.a.a(123 + (h.a9 == 0 ? 0 : 40), this.jdField_for + 5, this.a.cZ.a((byte)20), 24);
     this.a.a(45, this.jdField_for + 5, 20 + (h.a9 == 0 ? 0 : 40), 4, h.b2[4][0], this.a.cZ.a((byte)20), this.a.cZ.a((byte)16));
     this.jdField_for = ((short)(this.jdField_for + this.jdField_do));
+    //绘制函数 
+    //以测试 是读取人物属性时绘制到屏幕上
+    // 参数1 绘制文字
+    // 参数2 状态?
+    // 参数34  绘制位置xy？
     this.a.a("魔力", 5, this.jdField_for, 0, h.b2[2][0]);
     this.a.a(95 + (h.a9 == 0 ? 0 : 40), this.jdField_for + 5, this.a.cZ.a((byte)24) + this.a.de, 24);
     this.a.a(95 + (h.a9 == 0 ? 0 : 40), this.jdField_for + 5, 5, 7, 50, 0, this.a.aH[5], 0);
