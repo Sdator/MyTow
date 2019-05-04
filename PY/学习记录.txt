@@ -1,4 +1,3 @@
-untitled:Untitled-3
 常用指令：
     指定下载源
         pip install 库名 -i pip源
