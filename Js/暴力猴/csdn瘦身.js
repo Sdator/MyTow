@@ -4,7 +4,7 @@
 // @match *://blog.csdn.net/*
 // @grant none
 // @author              by:绝
-// @version             1.0
+// @version             1.1
 // @updateURL           https://raw.githubusercontent.com/Sdator/MyCode/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4/csdn%E7%98%A6%E8%BA%AB.js
 // ==/UserScript==
 
