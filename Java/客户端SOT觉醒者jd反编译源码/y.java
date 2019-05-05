@@ -2476,13 +2476,35 @@ public class y
     this.jdField_do = ((short)paramByte);
   }
   
+  //登陆界面调用了
   private void jdMethod_goto()
   {
+    //设置颜色
     this.l.fj.setColor(0);
+    //填充
     this.l.fj.fillRect(0, 0, h.dU, h.fp);
     this.l.a(0, 0, h.dU, h.fp, int);
   }
-  
+  /*
+  //读取this    取出调用栈第一个参数
+  aload_0
+  //读取l的值   this.l     说明l属于当前类y的属性值 y是当前类this 
+  getfield y/l Lh;
+  //读取到this.l是指向h类的 再读取h类中的fj属性    this.l.fj
+  getfield h/fj Ljavax/microedition/lcdui/Graphics;
+  //
+  iconst_0
+  invokevirtual javax/microedition/lcdui/Graphics/setColor(I)V
+  aload_0
+  getfield y/l Lh;
+  getfield h/fj Ljavax/microedition/lcdui/Graphics;
+  iconst_0
+  iconst_0
+  aload_0
+  getfield y/l Lh;
+
+*/
+
   private void jdMethod_int()
   {
     if (this.jdField_char == 0) {

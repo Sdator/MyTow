@@ -1366,12 +1366,19 @@ class h
     return Image.createImage(arrayOfByte1, 0, arrayOfByte1.length);
   }
   
+  //在applet窗口中或者画布上写字画图，也在update（）方法中被自动调用
+  
   public void paint(Graphics paramGraphics)
   {
+    //复制引用
     this.fj = paramGraphics;
+    //设置字体
     paramGraphics.setFont(dA);
     this.bj.jdMethod_if();
+    //设置颜色
     paramGraphics.setColor(0);
+    //填充指定的矩形 
+    //可能是填充背景颜色  或者是画线条
     paramGraphics.fillRect(dU, 0, getWidth() - dU, getHeight());
     if (this.bj != this.cJ) {
       paramGraphics.fillRect(0, fp, dU, getHeight() - fp);
@@ -1410,7 +1417,7 @@ class h
       this.c8[i1] = ((byte)jdMethod_if(0, p.length - 1));
     }
   }
-  
+  //登陆界面 y.goto()V 调用了
   public void a(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5)
   {
     if ((this.aN == null) || (this.aK == null)) {
@@ -2786,7 +2793,7 @@ class h
       paramShort = (short)(paramShort / 10);
     }
   }
-  
+  //计算某个东西
   public static boolean a(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5, int paramInt6, int paramInt7, int paramInt8)
   {
     return (paramInt1 + paramInt3 >= paramInt5) && (paramInt1 <= paramInt5 + paramInt7) && (paramInt2 + paramInt4 >= paramInt6) && (paramInt2 <= paramInt6 + paramInt8);

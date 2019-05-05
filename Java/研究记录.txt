@@ -52,7 +52,9 @@
     byte[]      [B    
     V           void
     字符串      Ljava.lang.String       L代表长字节
+    boolean     Z    布尔类型
 
+    h.a(IIIIIIII)Z
 
     调用参考
     invokevirtual foo/bar/bla()Ljava/lang/String;
