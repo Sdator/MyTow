@@ -39,8 +39,11 @@
     "themeBackground": "#1e1e1e",
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///e%3A/Git/MyCode",
-            "backupPath": "E:\\Git\\MyCode\\.vscode\\Code\\Backups\\fc411c0a49d27587867b7f30223d9094",
+            "workspaceIdentifier": {
+                "id": "2e14fc38ee0549573bc8ba05eca8d9fc",
+                "configURIPath": "file:///e%3A/Git/MyCode/.vscode/Code/Workspaces/1557128653406/workspace.json"
+            },
+            "backupPath": "E:\\Git\\MyCode\\.vscode\\Code\\Backups\\2e14fc38ee0549573bc8ba05eca8d9fc",
             "uiState": {
                 "mode": 0,
                 "x": -8,
