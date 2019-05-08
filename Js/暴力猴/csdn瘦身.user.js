@@ -20,13 +20,11 @@ $(() => {
     //模拟点击
     $("#btn-readmore").click()
     //移除相关广告无用元素
- 
-    $('.pulllog-box,a[href^="https://h5.youzan.com"],.blog-content-box~div,#csdn-toolbar').remove()
-
-    //选取.blog-content-box后面的所有div兄弟元素   底部栏目
+    //顶部广告 新增
     //aside左边栏目
-    //选取类名recommend-right的元素  右边栏目
+    //选取.blog-content-box后面的所有div兄弟元素   底部栏目
     //顶部栏目
+    $('#article_content>a,[ID^=kp_box_],.pulllog-box,a[href^="https://h5.youzan.com"],.blog-content-box~div,#csdn-toolbar').remove()
     //举报按钮 垃圾奖杯
     $('aside,.recommend-right,.tool-box,#reportContent,#adContent').wrap($("<div></div>")).parent().css("-webkit-mask", 'url() no-repeat')
 })
