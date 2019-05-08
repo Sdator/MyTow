@@ -3,7 +3,7 @@
 // @author              絕版大叔丶
 // @namespace           https://github.com/Sdator/MyCode/tree/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4
 // @icon                https://avatars3.githubusercontent.com/u/17621623?s=40&v=4
-// @version             1.2
+// @version             1.3
 // @match               *://blog.csdn.net/*
 // @description         删除csdn所有广告，保留主题内容
 // @updateURL           https://github.com/Sdator/MyCode/raw/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4/csdn%E7%98%A6%E8%BA%AB.user.js
