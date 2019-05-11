@@ -2835,9 +2835,12 @@ public class g
             }
           }
         }
+        //场景切换状态判断?  一共有三个场景数据库 scene1.pak scene2.pak scene3.pak
         if (this.jdField_if < 4)
         {
+          //打开数据流 从文件打开
           DataInputStream localDataInputStream = new DataInputStream(getClass().getResourceAsStream("scene" + this.jdField_if + ".pak"));
+          //用了一个方法来处理
           a(2508, 0, localDataInputStream);
         }
         else
@@ -4633,6 +4636,8 @@ public class g
     }
   }
   
+  //pak解包程序
+  // a(2508, 0, localDataInputStream);  场景参数
   public void a(int paramInt1, int paramInt2, DataInputStream paramDataInputStream)
   {
     ;
@@ -4641,6 +4646,7 @@ public class g
     String str1 = null;
     try
     {
+      //应该是判断读取的文件类型？ 场景 图片 存档等
       if (paramInt2 == 1)
       {
         i = paramDataInputStream.readByte();
@@ -8229,6 +8235,7 @@ public class g
           ???++;
         }
         break;
+        //处理pak读取
       case 2508: 
         label27919:
         this.gR = 0;

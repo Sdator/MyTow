@@ -2673,6 +2673,7 @@ class h
   }
   
   //读取地图存档 并返回
+  //可以找有谁调用了此方法 从而找出相关读档处理
   public byte[] i(short paramShort)
   {
     RecordStore localRecordStore = null;
@@ -6131,11 +6132,13 @@ class h
     return null;
   }
   
+  //处理场景数据分支
   public void jdMethod_byte(DataInputStream paramDataInputStream)
   {
     if (this.cJ.jl) {
       try
       {
+        //数据流不为空 并且 前1字节大于3？存档数据前1字节等于3
         if ((paramDataInputStream != null) && (this.cJ.jdField_if > 3)) {
           paramDataInputStream.readShort();
         }
@@ -6158,11 +6161,12 @@ class h
       catch (Exception localException2) {}
     }
   }
-  
+  //处理pak文件读取
   public void jdMethod_goto(DataInputStream paramDataInputStream)
   {
     try
     {
+      //数据流不为空 并且 前两字节等于0  返回空
       if ((paramDataInputStream != null) && (paramDataInputStream.readShort() == 0))
       {
         this.d7 = false;
@@ -6174,6 +6178,8 @@ class h
       if ((this.cJ.jdField_if > 3) && (!this.cJ.bo) && (!this.cJ.l0)) {
         try
         {
+          //获取数据长度available()
+          //创建字节集 用于保存pak地图信息数据
           arrayOfByte1 = new byte[paramDataInputStream.available()];
           paramDataInputStream.readFully(arrayOfByte1);
           int i1 = a(arrayOfByte1, jdMethod_else(this.cJ.jdField_if));
