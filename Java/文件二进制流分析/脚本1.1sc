@@ -1,0 +1,67 @@
+//------------------------------------------------
+//--- 010 Editor v9.0.2 Script File
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+//   History: 
+//------------------------------------------------
+
+//大端开始
+BigEndian();
+
+//修改属性
+void hack(string str,int a,int16 b,int16 c,int16 d)
+{
+//搜索字符串
+    int offset=FindFirst(str);
+//设置属性开始位置 作基地址
+    int sx=offset+Strlen(str);
+//设置相关属性偏移地址
+    int HP=sx+5;
+    int Ant=sx+9;
+    int Int=sx+13;
+    int Spd=sx+27;
+//修改相关属性
+    WriteInt(HP,a);
+    WriteShort(Ant,b);
+    WriteShort(Int,c);
+    WriteShort(Spd,d);
+}
+
+//修改怪物数量
+void unitlen(int len)
+{
+  
+    int16 a=5140;
+    int16 b=4111;
+    int16 c=5139;
+
+    int aa=FindFirst(a);
+    int bb=FindFirst(b);	
+    int cc=FindFirst(c);	
+    //位与  取出有效的值   最愚蠢的办法同时也是最有效的办法
+    int off=aa&bb&cc;
+    WriteShort(off-2,len);
+}
+
+//修改怪数量
+unitlen(50);
+
+//怪物名字 hp 物攻 魔攻 速度
+hack("辐射蠕虫",1,1,1,3000);
+hack("辐射翼蛙",1,1,1,3000);
+
+//保存修改
+FileSave();
+
+
+
+
+//信息框
+//MessageBox( 0, "标题", "内容" );
+//输入框
+//LIMIT = InputNumber("Count Blocks of Identical Bytes","Set the minimum size of block \nto be found",sLIMIT );
+

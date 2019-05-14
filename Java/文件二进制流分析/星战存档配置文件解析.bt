@@ -1,0 +1,24 @@
+//------------------------------------------------
+//--- 010 Editor v8.0.1
+//
+//      File: 515
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: .rms
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+
+
+BigEndian();
+
+struct F {
+    byte a <comment="如果是0就清空存档">;
+    int16 b <comment="存档数量">;
+    //应该是无符号类型 由于得到的值过大 溢出了
+    int d[b*4] <comment="溢出了 取最后一位">;
+   
+} fa ;
+

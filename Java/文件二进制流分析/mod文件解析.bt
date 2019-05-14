@@ -1,0 +1,31 @@
+//------------------------------------------------
+//--- 010 Editor v8.0.1
+//
+//      File: 515
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: .mod
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+
+BigEndian();
+
+
+
+struct {
+    int16 a <comment="图片数量">;
+    int16 b;
+    int16 c;
+    byte c;
+}f;
+
+
+struct {
+    int16 a;
+    int16 b;
+    int16 c;
+  
+}c;
