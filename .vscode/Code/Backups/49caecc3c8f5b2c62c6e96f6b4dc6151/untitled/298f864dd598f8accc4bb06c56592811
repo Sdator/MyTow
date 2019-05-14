@@ -1,5 +1,27 @@
 untitled:Untitled-6
 
+
+{
+    function 到整数(坐标) {
+        const [x,y] = 坐标.split("/")
+        const v = y * 20 + x * 1
+        return v.toString(16)
+    }
+
+    function 到坐标(num) {
+        const x = num % 20
+        const y = num / 20
+        return x + "/" + parseInt(y)
+    }
+
+    console.log(到坐标(256))
+
+}
+1
+
+
+
+
 111E8FF8        当前选择的技能代码
 
 技能槽未占用时为 FF FF FF FF
@@ -13,6 +35,10 @@ untitled:Untitled-6
 SocketConnection: socket://101.201.239.137:9090
 host:101.201.239.137
 port:9090
+
+
+
+
 
 监听本地9090端口 当发生链接就 转到127.0.0.1：8888端口
 netsh interface portproxy add v4tov4  listenaddress=101.201.239.137 listenport=9090 connectaddress=127.0.0.1  connectport=8888

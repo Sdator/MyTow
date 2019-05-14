@@ -62,19 +62,25 @@ class AirFile:
 # dsfdsf
 
 
-def 写出文件(路径, data, 读写方式="a"):
+def 写出文件(关键字, data, 读写方式="a"):
     """`参数1` 写出路径
 
     `参数2` 写出的数据
 
     `参数3` 读写方式 默认为追加模式
     """
+    # 构建命名规则
+    日期 = datetime.now().strftime("%Y%m%d")
+    路径 = AirFile("/json/%s_%s.json" % (日期, 关键字))
+    路径.创建目录Ex()
+
+
     # 如果不是字符串就转码
     if not isinstance(data, str):
         data = json.dumps(data, ensure_ascii=False)+"\n"
 
     # 打开文件
-    with open(路径, 读写方式, encoding="utf-8") as f:
+    with open(路径.绝对路径, 读写方式, encoding="utf-8") as f:
         # 写到文件
         f.write(data)
 
@@ -139,6 +145,8 @@ class 吉吉儿不放假:
             b'aHR0cCUzQS8vbi4yeHd0NzUuY24vaW5kZXgucGhwL2luZGV4L2luZGV4L2hlemkuaHRtbA==')
         url = str(url, 'utf8')
         url = urllib.parse.unquote(url)
+        # http://n.2xwt75.cn/index.php/index/index/hezi.html  已失效
+        url = "http://gt57jip.cn/index.php/index/index/hezi.html"
         return url
 
     def __init__(self):

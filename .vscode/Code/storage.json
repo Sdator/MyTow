@@ -2,21 +2,16 @@
     "telemetry.machineId": "a305edc2d019e93415dc90bff0e7476bb8afe911ffb1724a54074f23a78dd6d3",
     "openedPathsList": {
         "workspaces3": [
-            "file:///e%3A/Git/MyCode",
             "file:///d%3A/Git/MyCode",
             "file:///c%3A/DemoAir"
         ],
         "files2": [
-            "file:///e%3A/Git/MyCode/.gitignore",
-            "file:///e%3A/Git/MyCode/.vscode/Code/Backups/1556808760569/untitled/387795c86765346eca0c041bac00348b",
-            "file:///e%3A/Git/MyCode/.vscode/Code/Backups/1556808760569/untitled/7af73b77dbbc5cc576171e7c8190e2fa",
-            "file:///e%3A/Git/MyCode/.vscode/Code/Backups/2e14fc38ee0549573bc8ba05eca8d9fc/untitled/13264068d108c6901b3592ea654fcd57",
-            "file:///e%3A/Git/MyCode/.vscode/Code/Backups/2e14fc38ee0549573bc8ba05eca8d9fc/untitled/387795c86765346eca0c041bac00348b",
+            "file:///d%3A/Git/MyCode/.gitignore",
+            "file:///c%3A/App/Java/KEmulator240/log.txt",
             "file:///c%3A/App/Java/KEmulator240/rms/SonyEricssonK800_240x320/.PLAYER2/PLAYER2_1.rms",
             "file:///d%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E6%96%87%E4%BB%B6%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B5%81%E5%88%86%E6%9E%90/mod%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90.bt",
             "file:///d%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E6%96%87%E4%BB%B6%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B5%81%E5%88%86%E6%9E%90/Template1.bt",
             "file:///d%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E6%96%87%E4%BB%B6%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B5%81%E5%88%86%E6%9E%90/%E6%98%9F%E6%88%98%E5%AD%98%E6%A1%A3%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90.bt",
-            "file:///c%3A/App/Java/KEmulator240/log.txt",
             "file:///d%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E6%98%9F%E6%88%98ol%E5%90%88%E9%9B%86%EF%BC%8C%E5%90%AB%E5%90%84%E5%B9%B3%E5%8F%B0%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%8F%8A%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97%EF%BC%8C%E8%AF%B7%E7%94%B5%E8%84%91%E8%A7%A3%E5%8E%8B%E4%BD%BF%E7%94%A8/%E6%98%9F%E6%88%98ol%E5%90%88%E9%9B%86/KEmulator-v0.9.8%EF%BC%88%E7%94%B5%E8%84%91%E6%A8%A1%E6%8B%9F%E5%99%A8%EF%BC%89/property.txt",
             "file:///c%3A/App/Java/KEmulator240/property.txt",
             "file:///d%3A/Git/MyCode/.vscode/Code/Backups/workspaces.json",
@@ -45,10 +40,10 @@
     "windowsState": {
         "lastActiveWindow": {
             "workspaceIdentifier": {
-                "id": "2e14fc38ee0549573bc8ba05eca8d9fc",
-                "configURIPath": "file:///e%3A/Git/MyCode/.vscode/Code/Workspaces/1557128653406/workspace.json"
+                "id": "49caecc3c8f5b2c62c6e96f6b4dc6151",
+                "configURIPath": "file:///d%3A/Git/MyCode/.vscode/Code/Workspaces/1557587987652/workspace.json"
             },
-            "backupPath": "E:\\Git\\MyCode\\.vscode\\Code\\Backups\\2e14fc38ee0549573bc8ba05eca8d9fc",
+            "backupPath": "D:\\Git\\MyCode\\.vscode\\Code\\Backups\\49caecc3c8f5b2c62c6e96f6b4dc6151",
             "uiState": {
                 "mode": 0,
                 "x": -8,

@@ -15,6 +15,7 @@ def 吉儿不放假(页数):
         b'aHR0cCUzQS8vbi4yeHd0NzUuY24vaW5kZXgucGhwL2luZGV4L2luZGV4L2hlemkuaHRtbA==')
     url = str(url, 'utf8')
     url = urllib.parse.unquote(url)
+    print(url)
     # 访问数据
     提交数据 = {'page': 页数, 'userid': 10029, 'ddh': 'vA8RVMNwA2'}
 
@@ -40,14 +41,16 @@ def 吉儿不放假(页数):
 
 def init():
     # 生成保存路径
-    日期 = datetime.now().strftime("%Y%m%d")
-    路径 = AirFile("/json/%s_H.json" % 日期)
-    路径.创建目录Ex()
+
+    #日期 = datetime.now().strftime("%Y%m%d")
+    #路径 = AirFile("/json/%s_H.json" % 日期)
+    #路径.创建目录Ex()
 
     # 类实现 采用递归
     jj = 吉吉儿不放假().返回数据
 
-    写出文件(路径.绝对路径, jj)
+    写出文件("不放假", jj)
+
 
     # 面向过程的实现方法 可以配合yield生成器
     # for num in range(1, 20):
