@@ -1,0 +1,73 @@
+//------------------------------------------------
+//--- 010 Editor v8.0.1
+//
+//      File: mdx.bt
+//   Authors:
+//   Version: 1.0
+//   Purpose:
+//  Category:
+// File Mask: *.mdx
+//  ID Bytes:
+//   History:
+//------------------------------------------------
+
+//大端
+BigEndian();
+struct mdx
+{
+    //设置颜色
+    SetForeColor(cPurple);
+
+    //文件头
+    struct HEADER
+    {
+        char  headStr[8] <comment="文件头标识">;
+        ULONG nulA <comment="未知">;
+        ULONG nulB <comment="未知">;
+        char  hA[4] <comment="标识">;
+        ULONG nulC <comment="未知">;    
+        string  hB <comment="模型名字">;
+
+        local string str = "TEXS"; 
+        local string ss;
+        local int b = Strchr("TEXS",'X');
+       // ReadString("TEXS")
+        //local int c = ReadWStringLength(0,4)
+        local string s="";
+        local int i=0;
+        while( s!="TEXS" )
+        {
+            
+            //ReadLine(ReadInt64())
+            Printf("%s",ReadLine(ReadInt64()));
+            Printf( "%s-%d\n", s,FSkip() );  
+            i++;  
+            if(i>10){
+                break;
+            }
+        
+
+        } 
+        
+      
+
+        
+        Printf("%d",ReadInt64());
+
+        //SPrintf(ss,"%d",c);
+       // Printf(ss);
+                
+   
+      
+
+
+
+//TEXS
+    } header <open=true>;  //默认节点
+
+   // SetForeColor(cGreen);
+    
+
+} AirMdx  <open=true>;
+
+

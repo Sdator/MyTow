@@ -6,6 +6,16 @@
             "file:///c%3A/DemoAir"
         ],
         "files2": [
+            "file:///c%3A/Git/MyCode/Java/%E6%96%87%E4%BB%B6%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B5%81%E5%88%86%E6%9E%90/rms%E5%AD%98%E6%A1%A3%E5%88%86%E6%9E%90.bt",
+            "file:///e%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A7%A3%E6%9E%90/%E6%98%9F%E6%88%98%E5%9C%B0%E5%BD%A2%E5%AD%98%E6%A1%A3%E8%A7%A3%E9%87%8A.bt",
+            "file:///e%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A7%A3%E6%9E%90/mod%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90.bt",
+            "file:///c%3A/Git/MyCode/Java/%E6%96%87%E4%BB%B6%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B5%81%E5%88%86%E6%9E%90/mod%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90.bt",
+            "file:///e%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A7%A3%E6%9E%90/mx.bt",
+            "file:///e%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A7%A3%E6%9E%90/%E6%98%9F%E6%88%98%E5%AD%98%E6%A1%A3%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90.bt",
+            "file:///e%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A7%A3%E6%9E%90/%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E8%A7%A3%E6%9E%90.bt",
+            "file:///e%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A7%A3%E6%9E%90/Template1.bt",
+            "file:///e%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A7%A3%E6%9E%90/%E6%98%9F%E6%88%98.bt",
+            "file:///e%3A/OneDrive/%E6%B8%B8%E6%88%8F/%E6%98%9F%E6%88%98/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A7%A3%E6%9E%90/%E6%98%9F%E6%88%98%E5%AD%98%E6%A1%A3%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%20-%20%E5%89%AF%E6%9C%AC.bt",
             "file:///d%3A/Git/MyCode/.gitignore",
             "file:///c%3A/App/Java/KEmulator240/log.txt",
             "file:///c%3A/App/Java/KEmulator240/rms/SonyEricssonK800_240x320/.PLAYER2/PLAYER2_1.rms",
@@ -40,10 +50,10 @@
     "windowsState": {
         "lastActiveWindow": {
             "workspaceIdentifier": {
-                "id": "49caecc3c8f5b2c62c6e96f6b4dc6151",
-                "configURIPath": "file:///d%3A/Git/MyCode/.vscode/Code/Workspaces/1557587987652/workspace.json"
+                "id": "c431cba51fc34d91aec1c4243064b53f",
+                "configURIPath": "file:///c%3A/Git/MyCode/.vscode/Code/Workspaces/1557921417856/workspace.json"
             },
-            "backupPath": "D:\\Git\\MyCode\\.vscode\\Code\\Backups\\49caecc3c8f5b2c62c6e96f6b4dc6151",
+            "backupPath": "C:\\Git\\MyCode\\.vscode\\Code\\Backups\\c431cba51fc34d91aec1c4243064b53f",
             "uiState": {
                 "mode": 0,
                 "x": -8,
