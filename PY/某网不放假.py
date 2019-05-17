@@ -8,6 +8,7 @@ by 绝 2019.4.15
 import urllib.parse
 from AirCom import *
 
+
 # 用作参考 已在AirCom中用类实现了
 def 吉儿不放假(页数):
     # 提交地址 不要这么明显
