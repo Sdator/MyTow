@@ -1,0 +1,32 @@
+//------------------------------------------------
+//--- 010 Editor v9.0.2 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+//大端开始
+BigEndian();
+//发送封包 
+//接收任务
+struct MSG(){
+    //头 一般不变
+    char h[10] <comment="标识头1">;
+    int b1 <comment="可能是时间 变动数据1">;
+    //长度包含了消息内容和一些控制符
+    int16 n1[4] <comment="未知">;
+    int16 b2[3] <comment="变动数据2">;
+    int16 n2[8] <comment="未知">;
+    int16 b3[2] <comment="变动数据3">;
+    byte b3 <comment="变动数据3">;
+    //00为string字符串的结尾标识 会自动识别
+    int16 n3[4] <comment="未知">;
+    byte end <comment="00可能是结束符">;
+
+
+}msg<open=true, optimize=false>;

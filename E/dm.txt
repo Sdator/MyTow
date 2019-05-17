@@ -1,0 +1,2135 @@
+
+类型: Idmsoft  0个属性，314个方法，标记: {F3F54BC2-D6D1-4A85-B943-16287ECEA64C}
+
+-------------------------------- 方法列表 --------------------------------
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"Ver"）
+解释：method Ver
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetPath"，path）
+参数<1>的名称为“path”，类型为“文本型”。
+解释：method SetPath
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"Ocr"，x1，y1，x2，y2，color，sim）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“color”，类型为“文本型”。
+参数<6>的名称为“sim”，类型为“双精度小数型”。
+解释：method Ocr
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FindStr"，x1，y1，x2，y2，str，color，sim，x，y）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“str”，类型为“文本型”。
+参数<6>的名称为“color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+参数<8>的名称为“x”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<9>的名称为“y”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method FindStr
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetResultCount"，str）
+参数<1>的名称为“str”，类型为“文本型”。
+解释：method GetResultCount
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetResultPos"，str，index，x，y）
+参数<1>的名称为“str”，类型为“文本型”。
+参数<2>的名称为“index”，类型为“整数型”。
+参数<3>的名称为“x”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<4>的名称为“y”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method GetResultPos
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"StrStr"，s，str）
+参数<1>的名称为“s”，类型为“文本型”。
+参数<2>的名称为“str”，类型为“文本型”。
+解释：method StrStr
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SendCommand"，cmd）
+参数<1>的名称为“cmd”，类型为“文本型”。
+解释：method SendCommand
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"UseDict"，index）
+参数<1>的名称为“index”，类型为“整数型”。
+解释：method UseDict
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetBasePath"）
+解释：method GetBasePath
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetDictPwd"，pwd）
+参数<1>的名称为“pwd”，类型为“文本型”。
+解释：method SetDictPwd
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"OcrInFile"，x1，y1，x2，y2，pic_name，color，sim）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“pic_name”，类型为“文本型”。
+参数<6>的名称为“color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+解释：method OcrInFile
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"Capture"，x1，y1，x2，y2，file）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“file”，类型为“文本型”。
+解释：method Capture
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"KeyPress"，vk）
+参数<1>的名称为“vk”，类型为“整数型”。
+解释：method KeyPress
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"KeyDown"，vk）
+参数<1>的名称为“vk”，类型为“整数型”。
+解释：method KeyDown
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"KeyUp"，vk）
+参数<1>的名称为“vk”，类型为“整数型”。
+解释：method KeyUp
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"LeftClick"）
+解释：method LeftClick
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"RightClick"）
+解释：method RightClick
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"MiddleClick"）
+解释：method MiddleClick
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"LeftDoubleClick"）
+解释：method LeftDoubleClick
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"LeftDown"）
+解释：method LeftDown
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"LeftUp"）
+解释：method LeftUp
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"RightDown"）
+解释：method RightDown
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"RightUp"）
+解释：method RightUp
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"MoveTo"，x，y）
+参数<1>的名称为“x”，类型为“整数型”。
+参数<2>的名称为“y”，类型为“整数型”。
+解释：method MoveTo
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"MoveR"，rx，ry）
+参数<1>的名称为“rx”，类型为“整数型”。
+参数<2>的名称为“ry”，类型为“整数型”。
+解释：method MoveR
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetColor"，x，y）
+参数<1>的名称为“x”，类型为“整数型”。
+参数<2>的名称为“y”，类型为“整数型”。
+解释：method GetColor
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetColorBGR"，x，y）
+参数<1>的名称为“x”，类型为“整数型”。
+参数<2>的名称为“y”，类型为“整数型”。
+解释：method GetColorBGR
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"RGB2BGR"，rgb_color）
+参数<1>的名称为“rgb_color”，类型为“文本型”。
+解释：method RGB2BGR
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"BGR2RGB"，bgr_color）
+参数<1>的名称为“bgr_color”，类型为“文本型”。
+解释：method BGR2RGB
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"UnBindWindow"）
+解释：method UnBindWindow
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"CmpColor"，x，y，color，sim）
+参数<1>的名称为“x”，类型为“整数型”。
+参数<2>的名称为“y”，类型为“整数型”。
+参数<3>的名称为“color”，类型为“文本型”。
+参数<4>的名称为“sim”，类型为“双精度小数型”。
+解释：method CmpColor
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"ClientToScreen"，hwnd，x，y）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“x”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<3>的名称为“y”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method ClientToScreen
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"ScreenToClient"，hwnd，x，y）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“x”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<3>的名称为“y”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method ScreenToClient
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"ShowScrMsg"，x1，y1，x2，y2，msg，color）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“msg”，类型为“文本型”。
+参数<6>的名称为“color”，类型为“文本型”。
+解释：method ShowScrMsg
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetMinRowGap"，row_gap）
+参数<1>的名称为“row_gap”，类型为“整数型”。
+解释：method SetMinRowGap
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetMinColGap"，col_gap）
+参数<1>的名称为“col_gap”，类型为“整数型”。
+解释：method SetMinColGap
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FindColor"，x1，y1，x2，y2，color，sim，dir，x，y）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“color”，类型为“文本型”。
+参数<6>的名称为“sim”，类型为“双精度小数型”。
+参数<7>的名称为“dir”，类型为“整数型”。
+参数<8>的名称为“x”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<9>的名称为“y”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method FindColor
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindColorEx"，x1，y1，x2，y2，color，sim，dir）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“color”，类型为“文本型”。
+参数<6>的名称为“sim”，类型为“双精度小数型”。
+参数<7>的名称为“dir”，类型为“整数型”。
+解释：method FindColorEx
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetWordLineHeight"，line_height）
+参数<1>的名称为“line_height”，类型为“整数型”。
+解释：method SetWordLineHeight
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetWordGap"，word_gap）
+参数<1>的名称为“word_gap”，类型为“整数型”。
+解释：method SetWordGap
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetRowGapNoDict"，row_gap）
+参数<1>的名称为“row_gap”，类型为“整数型”。
+解释：method SetRowGapNoDict
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetColGapNoDict"，col_gap）
+参数<1>的名称为“col_gap”，类型为“整数型”。
+解释：method SetColGapNoDict
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetWordLineHeightNoDict"，line_height）
+参数<1>的名称为“line_height”，类型为“整数型”。
+解释：method SetWordLineHeightNoDict
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetWordGapNoDict"，word_gap）
+参数<1>的名称为“word_gap”，类型为“整数型”。
+解释：method SetWordGapNoDict
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetWordResultCount"，str）
+参数<1>的名称为“str”，类型为“文本型”。
+解释：method GetWordResultCount
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetWordResultPos"，str，index，x，y）
+参数<1>的名称为“str”，类型为“文本型”。
+参数<2>的名称为“index”，类型为“整数型”。
+参数<3>的名称为“x”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<4>的名称为“y”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method GetWordResultPos
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetWordResultStr"，str，index）
+参数<1>的名称为“str”，类型为“文本型”。
+参数<2>的名称为“index”，类型为“整数型”。
+解释：method GetWordResultStr
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetWords"，x1，y1，x2，y2，color，sim）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“color”，类型为“文本型”。
+参数<6>的名称为“sim”，类型为“双精度小数型”。
+解释：method GetWords
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetWordsNoDict"，x1，y1，x2，y2，color）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“color”，类型为“文本型”。
+解释：method GetWordsNoDict
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetShowErrorMsg"，show）
+参数<1>的名称为“show”，类型为“整数型”。
+解释：method SetShowErrorMsg
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetClientSize"，hwnd，width，height）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“width”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<3>的名称为“height”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method GetClientSize
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"MoveWindow"，hwnd，x，y）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“x”，类型为“整数型”。
+参数<3>的名称为“y”，类型为“整数型”。
+解释：method MoveWindow
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetColorHSV"，x，y）
+参数<1>的名称为“x”，类型为“整数型”。
+参数<2>的名称为“y”，类型为“整数型”。
+解释：method GetColorHSV
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetAveRGB"，x1，y1，x2，y2）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+解释：method GetAveRGB
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetAveHSV"，x1，y1，x2，y2）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+解释：method GetAveHSV
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetForegroundWindow"）
+解释：method GetForegroundWindow
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetForegroundFocus"）
+解释：method GetForegroundFocus
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetMousePointWindow"）
+解释：method GetMousePointWindow
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetPointWindow"，x，y）
+参数<1>的名称为“x”，类型为“整数型”。
+参数<2>的名称为“y”，类型为“整数型”。
+解释：method GetPointWindow
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"EnumWindow"，parent，title，class_name，filter）
+参数<1>的名称为“parent”，类型为“整数型”。
+参数<2>的名称为“title”，类型为“文本型”。
+参数<3>的名称为“class_name”，类型为“文本型”。
+参数<4>的名称为“filter”，类型为“整数型”。
+解释：method EnumWindow
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetWindowState"，hwnd，flag）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“flag”，类型为“整数型”。
+解释：method GetWindowState
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetWindow"，hwnd，flag）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“flag”，类型为“整数型”。
+解释：method GetWindow
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetSpecialWindow"，flag）
+参数<1>的名称为“flag”，类型为“整数型”。
+解释：method GetSpecialWindow
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetWindowText"，hwnd，text）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“text”，类型为“文本型”。
+解释：method SetWindowText
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetWindowSize"，hwnd，width，height）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“width”，类型为“整数型”。
+参数<3>的名称为“height”，类型为“整数型”。
+解释：method SetWindowSize
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetWindowRect"，hwnd，x1，y1，x2，y2）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“x1”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<3>的名称为“y1”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<4>的名称为“x2”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<5>的名称为“y2”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method GetWindowRect
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetWindowTitle"，hwnd）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+解释：method GetWindowTitle
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetWindowClass"，hwnd）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+解释：method GetWindowClass
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetWindowState"，hwnd，flag）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“flag”，类型为“整数型”。
+解释：method SetWindowState
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"CreateFoobarRect"，hwnd，x，y，w，h）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“x”，类型为“整数型”。
+参数<3>的名称为“y”，类型为“整数型”。
+参数<4>的名称为“w”，类型为“整数型”。
+参数<5>的名称为“h”，类型为“整数型”。
+解释：method CreateFoobarRect
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"CreateFoobarRoundRect"，hwnd，x，y，w，h，rw，rh）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“x”，类型为“整数型”。
+参数<3>的名称为“y”，类型为“整数型”。
+参数<4>的名称为“w”，类型为“整数型”。
+参数<5>的名称为“h”，类型为“整数型”。
+参数<6>的名称为“rw”，类型为“整数型”。
+参数<7>的名称为“rh”，类型为“整数型”。
+解释：method CreateFoobarRoundRect
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"CreateFoobarEllipse"，hwnd，x，y，w，h）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“x”，类型为“整数型”。
+参数<3>的名称为“y”，类型为“整数型”。
+参数<4>的名称为“w”，类型为“整数型”。
+参数<5>的名称为“h”，类型为“整数型”。
+解释：method CreateFoobarEllipse
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"CreateFoobarCustom"，hwnd，x，y，pic，trans_color，sim）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“x”，类型为“整数型”。
+参数<3>的名称为“y”，类型为“整数型”。
+参数<4>的名称为“pic”，类型为“文本型”。
+参数<5>的名称为“trans_color”，类型为“文本型”。
+参数<6>的名称为“sim”，类型为“双精度小数型”。
+解释：method CreateFoobarCustom
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FoobarFillRect"，hwnd，x1，y1，x2，y2，color）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“x1”，类型为“整数型”。
+参数<3>的名称为“y1”，类型为“整数型”。
+参数<4>的名称为“x2”，类型为“整数型”。
+参数<5>的名称为“y2”，类型为“整数型”。
+参数<6>的名称为“color”，类型为“文本型”。
+解释：method FoobarFillRect
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FoobarDrawText"，hwnd，x，y，w，h，text，color，align）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“x”，类型为“整数型”。
+参数<3>的名称为“y”，类型为“整数型”。
+参数<4>的名称为“w”，类型为“整数型”。
+参数<5>的名称为“h”，类型为“整数型”。
+参数<6>的名称为“text”，类型为“文本型”。
+参数<7>的名称为“color”，类型为“文本型”。
+参数<8>的名称为“align”，类型为“整数型”。
+解释：method FoobarDrawText
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FoobarDrawPic"，hwnd，x，y，pic，trans_color）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“x”，类型为“整数型”。
+参数<3>的名称为“y”，类型为“整数型”。
+参数<4>的名称为“pic”，类型为“文本型”。
+参数<5>的名称为“trans_color”，类型为“文本型”。
+解释：method FoobarDrawPic
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FoobarUpdate"，hwnd）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+解释：method FoobarUpdate
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FoobarLock"，hwnd）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+解释：method FoobarLock
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FoobarUnlock"，hwnd）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+解释：method FoobarUnlock
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FoobarSetFont"，hwnd，font_name，size，flag）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“font_name”，类型为“文本型”。
+参数<3>的名称为“size”，类型为“整数型”。
+参数<4>的名称为“flag”，类型为“整数型”。
+解释：method FoobarSetFont
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FoobarTextRect"，hwnd，x，y，w，h）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“x”，类型为“整数型”。
+参数<3>的名称为“y”，类型为“整数型”。
+参数<4>的名称为“w”，类型为“整数型”。
+参数<5>的名称为“h”，类型为“整数型”。
+解释：method FoobarTextRect
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FoobarPrintText"，hwnd，text，color）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“text”，类型为“文本型”。
+参数<3>的名称为“color”，类型为“文本型”。
+解释：method FoobarPrintText
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FoobarClearText"，hwnd）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+解释：method FoobarClearText
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FoobarTextLineGap"，hwnd，gap）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“gap”，类型为“整数型”。
+解释：method FoobarTextLineGap
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"Play"，file）
+参数<1>的名称为“file”，类型为“文本型”。
+解释：method Play
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FaqCapture"，x1，y1，x2，y2，quality，delay，time）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“quality”，类型为“整数型”。
+参数<6>的名称为“delay”，类型为“整数型”。
+参数<7>的名称为“time”，类型为“整数型”。
+解释：method FaqCapture
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FaqRelease"，handle）
+参数<1>的名称为“handle”，类型为“整数型”。
+解释：method FaqRelease
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FaqSend"，server，handle，request_type，time_out）
+参数<1>的名称为“server”，类型为“文本型”。
+参数<2>的名称为“handle”，类型为“整数型”。
+参数<3>的名称为“request_type”，类型为“整数型”。
+参数<4>的名称为“time_out”，类型为“整数型”。
+解释：method FaqSend
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"Beep"，fre，delay）
+参数<1>的名称为“fre”，类型为“整数型”。
+参数<2>的名称为“delay”，类型为“整数型”。
+解释：method Beep
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FoobarClose"，hwnd）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+解释：method FoobarClose
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"MoveDD"，dx，dy）
+参数<1>的名称为“dx”，类型为“整数型”。
+参数<2>的名称为“dy”，类型为“整数型”。
+解释：method MoveDD
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FaqGetSize"，handle）
+参数<1>的名称为“handle”，类型为“整数型”。
+解释：method FaqGetSize
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"LoadPic"，pic_name）
+参数<1>的名称为“pic_name”，类型为“文本型”。
+解释：method LoadPic
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FreePic"，pic_name）
+参数<1>的名称为“pic_name”，类型为“文本型”。
+解释：method FreePic
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetScreenData"，x1，y1，x2，y2）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+解释：method GetScreenData
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FreeScreenData"，handle）
+参数<1>的名称为“handle”，类型为“整数型”。
+解释：method FreeScreenData
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"WheelUp"）
+解释：method WheelUp
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"WheelDown"）
+解释：method WheelDown
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetMouseDelay"，type，delay）
+参数<1>的名称为“type”，类型为“文本型”。
+参数<2>的名称为“delay”，类型为“整数型”。
+解释：method SetMouseDelay
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetKeypadDelay"，type，delay）
+参数<1>的名称为“type”，类型为“文本型”。
+参数<2>的名称为“delay”，类型为“整数型”。
+解释：method SetKeypadDelay
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetEnv"，index，name）
+参数<1>的名称为“index”，类型为“整数型”。
+参数<2>的名称为“name”，类型为“文本型”。
+解释：method GetEnv
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetEnv"，index，name，value）
+参数<1>的名称为“index”，类型为“整数型”。
+参数<2>的名称为“name”，类型为“文本型”。
+参数<3>的名称为“value”，类型为“文本型”。
+解释：method SetEnv
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SendString"，hwnd，str）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“str”，类型为“文本型”。
+解释：method SendString
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"DelEnv"，index，name）
+参数<1>的名称为“index”，类型为“整数型”。
+参数<2>的名称为“name”，类型为“文本型”。
+解释：method DelEnv
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetPath"）
+解释：method GetPath
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetDict"，index，dict_name）
+参数<1>的名称为“index”，类型为“整数型”。
+参数<2>的名称为“dict_name”，类型为“文本型”。
+解释：method SetDict
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FindPic"，x1，y1，x2，y2，pic_name，delta_color，sim，dir，x，y）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“pic_name”，类型为“文本型”。
+参数<6>的名称为“delta_color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+参数<8>的名称为“dir”，类型为“整数型”。
+参数<9>的名称为“x”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<10>的名称为“y”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method FindPic
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindPicEx"，x1，y1，x2，y2，pic_name，delta_color，sim，dir）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“pic_name”，类型为“文本型”。
+参数<6>的名称为“delta_color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+参数<8>的名称为“dir”，类型为“整数型”。
+解释：method FindPicEx
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetClientSize"，hwnd，width，height）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“width”，类型为“整数型”。
+参数<3>的名称为“height”，类型为“整数型”。
+解释：method SetClientSize
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"ReadInt"，hwnd，addr，type）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr”，类型为“文本型”。
+参数<3>的名称为“type”，类型为“整数型”。
+解释：method ReadInt
+
+
+方法调用格式： 〈小数型〉 对象．数值方法 （"ReadFloat"，hwnd，addr）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr”，类型为“文本型”。
+解释：method ReadFloat
+
+
+方法调用格式： 〈双精度小数型〉 对象．数值方法 （"ReadDouble"，hwnd，addr）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr”，类型为“文本型”。
+解释：method ReadDouble
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindInt"，hwnd，addr_range，int_value_min，int_value_max，type）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr_range”，类型为“文本型”。
+参数<3>的名称为“int_value_min”，类型为“整数型”。
+参数<4>的名称为“int_value_max”，类型为“整数型”。
+参数<5>的名称为“type”，类型为“整数型”。
+解释：method FindInt
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindFloat"，hwnd，addr_range，float_value_min，float_value_max）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr_range”，类型为“文本型”。
+参数<3>的名称为“float_value_min”，类型为“小数型”。
+参数<4>的名称为“float_value_max”，类型为“小数型”。
+解释：method FindFloat
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindDouble"，hwnd，addr_range，double_value_min，double_value_max）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr_range”，类型为“文本型”。
+参数<3>的名称为“double_value_min”，类型为“双精度小数型”。
+参数<4>的名称为“double_value_max”，类型为“双精度小数型”。
+解释：method FindDouble
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindString"，hwnd，addr_range，string_value，type）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr_range”，类型为“文本型”。
+参数<3>的名称为“string_value”，类型为“文本型”。
+参数<4>的名称为“type”，类型为“整数型”。
+解释：method FindString
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetModuleBaseAddr"，hwnd，module_name）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“module_name”，类型为“文本型”。
+解释：method GetModuleBaseAddr
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"MoveToEx"，x，y，w，h）
+参数<1>的名称为“x”，类型为“整数型”。
+参数<2>的名称为“y”，类型为“整数型”。
+参数<3>的名称为“w”，类型为“整数型”。
+参数<4>的名称为“h”，类型为“整数型”。
+解释：method MoveToEx
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"MatchPicName"，pic_name）
+参数<1>的名称为“pic_name”，类型为“文本型”。
+解释：method MatchPicName
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"AddDict"，index，dict_info）
+参数<1>的名称为“index”，类型为“整数型”。
+参数<2>的名称为“dict_info”，类型为“文本型”。
+解释：method AddDict
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"EnterCri"）
+解释：method EnterCri
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"LeaveCri"）
+解释：method LeaveCri
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"WriteInt"，hwnd，addr，type，v）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr”，类型为“文本型”。
+参数<3>的名称为“type”，类型为“整数型”。
+参数<4>的名称为“v”，类型为“整数型”。
+解释：method WriteInt
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"WriteFloat"，hwnd，addr，v）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr”，类型为“文本型”。
+参数<3>的名称为“v”，类型为“小数型”。
+解释：method WriteFloat
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"WriteDouble"，hwnd，addr，v）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr”，类型为“文本型”。
+参数<3>的名称为“v”，类型为“双精度小数型”。
+解释：method WriteDouble
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"WriteString"，hwnd，addr，type，v）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr”，类型为“文本型”。
+参数<3>的名称为“type”，类型为“整数型”。
+参数<4>的名称为“v”，类型为“文本型”。
+解释：method WriteString
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"AsmAdd"，asm_ins）
+参数<1>的名称为“asm_ins”，类型为“文本型”。
+解释：method AsmAdd
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"AsmClear"）
+解释：method AsmClear
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"AsmCall"，hwnd，mode）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“mode”，类型为“整数型”。
+解释：method AsmCall
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FindMultiColor"，x1，y1，x2，y2，first_color，offset_color，sim，dir，x，y）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“first_color”，类型为“文本型”。
+参数<6>的名称为“offset_color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+参数<8>的名称为“dir”，类型为“整数型”。
+参数<9>的名称为“x”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<10>的名称为“y”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method FindMultiColor
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindMultiColorEx"，x1，y1，x2，y2，first_color，offset_color，sim，dir）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“first_color”，类型为“文本型”。
+参数<6>的名称为“offset_color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+参数<8>的名称为“dir”，类型为“整数型”。
+解释：method FindMultiColorEx
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"AsmCode"，base_addr）
+参数<1>的名称为“base_addr”，类型为“整数型”。
+解释：method AsmCode
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"Assemble"，asm_code，base_addr，is_upper）
+参数<1>的名称为“asm_code”，类型为“文本型”。
+参数<2>的名称为“base_addr”，类型为“整数型”。
+参数<3>的名称为“is_upper”，类型为“整数型”。
+解释：method Assemble
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetWindowTransparent"，hwnd，v）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“v”，类型为“整数型”。
+解释：method SetWindowTransparent
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"ReadData"，hwnd，addr，len）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr”，类型为“文本型”。
+参数<3>的名称为“len”，类型为“整数型”。
+解释：method ReadData
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"WriteData"，hwnd，addr，data）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr”，类型为“文本型”。
+参数<3>的名称为“data”，类型为“文本型”。
+解释：method WriteData
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindData"，hwnd，addr_range，data）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr_range”，类型为“文本型”。
+参数<3>的名称为“data”，类型为“文本型”。
+解释：method FindData
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetPicPwd"，pwd）
+参数<1>的名称为“pwd”，类型为“文本型”。
+解释：method SetPicPwd
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"Log"，info）
+参数<1>的名称为“info”，类型为“文本型”。
+解释：method Log
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindStrE"，x1，y1，x2，y2，str，color，sim）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“str”，类型为“文本型”。
+参数<6>的名称为“color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+解释：method FindStrE
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindColorE"，x1，y1，x2，y2，color，sim，dir）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“color”，类型为“文本型”。
+参数<6>的名称为“sim”，类型为“双精度小数型”。
+参数<7>的名称为“dir”，类型为“整数型”。
+解释：method FindColorE
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindPicE"，x1，y1，x2，y2，pic_name，delta_color，sim，dir）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“pic_name”，类型为“文本型”。
+参数<6>的名称为“delta_color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+参数<8>的名称为“dir”，类型为“整数型”。
+解释：method FindPicE
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindMultiColorE"，x1，y1，x2，y2，first_color，offset_color，sim，dir）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“first_color”，类型为“文本型”。
+参数<6>的名称为“offset_color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+参数<8>的名称为“dir”，类型为“整数型”。
+解释：method FindMultiColorE
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetExactOcr"，exact_ocr）
+参数<1>的名称为“exact_ocr”，类型为“整数型”。
+解释：method SetExactOcr
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"ReadString"，hwnd，addr，type，len）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr”，类型为“文本型”。
+参数<3>的名称为“type”，类型为“整数型”。
+参数<4>的名称为“len”，类型为“整数型”。
+解释：method ReadString
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FoobarTextPrintDir"，hwnd，dir）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“dir”，类型为“整数型”。
+解释：method FoobarTextPrintDir
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"OcrEx"，x1，y1，x2，y2，color，sim）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“color”，类型为“文本型”。
+参数<6>的名称为“sim”，类型为“双精度小数型”。
+解释：method OcrEx
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetDisplayInput"，mode）
+参数<1>的名称为“mode”，类型为“文本型”。
+解释：method SetDisplayInput
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetTime"）
+解释：method GetTime
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetScreenWidth"）
+解释：method GetScreenWidth
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetScreenHeight"）
+解释：method GetScreenHeight
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"BindWindowEx"，hwnd，display，mouse，keypad，public_desc，mode）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“display”，类型为“文本型”。
+参数<3>的名称为“mouse”，类型为“文本型”。
+参数<4>的名称为“keypad”，类型为“文本型”。
+参数<5>的名称为“public_desc”，类型为“文本型”。
+参数<6>的名称为“mode”，类型为“整数型”。
+解释：method BindWindowEx
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetDiskSerial"）
+解释：method GetDiskSerial
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"Md5"，str）
+参数<1>的名称为“str”，类型为“文本型”。
+解释：method Md5
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetMac"）
+解释：method GetMac
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"ActiveInputMethod"，hwnd，id）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“id”，类型为“文本型”。
+解释：method ActiveInputMethod
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"CheckInputMethod"，hwnd，id）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“id”，类型为“文本型”。
+解释：method CheckInputMethod
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FindInputMethod"，id）
+参数<1>的名称为“id”，类型为“文本型”。
+解释：method FindInputMethod
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetCursorPos"，x，y）
+参数<1>的名称为“x”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<2>的名称为“y”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method GetCursorPos
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"BindWindow"，hwnd，display，mouse，keypad，mode）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“display”，类型为“文本型”。
+参数<3>的名称为“mouse”，类型为“文本型”。
+参数<4>的名称为“keypad”，类型为“文本型”。
+参数<5>的名称为“mode”，类型为“整数型”。
+解释：method BindWindow
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FindWindow"，class_name，title_name）
+参数<1>的名称为“class_name”，类型为“文本型”。
+参数<2>的名称为“title_name”，类型为“文本型”。
+解释：method FindWindow
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetScreenDepth"）
+解释：method GetScreenDepth
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetScreen"，width，height，depth）
+参数<1>的名称为“width”，类型为“整数型”。
+参数<2>的名称为“height”，类型为“整数型”。
+参数<3>的名称为“depth”，类型为“整数型”。
+解释：method SetScreen
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"ExitOs"，type）
+参数<1>的名称为“type”，类型为“整数型”。
+解释：method ExitOs
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetDir"，type）
+参数<1>的名称为“type”，类型为“整数型”。
+解释：method GetDir
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetOsType"）
+解释：method GetOsType
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FindWindowEx"，parent，class_name，title_name）
+参数<1>的名称为“parent”，类型为“整数型”。
+参数<2>的名称为“class_name”，类型为“文本型”。
+参数<3>的名称为“title_name”，类型为“文本型”。
+解释：method FindWindowEx
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetExportDict"，index，dict_name）
+参数<1>的名称为“index”，类型为“整数型”。
+参数<2>的名称为“dict_name”，类型为“文本型”。
+解释：method SetExportDict
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetCursorShape"）
+解释：method GetCursorShape
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"DownCpu"，rate）
+参数<1>的名称为“rate”，类型为“整数型”。
+解释：method DownCpu
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetCursorSpot"）
+解释：method GetCursorSpot
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SendString2"，hwnd，str）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“str”，类型为“文本型”。
+解释：method SendString2
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FaqPost"，server，handle，request_type，time_out）
+参数<1>的名称为“server”，类型为“文本型”。
+参数<2>的名称为“handle”，类型为“整数型”。
+参数<3>的名称为“request_type”，类型为“整数型”。
+参数<4>的名称为“time_out”，类型为“整数型”。
+解释：method FaqPost
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FaqFetch"）
+解释：method FaqFetch
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FetchWord"，x1，y1，x2，y2，color，word）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“color”，类型为“文本型”。
+参数<6>的名称为“word”，类型为“文本型”。
+解释：method FetchWord
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"CaptureJpg"，x1，y1，x2，y2，file，quality）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“file”，类型为“文本型”。
+参数<6>的名称为“quality”，类型为“整数型”。
+解释：method CaptureJpg
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FindStrWithFont"，x1，y1，x2，y2，str，color，sim，font_name，font_size，flag，x，y）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“str”，类型为“文本型”。
+参数<6>的名称为“color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+参数<8>的名称为“font_name”，类型为“文本型”。
+参数<9>的名称为“font_size”，类型为“整数型”。
+参数<10>的名称为“flag”，类型为“整数型”。
+参数<11>的名称为“x”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<12>的名称为“y”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method FindStrWithFont
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindStrWithFontE"，x1，y1，x2，y2，str，color，sim，font_name，font_size，flag）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“str”，类型为“文本型”。
+参数<6>的名称为“color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+参数<8>的名称为“font_name”，类型为“文本型”。
+参数<9>的名称为“font_size”，类型为“整数型”。
+参数<10>的名称为“flag”，类型为“整数型”。
+解释：method FindStrWithFontE
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindStrWithFontEx"，x1，y1，x2，y2，str，color，sim，font_name，font_size，flag）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“str”，类型为“文本型”。
+参数<6>的名称为“color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+参数<8>的名称为“font_name”，类型为“文本型”。
+参数<9>的名称为“font_size”，类型为“整数型”。
+参数<10>的名称为“flag”，类型为“整数型”。
+解释：method FindStrWithFontEx
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetDictInfo"，str，font_name，font_size，flag）
+参数<1>的名称为“str”，类型为“文本型”。
+参数<2>的名称为“font_name”，类型为“文本型”。
+参数<3>的名称为“font_size”，类型为“整数型”。
+参数<4>的名称为“flag”，类型为“整数型”。
+解释：method GetDictInfo
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SaveDict"，index，file）
+参数<1>的名称为“index”，类型为“整数型”。
+参数<2>的名称为“file”，类型为“文本型”。
+解释：method SaveDict
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetWindowProcessId"，hwnd）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+解释：method GetWindowProcessId
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetWindowProcessPath"，hwnd）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+解释：method GetWindowProcessPath
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"LockInput"，lock）
+参数<1>的名称为“lock”，类型为“整数型”。
+解释：method LockInput
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetPicSize"，pic_name）
+参数<1>的名称为“pic_name”，类型为“文本型”。
+解释：method GetPicSize
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetID"）
+解释：method GetID
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"CapturePng"，x1，y1，x2，y2，file）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“file”，类型为“文本型”。
+解释：method CapturePng
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"CaptureGif"，x1，y1，x2，y2，file，delay，time）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“file”，类型为“文本型”。
+参数<6>的名称为“delay”，类型为“整数型”。
+参数<7>的名称为“time”，类型为“整数型”。
+解释：method CaptureGif
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"ImageToBmp"，pic_name，bmp_name）
+参数<1>的名称为“pic_name”，类型为“文本型”。
+参数<2>的名称为“bmp_name”，类型为“文本型”。
+解释：method ImageToBmp
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FindStrFast"，x1，y1，x2，y2，str，color，sim，x，y）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“str”，类型为“文本型”。
+参数<6>的名称为“color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+参数<8>的名称为“x”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<9>的名称为“y”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method FindStrFast
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindStrFastEx"，x1，y1，x2，y2，str，color，sim）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“str”，类型为“文本型”。
+参数<6>的名称为“color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+解释：method FindStrFastEx
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindStrFastE"，x1，y1，x2，y2，str，color，sim）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“str”，类型为“文本型”。
+参数<6>的名称为“color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+解释：method FindStrFastE
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"EnableDisplayDebug"，enable_debug）
+参数<1>的名称为“enable_debug”，类型为“整数型”。
+解释：method EnableDisplayDebug
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"CapturePre"，file）
+参数<1>的名称为“file”，类型为“文本型”。
+解释：method CapturePre
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"RegEx"，code，Ver，ip）
+参数<1>的名称为“code”，类型为“文本型”。
+参数<2>的名称为“Ver”，类型为“文本型”。
+参数<3>的名称为“ip”，类型为“文本型”。
+解释：method RegEx
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetMachineCode"）
+解释：method GetMachineCode
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetClipboard"，data）
+参数<1>的名称为“data”，类型为“文本型”。
+解释：method SetClipboard
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetClipboard"）
+解释：method GetClipboard
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetNowDict"）
+解释：method GetNowDict
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"Is64Bit"）
+解释：method Is64Bit
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetColorNum"，x1，y1，x2，y2，color，sim）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“color”，类型为“文本型”。
+参数<6>的名称为“sim”，类型为“双精度小数型”。
+解释：method GetColorNum
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"EnumWindowByProcess"，process_name，title，class_name，filter）
+参数<1>的名称为“process_name”，类型为“文本型”。
+参数<2>的名称为“title”，类型为“文本型”。
+参数<3>的名称为“class_name”，类型为“文本型”。
+参数<4>的名称为“filter”，类型为“整数型”。
+解释：method EnumWindowByProcess
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetDictCount"，index）
+参数<1>的名称为“index”，类型为“整数型”。
+解释：method GetDictCount
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetLastError"）
+解释：method GetLastError
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetNetTime"）
+解释：method GetNetTime
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"EnableGetColorByCapture"，en）
+参数<1>的名称为“en”，类型为“整数型”。
+解释：method EnableGetColorByCapture
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"CheckUAC"）
+解释：method CheckUAC
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetUAC"，uac）
+参数<1>的名称为“uac”，类型为“整数型”。
+解释：method SetUAC
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"DisableFontSmooth"）
+解释：method DisableFontSmooth
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"CheckFontSmooth"）
+解释：method CheckFontSmooth
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetDisplayAcceler"，level）
+参数<1>的名称为“level”，类型为“整数型”。
+解释：method SetDisplayAcceler
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FindWindowByProcess"，process_name，class_name，title_name）
+参数<1>的名称为“process_name”，类型为“文本型”。
+参数<2>的名称为“class_name”，类型为“文本型”。
+参数<3>的名称为“title_name”，类型为“文本型”。
+解释：method FindWindowByProcess
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FindWindowByProcessId"，process_id，class_name，title_name）
+参数<1>的名称为“process_id”，类型为“整数型”。
+参数<2>的名称为“class_name”，类型为“文本型”。
+参数<3>的名称为“title_name”，类型为“文本型”。
+解释：method FindWindowByProcessId
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"ReadIni"，section，key，file）
+参数<1>的名称为“section”，类型为“文本型”。
+参数<2>的名称为“key”，类型为“文本型”。
+参数<3>的名称为“file”，类型为“文本型”。
+解释：method ReadIni
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"WriteIni"，section，key，v，file）
+参数<1>的名称为“section”，类型为“文本型”。
+参数<2>的名称为“key”，类型为“文本型”。
+参数<3>的名称为“v”，类型为“文本型”。
+参数<4>的名称为“file”，类型为“文本型”。
+解释：method WriteIni
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"RunApp"，path，mode）
+参数<1>的名称为“path”，类型为“文本型”。
+参数<2>的名称为“mode”，类型为“整数型”。
+解释：method RunApp
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"delay"，mis）
+参数<1>的名称为“mis”，类型为“整数型”。
+解释：method Delay
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FindWindowSuper"，spec1，flag1，type1，spec2，flag2，type2）
+参数<1>的名称为“spec1”，类型为“文本型”。
+参数<2>的名称为“flag1”，类型为“整数型”。
+参数<3>的名称为“type1”，类型为“整数型”。
+参数<4>的名称为“spec2”，类型为“文本型”。
+参数<5>的名称为“flag2”，类型为“整数型”。
+参数<6>的名称为“type2”，类型为“整数型”。
+解释：method FindWindowSuper
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"ExcludePos"，all_pos，type，x1，y1，x2，y2）
+参数<1>的名称为“all_pos”，类型为“文本型”。
+参数<2>的名称为“type”，类型为“整数型”。
+参数<3>的名称为“x1”，类型为“整数型”。
+参数<4>的名称为“y1”，类型为“整数型”。
+参数<5>的名称为“x2”，类型为“整数型”。
+参数<6>的名称为“y2”，类型为“整数型”。
+解释：method ExcludePos
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindNearestPos"，all_pos，type，x，y）
+参数<1>的名称为“all_pos”，类型为“文本型”。
+参数<2>的名称为“type”，类型为“整数型”。
+参数<3>的名称为“x”，类型为“整数型”。
+参数<4>的名称为“y”，类型为“整数型”。
+解释：method FindNearestPos
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"SortPosDistance"，all_pos，type，x，y）
+参数<1>的名称为“all_pos”，类型为“文本型”。
+参数<2>的名称为“type”，类型为“整数型”。
+参数<3>的名称为“x”，类型为“整数型”。
+参数<4>的名称为“y”，类型为“整数型”。
+解释：method SortPosDistance
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FindPicMem"，x1，y1，x2，y2，pic_info，delta_color，sim，dir，x，y）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“pic_info”，类型为“文本型”。
+参数<6>的名称为“delta_color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+参数<8>的名称为“dir”，类型为“整数型”。
+参数<9>的名称为“x”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<10>的名称为“y”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method FindPicMem
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindPicMemEx"，x1，y1，x2，y2，pic_info，delta_color，sim，dir）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“pic_info”，类型为“文本型”。
+参数<6>的名称为“delta_color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+参数<8>的名称为“dir”，类型为“整数型”。
+解释：method FindPicMemEx
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindPicMemE"，x1，y1，x2，y2，pic_info，delta_color，sim，dir）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“pic_info”，类型为“文本型”。
+参数<6>的名称为“delta_color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+参数<8>的名称为“dir”，类型为“整数型”。
+解释：method FindPicMemE
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"AppendPicAddr"，pic_info，addr，size）
+参数<1>的名称为“pic_info”，类型为“文本型”。
+参数<2>的名称为“addr”，类型为“整数型”。
+参数<3>的名称为“size”，类型为“整数型”。
+解释：method AppendPicAddr
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"WriteFile"，file，content）
+参数<1>的名称为“file”，类型为“文本型”。
+参数<2>的名称为“content”，类型为“文本型”。
+解释：method WriteFile
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"Stop"，id）
+参数<1>的名称为“id”，类型为“整数型”。
+解释：method Stop
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetDictMem"，index，addr，size）
+参数<1>的名称为“index”，类型为“整数型”。
+参数<2>的名称为“addr”，类型为“整数型”。
+参数<3>的名称为“size”，类型为“整数型”。
+解释：method SetDictMem
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetNetTimeSafe"）
+解释：method GetNetTimeSafe
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"ForceUnBindWindow"，hwnd）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+解释：method ForceUnBindWindow
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"ReadIniPwd"，section，key，file，pwd）
+参数<1>的名称为“section”，类型为“文本型”。
+参数<2>的名称为“key”，类型为“文本型”。
+参数<3>的名称为“file”，类型为“文本型”。
+参数<4>的名称为“pwd”，类型为“文本型”。
+解释：method ReadIniPwd
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"WriteIniPwd"，section，key，v，file，pwd）
+参数<1>的名称为“section”，类型为“文本型”。
+参数<2>的名称为“key”，类型为“文本型”。
+参数<3>的名称为“v”，类型为“文本型”。
+参数<4>的名称为“file”，类型为“文本型”。
+参数<5>的名称为“pwd”，类型为“文本型”。
+解释：method WriteIniPwd
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"DecodeFile"，file，pwd）
+参数<1>的名称为“file”，类型为“文本型”。
+参数<2>的名称为“pwd”，类型为“文本型”。
+解释：method DecodeFile
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"KeyDownChar"，key_str）
+参数<1>的名称为“key_str”，类型为“文本型”。
+解释：method KeyDownChar
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"KeyUpChar"，key_str）
+参数<1>的名称为“key_str”，类型为“文本型”。
+解释：method KeyUpChar
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"KeyPressChar"，key_str）
+参数<1>的名称为“key_str”，类型为“文本型”。
+解释：method KeyPressChar
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"KeyPressStr"，key_str，delay）
+参数<1>的名称为“key_str”，类型为“文本型”。
+参数<2>的名称为“delay”，类型为“整数型”。
+解释：method KeyPressStr
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"EnableKeypadPatch"，en）
+参数<1>的名称为“en”，类型为“整数型”。
+解释：method EnableKeypadPatch
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"EnableKeypadSync"，en，time_out）
+参数<1>的名称为“en”，类型为“整数型”。
+参数<2>的名称为“time_out”，类型为“整数型”。
+解释：method EnableKeypadSync
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"EnableMouseSync"，en，time_out）
+参数<1>的名称为“en”，类型为“整数型”。
+参数<2>的名称为“time_out”，类型为“整数型”。
+解释：method EnableMouseSync
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"DmGuard"，en，type）
+参数<1>的名称为“en”，类型为“整数型”。
+参数<2>的名称为“type”，类型为“文本型”。
+解释：method DmGuard
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FaqCaptureFromFile"，x1，y1，x2，y2，file，quality）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“file”，类型为“文本型”。
+参数<6>的名称为“quality”，类型为“整数型”。
+解释：method FaqCaptureFromFile
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindIntEx"，hwnd，addr_range，int_value_min，int_value_max，type，step，multi_thread，mode）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr_range”，类型为“文本型”。
+参数<3>的名称为“int_value_min”，类型为“整数型”。
+参数<4>的名称为“int_value_max”，类型为“整数型”。
+参数<5>的名称为“type”，类型为“整数型”。
+参数<6>的名称为“step”，类型为“整数型”。
+参数<7>的名称为“multi_thread”，类型为“整数型”。
+参数<8>的名称为“mode”，类型为“整数型”。
+解释：method FindIntEx
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindFloatEx"，hwnd，addr_range，float_value_min，float_value_max，step，multi_thread，mode）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr_range”，类型为“文本型”。
+参数<3>的名称为“float_value_min”，类型为“小数型”。
+参数<4>的名称为“float_value_max”，类型为“小数型”。
+参数<5>的名称为“step”，类型为“整数型”。
+参数<6>的名称为“multi_thread”，类型为“整数型”。
+参数<7>的名称为“mode”，类型为“整数型”。
+解释：method FindFloatEx
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindDoubleEx"，hwnd，addr_range，double_value_min，double_value_max，step，multi_thread，mode）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr_range”，类型为“文本型”。
+参数<3>的名称为“double_value_min”，类型为“双精度小数型”。
+参数<4>的名称为“double_value_max”，类型为“双精度小数型”。
+参数<5>的名称为“step”，类型为“整数型”。
+参数<6>的名称为“multi_thread”，类型为“整数型”。
+参数<7>的名称为“mode”，类型为“整数型”。
+解释：method FindDoubleEx
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindStringEx"，hwnd，addr_range，string_value，type，step，multi_thread，mode）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr_range”，类型为“文本型”。
+参数<3>的名称为“string_value”，类型为“文本型”。
+参数<4>的名称为“type”，类型为“整数型”。
+参数<5>的名称为“step”，类型为“整数型”。
+参数<6>的名称为“multi_thread”，类型为“整数型”。
+参数<7>的名称为“mode”，类型为“整数型”。
+解释：method FindStringEx
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindDataEx"，hwnd，addr_range，data，step，multi_thread，mode）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“addr_range”，类型为“文本型”。
+参数<3>的名称为“data”，类型为“文本型”。
+参数<4>的名称为“step”，类型为“整数型”。
+参数<5>的名称为“multi_thread”，类型为“整数型”。
+参数<6>的名称为“mode”，类型为“整数型”。
+解释：method FindDataEx
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"EnableRealMouse"，en，mousedelay，mousestep）
+参数<1>的名称为“en”，类型为“整数型”。
+参数<2>的名称为“mousedelay”，类型为“整数型”。
+参数<3>的名称为“mousestep”，类型为“整数型”。
+解释：method EnableRealMouse
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"EnableRealKeypad"，en）
+参数<1>的名称为“en”，类型为“整数型”。
+解释：method EnableRealKeypad
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SendStringIme"，str）
+参数<1>的名称为“str”，类型为“文本型”。
+解释：method SendStringIme
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FoobarDrawLine"，hwnd，x1，y1，x2，y2，color，style，width）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“x1”，类型为“整数型”。
+参数<3>的名称为“y1”，类型为“整数型”。
+参数<4>的名称为“x2”，类型为“整数型”。
+参数<5>的名称为“y2”，类型为“整数型”。
+参数<6>的名称为“color”，类型为“文本型”。
+参数<7>的名称为“style”，类型为“整数型”。
+参数<8>的名称为“width”，类型为“整数型”。
+解释：method FoobarDrawLine
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindStrEx"，x1，y1，x2，y2，str，color，sim）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“str”，类型为“文本型”。
+参数<6>的名称为“color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+解释：method FindStrEx
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"IsBind"，hwnd）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+解释：method IsBind
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetDisplayDelay"，t）
+参数<1>的名称为“t”，类型为“整数型”。
+解释：method SetDisplayDelay
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetDmCount"）
+解释：method GetDmCount
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"DisableScreenSave"）
+解释：method DisableScreenSave
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"DisablePowerSave"）
+解释：method DisablePowerSave
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetMemoryHwndAsProcessId"，en）
+参数<1>的名称为“en”，类型为“整数型”。
+解释：method SetMemoryHwndAsProcessId
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FindShape"，x1，y1，x2，y2，offset_color，sim，dir，x，y）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“offset_color”，类型为“文本型”。
+参数<6>的名称为“sim”，类型为“双精度小数型”。
+参数<7>的名称为“dir”，类型为“整数型”。
+参数<8>的名称为“x”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<9>的名称为“y”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method FindShape
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindShapeE"，x1，y1，x2，y2，offset_color，sim，dir）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“offset_color”，类型为“文本型”。
+参数<6>的名称为“sim”，类型为“双精度小数型”。
+参数<7>的名称为“dir”，类型为“整数型”。
+解释：method FindShapeE
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindShapeEx"，x1，y1，x2，y2，offset_color，sim，dir）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“offset_color”，类型为“文本型”。
+参数<6>的名称为“sim”，类型为“双精度小数型”。
+参数<7>的名称为“dir”，类型为“整数型”。
+解释：method FindShapeEx
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindStrS"，x1，y1，x2，y2，str，color，sim，x，y）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“str”，类型为“文本型”。
+参数<6>的名称为“color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+参数<8>的名称为“x”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<9>的名称为“y”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method FindStrS
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindStrExS"，x1，y1，x2，y2，str，color，sim）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“str”，类型为“文本型”。
+参数<6>的名称为“color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+解释：method FindStrExS
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindStrFastS"，x1，y1，x2，y2，str，color，sim，x，y）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“str”，类型为“文本型”。
+参数<6>的名称为“color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+参数<8>的名称为“x”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<9>的名称为“y”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method FindStrFastS
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindStrFastExS"，x1，y1，x2，y2，str，color，sim）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“str”，类型为“文本型”。
+参数<6>的名称为“color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+解释：method FindStrFastExS
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindPicS"，x1，y1，x2，y2，pic_name，delta_color，sim，dir，x，y）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“pic_name”，类型为“文本型”。
+参数<6>的名称为“delta_color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+参数<8>的名称为“dir”，类型为“整数型”。
+参数<9>的名称为“x”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<10>的名称为“y”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method FindPicS
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FindPicExS"，x1，y1，x2，y2，pic_name，delta_color，sim，dir）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“pic_name”，类型为“文本型”。
+参数<6>的名称为“delta_color”，类型为“文本型”。
+参数<7>的名称为“sim”，类型为“双精度小数型”。
+参数<8>的名称为“dir”，类型为“整数型”。
+解释：method FindPicExS
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"ClearDict"，index）
+参数<1>的名称为“index”，类型为“整数型”。
+解释：method ClearDict
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetMachineCodeNoMac"）
+解释：method GetMachineCodeNoMac
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetClientRect"，hwnd，x1，y1，x2，y2）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“x1”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<3>的名称为“y1”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<4>的名称为“x2”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<5>的名称为“y2”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method GetClientRect
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"EnableFakeActive"，en）
+参数<1>的名称为“en”，类型为“整数型”。
+解释：method EnableFakeActive
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetScreenDataBmp"，x1，y1，x2，y2，data，size）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“data”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+参数<6>的名称为“size”，类型为“变体型”，需要提供变量以取回方法所返回的数据。
+解释：method GetScreenDataBmp
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"EncodeFile"，file，pwd）
+参数<1>的名称为“file”，类型为“文本型”。
+参数<2>的名称为“pwd”，类型为“文本型”。
+解释：method EncodeFile
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetCursorShapeEx"，type）
+参数<1>的名称为“type”，类型为“整数型”。
+解释：method GetCursorShapeEx
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FaqCancel"）
+解释：method FaqCancel
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"IntToData"，int_value，type）
+参数<1>的名称为“int_value”，类型为“整数型”。
+参数<2>的名称为“type”，类型为“整数型”。
+解释：method IntToData
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"FloatToData"，float_value）
+参数<1>的名称为“float_value”，类型为“小数型”。
+解释：method FloatToData
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"DoubleToData"，double_value）
+参数<1>的名称为“double_value”，类型为“双精度小数型”。
+解释：method DoubleToData
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"StringToData"，string_value，type）
+参数<1>的名称为“string_value”，类型为“文本型”。
+参数<2>的名称为“type”，类型为“整数型”。
+解释：method StringToData
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetMemoryFindResultToFile"，file）
+参数<1>的名称为“file”，类型为“文本型”。
+解释：method SetMemoryFindResultToFile
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"EnableBind"，en）
+参数<1>的名称为“en”，类型为“整数型”。
+解释：method EnableBind
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetSimMode"，mode）
+参数<1>的名称为“mode”，类型为“整数型”。
+解释：method SetSimMode
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"LockMouseRect"，x1，y1，x2，y2）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+解释：method LockMouseRect
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SendPaste"，hwnd）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+解释：method SendPaste
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"IsDisplayDead"，x1，y1，x2，y2，t）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“t”，类型为“整数型”。
+解释：method IsDisplayDead
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetKeyState"，vk）
+参数<1>的名称为“vk”，类型为“整数型”。
+解释：method GetKeyState
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"CopyFile"，src_file，dst_file，over）
+参数<1>的名称为“src_file”，类型为“文本型”。
+参数<2>的名称为“dst_file”，类型为“文本型”。
+参数<3>的名称为“over”，类型为“整数型”。
+解释：method CopyFile
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"IsFileExist"，file）
+参数<1>的名称为“file”，类型为“文本型”。
+解释：method IsFileExist
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"DeleteFile"，file）
+参数<1>的名称为“file”，类型为“文本型”。
+解释：method DeleteFile
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"MoveFile"，src_file，dst_file）
+参数<1>的名称为“src_file”，类型为“文本型”。
+参数<2>的名称为“dst_file”，类型为“文本型”。
+解释：method MoveFile
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"CreateFolder"，folder_name）
+参数<1>的名称为“folder_name”，类型为“文本型”。
+解释：method CreateFolder
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"DeleteFolder"，folder_name）
+参数<1>的名称为“folder_name”，类型为“文本型”。
+解释：method DeleteFolder
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"GetFileLength"，file）
+参数<1>的名称为“file”，类型为“文本型”。
+解释：method GetFileLength
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"ReadFile"，file）
+参数<1>的名称为“file”，类型为“文本型”。
+解释：method ReadFile
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"WaitKey"，key_code，time_out）
+参数<1>的名称为“key_code”，类型为“整数型”。
+参数<2>的名称为“time_out”，类型为“整数型”。
+解释：method WaitKey
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"DeleteIni"，section，key，file）
+参数<1>的名称为“section”，类型为“文本型”。
+参数<2>的名称为“key”，类型为“文本型”。
+参数<3>的名称为“file”，类型为“文本型”。
+解释：method DeleteIni
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"DeleteIniPwd"，section，key，file，pwd）
+参数<1>的名称为“section”，类型为“文本型”。
+参数<2>的名称为“key”，类型为“文本型”。
+参数<3>的名称为“file”，类型为“文本型”。
+参数<4>的名称为“pwd”，类型为“文本型”。
+解释：method DeleteIniPwd
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"EnableSpeedDx"，en）
+参数<1>的名称为“en”，类型为“整数型”。
+解释：method EnableSpeedDx
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"EnableIme"，en）
+参数<1>的名称为“en”，类型为“整数型”。
+解释：method EnableIme
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"Reg"，code，Ver）
+参数<1>的名称为“code”，类型为“文本型”。
+参数<2>的名称为“Ver”，类型为“文本型”。
+解释：method Reg
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"SelectFile"）
+解释：method SelectFile
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"SelectDirectory"）
+解释：method SelectDirectory
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"LockDisplay"，lock）
+参数<1>的名称为“lock”，类型为“整数型”。
+解释：method LockDisplay
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FoobarSetSave"，hwnd，file，en，header）
+参数<1>的名称为“hwnd”，类型为“整数型”。
+参数<2>的名称为“file”，类型为“文本型”。
+参数<3>的名称为“en”，类型为“整数型”。
+参数<4>的名称为“header”，类型为“文本型”。
+解释：method FoobarSetSave
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"EnumWindowSuper"，spec1，flag1，type1，spec2，flag2，type2，sort）
+参数<1>的名称为“spec1”，类型为“文本型”。
+参数<2>的名称为“flag1”，类型为“整数型”。
+参数<3>的名称为“type1”，类型为“整数型”。
+参数<4>的名称为“spec2”，类型为“文本型”。
+参数<5>的名称为“flag2”，类型为“整数型”。
+参数<6>的名称为“type2”，类型为“整数型”。
+参数<7>的名称为“sort”，类型为“整数型”。
+解释：method EnumWindowSuper
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"DownloadFile"，url，save_file，timeout）
+参数<1>的名称为“url”，类型为“文本型”。
+参数<2>的名称为“save_file”，类型为“文本型”。
+参数<3>的名称为“timeout”，类型为“整数型”。
+解释：method DownloadFile
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"EnableKeypadMsg"，en）
+参数<1>的名称为“en”，类型为“整数型”。
+解释：method EnableKeypadMsg
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"EnableMouseMsg"，en）
+参数<1>的名称为“en”，类型为“整数型”。
+解释：method EnableMouseMsg
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"RegNoMac"，code，Ver）
+参数<1>的名称为“code”，类型为“文本型”。
+参数<2>的名称为“Ver”，类型为“文本型”。
+解释：method RegNoMac
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"RegExNoMac"，code，Ver，ip）
+参数<1>的名称为“code”，类型为“文本型”。
+参数<2>的名称为“Ver”，类型为“文本型”。
+参数<3>的名称为“ip”，类型为“文本型”。
+解释：method RegExNoMac
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"SetEnumWindowDelay"，delay）
+参数<1>的名称为“delay”，类型为“整数型”。
+解释：method SetEnumWindowDelay
+
+
+方法调用格式： 〈整数型〉 对象．数值方法 （"FindMulColor"，x1，y1，x2，y2，color，sim）
+参数<1>的名称为“x1”，类型为“整数型”。
+参数<2>的名称为“y1”，类型为“整数型”。
+参数<3>的名称为“x2”，类型为“整数型”。
+参数<4>的名称为“y2”，类型为“整数型”。
+参数<5>的名称为“color”，类型为“文本型”。
+参数<6>的名称为“sim”，类型为“双精度小数型”。
+解释：method FindMulColor
+
+
+方法调用格式： 〈文本型〉 对象．文本方法 （"GetDict"，index，font_index）
+参数<1>的名称为“index”，类型为“整数型”。
+参数<2>的名称为“font_index”，类型为“整数型”。
+解释：method GetDict
+

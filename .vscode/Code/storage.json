@@ -2,6 +2,7 @@
     "telemetry.machineId": "a305edc2d019e93415dc90bff0e7476bb8afe911ffb1724a54074f23a78dd6d3",
     "openedPathsList": {
         "workspaces3": [
+            "file:///c%3A/Git/MyCode/PY",
             "file:///d%3A/Git/MyCode",
             "file:///c%3A/DemoAir"
         ],
@@ -49,17 +50,13 @@
     "themeBackground": "#1e1e1e",
     "windowsState": {
         "lastActiveWindow": {
-            "workspaceIdentifier": {
-                "id": "c431cba51fc34d91aec1c4243064b53f",
-                "configURIPath": "file:///c%3A/Git/MyCode/.vscode/Code/Workspaces/1557921417856/workspace.json"
-            },
-            "backupPath": "C:\\Git\\MyCode\\.vscode\\Code\\Backups\\c431cba51fc34d91aec1c4243064b53f",
+            "backupPath": "C:\\Git\\MyCode\\.vscode\\Code\\Backups\\1558099488788",
             "uiState": {
-                "mode": 0,
-                "x": -8,
-                "y": 22,
-                "width": 1936,
-                "height": 1066
+                "mode": 1,
+                "x": 109,
+                "y": 223,
+                "width": 1024,
+                "height": 768
             }
         },
         "openedWindows": []
