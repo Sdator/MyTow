@@ -17,6 +17,7 @@ void hack(string str,int a,int16 b,int16 c,int16 d)
 {
 //搜索字符串
     int offset=FindFirst(str);
+    if(offset==-1)return;
 //设置属性开始位置 作基地址
     int sx=offset+Strlen(str);
 //设置相关属性偏移地址
@@ -34,25 +35,44 @@ void hack(string str,int a,int16 b,int16 c,int16 d)
 //修改怪物数量
 void unitlen(int len)
 {
-  
-    int16 a=5140;
-    int16 b=4111;
-    int16 c=5139;
-
-    int aa=FindFirst(a);
-    int bb=FindFirst(b);	
-    int cc=FindFirst(c);	
+    
+    //if(FindFirst("艾尔冈")!=-1)int16 a=5140;
+    
+    //int16 a=0x14140180;
+    //辐射矿洞
+    int16 a=0x141401;
+    //int16 b=4111;
+    int16 b=0x100F;
+    //int16 c=5139;
+    int16 c=0x1413;
+    //在0-150范围内搜索
+    int aa=FindFirst(a,true,false,0,0.0,1,0,150);
+    //int aa=FindFirst(a);
+    int bb=FindFirst(b,true,false,0,0.0,1,0,150);	
+    int cc=FindFirst(c,true,false,0,0.0,1,0,150);	
     //位与  取出有效的值   最愚蠢的办法同时也是最有效的办法
     int off=aa&bb&cc;
-    WriteShort(off-2,len);
+
+    Printf("%d-%d-%d-%d",aa,bb,cc,off);
+    WriteShort(off-3,len);
 }
 
 //修改怪数量
 unitlen(50);
 
 //怪物名字 hp 物攻 魔攻 速度
+hack("铁面藤蔓",1,1,1,3000);
+hack("侦测仪AEG",1,1,1,3000);
+
+//怪物名字 hp 物攻 魔攻 速度
 hack("辐射蠕虫",1,1,1,3000);
 hack("辐射翼蛙",1,1,1,3000);
+
+hack("恶灵",1,1,1,3000);
+hack("冤魂",1,1,1,3000);
+
+
+
 
 //保存修改
 FileSave();
