@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="DPlayer.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/dplayer/1.9.1/DPlayer.min.css">
+    <style>
+        body {
+            background-color: black;
+            background-image:
+                radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px),
+                radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px),
+                radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
+            background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+            background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+        }
+
+        /*
+        justify-content
+        align-items
+        flex-direction
+        order
+        align-self
+        flex-wrap
+        flex-flow
+        align-content     
+        flex-grow           属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。
+
+
+        justify-content                        主轴上的对齐方式               X轴
+            flex-start（默认值）：左对齐
+            flex-end：右对齐
+            center： 居中
+            space-between：两端对齐，项目之间的间隔都相等。
+            space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
+
+        align-items         交叉轴上如何对齐                                            Y轴
+        align-self      用于设置单独元素
+            flex-start: Items align to the top of the container.             顶部
+            flex-end: Items align to the bottom of the container.            底部
+            center: Items align at the vertical center of the container.      居中
+            baseline    则会使你的文字底部对齐。见图知意。
+            stretch     你的元素将会被拉伸充满整个交叉轴。
+
+         align-content             定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用        确定线条之间的间距    同时拥有移动效果
+            flex-start：与交叉轴的起点对齐。
+            flex-end：与交叉轴的终点对齐。
+            center：与交叉轴的中点对齐。
+            space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。
+            space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。
+            stretch（默认值）：轴线占满整个交叉轴。
+
+
+        flex-direction      镜像 方向反转       决定主轴的方向（即项目的排列方向）。 设置中心点
+           row（默认值）：主轴为水平方向，起点在左端。
+            row-reverse：主轴为水平方向，起点在右端。
+            column：主轴为垂直方向，起点在上沿。
+            column-reverse：主轴为垂直方向，起点在下沿。
+                    
+        order:0;        设置位置 0为当前位置
+            1           为当前位置+1
+            -1          为所有元素最前面的位置
+
+        flex-wrap:wrap                  展开排列 默认元素会无视宽高挤压在一起
+            nowrap（默认）：不换行。
+            wrap：换行，第一行在上方。            展开
+           wrap-reverse：换行，第一行在下方。      反转展开 
+
+        flex-flow <flex-direction ,flex-wrap>
+       */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            /* 外边框 */
+            margin: 20px;
+            /* 描边 */
+            border: 2px solid #d1bd07;
+            /* 弹性容器 */
+            display: flex;
+            /* 分行 */
+            /* flex-wrap: wrap; */
+            /* 居中 */
+            /* justify-content: center; */
+            /* align-items: stretch; */
+            /* 垂直 */
+            flex-direction: column;
+            flex: 0.8;
+            
+        }
+
+        #dplayer {
+            
+        }
+
+        #in {
+            /* height: 30px; */
+        }
+
+        #play {
+            /* height: 40px; */
+            /* flex-grow: 0; */
+            /* flex-shrink: 0; */
+        }
+    </style>
+</head>
+
+
+<body>
+    <main>
+        <div id="dplayer"></div>
+        <input id="in" />
+        <input id="play" type="button" value="播放" />
+    </main>
+
+
+    <script src="https://cdnjs.loli.net/ajax/libs/hls.js/0.9.1/hls.min.js"></script>
+    <script src="https://cdnjs.loli.net/ajax/libs/dplayer/1.9.1/DPlayer.min.js"></script>
+    <script>
+
+        const dp = document.getElementById('dplayer')
+        var dplayer = new DPlayer({
+            element: dp,
+            video: {
+                name: '普清',
+                url: "https://voo.lstjc.cn/20190515/GeB8ZWSz/index.m3u8",
+
+            }
+        });
+/*
+                                                                                                                        var iframe = document.createElement('iframe');
+                                                                                                                        //iframe['src'] = vUrl;
+                                                                                                                       // iframe['width'] = 580;
+                                                                                                                       // iframe['height'] = 434;
+                                                                                                                        document.body.appendChild(iframe);
+                                                                                                                        iframe.appendChild(dp);
+                                                                                                                */
+    </script>
+</body>
+
+</html>
