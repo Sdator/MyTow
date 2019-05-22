@@ -17,6 +17,7 @@ void hack(string str,int a,int16 b,int16 c,int16 d)
 {
 //搜索字符串
     int offset=FindFirst(str);
+//如果没找到返回
     if(offset==-1)return;
 //设置属性开始位置 作基地址
     int sx=offset+Strlen(str);
@@ -81,6 +82,12 @@ hack("冤魂",1,1,1,3000);
 
 hack("沼泽飞虫",1,1,1,3000);
 hack("沼泽翼鱼",1,1,1,3000);
+
+
+hack("丛林孢子兽",1,1,1,3000);
+hack("丛林树妖",1,1,1,3000);
+
+hack("杜兰狂民",1,1,1,3000);
 
 
 
