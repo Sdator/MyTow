@@ -3650,9 +3650,12 @@ public class ag
       if (a((byte)24) <= 0) {
         return;
       }
+      //判断释放技能等级是否满足
       if ((!l((byte)this.dF[i][0])) && (a((byte)14) <= a.n * h.s((byte)this.dF[i][0])))
       {
+        //这里调用了发送系统信息
         a3.bE.cJ.jdMethod_do(this.hQ);
+        //返回
         return;
       }
       if (a3.bE.aG.jdMethod_int(5120))

@@ -4187,7 +4187,9 @@ public class g
       this.jdField_do = 21;
     }
   }
-  
+//其他案例
+  //this.b.a(str + "只允许领取1个任务,必须完成或放弃已接受的任务才能领取新任务.在菜单->个人->任务中查看你要完成的任务.", (short)11, false, 9999);
+  //可能是屏幕绘制文字函数
   public void a(String paramString, short paramShort, boolean paramBoolean, int paramInt)
   {
     this.eP = paramInt;

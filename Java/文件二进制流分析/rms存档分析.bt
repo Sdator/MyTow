@@ -65,6 +65,17 @@ typedef struct  {
     //1414好像是地图结束符
 } MiMap <open=true, optimize=false>;
 /*====================================================
+NPC
+*==============*/
+typedef struct (){
+    int16 nLen <comment="npc名字长度">;
+    char npcName [nLen]<comment="怪名字">;
+    int16 nn <comment="npc所在坐标？">;
+    byte ulen <comment="怪物的种类数量">;
+    int16 nn <comment="未知">;
+    byte nn <comment="未知">;
+}NPC<open=true, optimize=false>;
+/*====================================================
 怪物信息
 *====================================================*/
 typedef struct (){
@@ -86,12 +97,49 @@ typedef struct (){
 
     char h[4] <comment="地图资源结束标识">;
     int gw <comment="怪物数据开始标识">;	
-    int16 x <comment="怪物的种类数量">;
+
+//处理一些有NPC的地图
+   // local int npc=FindFirst("西蒙领地");
+   
+    //local int npc=FindFirst("掩体西区1");
+
+    local byte isnpc=ReadByte();
+   Printf("%d",isnpc);
+    //如果没找到返回
+    if(isnpc == 1) 
+    {
+        local int npcxm=FindFirst("西蒙荒漠2");
+        if(npcxm != -1)
+        {
+            byte nh <comment="是否有npc标识？">;
+            int16 nx <comment="npc数量">;
+            int16 nLen <comment="npc名字长度">;
+            char npcName [nLen]<comment="怪名字">;
+            int16 nn <comment="未知">;
+            int16 nn <comment="未知">;
+            int16 nn <comment="未知">;
+
+            
+        	}
+	local int npchd=FindFirst("劫掠者I号");
+        //如果没找到返回
+         if(npchd != -1) 
+         {
+                byte nh <comment="是否有npc标识？">;
+                int16 nx <comment="npc数量">;
+	      NPC npc[nx];
+              byte ulen <comment="怪物的种类数量">;
+		
+               
+        	   }
+	}
+	else int16 ulen <comment="怪物的种类数量">;
+     
 
     struct nG {
         int16 x <comment="怪物ID/等级？">;
         int16 len <comment="字符长度">;
-        char namea [len]<comment="怪名字">;
+        char name [len]<comment="怪名字">;
         byte dlen <comment="怪物黄槽/ID/等级？">;
         int d <comment="魔法">;	
         int d <comment="生命",fgcolor=0x0000FF>;
@@ -113,7 +161,7 @@ typedef struct (){
         int16 dd <comment="智能程度？值越低越贴人">;	
         int16 dd <comment="未知属性">;	
 
-    }ng[x]<open=true, optimize=false> ;
+    }ng[ulen]<open=true, optimize=false> ;
 
 }Ggg<open=true, optimize=false>;
 
@@ -152,8 +200,19 @@ while(true)
     if (c.a3==5140 || c.a3==4111|| c.a3==5139)break;
 }  
 
+
+
+
 //怪物信息
 Ggg g;
+
+
+
+
+
+
+
+
 
 
 //修改这个可以连接到任何传送点
@@ -198,7 +257,9 @@ byte y <comment="未知属性 0或-1可以过图">;
 //,hidden=true
 //, optimize=false
 
-//顺序：在声明模板变量后，当前文件指针后移，通过FTell获取当前位置，通过FSeek FSkip移动指针  通过ReadByte ReadShort ReadInt任意读取而不移动指针
+//顺序：在声明模板变量后，当前文件指针后移，通过FTell获取当前位置，通过FSeek FSkip移动指针  
+//通过ReadByte ReadShort ReadInt任意读取而不移动指针
+
 // FSeek(5);  	设置指针位置		
 // FSkip(5);  		递增  当前指针增加5个字节
 // FTell()      		指针当前位置
