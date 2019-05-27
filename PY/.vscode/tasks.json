@@ -5,8 +5,8 @@
     "type":"shell",
     "tasks": [
         {
-            "label": "控制台输出",
-            "command": "echo ${workspaceRoot}"
+            "label": "执行批处理文件",
+            "command": "start ${file}"
         },
         {
             "label": "py",

@@ -173,13 +173,14 @@ def 动漫花园走起(关键字=动画.多羅羅.name, 那个字幕组=字幕�
         "order": 时序.發佈時間從前往後.value  # 时间排列?
     }
 
-    返回数据 = 爬取(url, 请求数据)
+    返回数据 = 爬取(url, 请求数据, "str", 1)
 
-    日期 = datetime.now().strftime("%Y%m%d")
-    路径 = AirFile("/json/%s_%s.xml" % (日期, 关键字))
-    路径.创建目录Ex()
+    # 正则匹配
+    集数 = re.findall(r'<title>(.*)</title>', 返回数据)[1:]
+    种子 = re.findall(r'<enclosure url=(.*)</enclosure>', 返回数据)[1:]
+    磁链 = re.findall(r'<nyaa:infoHash>(.*)</nyaa:infoHash>', 返回数据)
 
-    写出文件(路径.绝对路径, 返回数据, "w")
+    写出文件(关键字, 返回数据, "w")
 
 
 # 第一个参数是搜索关键字
@@ -190,6 +191,7 @@ class 用户名(Enum):
     默认 = ""
     YMDR = "Fox-06_18"
     U3 = "U3-Web"
+    咪梦动漫组 = "xiaomeng"
 
 
 @unique
@@ -266,5 +268,11 @@ def nyaa走起(关键字="多羅羅", 用户名=用户名.默认, 资源类型=�
 
 if __name__ == '__main__':
 
-    nyaa走起()
-    #动漫花园走起(动画.多羅羅.name, 字幕组.全部, 分类.動畫)
+    # nyaa走起("盾")
+    # 动漫花园走起("盾", 字幕组.LoliHouse, 分类.動畫)
+
+
+
+
+
+

@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
-# from AirCom import *
 
+
+# from AirCom import *
+'''
 from socket import *
 from time import ctime
 
@@ -31,3 +33,25 @@ while True:
         tcpCliSock.close
 
 tcpSerSock.close
+'''
+
+# 这是一个函数 带两个参数  我们叫这种做形参
+
+# 变量 整形和实数
+a = 100
+b = 1.222
+
+# 变量 字符串类型
+test = "你大爷"
+test1 = "你妹子"
+
+# 变量 布尔类型只有真和假 即  true和false
+b = a < b
+
+
+if b:
+    # 如果b等于真就
+    print(test)
+else:
+    # 否则就
+    print(test1)
