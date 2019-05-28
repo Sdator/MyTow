@@ -148,53 +148,59 @@ typedef struct (){
 
     char h[4] <comment="地图资源结束标识">;
     int gw <comment="怪物数据开始标识">;	
+    //记录当前偏移
+    local int ft = FTell();
 
-//处理一些有NPC的地图
+  //处理一些有NPC的地图
    // local int npc=FindFirst("西蒙领地");
-   
-    //local int npc=FindFirst("掩体西区1");
 
     local byte isnpc=ReadByte();
    Printf("%d",isnpc);
     //如果没找到返回
-    if(isnpc == 1) 
+if(isnpc == 1) 
+{
+    getUnit("海盗舰长");
+ 
+    local int npclb2=FindFirst("驿站中央通道");
+    if(npclb2 != -1)
     {
-
-
-getUnit("海盗舰长");
-
-
-local int npclb2=FindFirst("驿站中央通道");
-if(npclb2 != -1)
-{
-int16 nn <comment="未知">;
-int16 ulen <comment="怪物的种类数量">;
-}
-
-local int npcxm=FindFirst("西蒙荒漠2");
-if(npcxm != -1)
-{
-NPC npc;
-int16 nn <comment="未知">;
-}
-local int npchd=FindFirst("劫掠者I号");
-//如果没找到返回
-if(npchd != -1) 
-{
-
-NPC npc[nx];
-byte ulen <comment="怪物的种类数量">;
-}
+    int16 nn <comment="未知">;
+    int16 ulen <comment="怪物的种类数量">;
+    }
+    
+    local int npcxm=FindFirst("西蒙荒漠2");
+    if(npcxm != -1)
+    {
+    NPC npc;
+    int16 nn <comment="未知">;
+    }
+    local int npchd=FindFirst("劫掠者I号");
+    //如果没找到返回
+    if(npchd != -1) 
+    {
+    
+    NPC npc[nx];
+    byte ulen <comment="怪物的种类数量">;
+    }
 }
 
 else int16 ulen <comment="怪物的种类数量">;
 
+   //旁加行星  掩体西区 处理 跳过
+    local int isyt=FindFirst("掩体西区1");
+   if(isyt != -1){
+        Printf("\n%d",666666);
+         FSkip(4);
+        int16 ulen <comment="怪物的种类数量">;
+   }
+
+
 
     struct nG {
-        int16 x <comment="怪物ID/等级？">;
+        int16 x <comment="怪物ID">;
         int16 len <comment="字符长度">;
         char name [len]<comment="怪名字">;
-        byte dlen <comment="怪物黄槽/ID/等级？">;
+        byte dlen <comment="怪物等级">;
         int d <comment="魔法">;	
         int d <comment="生命",fgcolor=0x0000FF>;
         int16 d <comment="物攻",fgcolor=0x0000FF>;
