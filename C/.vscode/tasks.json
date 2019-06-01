@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "g++",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-o",
+                "${fileBasenameNoExtension}",
+                "${fileBasename}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "vs环境变量输出",
+            "command": "echo",
+            "args": [
+                "${file}\n",
+                "${workspaceRootFolderName}\n",
+                "${fileBasenameNoExtension}\n",
+                "${fileBasename}\n",
+                "${fileDirname}\n",
+                "${fileExtname}\n",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe\n",
+
+            ]
+        },
+    ]
+}

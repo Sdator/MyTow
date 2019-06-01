@@ -2,16 +2,22 @@
 '''
 by 绝 2019.4.28
 
-解析动漫花园【解析待写】
-    需要填写服务器信息（梯子）
+#2019.6.1
+    文件保存命名方式采用“时间+关键字+字幕组”的方式
+    解析动漫花园【已完成】
 
-解析nyaa【已完成】
+#2019.4.28
+    解析动漫花园【待写】
+        需要填写服务器信息（梯子）
+    解析nyaa【已完成】
 
 '''
+
 # 枚举类型
 from enum import Enum, unique
 import re
 from AirCom import *
+import xml.dom.minidom  # xml处理模块
 
 
 @unique
@@ -163,28 +169,41 @@ class 动画(Enum):
     博人傳 = 4
 
 
-def 动漫花园走起(关键字=动画.多羅羅.name, 那个字幕组=字幕组.全部, 那个分类=分类.動畫):
+def 动漫花园走起(关键字="多羅羅", 那个字幕组=字幕组.全部, 那个分类=分类.動畫):
     url = "https://share.dmhy.org/topics/rss/rss.xml"
 
     请求数据 = {
-        "keyword": 关键字,
+        "keyword": 关键字,      # 搜索用关键字
         "sort_id": 那个分类.value,
         "team_id": 那个字幕组.value,
         "order": 时序.發佈時間從前往後.value  # 时间排列?
     }
 
     返回数据 = 爬取(url, 请求数据, "str", 1)
+    写出名字 = "%s_%s" % (关键字, 那个字幕组.name)
+    路径 = 写出文件(写出名字, 返回数据, "w", "xml")
 
-    # 正则匹配
-    集数 = re.findall(r'<title>(.*)</title>', 返回数据)[1:]
-    种子 = re.findall(r'<enclosure url=(.*)</enclosure>', 返回数据)[1:]
-    磁链 = re.findall(r'<nyaa:infoHash>(.*)</nyaa:infoHash>', 返回数据)
+    # 解析返回的xml
+    document_tree = xml.dom.minidom.parse(路径)
+    collection = document_tree.documentElement  # 获取所有元素
+    # 在集合中获取所有电影
+    items = collection.getElementsByTagName("item")
+    # 生成数组对象 后续转化为json
+    arr = []
+    地址 = ""
+    for item in items:
+        # 获取标题
+        title = item.getElementsByTagName('title')[0]
+        标题 = title.childNodes[0].data
+        # 获取下载地址
+        url = item.getElementsByTagName('enclosure')[0]
+        if url.hasAttribute("url"):
+            地址 = url.getAttribute("url")
+        # 构建新的数据用作写出
+        arr.append({"标题": 标题, "磁链": 地址})
 
-    写出文件(关键字, 返回数据, "w")
+    写出文件(写出名字, arr, "w")
 
-
-# 第一个参数是搜索关键字
-# 第二个参数是字幕组 相关名称到nyaa查找
 
 @unique
 class 用户名(Enum):
@@ -235,6 +254,9 @@ $("#navFilter-category [data-original-index]").each(function(){
 
 '''
 
+# 第一个参数是搜索关键字
+# 第二个参数是字幕组 相关名称到nyaa查找
+
 
 def nyaa走起(关键字="多羅羅", 用户名=用户名.默认, 资源类型=资源类型.动漫_非英语翻译):
 
@@ -242,7 +264,7 @@ def nyaa走起(关键字="多羅羅", 用户名=用户名.默认, 资源类型=�
     请求数据 = {
         "page": "rss",
         "u": 用户名.value,
-        "q": 关键字,
+        "q": 关键字,  # 搜索用关键字
         "c": 资源类型.value
     }
 
@@ -262,17 +284,15 @@ def nyaa走起(关键字="多羅羅", 用户名=用户名.默认, 资源类型=�
         arr.append(
             {"集数": 集数[i], "种子": 种子[i], "磁链": strTmp}
         )
-
-    写出文件(关键字, arr, "w")
+    写出名字 = "%s_%s" % (关键字, 用户名.name)
+    写出文件(写出名字, arr, "w")
 
 
 if __name__ == '__main__':
 
-    # nyaa走起("盾")
-    # 动漫花园走起("盾", 字幕组.LoliHouse, 分类.動畫)
-
-
-
-
-
-
+   # nyaa走起("多 web")
+   # 动漫花园走起("多罗罗 web", 字幕组.全部, 分类.動畫)
+   # 动漫花园走起("盾", 字幕组.LoliHouse, 分类.動畫)
+   # 动漫花园走起("盾", 字幕组.自由字幕组, 分类.動畫)
+   # 动漫花园走起("贤者 简 web", 字幕组.全部, 分类.動畫)
+    动漫花园走起("多罗罗 web", 字幕组.全部, 分类.動畫)

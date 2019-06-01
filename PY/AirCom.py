@@ -6,6 +6,7 @@ import json
 from datetime import datetime
 import base64
 import urllib.parse
+from abc import ABCMeta, abstractmethod
 
 
 class AirFile:
@@ -57,13 +58,11 @@ class AirFile:
 
         if 绝对目录.目录是否存在:
             return
-        #创建目录
+        # 创建目录
         os.makedirs(绝对目录.取路径)
 
 
-
-
-def 写出文件(关键字, data, 读写方式="a"):
+def 写出文件(关键字, data, 读写方式="a", 写出格式="json"):
     """`参数1` 写出路径
 
     `参数2` 写出的数据
@@ -72,9 +71,8 @@ def 写出文件(关键字, data, 读写方式="a"):
     """
     # 构建命名规则
     日期 = datetime.now().strftime("%Y%m%d")
-    路径 = AirFile("/json/%s_%s.json" % (日期, 关键字))
+    路径 = AirFile("/json/%s_%s.%s" % (日期, 关键字, 写出格式))
     路径.创建目录Ex()
-
 
     # 如果不是字符串就转码
     if not isinstance(data, str):
@@ -84,6 +82,8 @@ def 写出文件(关键字, data, 读写方式="a"):
     with open(路径.绝对路径, 读写方式, encoding="utf-8") as f:
         # 写到文件
         f.write(data)
+    # 返回写出路径
+    return 路径.绝对路径
 
 
 def 爬取(提交地址, 请求数据, 返回格式="str", 是否使用代理=0):
@@ -121,12 +121,28 @@ def 爬取(提交地址, 请求数据, 返回格式="str", 是否使用代理=0)
     return sTmp
 
 
-class 吉吉儿不放假:
+class H:
+    __metaclass__ = ABCMeta
+
+    def __init__(self):
+        pass
+    # 虚函数
+    @abstractmethod
+    def 提交数据(self):
+        pass
+
+    @abstractmethod
+    def url(self):
+        pass
+
+
+class 吉吉儿不放假(H):
     返回数据 = []
     页数 = 0
     i = 0
+
     @property
-    def __递增页数(self):
+    def 递增页数(self):
         self.页数 += 1
         return self.页数
 
@@ -135,29 +151,11 @@ class 吉吉儿不放假:
         self.i += 1
         return self.i
 
-    @property
-    def 提交数据(self):
-        return {'page': self.__递增页数, 'userid': 10029, 'ddh': 'vA8RVMNwA2'}
-
-    @property
-    def url(self):
-        # 提交地址 不要那么明显
-        url = base64.b64decode(
-            b'aHR0cCUzQS8vbi4yeHd0NzUuY24vaW5kZXgucGhwL2luZGV4L2luZGV4L2hlemkuaHRtbA==')
-        url = str(url, 'utf8')
-        url = urllib.parse.unquote(url)
-        # http://n.2xwt75.cn/index.php/index/index/hezi.html  已失效
-        url = "http://gt57jip.cn/index.php/index/index/hezi.html"
-        return url
-
     def __init__(self):
         self.获取()
 
     def __str__(self):
         return json.dumps(self.返回数据, ensure_ascii=False)
-
-    # def data(self, *data):
-    #     print(data)
 
     def 获取(self):
         # 访问网站
@@ -181,3 +179,25 @@ class 吉吉儿不放假:
             self.返回数据.append(data.copy())
         # 递归
         self.获取()
+
+
+class geodreamer(吉吉儿不放假):
+    @property
+    def 提交数据(self):
+        return {'page': self.递增页数, 'userid': 10109, "ddh": 'qyDBPSs7FZ'}
+
+    @property
+    def url(self):
+        url = "http://fdgdfgdfgdfgdfshtyjykj.geodreamer.xyz/index.php/index/index/hezi.html"
+        return url
+
+
+class 老的(吉吉儿不放假):
+    @property
+    def 提交数据(self):
+        return {'page': self.递增页数, 'userid': 10029, 'ddh': 'vA8RVMNwA2'}
+
+    @property
+    def url(self):
+        url = "http://gt57jip.cn/index.php/index/index/hezi.html"
+        return url

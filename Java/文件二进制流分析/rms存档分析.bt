@@ -100,13 +100,24 @@ typedef struct (){
 *====================================================*/
 void getUnit (string s){
         local int offset=FindFirst(s);
-	if(offset==-1)return;
+        local int tmp;
+        //枚举所有找到的项目只取最后一个
+        while(tmp != -1)
+        {	
+            //寻找下一个
+            tmp = FindNext() ;
+            Printf("%d",tmp);
+            if( tmp != -1) offset = tmp;
+            else return;
+        };
+
+
        //跳到指定位置
-       FSeek(offset-4); 
-        int16 x <comment="怪物ID/等级？">;
+        FSeek(offset-4); 
+        int16 x <comment="怪物ID">;
         int16 len <comment="字符长度">;
         char name [len]<comment="怪名字">;
-        byte dlen <comment="怪物黄槽/ID/等级？">;
+        byte dlen <comment="怪物等级">;
         int d <comment="魔法">;	
         int d <comment="生命",fgcolor=0x0000FF>;
         int16 d <comment="物攻",fgcolor=0x0000FF>;
@@ -115,7 +126,7 @@ void getUnit (string s){
         int16 d <comment="魔防">;
         //内存中在这里断开了 应该是结束符
         int16 dd <comment="结束符？/使用魔法的几率越高越大">;
-         int16 dd <comment="智能程度有所下降">;	
+        int16 dd <comment="智能程度有所下降">;	
         int16 dd <comment="未知属性">;	
         int16 dd <comment="未知属性">;	
         int16 dd <comment="未知属性">;	
@@ -150,65 +161,82 @@ typedef struct (){
     int gw <comment="怪物数据开始标识">;	
     //记录当前偏移
     local int ft = FTell();
-
-  //处理一些有NPC的地图
-   // local int npc=FindFirst("西蒙领地");
-
+   /*
+    //处理一些有NPC的地图
     local byte isnpc=ReadByte();
-   Printf("%d",isnpc);
-    //如果没找到返回
-if(isnpc == 1) 
-{
-    getUnit("海盗舰长");
- 
-    local int npclb2=FindFirst("驿站中央通道");
-    if(npclb2 != -1)
+    Printf("NPC：%d\n",isnpc);
+   //如果没找到返回
+    if(isnpc == 1) 
     {
-    int16 nn <comment="未知">;
-    int16 ulen <comment="怪物的种类数量">;
-    }
-    
-    local int npcxm=FindFirst("西蒙荒漠2");
-    if(npcxm != -1)
-    {
-    NPC npc;
-    int16 nn <comment="未知">;
-    }
-    local int npchd=FindFirst("劫掠者I号");
-    //如果没找到返回
-    if(npchd != -1) 
-    {
-    
-    NPC npc[nx];
-    byte ulen <comment="怪物的种类数量">;
-    }
-}
+        Printf("%s","有NPC\n");
+        //直接读取怪物属性
+        //getUnit("海盗舰长");
+        getUnit("海盗舰长");
+        getUnit("老布");
 
-else int16 ulen <comment="怪物的种类数量">;
+     
+        local int npclb2=FindFirst("驿站中央通道");
+        if(npclb2 != -1)
+        {
+            int16 nn <comment="未知">;
+            int16 ulen <comment="怪物的种类数量">;
+        }
+        
+        local int npcxm=FindFirst("西蒙荒漠2");
+        if(npcxm != -1)
+        {
+            NPC npc;
+            int16 nn <comment="未知">;
+        }
 
-   //旁加行星  掩体西区 处理 跳过
+        local int npchd=FindFirst("劫掠者I号");
+        //如果没找到返回
+        if(npchd != -1) 
+        {
+    
+            NPC npc[nx];
+            byte ulen <comment="怪物的种类数量">;
+        }
+        
+    }
+    */
+    //旁加行星  掩体西区 处理 跳过
     local int isyt=FindFirst("掩体西区1");
-   if(isyt != -1){
+    if(isyt != -1){
         Printf("\n%d",666666);
-         FSkip(4);
-        int16 ulen <comment="怪物的种类数量">;
-   }
+        FSkip(4);
+    }
 
+    //老布
+    local int islb=FindFirst("老布");
+    if(islb != -1){
+        getUnit("老布");
+	    
+        FSkip(46);
+    }
+ 
+    //老布
+    local int is1516=FindFirst("乱石丘陵1");
+    if(is1516 != -1){
+        FSkip(19);
+    }
+ 
 
+    int16 ulen <comment="怪物的种类数量">;
 
     struct nG {
-        int16 x <comment="怪物ID">;
+        int16 uid <comment="怪物ID">;
         int16 len <comment="字符长度">;
         char name [len]<comment="怪名字">;
-        byte dlen <comment="怪物等级">;
-        int d <comment="魔法">;	
-        int d <comment="生命",fgcolor=0x0000FF>;
-        int16 d <comment="物攻",fgcolor=0x0000FF>;
-        int16 d <comment="物防">;	
-        int16 d <comment="魔攻",fgcolor=0x0000FF>;
-        int16 d <comment="魔防">;
+        byte lv <comment="怪物等级">;
+        int MP <comment="魔法">;	
+        int HP <comment="生命",fgcolor=0x0000FF>;
+        int16 ATN <comment="物攻",fgcolor=0x0000FF>;
+        int16 DEF <comment="物防">;	
+        int16 Int <comment="魔攻",fgcolor=0x0000FF>;
+        int16 RES <comment="魔防">;
         //内存中在这里断开了 应该是结束符
-        int16 dd <comment="结束符？/使用魔法的几率越高越大">;
+        int16 end <comment="结束符？/使用魔法的几率越高越大">;
         //少攻击使用异常技能多
 
         int16 dd <comment="智能程度有所下降">;	
@@ -216,7 +244,7 @@ else int16 ulen <comment="怪物的种类数量">;
         int16 dd <comment="未知属性">;	
         int16 dd <comment="未知属性">;	
 
-        int16 dd <comment="速度",fgcolor=0x0000FF>;	
+        int16 speed <comment="速度",fgcolor=0x0000FF>;	
         int16 dd <comment="未知属性">;	
         int16 dd <comment="智能程度？值越低越贴人">;	
         int16 dd <comment="未知属性">;	
