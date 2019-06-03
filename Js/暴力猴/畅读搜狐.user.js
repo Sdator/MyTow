@@ -9,9 +9,6 @@
 // @updateURL           https://github.com/Sdator/MyCode/raw/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4/畅读搜狐.user.js
 // @downloadURL         https://github.com/Sdator/MyCode/raw/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4/畅读搜狐.user.js
 // @run-at              document-end
-// @grant               GM_getValue
-// @grant               GM_setValue
-// @grant               GM_addStyle
 // ==/UserScript==
 
 let css = `
