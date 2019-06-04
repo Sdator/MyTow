@@ -29,6 +29,10 @@ class AirFile:
     @property
     def 路径是否存在(self):
         return os.path.exists(self.__path)
+    @property
+    def 取合格路径(self):
+        return os.path.realpath(self.__path)
+
 
     @property
     def 目录是否存在(self):
