@@ -9,6 +9,7 @@
 // @updateURL           https://github.com/Sdator/MyCode/raw/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4/畅读搜狐.user.js
 // @downloadURL         https://github.com/Sdator/MyCode/raw/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4/畅读搜狐.user.js
 // @run-at              document-end
+// @grant               GM_addStyle
 // ==/UserScript==
 
 let css = `
@@ -29,6 +30,7 @@ body {
 GM_addStyle(css)
 
 
+
 $(() => {
     let 元素 = ".text"
 
@@ -36,11 +38,11 @@ $(() => {
     let 特殊页面 = $(".article-box.l")
     if (特殊页面.length) {
         元素 += ",.article-box.l"
-        特殊页面.children(":gt(2)").nextAll().remove()
+        特殊页面.children(":gt(3)").remove()
     }
 
     // 重建主题
-    $('.text').appendTo($("body")).wrap($("<div id='diy'></div>"));
+    $(元素).appendTo($("body")).wrap($("<div id='diy'></div>"));
     // 删除多余标签
     $("body *").not('#diy').not($('#diy').find("*")).remove()
 })
