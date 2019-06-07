@@ -3,7 +3,7 @@
 // @author              絕版大叔丶
 // @namespace           https://github.com/Sdator/MyCode/tree/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4
 // @icon                https://avatars3.githubusercontent.com/u/17621623?s=40&v=4
-// @version             1.0
+// @version             1.1
 // @match               *://www.sohu.com/a/*
 // @description         删除搜狐所有广告，重建主题内容
 // @updateURL           https://github.com/Sdator/MyCode/raw/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4/畅读搜狐.user.js
