@@ -38,7 +38,7 @@ $(() => {
     let 特殊页面 = $(".article-box.l")
     if (特殊页面.length) {
         元素 += ",.article-box.l"
-        特殊页面.children(":gt(3)").remove()
+        特殊页面.children(":gt(4)").remove()
     }
 
     // 重建主题
