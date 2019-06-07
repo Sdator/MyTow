@@ -30,6 +30,15 @@ GM_addStyle(css)
 
 
 $(() => {
+    let 元素 = ".text"
+
+    //兼容另一种特殊页面
+    let 特殊页面 = $(".article-box.l")
+    if (特殊页面.length) {
+        元素 += ",.article-box.l"
+        特殊页面.children(":gt(2)").nextAll().remove()
+    }
+
     // 重建主题
     $('.text').appendTo($("body")).wrap($("<div id='diy'></div>"));
     // 删除多余标签
