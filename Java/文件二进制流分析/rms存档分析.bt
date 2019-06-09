@@ -61,9 +61,11 @@ typedef  struct  {
         char an [la]<comment="当前地图名字">;
         //最后一个是怪密度",	
         int16 csdxy <comment="传送点在地图坐标/怪密度",bgcolor=0x80FF80>;
-        int16 a3 <comment="地图标识 用作触发传送点提示文本">;
+        int16 a3 <comment="地图标识 用作触发传送点提示文本",fgcolor=0x0000FF>;
         //1414好像是地图结束符
     } MiMap <open=true, optimize=false>;
+
+
 
     //其余传送点
     while(true)  
@@ -131,8 +133,9 @@ void getUnit (string s){
         int16 dd <comment="未知属性">;	
         int16 dd <comment="未知属性">;	
 
-        int16 dd <comment="速度",fgcolor=0x0000FF>;	
-        int16 dd <comment="未知属性">;	
+        int16 dd <comment="移动速度",fgcolor=0x0000FF>;	
+        byte yz <comment="硬直 越大越霸体">;	
+        byte dd <comment="未知属性">;	
         int16 dd <comment="智能程度？值越低越贴人">;	
         int16 dd <comment="未知属性">;	
 };
@@ -244,9 +247,12 @@ typedef struct (){
         int16 dd <comment="未知属性">;	
         int16 dd <comment="未知属性">;	
 
-        int16 speed <comment="速度",fgcolor=0x0000FF>;	
-        int16 dd <comment="未知属性">;	
-        int16 dd <comment="智能程度？值越低越贴人">;	
+        int16 speed <comment="移动速度",fgcolor=0x0000FF>;	
+        byte yz <comment="硬直 越大越霸体",fgcolor=0x0000FF>;	
+        byte x <comment="中心点x 修改会导致怪攻击偏移">;	
+        byte y <comment="中心点y 修改会导致怪攻击偏移">;	
+        //0 怪只会采用魔法攻击 不会出物理攻击
+        byte dd <comment="攻击频率?值越低不会物理角色">;	
         int16 dd <comment="未知属性">;	
 
     }ng[ulen]<open=true, optimize=false> ;
