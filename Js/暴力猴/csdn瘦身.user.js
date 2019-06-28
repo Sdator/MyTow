@@ -3,7 +3,7 @@
 // @author              絕版大叔丶
 // @namespace           https://github.com/Sdator/MyCode/tree/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4
 // @icon                https://avatars3.githubusercontent.com/u/17621623?s=40&v=4
-// @version             1.3
+// @version             1.4
 // @match               *://blog.csdn.net/*
 // @description         删除csdn所有广告，保留主题内容
 // @updateURL           https://github.com/Sdator/MyCode/raw/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4/csdn%E7%98%A6%E8%BA%AB.user.js
@@ -24,7 +24,7 @@ $(() => {
     //aside左边栏目
     //选取.blog-content-box后面的所有div兄弟元素   底部栏目
     //顶部栏目
-    $('#article_content>a,[ID^=kp_box_],.pulllog-box,a[href^="https://h5.youzan.com"],.blog-content-box~div,#csdn-toolbar').remove()
+    $('#article_content>a,[ID^=kp_box_],.pulllog-box,a[href^="https://h5.youzan.com"],.blog-content-box~div,#csdn-toolbar,#passportbox').remove()
     //举报按钮 垃圾奖杯
     $('aside,.recommend-right,.tool-box,#reportContent,#adContent').wrap($("<div></div>")).parent().css("-webkit-mask", 'url() no-repeat')
 })
