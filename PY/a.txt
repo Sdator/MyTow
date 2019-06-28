@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 FROM mritd/shadowsocks
 WORKDIR /code
 ENV SS_MODULE ss-server
@@ -85,3 +86,14 @@ services:
       FLASK_ENV: development        设置flask开发模式环境变量 文件热更新
   redis:
     image: "redis:alpine"
+=======
+生成镜像
+cd doodle\cheers2019 ;
+docker build -t sdator/cheers2019 .
+
+运行镜像
+docker run -it --rm sdator/cheers2019
+上传镜像
+docker push sdator/cheers2019
+
+>>>>>>> b1ecd65d497fc4c79c4ae280cdb6baee7656f7e8
