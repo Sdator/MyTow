@@ -50,7 +50,8 @@ def init():
     # 类实现 采用递归
     # jj = 吉吉儿不放假().返回数据
 
-    kk= geodreamer().返回数据
+    # kk= geodreamer().返回数据
+    kk= 老的().返回数据
 
     # 写出文件("不放假", jj)
     写出文件("不放假geo", kk)
