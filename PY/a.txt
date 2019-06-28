@@ -1,0 +1,10 @@
+
+生成镜像
+cd doodle\cheers2019 ;
+docker build -t sdator/cheers2019 .
+
+运行镜像
+docker run -it --rm sdator/cheers2019
+上传镜像
+docker push sdator/cheers2019
+
