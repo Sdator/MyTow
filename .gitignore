@@ -2,6 +2,7 @@
 #过滤code文件夹
 /.vscode
 /CQ
+/酷Qlua
 # 不忽略临时文件
 #!/.vscode/Code/Backups/
 # 不忽略配置文件
