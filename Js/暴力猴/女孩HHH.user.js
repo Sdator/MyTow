@@ -4,12 +4,14 @@
 // @namespace           https://github.com/Sdator/MyCode/tree/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4
 // @icon                https://avatars3.githubusercontent.com/u/17621623?s=40&v=4
 // @version             1.1
-// @match               *://www.xxxx.com/a/*
+// @match               *://home.twofei.com:7890/date/*/*/*/*
 // @description         学习
 // @updateURL           https://github.com/Sdator/MyCode/raw/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4/女孩HHH.user.js
 // @downloadURL         https://github.com/Sdator/MyCode/raw/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4/女孩HHH.user.js
 // @run-at              document-end
 // @grant               GM_addStyle
+// @require             https://cdnjs.loli.net/ajax/libs/jquery/3.4.1/jquery.js
+// @contributionAmount  10软妹
 // ==/UserScript==
 
 $(() => {
