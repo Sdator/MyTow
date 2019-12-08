@@ -1,6 +1,6 @@
 
 #过滤code文件夹
-/.vscode
+/.vscode/*/
 /CQ
 /酷Qlua
 # 不忽略临时文件

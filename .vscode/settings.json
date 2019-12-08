@@ -1,0 +1,5 @@
+{
+    "git.path": "C:\\App\\PortableGit",
+    "terminal.integrated.shell.windows": "C:\\ScoopApp\\git\\current\\bin\\bash.exe",
+    "python.linting.pylintEnabled": true,
+}
