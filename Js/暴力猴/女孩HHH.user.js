@@ -3,7 +3,7 @@
 // @author              絕版大叔丶
 // @namespace           https://github.com/Sdator/MyCode/tree/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4
 // @icon                https://avatars3.githubusercontent.com/u/17621623?s=40&v=4
-// @version             1.2
+// @version             1.3
 // @match               *://home.twofei.com:7890/*
 // @description         学习
 // @updateURL           https://github.com/Sdator/MyCode/raw/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4/女孩HHH.user.js
@@ -23,42 +23,57 @@ margin:0;
 }
 
 
+/* 总层 */
 #img{
     background-color: rgba(255,255,255,0.8);
     display: flex;
-    flex-direction: column;
+   /* flex-direction: column;*/
     min-height: 100vh;
-  background: rgba(0,0,0,1);
+    background: rgba(0,0,0,1);
+  /*  width: 95vw;*/
+    height: 100vh;
+
+
 }
 
-
+/* 显示层 */
 #show{
   background-color: rgba(0,0,0,0.8);
   flex: 1 0 768px;
 }
 
 
-
+/* 预览层 */
 #imgs {
     box-shadow: 0 0 10px -6px black;
     padding: 10px;
     z-index: 1;
     display: flex;
     justify-content: center;
-    flex: 1;
-/*background: rgba(255,255,255,0.2);*/
+    flex-wrap: wrap;
+    overflow: auto;
+    height:90vh;
+    width: 20vw;
+    margin: 30px;
+
+
 }
 
-
-img{
-    transition: transform 0.2s linear;
+/* 图们 */
+#imgs div{
+    transition: transform 0.2s linear,box-shadow 0.2s;
     transform: scale(1.0);
     margin: 10px;
-  
+    border:1px solid #a1a1a1;
+    box-shadow: 0 0 10px -3px #fff;
+
 }
 
-img:hover {
+/* 特效 */
+#imgs div:hover {
     transform: scale(1.2);
+    border:1px solid #FFCC00;
+    box-shadow: 0 0 11px 5px #FFCC00;
 }
 
 
@@ -92,23 +107,18 @@ $(() => {
   $("<div id='imgs'>").prependTo("#img")
   $("<div id='show'>").prependTo("#img")
 
-    $("[href$='.jpg']").each(function () {
+    $("[href$='.jpg'],[href$='.png']").each(function () {
         let url = window.location.href + $(this).attr("href")
-        $("<img>", {
+        $("<div>", {
             click: function () {
                 $(this).css({
-                    // "align-self": "flex-start",
                 });
             },
             mouseover: function () {
                 let css = $(this).css("background")      
-                $("#show").css("background", css)
-  
-
-              
+                $("#show").css("background", css)             
             },
             mouseout: function () {
-
             },
             style: `height:100px;width:100px;background:url(${url});background-size:contain;background-repeat:no-repeat;background-position:center`
         }).appendTo("#imgs");
