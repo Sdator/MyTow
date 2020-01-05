@@ -1,0 +1,116 @@
+untitled:Untitled-10
+api_call.js
+
+
+function addItemToFavoriteList(id) {
+    var API_URL = 'https://' + location.host + '/api/MypageApi.php';
+
+    // 必要項目がなければエラー
+    if (!id) {
+        alert('必要データが取得出来ませんでした。');
+        return false;
+    }
+
+    $.ajax({
+        type: 'POST',
+        url: API_URL,
+        xhrFields: {
+            withCredentials: true
+        },
+        data: {
+            'id': id,
+            'type': 'favorite',
+            'process': 'insert'
+        },
+        dataType: 'json',
+        success: function(result, dataType) {
+            // 登録OK
+            if (result['error'] == '' && result['status'] == true) {
+                alert('お気に入りリストに追加しました。');
+                // 登録済み
+            } else if (result['error'] == 'exist') {
+                alert('お気に入りリストに既に登録されています。');
+                // 商品ID未渡しエラー
+            } else if (result['error'] == 'no_product') {
+                alert('お気に入りリストに追加できませんでした。');
+                // お気に入りリストの上限到達
+            } else if (result['error'] == 'upper_limit') {
+                alert('お気に入りリストの上限を超えています。リストの不要なアイテムを削除してから、再度追加してください。');
+                // 存在しない商品IDエラー
+            } else if (result['error'] == 'no_product_exist') {
+                alert('お気に入りリストに追加できませんでした。');
+                // 未ログイン
+            } else if (result['error'] == 'no_login') {
+                location.href = '/login/login.php';
+                // 未定義エラー
+            } else {
+                alert('お気に入りリストに追加できませんでした。');
+            }
+        },
+        // エラー
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            alert('通信に失敗しました。' + textStatus + errorThrown);
+        }
+    });
+}
+
+
+
+data.html.indexOf("var pane") - "var pane".length
+
+14653
+
+从字符串指定位置开始获取n个字符串
+data.html.substr(14650, 40)
+
+
+
+
+
+data.html = data.html.slice(0, 14650) + 'var bonus_flg = 0;' + data.html.slice(14650)
+
+
+{
+    let movieloc = "https://www.mgstage.com/sampleplayer/sampleRespons.php?pid=0ca91b2c-f4c2-4578-9108-49b48e0abe62";
+    $.ajax({
+        async: true,
+        url: movieloc,
+        success: function(data, textStatus) {
+            console.log(data)
+
+        }
+
+    })
+}
+
+返回了一个地址
+url: "https://sample.mgstage.com/sample/shirouto/siro/3743/SIRO-3743_sample.ism/request?uid=10000000-0000-0000-0000-00000000000a&amp;pid=0ca91b2c-f4c2-4578-9108-49b48e0abe62"
+
+
+https://sample.mgstage.com/sample/shirouto/siro/3743/SIRO-3743_sample.mp4
+
+https://feature.mgstage.com/feature/SIRO-3743_tokuten_sample/SIRO-3743_tokuten_sample.mp4
+
+
+//通过post这个地址来获取返回的整个html页面数据再呈现给用户 里面包含了播放地址
+https://www.mgstage.com/sampleplayer/sampleplayer.php?pid=0ca91b2c-f4c2-4578-9108-49b48e0abe62
+
+
+发现了另外一种也能预览的方式 分享按钮
+采用了套框架的方式调用一个api
+https://www.mgstage.com/affsamplem/affsamplem.php?pid=0ca91b2c-f4c2-4578-9108-49b48e0abe62
+
+经过跟踪获取到了另外一个调用接口可以通过番号直接预览片子
+`https://www.mgstage.com/api/affiliate_sample_movie.php?p=${SIRO-3743}`
+
+
+
+
+<Error>
+<Code>AccessDenied</Code>
+<Message>Access Denied</Message>
+<RequestId>84C331D2743340F9</RequestId>
+<HostId>
+CaHN8zJlC9QGQ0jLY7h7LzqI545DwO/hw8D8hSLbo46TXNZp2vs7FTg2Os6B5DZ71YPjHX5sVyk=
+</HostId>
+</Error>

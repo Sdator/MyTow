@@ -1,0 +1,16 @@
+untitled:Untitled-12
+#!/bin/sh
+
+wget --no-check-certificate -O shadowsocks-go.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-go.sh
+chmod +x shadowsocks-go.sh
+yum install net-tools -y
+rpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-3.10.0-229.1.2.el7.x86_64.rpm --force
+wget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master/serverspeeder.sh && bash serverspeeder.sh
+reboot
+./shadowsocks-go.sh 2>&1 | tee shadowsocks-go.log
+
+
+#yum -y install epel-release
+#yum -y install python-pip
+#pip install --upgrade pip
+#pip install docker-compose

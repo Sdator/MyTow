@@ -1,0 +1,44 @@
+untitled:Untitled-1
+
+firewall-cmd --permanent "
+
+
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" port port="25565" protocol="tcp" accept'
+
+
+
+firewall-cmd --permanent --add-port=11992/tcp
+
+
+firewall-cmd --permanent --add-port=10000-20000/tcp
+
+sudo firewall-cmd --permanent --add-source=14.209.1.1/16
+
+firewall-cmd --list-all
+
+sudo firewall-cmd --reload
+
+103.27.0.0/16
+112.96.0.0/16
+
+
+三种X Window的显示管理器（Display Manager） 登陆界面？
+xdm gdm kdm 、
+
+
+我的世界
+
+    luckperms        权限插件
+        griefprevention-1.12.2-4.3.0.689        圈地插件
+
+    Nucleus         功能命令插件    基础插件*
+
+
+
+ls -a ${PATH//:/ } | grep ^rc
+
+
+
+tablet:mitomio
+account: mitomio@outlook.com
+password:Yy603492398+

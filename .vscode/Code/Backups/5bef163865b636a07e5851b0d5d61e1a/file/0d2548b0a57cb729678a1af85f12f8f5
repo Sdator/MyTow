@@ -1,0 +1,35 @@
+file:///c%3A/Users/Air/Desktop/%E6%97%A0%E6%A0%87%E9%A2%981.ps1 {"mtime":1563058006770,"size":636,"etag":"33hm89n4hkg","orphaned":false}
+# 全局安装路径
+$env:SCOOP_GLOBAL="D:\Apps\Scoop"
+
+# NET方法 永久添加到环境变量
+# [Environment]::SetEnvironmentVariable('SCOOP_GLOBAL', $env:SCOOP_GLOBAL,"User")
+
+#minikube报错找不到路径文件是因为minikube没有装在c盘
+$MINIKUBE_HOME=$env:USERPROFILE + "v.minikube"
+$MINIKUBE_HOME=$env:USERPROFILE + "\.minikube"
+
+
+
+[Environment]::SetEnvironmentVariable('MINIKUBE_HOME', "H:\.minikube", "User")
+
+$MINIKUBE_HOME
+
+$env:MINIKUBE_HOME
+
+
+$env:MINIKUBE_HOME="H:\.minikube"
+
+# 一些神秘的命令行
+wmic /?
+WMIC 已弃用。
+
+
+#列举所有变量 包含环境变量
+# ls variable:
+
+
+
+# 全局安装
+# 全局安装需要先定义好SCOOP_GLOBAL环境变量 再使用-g参数
+# scoop install -g minikube

@@ -1,0 +1,46 @@
+untitled:Untitled-5
+
+# 在/home/user/coolq一层内搜索exe文件
+hasexe=$(find /home/user/coolq -maxdepth 1 -type f -name '*.exe')
+
+# 如果不等于空就提示已经存在
+if [ "$hasexe" != "" ] ; then
+    echo 'CoolQ already exists, skip download.'
+# 否则重新下载
+else
+    echo 'Downloading CoolQ ...'
+    # 创建文件夹
+    mkdir /tmp/cq
+    # 下载酷C
+    wget $COOLQ_URL -O /tmp/cq/coolq.zip
+    echo 'Unzipping CoolQ ...'
+    # 进入目录
+    cd /tmp/cq
+    # 解压 不提示
+    LC_ALL=zh_CN.UTF-8 unzip coolq.zip > /dev/null
+    # 移动当前目录下所有文件到 home/user/coolq
+    mv */* /home/user/coolq
+    # 设置权限
+    chown -R user:user /home/user/coolq
+    # 删除临时文件
+    rm -rf /tmp/cq
+fi
+
+sudo -E -Hu user /usr/bin/python3 /home/user/bootstrap.py
+
+
+#!/usr/bin/with-contenv /bin/bash
+hasexe=$(find /home/user/coolq -maxdepth 1 -type f -name '*.exe')
+if [ "$hasexe" != "" ] ; then
+    echo 'CoolQ already exists, skip download.'
+else
+    echo 'Downloading CoolQ ...'
+    mkdir /tmp/cq
+    wget $COOLQ_URL -O /tmp/cq/coolq.zip
+    echo 'Unzipping CoolQ ...'
+    cd /tmp/cq
+    LC_ALL=zh_CN.UTF-8 unzip coolq.zip > /dev/null
+    mv */* /home/user/coolq
+    chown -R user:user /home/user/coolq
+    rm -rf /tmp/cq
+fi

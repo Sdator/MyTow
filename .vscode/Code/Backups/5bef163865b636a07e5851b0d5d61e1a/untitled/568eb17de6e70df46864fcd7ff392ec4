@@ -1,0 +1,113 @@
+untitled:Untitled-7
+https: //www.at-x.com/program/31972
+
+    // 匹配出所有连接
+    $("td a[href^='/program']").attr("href")
+
+
+{
+    $("td a[href^='/program']").attr("href", function(index, oldvalue) {
+        let url = "https://www.at-x.com" + oldvalue
+        $.get(url, function(data) {
+            if (data.indexOf("視聴年齢制限あり") != -1) {
+                console.log(url)
+            }
+        })
+    })
+}
+
+
+{
+    let 过滤地址 = new Map()
+    $("td a[href^='/program']").each(function() {
+
+
+        let 动画名 = $(this).text()
+        let url = "https://www.at-x.com" + $(this).attr("href")
+        $.get(url, function(data) {
+            if (data.indexOf("視聴年齢制限あり") != -1) {
+                console.log(url, 动画名)
+            }
+        })
+    })
+    console.log("完成")
+}
+
+
+// 成品
+{
+
+    let 过滤地址 = new Map()
+        //先处理得到的地址 放到map里过滤重复项 由于有键值对所以不适合使用set
+    $("td a[href^='/program']").each(function() {
+        let 动画名 = $(this).text()
+        let url = "https://www.at-x.com" + $(this).attr("href")
+            //使用url来当key直接覆盖相同的 等同过滤了重复的值
+        过滤地址.set(url, 动画名)
+    })
+
+    let i = 0
+    let len = 过滤地址.size
+    for (const [地址, 动画名] of 过滤地址) {
+        //这里是异步执行的
+        $.get(地址, function(data) {
+            if (data.indexOf("視聴年齢制限あり") != -1) {
+                console.log(i++, 地址, 动画名)
+            }
+            console.log(`共${len}，已完成`, i++)
+        })
+
+    }
+}
+
+
+
+https: //www.at-x.com/program/31968
+    http: //www.saiani.net/image/animeinfo-top.html
+
+
+    {
+        let i = 0
+        $("td a[href^='/program']").each(function() {
+            i++
+        })
+        console.log(i)
+
+    }
+
+/*
+最近妹妹有点怪
+    【パッケージ版】
+    2019年4月7日（日）スタート
+    毎週（日）27：00
+    【30分×1話】
+    ※視聴年齢制限あり※
+
+
+老师会出现在这里？
+    なんでここに先生が!?
+    もっとたゆたゆver.
+    2019年4月11日（木）スタート
+    毎週（木）21：45
+    毎週（土）13：45
+    毎週（火）29：45
+    【15分×1話】
+    ※視聴年齢制限あり※
+
+噬血狂袭
+    2019年6月8日（土）スタート
+    毎週（土）23：30
+    毎週（火）15：30
+    毎週（金）7：30
+    【30分×1話】
+    ※視聴年齢制限あり※
+
+
+OVA版 同級生2
+    2019年3月31日（日）スタート
+    毎週（日）27：30
+    【30分×1話】
+    ※視聴年齢制限あり※
+
+
+    */

@@ -1,0 +1,162 @@
+untitled:Untitled-8
+<script src="https://static.mgstage.com/mgs/script/common/api_call.js">
+</script>↵
+<script src="https://static.mgstage.com/mgs/script/pc/sale-discount.js"></script>↵
+<script type="text/javascript">
+    ↵
+    $(function() {↵ //$('#sample-photo a, a.link_magnify').lightBox();↵↵        $("#st_detail_sampleplayer").ready(function() {↵            if ($("input[name='price_sampleplayer']:checked").length === 0) {↵                return;↵            }↵            if ( $("input[name='price_sampleplayer']:checked").val().split(",")[0] == 'streaming') {↵                $("#st_detail_sampleplayer").css("display","block");↵                $("#st_detail_sampleplayer_point").css("display","block");↵            } else {↵                $("#st_detail_sampleplayer").css("display","none");↵                $("#st_detail_sampleplayer_point").css("display","none");↵            }↵        });↵↵        $("#dl_detail_sampleplayer").ready(function() {↵            if ($("input[name='price_sampleplayer']:checked").length === 0) {↵                return;↵            }↵            if ( $("input[name='price_sampleplayer']:checked").val().split(",")[0] == 'download') {↵                $("#dl_detail_sampleplayer").css("display","block");↵                $("#dl_detail_sampleplayer_point").css("display","block");↵            } else {↵                $("#dl_detail_sampleplayer").css("display","none");↵                $("#dl_detail_sampleplayer_point").css("display","none");↵            }↵        });↵↵        $("#dlh_detail_sampleplayer").ready(function() {↵            if ($("input[name='price_sampleplayer']:checked").length === 0) {↵                return;↵            }↵            if ( $("input[name='price_sampleplayer']:checked").val().split(",")[0] == 'download_hd') {↵                $("#dlh_detail_sampleplayer").css("display","block");↵                $("#dlh_detail_sampleplayer_point").css("display","block");↵            } else {↵                $("#dlh_detail_sampleplayer").css("display","none");↵                $("#dlh_detail_sampleplayer_point").css("display","none");↵            }↵        });↵↵        $("#st_vr_detail_sampleplayer").ready(function() {↵            if ($("input[name='price_sampleplayer']:checked").length === 0) {↵                return;↵            }↵            if ( $("input[name='price_sampleplayer']:checked").val().split(",")[0] == 'streaming_vr') {↵                $("#st_vr_detail_sampleplayer").css("display","block");↵                $("#st_vr_detail_sampleplayer_point").css("display","block");↵            } else {↵                $("#st_vr_detail_sampleplayer").css("display","none");↵                $("#st_vr_detail_sampleplayer_point").css("display","none");↵            }↵        });↵↵        $("#dl_vr_detail_sampleplayer").ready(function() {↵            if ($("input[name='price_sampleplayer']:checked").length === 0) {↵                return;↵            }↵            if ( $("input[name='price_sampleplayer']:checked").val().split(",")[0] == 'download_vr') {↵                $("#dl_vr_detail_sampleplayer").css("display","block");↵                $("#dl_vr_detail_sampleplayer_point").css("display","block");↵            } else {↵                $("#dl_vr_detail_sampleplayer").css("display","none");↵                $("#dl_vr_detail_sampleplayer_point").css("display","none");↵            }↵        });↵↵        $("#dlh_vr_detail_sampleplayer").ready(function() {↵            if ($("input[name='price_sampleplayer']:checked").length === 0) {↵                return;↵            }↵            if ( $("input[name='price_sampleplayer']:checked").val().split(",")[0] == 'download_hd_vr') {↵                $("#dlh_vr_detail_sampleplayer").css("display","block");↵                $("#dlh_vr_detail_sampleplayer_point").css("display","block");↵            } else {↵                $("#dlh_vr_detail_sampleplayer").css("display","none");↵                $("#dlh_vr_detail_sampleplayer_point").css("display","none");↵            }↵        });↵↵        $("input[name=price_sampleplayer]:radio").click( function() {↵            var argument =  $( this ).val().split(",");↵            var target   =  argument[0];↵            var sku      =  argument[1];↵            $(".price_selection_sampleplayer").removeClass("select_sampleplayer");↵            $(".sale_time_sampleplayer").removeClass("select_sampleplayer");↵            $("table#"+target).addClass("select_sampleplayer");↵            $("#ch_price_sampleplayer").html($("strong#"+target+"_price_sampleplayer").html());↵                            $("#ch_point_sampleplayer").html($("strong#"+target+"_point_sampleplayer").html());↵                        $("#us_price_sampleplayer").html($("strong#"+target+"_fixed_price").html());↵            var chpr = $("#ch_price_sampleplayer").html();↵            $("#totalPrice").val(chpr.replace(/\,/g,''));↵            chpr = $("#totalPrice").val();↵            if (chpr) {↵                $("#totalPrice").val(chpr.replace(/円/g,''));↵            }↵↵            if (target == "streaming") {↵                $("#st_detail_sampleplayer").css("display","block");↵                $("#st_detail_sampleplayer_point").css("display","block");↵                $("#dl_detail_sampleplayer").css("display","none");↵                $("#dl_detail_sampleplayer_point").css("display","none");↵                $("#dlh_detail_sampleplayer").css("display","none");↵                $("#dlh_detail_sampleplayer_point").css("display","none");↵                $("#st_vr_detail_sampleplayer").css("display","none");↵                $("#st_vr_detail_sampleplayer_point").css("display","none");↵                $("#dl_vr_detail_sampleplayer").css("display","none");↵                $("#dl_vr_detail_sampleplayer_point").css("display","none");↵                $("#dlh_vr_detail_sampleplayer").css("display","none");↵                $("#dlh_vr_detail_sampleplayer_point").css("display","none");↵            } else if (target == "download") {↵                $("#dl_detail_sampleplayer").css("display","block");↵                $("#dl_detail_sampleplayer_point").css("display","block");↵                $("#st_detail_sampleplayer").css("display","none");↵                $("#st_detail_sampleplayer_point").css("display","none");↵                $("#dlh_detail_sampleplayer").css("display","none");↵                $("#dlh_detail_sampleplayer_point").css("display","none");↵                $("#st_vr_detail_sampleplayer").css("display","none");↵                $("#st_vr_detail_sampleplayer_point").css("display","none");↵                $("#dl_vr_detail_sampleplayer").css("display","none");↵                $("#dl_vr_detail_sampleplayer_point").css("display","none");↵                $("#dlh_vr_detail_sampleplayer").css("display","none");↵                $("#dlh_vr_detail_sampleplayer_point").css("display","none");↵            } else if (target == "download_hd") {↵                $("#dlh_detail_sampleplayer").css("display","block");↵                $("#dlh_detail_sampleplayer_point").css("display","block");↵                $("#dl_detail_sampleplayer").css("display","none");↵                $("#dl_detail_sampleplayer_point").css("display","none");↵                $("#st_detail_sampleplayer").css("display","none");↵                $("#st_detail_sampleplayer_point").css("display","none");↵                $("#st_vr_detail_sampleplayer").css("display","none");↵                $("#st_vr_detail_sampleplayer_point").css("display","none");↵                $("#dl_vr_detail_sampleplayer").css("display","none");↵                $("#dl_vr_detail_sampleplayer_point").css("display","none");↵                $("#dlh_vr_detail_sampleplayer").css("display","none");↵                $("#dlh_vr_detail_sampleplayer_point").css("display","none");↵            } else if (target == "streaming_vr") {↵                $("#dlh_detail_sampleplayer").css("display","none");↵                $("#dlh_detail_sampleplayer_point").css("display","none");↵                $("#dl_detail_sampleplayer").css("display","none");↵                $("#dl_detail_sampleplayer_point").css("display","none");↵                $("#st_detail_sampleplayer").css("display","none");↵                $("#st_detail_sampleplayer_point").css("display","none");↵                $("#st_vr_detail_sampleplayer").css("display","block");↵                $("#st_vr_detail_sampleplayer_point").css("display","block");↵                $("#dl_vr_detail_sampleplayer").css("display","none");↵                $("#dl_vr_detail_sampleplayer_point").css("display","none");↵                $("#dlh_vr_detail_sampleplayer").css("display","none");↵                $("#dlh_vr_detail_sampleplayer_point").css("display","none");↵            } else if (target == "download_vr") {↵                $("#dlh_detail_sampleplayer").css("display","none");↵                $("#dlh_detail_sampleplayer_point").css("display","none");↵                $("#dl_detail_sampleplayer").css("display","none");↵                $("#dl_detail_sampleplayer_point").css("display","none");↵                $("#st_detail_sampleplayer").css("display","none");↵                $("#st_detail_sampleplayer_point").css("display","none");↵                $("#st_vr_detail_sampleplayer").css("display","none");↵                $("#st_vr_detail_sampleplayer_point").css("display","none");↵                $("#dl_vr_detail_sampleplayer").css("display","block");↵                $("#dl_vr_detail_sampleplayer_point").css("display","block");↵                $("#dlh_vr_detail_sampleplayer").css("display","none");↵                $("#dlh_vr_detail_sampleplayer_point").css("display","none");↵            } else if (target == "download_hd_vr") {↵                $("#dlh_detail_sampleplayer").css("display","none");↵                $("#dlh_detail_sampleplayer_point").css("display","none");↵                $("#dl_detail_sampleplayer").css("display","none");↵                $("#dl_detail_sampleplayer_point").css("display","none");↵                $("#st_detail_sampleplayer").css("display","none");↵                $("#st_detail_sampleplayer_point").css("display","none");↵                $("#st_vr_detail_sampleplayer").css("display","none");↵                $("#st_vr_detail_sampleplayer_point").css("display","none");↵                $("#dl_vr_detail_sampleplayer").css("display","none");↵                $("#dl_vr_detail_sampleplayer_point").css("display","none");↵                $("#dlh_vr_detail_sampleplayer").css("display","block");↵                $("#dlh_vr_detail_sampleplayer_point").css("display","block");↵            }↵↵            if (target == "download") {↵                var type = "download";↵            } else {↵                var type = target;↵            }↵↵            /*if (isDiscountedViewType(target)) {↵                $("div.sale_info").show();↵            } else {↵                $("div.sale_info").hide();↵            }*/↵↵                            var linkurl = "/cart/cart/add/" + type + "/" + sku;↵                $("#dldp_sampleplayer").attr({href:linkurl});↵                    });↵↵        $("#dldp_sampleplayer").click( function() {↵            if (!$("input:radio[name='price_sampleplayer']:checked").val()) {↵                alert("購入する商品を選択してください。")↵                return false;↵            }↵        });↵↵        if ( $("#dlh_detail_sampleplayer").size() != 0 ) {↵            $("#dlh_detail_sampleplayer").css("display","none");↵            $("#dlh_detail_sampleplayer_point").css("display","none");↵        }↵        if ( $("#dl_detail_sampleplayer").size() != 0 ) {↵            $("#dl_detail_sampleplayer").css("display","none");↵            $("#dl_detail_sampleplayer_point").css("display","none");↵        }↵        if ( $("#st_detail_sampleplayer").size() != 0 ) {↵            $("#st_detail_sampleplayer").css("display","none");↵            $("#st_detail_sampleplayer_point").css("display","none");↵        }↵        if ( $("#dlh_vr_detail_sampleplayer").size() != 0 ) {↵            $("#dlh_vr_detail_sampleplayer").css("display","none");↵            $("#dlh_vr_detail_sampleplayer_point").css("display","none");↵        }↵        if ( $("#dl_vr_detail_sampleplayer").size() != 0 ) {↵            $("#dl_vr_detail_sampleplayer").css("display","none");↵            $("#dl_vr_detail_sampleplayer_point").css("display","none");↵        }↵        if ( $("#st_vr_detail_sampleplayer").size() != 0 ) {↵            $("#st_vr_detail_sampleplayer").css("display","none");↵            $("#st_vr_detail_sampleplayer_point").css("display","none");↵        }↵↵        if ( $("#dlh_detail_sampleplayer").size() != 0 ) {↵            $("#download_hd_btn_sampleplayer").trigger("click");↵            $("#download_hd_btn_sampleplayer_point").trigger("click");↵        } else if ( $("#dl_detail_sampleplayer").size() != 0 ) {↵            $("#download_btn_sampleplayer").trigger("click");↵            $("#download_btn_sampleplayer_point").trigger("click");↵        } else if ( $("#st_detail_sampleplayer").size() != 0 ) {↵            $("#streaming_btn_sampleplayer").trigger("click");↵            $("#streaming_btn_sampleplayer_point").trigger("click");↵        } else if ( $("#dlh_vr_detail_sampleplayer").size() != 0 ) {↵            $("#download_hd_vr_btn_sampleplayer").trigger("click");↵            $("#download_hd_vr_btn_sampleplayer_point").trigger("click");↵        } else if ( $("#dl_vr_detail_sampleplayer").size() != 0 ) {↵            $("#download_vr_btn_sampleplayer").trigger("click");↵            $("#download_vr_btn_sampleplayer_point").trigger("click");↵        } else if ( $("#st_vr_detail_sampleplayer").size() != 0 ) {↵            $("#streaming_vr_btn_sampleplayer").trigger("click");↵            $("#streaming_vr_btn_sampleplayer_point").trigger("click");↵        }↵    });↵
+</script>↵↵
+<div id="sampleLayer">↵
+    <div class="close_layout">↵ <img src="https://static.mgstage.com/mgs/img/pc/logo.jpg" width="138" height="23" alt="MGS動画">↵ <a href="javascript:SamplePlayerWindow.close();">↵                            <img src="https://static.mgstage.com/mgs/img/pc/close.png" width="100" height="25" alt="閉じる" align="right">↵                        </a>↵
+        </div>↵
+    <h2 id="labelTitle">↵ 【初撮り】ネットでAV応募→AV体験撮影 957 美人過ぎるCA候補生現る！ファーストクラスなスタイルも相まって、偏差値高すぎな顔面に大量射精！ </h2>↵
+    <div class="sample_layout_01" id="SamplePlayerPane" style="float:left;">↵
+        <script type="text/javascript">
+            ↵
+            var pane = $('#SamplePlayerPane');↵
+            var xap = "https://www.mgstage.com/sampleplayer/MgsPlayerS.xap";↵
+            var movieloc = "https://www.mgstage.com/sampleplayer/sampleRespons.php?pid=0ca91b2c-f4c2-4578-9108-49b48e0abe62";↵
+            var userAgent = window.navigator.userAgent.toLowerCase();↵
+            $.ajax({↵
+                async: true,
+                url: movieloc,
+                ↵success: function(data, textStatus) {↵
+                    if (data == null || data.url == null || data.url == "") {↵
+                        alert('動画の読み込みに失敗しました。ブラウザのページリロード(再表示)    を行っても、このメッセージが表示されている場合は、大変お手数ですが、お問い合わせください。');↵
+                    } else {↵
+                        if (bonus_flg == 1) {↵
+                            var movie = 'https://feature.mgstage.com/feature/SIRO-3743_tokuten_sample/SIRO-3743_tokuten_sample.mp4';↵
+                            var full_screen_flg = 'true';↵
+                            var window_width = (window.innerWidth || document.documentElement.clientWidth || 0);↵
+                            var window_height = (window.innerHeight || document.documentElement.clientHeight || 0);↵
+                            var sample_layer_width = $('#sampleLayer').width();↵
+                            if (window_width > sample_layer_width) {↵
+                                window_width = Math.floor(sample_layer_width * 0.99);↵
+                            } else {↵
+                                window_width = Math.floor(window_width * 0.99);↵
+                            }↵
+                            window_height = Math.floor(window_height * 0.68);↵
+                            var left_px = Math.floor((sample_layer_width - window_width - 10) / 2) + 'px';↵
+                        } else {↵
+                            var movie = data.url;↵
+                            var full_screen_flg = 'false';↵
+                            var window_width = 700;↵
+                            var window_height = 405;↵
+                            bonus_flg = 0;↵
+                            movie = movie.replace(/http:\/\/dl/, "http://chdl");↵
+                            movie = movie.replace(/\.ism\/request?.+$/, ".mp4");↵
+                        }↵
+                        var common_str_html = ↵'<video controls autoplay poster="' + IMG_URL_NEW + '/logo_mgs_580_367.png" width="' + window_width + '" height="' + window_height + '">' + ↵'<source src="' + movie + '">' + ↵'<p>動画を再生するには、videoタグをサポートしたブラウザが必要です。</p>' + ↵'</video>' + ↵'<p style="font-family:meiryo; font-size:14px; font-weight:bold; margin:-3px 0;">※サンプル動画の為低画質となっています。また実際の商品内容と異なる場合があります。</p>';↵
+                        var str_html = '';↵
+                        str_html = '<div style="width: ' + window_width + '; height: ' + window_height + ';">' + common_str_html + '</div>';↵
+                        pane.html(str_html);↵
+                    }↵
+                }↵
+            });↵
+        </script>↵ </div>↵ ↵
+    <!--------------------------カートエリア-------------------------->↵
+    <script>
+        ↵
+        if (bonus_flg == 0) {↵
+            $('#detail_right').show();↵
+        }↵
+    </script>↵
+    <!-- 単品動画の場合 START ----------------------------------------------------- -->↵
+    <div id="detail_right" class="detail_right" style="display:none">↵
+        <p class="bnr↵                 isp_none pcmax_none            ">↵
+            <a href="/howto/howto_point.php" class="button button_sample"><img src="https://static.mgstage.com/mgs/img/pc/ppv_right_point_wide.jpg" alt="MGSポイント"></a>↵ </p>↵
+        <p class="bnr↵                            ">↵
+            <a href="/howto/howto_mgsplayer.php" class="button button_sample"><img src="https://static.mgstage.com/mgs/img/pc/ppv_right_player_wide_190307.jpg" alt="MGSプレイヤー"></a>↵ </p>↵
+        <div class="buy_box">↵
+            <h3>ご購入はこちら</h3>↵
+            <!--//ここから-->↵
+            <form method="get" action="/cart/CartConfirm.php" class="ItemVideoForm" id="ItemVideoFormSample">↵
+                <div class="content_purchase_layout_01">↵
+                    <div class="price_list_sampleplayer">↵
+                        <div class="text">↵
+                            <div id="PriceList">↵ <label>↵                                                <table class="price_selection_sampleplayer" id="download_hd">↵                                                    <tr>↵                                                        <td class="normal_type_box1" rowspan="2">↵                                                            <input type="radio" name="price_sampleplayer" value="download_hd,SIRO-3743" id="download_hd_btn_sampleplayer"checked="checked">↵                                                        </td>↵                                                        <td  class="normal_type_box2" colspan="2">↵                                                            HDダウンロード+HDストリーミング                                                        </td>↵                                                    </tr>↵                                                    <tr>↵                                                        <td class="normal_type_box3">↵                                                            視聴期限：                                                            <span style="color: #ff0000; font-weight: bold;">↵                                                            無期限                                                            </span>↵                                                        </td>↵                                                        <td class="normal_type_box4">↵                                                            <strong id="download_hd_price_sampleplayer">↵                                                                980円                                                            </strong>↵                                                                                                                                                                                        <span style="display:none">↵                                                                    <strong id="download_hd_point_sampleplayer">49ポイント付与</strong>↵                                                                </span>↵                                                                                                                    </td>↵                                                    </tr>↵                                                </table>↵                                            </label>↵
+                                <label>↵                                                <table class="price_selection_sampleplayer" id="streaming">↵                                                    <tr>↵                                                        <td class="normal_type_box1" rowspan="2">↵                                                            <input type="radio" name="price_sampleplayer" value="streaming,SIRO-3743" id="streaming_btn_sampleplayer">↵                                                        </td>↵                                                        <td  class="normal_type_box2" colspan="2">↵                                                            HDストリーミング                                                        </td>↵                                                    </tr>↵                                                    <tr>↵                                                        <td class="normal_type_box3">↵                                                            視聴期限：                                                            <span style="color: #ff0000; font-weight: bold;">↵                                                            7日間                                                            </span>↵                                                        </td>↵                                                        <td class="normal_type_box4">↵                                                            <strong id="streaming_price_sampleplayer">↵                                                                500円                                                            </strong>↵                                                                                                                                                                                        <span style="display:none">↵                                                                    <strong id="streaming_point_sampleplayer">25ポイント付与</strong>↵                                                                </span>↵                                                                                                                    </td>↵                                                    </tr>↵                                                </table>↵                                            </label>↵
+                                </div>↵ </div>↵ </div>↵
+                    <div class="price_select">↵
+                        <div class="title" style="display:none">▼ 商品をご確認してカートへ</div>↵
+                        <div class="price_select_below" id="download_hd_layout">↵
+                            <div class="price_detail now_price" style="display:none">↵
+                                <div class="text">金額：</div>↵
+                                <div class="price"><strong id="ch_price_sampleplayer">980円</strong></div>↵ </div>↵
+                            <!-- 付与ポイント -->↵
+                            <div class="point_detail now_point isp_none pcmax_none">↵
+                                <div class="point">↵ <span id="ch_point_sampleplayer">49ポイント付与</span>↵ </div>↵ </div>↵
+                            <p class="isp_none pcmax_none" style="font-size: 11px; text-align: right;">↵ ※ポイントを利用した場合、付与ポイントが変動します。↵ </p>↵
+                            <!-- 配信開始日表示 -->↵
+                            <!-- 購入済み表示 -->↵
+                            <!-- カートに入れる -->↵
+                            <div class="inCart">↵ <a href="/cart/cart/add/download_hd/SIRO-3743" class="button button_add_cart" id="dldp_sampleplayer">↵                                            カートに入れる                                        </a>↵ </div>↵
+                            <!-- ポイントで今すぐ購入 -->↵
+                            <div class="inCart" id="dlh_detail_sampleplayer_point">↵ <input type="hidden" name="mode" value="buynow">↵ <input type="hidden" name="totalPrice" id="totalPrice" value="980">↵ <input type="hidden" name="payment" value="radioPoint" checked="checked">↵ <input type="hidden" name="checkAgree"
+                                    checked="checked">↵ <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWFQKix8iKAwKl0+P1DALU37mYBQL4mfKlCAKPlaPRAgLQhO35AwKqzqSvDwKrzqSvDwKszqSvDwKlzqSvDwL6oMvFCQLIl/MkAu2yp4kLApyKgr8NAqOBgJoGAs6K1JgMAprF7okIAqyJsIwIAqucuoEEAq6o27QHAtaZ17QMraO6UWMAhiBEyPkp/z1k9s0gXgs=">↵
+                                <a id="buttonConfirm" href="/cart/buynow.php?type=download_hd&sku=SIRO-3743&multi_device_flg=1" class="button button_add_point isp_none"></a>↵ </div>↵
+                            <div class="inCart" id="st_detail_sampleplayer_point">↵ <input type="hidden" name="mode" value="buynow">↵ <input type="hidden" name="totalPrice" id="totalPrice" value="980">↵ <input type="hidden" name="payment" value="radioPoint" checked="checked">↵ <input type="hidden" name="checkAgree"
+                                    checked="checked">↵ <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWFQKix8iKAwKl0+P1DALU37mYBQL4mfKlCAKPlaPRAgLQhO35AwKqzqSvDwKrzqSvDwKszqSvDwKlzqSvDwL6oMvFCQLIl/MkAu2yp4kLApyKgr8NAqOBgJoGAs6K1JgMAprF7okIAqyJsIwIAqucuoEEAq6o27QHAtaZ17QMraO6UWMAhiBEyPkp/z1k9s0gXgs=">↵
+                                <a id="buttonConfirm" href="/cart/buynow.php?type=streaming&sku=SIRO-3743&multi_device_flg=1" class="button button_add_point isp_none"></a>↵ </div>↵
+                            <div class="inCart">↵ <a href="javascript:void(0);" onclick="addItemToFavoriteList('0ca91b2c-f4c2-4578-9108-49b48e0abe62'); return false;" class="button button_add_need" id="">お気に入りリストに追加</a>↵ </div>↵
+                            <div id="dlh_detail_sampleplayer">↵
+                                <div class="goods_detail" style="display:none">↵
+                                    <div class="text">視聴期限：</div>↵
+                                    <div class="text2">無期限</div>↵
+                                    <div class="text">ダウンロード期限：</div>↵
+                                    <div class="text2">無期限</div>↵
+                                    <div class="text">ダウンロード回数：</div>↵
+                                    <div class="text2">無制限</div>↵
+                                    <div class="text3"><a href="/howto/bitrate.php">▶HDダウンロード+HDストリーミングとは？</a> </div>↵ </div>↵
+                                <div class="goods_detail" style="display:none">↵
+                                    <div class="text">ストリーミング期限：</div>↵
+                                    <div class="text2">無期限</div>↵
+                                    <div class="text2"><a href="/howto/bitrate.php#ST">▶スムースストリーミングとは？</a> </div>↵ </div>↵
+                                <div class="handling_device item_multi">↵
+                                    <div>対応デバイス</div>↵
+                                    <ul>↵
+                                        <li><img alt="ダウンロード、ストリーミング WINDOWS・Macintosh端末対応" src="https://static.mgstage.com/mgs/img/pc/device_pc_st_dl.png"></li>↵
+                                        <li><img alt="ダウンロード、ストリーミング アンドロイド端末対応" src="https://static.mgstage.com/mgs/img/pc/device_android_st_dl.png"></li>↵
+                                        <li><img alt="" src="https://static.mgstage.com/mgs/img/pc/device_android_st_cast.png"></li>↵
+                                        <li><img alt="ダウンロード、ストリーミング IOS端末対応" src="https://static.mgstage.com/mgs/img/pc/device_ios_st.png"></li>↵ </ul>↵ </div>↵
+                                <ul class="directions multi">↵
+                                    <li><a href="/howto/howto_multidevice.php">▶マルチデバイスについて</a></li>↵ </ul>↵ </div>↵
+                            <div id="st_detail_sampleplayer">↵
+                                <div class="goods_detail" style="display:none">↵
+                                    <div class="text">ストリーミング期限：</div>↵
+                                    <div class="text2">7日間</div>↵
+                                    <div class="text2"> <a href="/howto/bitrate.php#ST">▶スムースストリーミングとは？</a> </div>↵ </div>↵
+                                <div class="handling_device item_multi">↵
+                                    <div>対応デバイス</div>↵
+                                    <ul>↵
+                                        <li><img alt="ダウンロード、ストリーミング WINDOWS・Macintosh端末対応" src="https://static.mgstage.com/mgs/img/pc/device_pc_st.png"></li>↵
+                                        <li><img alt="ダウンロード、ストリーミング アンドロイド端末対応" src="https://static.mgstage.com/mgs/img/pc/device_android_st.png"></li>↵
+                                        <li><img alt="" src="https://static.mgstage.com/mgs/img/pc/device_android_st_cast.png"></li>↵
+                                        <li><img alt="ダウンロード、ストリーミング IOS端末対応" src="https://static.mgstage.com/mgs/img/pc/device_ios_st.png"></li>↵ </ul>↵ </div>↵
+                                <ul class="directions multi">↵
+                                    <li><a href="/howto/howto_multidevice.php">▶マルチデバイスについて</a></li>↵ </ul>↵ </div>↵
+                            <ul class="directions">↵
+                                <li><a href="/howto/howto_mgsplayer_play_dl.php#play_link_2">▶ダウンロードでの視聴について</a></li>↵
+                                <li><a href="/howto/howto_mgsplayer_play_st.php#play_link_1">▶ストリーミングでの視聴について</a></li>↵ </div>↵ </div>↵
+                    <ul class="before_buy">↵
+                        <li><a href="/howto/howto_top.php">▶初めての方はこちら</a></li>↵
+                        <li><a href="/howto/howto_E.php">▶動作環境確認</a></li>↵
+                        <li><a href="/howto/howto_mgsplayer.php">▶MGS Playerについて</a></li>↵ </ul>↵ </div>↵ </form>↵
+            <!--//ここまで-->↵ </div>↵ </div>↵
+    <!-- 単品動画の場合 END ----------------------------------------------------- -->↵
+    <!--------------------------カートエリア-------------------------->↵
+    <div class="install_layout" style="clear:both;">↵
+        <h3 style="color:#000000;">▼MGS PLAYERをインストール</h3>↵
+        <p class="caution2">↵ 【重要事項】 恐れ入りますが、購入した動画を視聴するにはMGS PLAYERをインストールする必要がございます。 <br /> お手数をおかけいたしますが、以下のリンクよりインストールをお願いいたします。（無料） </p>↵↵
+        <div class="install_btn_layout">↵ <a href="/howto/howto_mgsplayer.php" class="install_btn">MGS PLAYERインストール</a>↵
+            <p><a href="/howto/howto_mgsplayer.php">▶MGS PLAYERについて</a></p>↵ </div>↵ </div>↵ </div>↵↵
+<script>
+    ↵
+    $(function() {↵
+        $("a.button_postback").bind("click", function(e) {↵
+            e.preventDefault();↵
+            $form = $(this).attr("href");↵
+            $($form).submit();↵
+        });↵
+    });↵
+</script>↵

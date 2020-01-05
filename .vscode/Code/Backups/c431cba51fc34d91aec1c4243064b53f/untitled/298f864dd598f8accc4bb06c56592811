@@ -1,0 +1,154 @@
+untitled:Untitled-6
+
+
+{
+    function 到整数(坐标) {
+        const [x,y] = 坐标.split("/")
+        const v = y * 20 + x * 1
+        return v.toString(16)
+    }
+
+    function 到坐标(num) {
+        const x = num % 20
+        const y = num / 20
+        return x + "/" + parseInt(y)
+    }
+
+    console.log(到坐标(256))
+
+}
+1
+
+
+
+
+111E8FF8        当前选择的技能代码
+
+技能槽未占用时为 FF FF FF FF
+
+1号技能当前使用代码
+    114*****        波动地址
+
+2号技能槽 地址偏移  1号+F
+    
+服务器地址和端口
+SocketConnection: socket://101.201.239.137:9090
+host:101.201.239.137
+port:9090
+
+EAX=000000B4
+EBX=0000005E
+ECX=108D76F8
+EDX=00000000
+ESI=145CC1F4
+EDI=0565FB04
+EBP=0565FAFC
+ESP=0565FAE0
+EIP=0237D4CD
+
+指针基址可能是 =108D76F8
+
+0237D4C7 - pop eax
+0237D4C8 - pop ecx
+0237D4C9 - mov [ecx+ebx],ax
+0237D4CD - jmp 0237D549
+0237D4D2 - cmp eax,04
+
+5E
+
+
+EAX=108D76F8
+EBX=000000B8
+ECX=10B3B280
+EDX=00000000
+ESI=145D5028
+EDI=0565FAE0
+EBP=0565FA80
+ESP=0565FA64
+EIP=0237D49A
+
+指针基址可能是 =10B3B280
+
+0237D495 - pop eax
+0237D496 - pop ecx
+0237D497 - mov [ecx+ebx],eax
+0237D49A - shr ecx,09
+0237D49D - mov byte ptr [ecx+0038FF80],00
+
+B8
+
+
+EAX=10B3ACDC
+EBX=00000000
+ECX=0000000C
+EDX=080F1278
+ESI=10B3B280
+EDI=10B3ACF4
+EBP=0052FC08
+ESP=0052FBB8
+EIP=080A1C8A
+
+指针基址可能是 =10B3ACDC
+
+080A1C83 - mov eax,[esp+04]
+080A1C87 - push esi
+080A1C88 - mov esi,[eax]
+080A1C8A - test esi,esi
+080A1C8C - je 080A1CAB
+
+
+
+
+
+监听本地9090端口 当发生链接就 转到127.0.0.1：8888端口
+netsh interface portproxy add v4tov4  listenaddress=101.201.239.137 listenport=9090 connectaddress=127.0.0.1  connectport=8888
+
+netsh interface portproxy add v4tov4 listenport=10446 connectaddress=127.0.0.1  connectport=8888  listenaddress=* 
+
+//添加配置: 本机监听10022端口,当有socket连接到10022端口时,本机就连接到192.168.2.53的22端口,本机的10022端口可以接受的连接地址为"*",使用的协议为tcp,当前仅支持传输控制协议 (TCP)。
+netsh interface portproxy add v4tov4 listenport=10022 connectaddress=192.168.2.53 connectport=22 listenaddress=* protocol=tcp
+
+
+端口转发
+netsh interface portproxy add v4tov4 listenport=19988 connectaddress=192.168.88.110 connectport=9988
+
+
+添加映射
+netsh interface portproxy add v4tov4  listenaddress=160.19.51.180 listenport=22 connectaddress=160.19.51.187  connectport=2200
+删除
+netsh interface  portproxy delete v4tov4 listenaddress=160.19.51.180  listenport=22
+add v4tov4     - 添加通过 IPv4 的 IPv4 和代理连接到的侦听项目。
+add v4tov6     - 添加通过 IPv6 的 IPv4 和代理连接到的侦听项目。
+add v6tov4     - 添加通过 IPv4 的 IPv6 和代理连接到的侦听项目。
+add v6tov6     - 添加通过 IPv6 的 IPv6 和代理连接到的侦听项目。
+
+用法: add v4tov4 [listenport=]<integer>|<servicename>
+            [connectaddress=]<IPv4 address>|<hostname>
+            [[connectport=]<integer>|<servicename>]
+            [[listenaddress=]<IPv4 address>|<hostname>]
+            [[protocol=]tcp]
+
+参数:
+
+        标记            值
+        listenport      - IPv4 侦听端口。
+        connectaddress  - IPv4 连接地址。
+        connectport     - IPv4 连接端口。
+        listenaddress   - IPv4 侦听地址。
+        protocol        - 使用的协议。现在只支持 TCP。
+
+说明: 添加通过 IPv4 的 IPv4 和代理连接到的侦听项目。
+
+
+重置
+netsh interface portproxy reset
+
+
+
+netsh interface portproxy show all
+此上下文中的命令:
+show all       - 显示所有端口代理参数。
+show v4tov4    - 显示 IPv4 代理连接到另一个 IPv4 端口的参数。
+show v4tov6    - 显示 IPv4 代理连接到 IPv6 的参数。
+show v6tov4    - 显示 IPv6 代理连接到 IPv4 的参数。
+show v6tov6    - 显示 IPv6 代理连接到另一个 IPv6 端口的参数。
