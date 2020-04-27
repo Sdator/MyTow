@@ -21,10 +21,10 @@ import javax.wireless.messaging.MessageConnection;
 import javax.wireless.messaging.TextMessage;
 import kava.lang.Threak;
 
-public class g
-  extends ap
-  implements CommandListener, ItemStateListener
-{
+// g类 继承 ap 类 实现了 CommandListener 和 ItemStateListener 两个接口
+// CommandListener             处理软按钮(Command)事件
+// ItemStateListener           处理控件(Item)状态改变事件
+public class g extends ap implements CommandListener, ItemStateListener {
   int b4;
   int eP;
   short dL;
@@ -348,7 +348,7 @@ public class g
   String bu = null;
   byte eR;
   public l[] mN = null;
-  short cH = (short)(h.fp - 96);
+  short cH = (short) (h.fp - 96);
   static final byte bv = 50;
   static final byte gx = 10;
   short bG = 0;
@@ -570,7 +570,7 @@ public class g
   byte fj;
   byte h9;
   boolean fn = false;
-  public byte dw = (byte)(h.fp / (h.eA + 4));
+  public byte dw = (byte) (h.fp / (h.eA + 4));
   short c4;
   byte hi;
   short mo;
@@ -610,11 +610,12 @@ public class g
   short f2;
   boolean gL;
   short bW;
-  public static final byte iX = (byte)((h.fp - 40) / (h.eA + 2) - 1);
+  public static final byte iX = (byte) ((h.fp - 40) / (h.eA + 2) - 1);
   public String[] hl = null;
   public byte[] lj = null;
   public byte[] mT = null;
-  public static String[][] f1 = { { "查看", "数字1", "数字3", "数字7", "数字9", "返回" }, { "查看", "学习", "返回" }, { "查看", "数字1", "数字3", "数字7", "数字9", "提升", "返回" } };
+  public static String[][] f1 = { { "查看", "数字1", "数字3", "数字7", "数字9", "返回" }, { "查看", "学习", "返回" },
+      { "查看", "数字1", "数字3", "数字7", "数字9", "提升", "返回" } };
   public byte dF;
   public byte gS;
   public short nw;
@@ -622,10 +623,10 @@ public class g
   short[] jc = null;
   String[] lI = null;
   String[] hA = null;
-  short[][] nl = (short[][])null;
-  short[][] jv = (short[][])null;
-  short[][] ev = (short[][])null;
-  int[][] lK = (int[][])null;
+  short[][] nl = (short[][]) null;
+  short[][] jv = (short[][]) null;
+  short[][] ev = (short[][]) null;
+  int[][] lK = (int[][]) null;
   byte[] bs = null;
   short hr;
   String hX;
@@ -730,11 +731,11 @@ public class g
   String jb;
   String[] kX = null;
   String[] kd = null;
-  String[][] gq = (String[][])null;
-  String[][][] cv = (String[][][])null;
+  String[][] gq = (String[][]) null;
+  String[][][] cv = (String[][][]) null;
   byte[] jV = null;
-  byte[][] cT = (byte[][])null;
-  byte[][][] iM = (byte[][][])null;
+  byte[][] cT = (byte[][]) null;
+  byte[][][] iM = (byte[][][]) null;
   byte jM;
   byte ix;
   byte dA;
@@ -788,9 +789,8 @@ public class g
   short cA = -1;
   short i9;
   short i8;
-  
-  public void E()
-  {
+
+  public void E() {
     k();
     int i;
     if (this.mN != null) {
@@ -814,74 +814,62 @@ public class g
     this.bh.R();
     jdMethod_long();
   }
-  
-  public void itemStateChanged(Item paramItem)
-  {
-    if (paramItem == this.bh.i.jdField_byte)
-    {
-      if (!this.bh.i.g.isSelected(0))
-      {
+
+  public void itemStateChanged(Item paramItem) {
+    if (paramItem == this.bh.i.jdField_byte) {
+      if (!this.bh.i.g.isSelected(0)) {
         this.bh.i.jdField_byte.setString("");
         Alert localAlert = new Alert("提示", "请绑定手机号和密保码.", null, AlertType.WARNING);
         localAlert.setTimeout(2000);
         Display.getDisplay(this.bh.fG).setCurrent(localAlert);
       }
-    }
-    else if ((paramItem == this.bh.i.g) && (!this.bh.i.g.isSelected(0))) {
+    } else if ((paramItem == this.bh.i.g) && (!this.bh.i.g.isSelected(0))) {
       this.bh.i.jdField_byte.setString("");
     }
   }
-  
-  public void commandAction(Command paramCommand, Displayable paramDisplayable)
-  {
+
+  public void commandAction(Command paramCommand, Displayable paramDisplayable) {
     this.bh.i.a(paramCommand, paramDisplayable);
   }
-  
-  public void jdMethod_int(byte paramByte)
-  {
+
+  public void jdMethod_int(byte paramByte) {
     if (this.bh.d5) {
       this.a = jdMethod_for(this.bh.aW, this.bh.aV);
     }
-    this.bh.cZ.aP = ((short)(this.a % this.bh.w * h.u));
-    this.bh.cZ.aM = ((short)(this.a / this.bh.w * h.b8));
+    this.bh.cZ.aP = ((short) (this.a % this.bh.w * h.u));
+    this.bh.cZ.aM = ((short) (this.a / this.bh.w * h.b8));
     this.bh.cZ.d7 = 0;
     this.bh.cZ.d6 = 0;
     this.bh.cZ.jdMethod_do(this.bh.cZ.aP, this.bh.cZ.aM);
     if (this.bh.cZ.gR != null) {
       this.bh.jdMethod_if(this.bh.cZ.gR, this.bh.cZ);
     }
-    if (this.bh.d5)
-    {
+    if (this.bh.d5) {
       this.bh.d5 = false;
       this.bh.cZ.aP = this.bh.aW;
       this.bh.cZ.aM = this.bh.aV;
-      if (this.bh.cZ.a((byte)16) == 0) {
+      if (this.bh.cZ.a((byte) 16) == 0) {
         this.bh.cZ.a4 = 10;
       } else {
-        this.bh.b0.a(this.bh.cZ.jdMethod_int((byte)1), 0, this.bh.cZ.al);
+        this.bh.b0.a(this.bh.cZ.jdMethod_int((byte) 1), 0, this.bh.cZ.al);
       }
     }
     this.bh.N();
-    if (paramByte == 0)
-    {
+    if (paramByte == 0) {
       this.bh.dk = null;
       gf = 0;
       this.jdField_do = 0;
       this.jdField_for = false;
-    }
-    else
-    {
+    } else {
       this.j0 = 1;
     }
   }
-  
-  public void t()
-  {
+
+  public void t() {
     this.kG = false;
   }
-  
-  public void u()
-  {
+
+  public void u() {
     if (!this.kG) {
       this.be = 0;
     }
@@ -892,101 +880,81 @@ public class g
       this.c4 = 18;
     }
     this.hi = 0;
-    this.hZ = ((short)(this.hZ + 1));
-    if (this.jdField_do == -106)
-    {
+    this.hZ = ((short) (this.hZ + 1));
+    if (this.jdField_do == -106) {
       if (this.hZ > this.c8.size() - 1) {
         this.bh.i.jdMethod_for();
       }
-    }
-    else if (this.jdField_do == -108)
-    {
+    } else if (this.jdField_do == -108) {
       if (this.hZ > this.j8.size() - 1) {
         this.bh.i.jdMethod_for();
       }
-    }
-    else if (this.jdField_do == -109)
-    {
+    } else if (this.jdField_do == -109) {
       if (this.hZ > this.nk.size() - 1) {
         this.bh.i.jdMethod_for();
       }
-    }
-    else if (this.jdField_do == -120)
-    {
+    } else if (this.jdField_do == -120) {
       if (this.hZ > this.cd.size() - 1) {
         this.bh.i.jdMethod_for();
       }
-    }
-    else if (this.hZ > this.ip.size() - 1)
-    {
+    } else if (this.hZ > this.ip.size() - 1) {
       this.bh.i.jdMethod_for();
       return;
     }
     if (this.gi + this.dw - 1 < this.hZ) {
-      this.gi = ((short)(this.gi + 1));
+      this.gi = ((short) (this.gi + 1));
     }
   }
-  
-  public void L()
-  {
+
+  public void L() {
     this.ku = 0;
     if (!this.kG) {
       this.be = 0;
     }
     this.kG = true;
-    this.hZ = ((short)(this.hZ - 1));
+    this.hZ = ((short) (this.hZ - 1));
     this.c4 = 5;
     if ((this.j1 == 28) || (this.j1 == -91)) {
       this.c4 = 18;
     }
     this.hi = 0;
-    if (this.hZ < 0)
-    {
+    if (this.hZ < 0) {
       if (this.jdField_do == -106) {
-        this.hZ = ((short)(this.c8.size() - 1));
+        this.hZ = ((short) (this.c8.size() - 1));
       } else if (this.jdField_do == -108) {
-        this.hZ = ((short)(this.j8.size() - 1));
+        this.hZ = ((short) (this.j8.size() - 1));
       } else if (this.jdField_do == -109) {
-        this.hZ = ((short)(this.nk.size() - 1));
+        this.hZ = ((short) (this.nk.size() - 1));
       } else if (this.jdField_do == -120) {
-        this.hZ = ((short)(this.cd.size() - 1));
+        this.hZ = ((short) (this.cd.size() - 1));
       } else {
-        this.hZ = ((short)(this.ip.size() - 1));
+        this.hZ = ((short) (this.ip.size() - 1));
       }
-      this.gi = ((short)Math.max(0, this.hZ - this.dw + 1));
+      this.gi = ((short) Math.max(0, this.hZ - this.dw + 1));
       return;
     }
     if (this.hZ < this.gi) {
       this.gi = this.hZ;
     }
   }
-  
-  public void x()
-  {
-    synchronized (this.bx)
-    {
+
+  public void x() {
+    synchronized (this.bx) {
       this.jF = 0;
     }
   }
-  
-  public void h()
-  {
-    synchronized (this.mX)
-    {
-      for (int i = 0; i < this.kT; i++)
-      {
-        if (((this.mX[i] != this.jq[i]) || (this.mW[i] != this.jo[i])) && (this.gF[i] <= 0))
-        {
+
+  public void h() {
+    synchronized (this.mX) {
+      for (int i = 0; i < this.kT; i++) {
+        if (((this.mX[i] != this.jq[i]) || (this.mW[i] != this.jo[i])) && (this.gF[i] <= 0)) {
           this.iG[i] = 0;
-        }
-        else if (this.iG[i] <= 60)
-        {
+        } else if (this.iG[i] <= 60) {
           int tmp82_81 = i;
           byte[] tmp82_78 = this.iG;
-          tmp82_78[tmp82_81] = ((byte)(tmp82_78[tmp82_81] + 1));
+          tmp82_78[tmp82_81] = ((byte) (tmp82_78[tmp82_81] + 1));
         }
-        if (this.bh.cv == 1)
-        {
+        if (this.bh.cv == 1) {
           if (this.jq[i] > this.mX[i]) {
             this.dQ[i] = 1;
           } else if (this.jq[i] < this.mX[i]) {
@@ -994,63 +962,50 @@ public class g
           }
           this.mX[i] = this.jq[i];
           this.mW[i] = this.jo[i];
-        }
-        else
-        {
+        } else {
           int tmp178_177 = i;
           short[] tmp178_174 = this.gF;
-          tmp178_174[tmp178_177] = ((short)(tmp178_174[tmp178_177] - 1));
-          if (this.gF[i] <= 0)
-          {
+          tmp178_174[tmp178_177] = ((short) (tmp178_174[tmp178_177] - 1));
+          if (this.gF[i] <= 0) {
             if (Math.abs(this.jq[i] - this.mX[i]) <= 6) {
               this.mX[i] = this.jq[i];
             }
             if (Math.abs(this.jo[i] - this.mW[i]) <= 6) {
               this.mW[i] = this.jo[i];
             }
-            if (this.jq[i] > this.mX[i])
-            {
+            if (this.jq[i] > this.mX[i]) {
               int tmp279_278 = i;
               short[] tmp279_275 = this.mX;
-              tmp279_275[tmp279_278] = ((short)(tmp279_275[tmp279_278] + 6));
-            }
-            else if (this.jq[i] < this.mX[i])
-            {
+              tmp279_275[tmp279_278] = ((short) (tmp279_275[tmp279_278] + 6));
+            } else if (this.jq[i] < this.mX[i]) {
               int tmp309_308 = i;
               short[] tmp309_305 = this.mX;
-              tmp309_305[tmp309_308] = ((short)(tmp309_305[tmp309_308] - 6));
+              tmp309_305[tmp309_308] = ((short) (tmp309_305[tmp309_308] - 6));
             }
-            if (this.jo[i] > this.mW[i])
-            {
+            if (this.jo[i] > this.mW[i]) {
               int tmp336_335 = i;
               short[] tmp336_332 = this.mW;
-              tmp336_332[tmp336_335] = ((short)(tmp336_332[tmp336_335] + 6));
-            }
-            else if (this.jo[i] < this.mW[i])
-            {
+              tmp336_332[tmp336_335] = ((short) (tmp336_332[tmp336_335] + 6));
+            } else if (this.jo[i] < this.mW[i]) {
               int tmp366_365 = i;
               short[] tmp366_362 = this.mW;
-              tmp366_362[tmp366_365] = ((short)(tmp366_362[tmp366_365] - 6));
+              tmp366_362[tmp366_365] = ((short) (tmp366_362[tmp366_365] - 6));
             }
           }
         }
       }
     }
   }
-  
-  public void e()
-  {
-    synchronized (this.mX)
-    {
+
+  public void e() {
+    synchronized (this.mX) {
       h();
       this.fk = 0;
       int i;
-      for (this.hM = ((short)(this.kT - 1)); this.hM >= 0; this.hM = ((short)(this.hM - 1)))
-      {
+      for (this.hM = ((short) (this.kT - 1)); this.hM >= 0; this.hM = ((short) (this.hM - 1))) {
         i = 0;
-        for (int j = 0; j < this.li.length; j = (byte)(j + 1)) {
-          if ((!this.li[j].gq) && (this.iy[this.hM].equals(this.li[j].O)))
-          {
+        for (int j = 0; j < this.li.length; j = (byte) (j + 1)) {
+          if ((!this.li[j].gq) && (this.iy[this.hM].equals(this.li[j].O))) {
             i = 1;
             break;
           }
@@ -1058,67 +1013,57 @@ public class g
         if ((this.bD != null) && (this.iy[this.hM].equals(this.hD))) {
           i = 1;
         }
-        if (i == 0)
-        {
+        if (i == 0) {
           int k;
-          if (dZ == 1)
-          {
-            if (this.bh.cZ.gE)
-            {
+          if (dZ == 1) {
+            if (this.bh.cZ.gE) {
               j = 0;
               if (this.g6 != null) {
-                for (k = 0; k < this.g6.length; k = (byte)(k + 1)) {
-                  if ((this.g6[k] != null) && (this.g6[k].equals(this.iy[this.hM])))
-                  {
+                for (k = 0; k < this.g6.length; k = (byte) (k + 1)) {
+                  if ((this.g6[k] != null) && (this.g6[k].equals(this.iy[this.hM]))) {
                     j = 1;
                     break;
                   }
                 }
               }
-              if (j == 0) {}
+              if (j == 0) {
+              }
             }
-          }
-          else
-          {
+          } else {
             int m;
-            if ((!this.bh.bu) && (this.bh.cZ.gE) && (this.g6 != null))
-            {
+            if ((!this.bh.bu) && (this.bh.cZ.gE) && (this.g6 != null)) {
               j = 1;
               k = h.dU - 82 + 20;
               this.bh.fj.setColor(h.b2[3][0]);
-              for (m = 0; m < this.g6.length; m = (byte)(m + 1)) {
-                if ((this.g6[m] != null) && (this.g6[m].equals(this.iy[this.hM])))
-                {
+              for (m = 0; m < this.g6.length; m = (byte) (m + 1)) {
+                if ((this.g6[m] != null) && (this.g6[m].equals(this.iy[this.hM]))) {
                   this.bh.fj.fillArc(k + 3 * (this.mX[this.hM] / h.u), j + 2 * (this.mW[this.hM] / h.u), 3, 3, 0, 360);
                   break;
                 }
               }
             }
-            if ((this.mX[this.hM] != 0) && (this.mW[this.hM] != 0) && (this.mX[this.hM] < ag.hF + h.dU) && (this.mX[this.hM] + 20 > ag.hF) && (this.mW[this.hM] < ag.hE + h.fp) && (this.mW[this.hM] + 31 > ag.hE))
-            {
+            if ((this.mX[this.hM] != 0) && (this.mW[this.hM] != 0) && (this.mX[this.hM] < ag.hF + h.dU)
+                && (this.mX[this.hM] + 20 > ag.hF) && (this.mW[this.hM] < ag.hE + h.fp)
+                && (this.mW[this.hM] + 31 > ag.hE)) {
               j = this.mX[this.hM] + 10 - h.dA.stringWidth(this.iy[this.hM]) / 2 - 12 - ag.hF;
-              if (this.bh.cv != 2)
-              {
+              if (this.bh.cv != 2) {
                 k = 0;
-                if (((this.mX[this.hM] == this.jq[this.hM]) && (this.mW[this.hM] == this.jo[this.hM])) || (this.gF[this.hM] > 0))
-                {
+                if (((this.mX[this.hM] == this.jq[this.hM]) && (this.mW[this.hM] == this.jo[this.hM]))
+                    || (this.gF[this.hM] > 0)) {
                   if (1 == h.h(this.dq[this.hM])) {
                     k = 4;
                   } else if (this.iG[this.hM] > 60) {
                     k = 5;
                   } else {
-                    switch (this.dQ[this.hM])
-                    {
-                    case 0: 
-                      k = 2;
-                      break;
-                    case 1: 
-                      k = 3;
+                    switch (this.dQ[this.hM]) {
+                      case 0:
+                        k = 2;
+                        break;
+                      case 1:
+                        k = 3;
                     }
                   }
-                }
-                else
-                {
+                } else {
                   if (this.jq[this.hM] > this.mX[this.hM]) {
                     k = 1;
                   } else if (this.jq[this.hM] < this.mX[this.hM]) {
@@ -1126,34 +1071,36 @@ public class g
                   }
                   this.dQ[this.hM] = k;
                 }
-                if (this.bh.cv == 0)
-                {
-                  this.bh.a(this.mX[this.hM], this.mW[this.hM], (byte)(k % 2 == 0 ? 3 : 1), this.gh[this.hM]);
+                if (this.bh.cv == 0) {
+                  this.bh.a(this.mX[this.hM], this.mW[this.hM], (byte) (k % 2 == 0 ? 3 : 1), this.gh[this.hM]);
                   if (this.hQ[this.hM] != 0) {
                     this.bh.b0.a(this.mX[this.hM] - ag.hF, this.mW[this.hM] - ag.hE, this.bh.o, ag.hR, 0, false, 0);
                   }
-                  this.bh.b0.a(this.mX[this.hM] - ag.hF, this.mW[this.hM] - ag.hE, this.bh.o, this.de[this.eX[this.hM]][k], k % 2 == 0 ? 2 : k == 4 ? 0 : this.dQ[this.hM] == 0 ? 2 : 0, this.gT[this.hM], this.kf[this.hM]);
+                  this.bh.b0.a(this.mX[this.hM] - ag.hF, this.mW[this.hM] - ag.hE, this.bh.o,
+                      this.de[this.eX[this.hM]][k], k % 2 == 0 ? 2 : k == 4 ? 0 : this.dQ[this.hM] == 0 ? 2 : 0,
+                      this.gT[this.hM], this.kf[this.hM]);
                   if (k == 5) {
-                    this.bh.a(this.mX[this.hM] - ag.hF, this.mW[this.hM] - ag.hE, this.eX[this.hM], this.kf[this.hM], this.jC[this.hM][0], this.jC[this.hM][1], this.jC[this.hM][2], this.jC[this.hM][3], this.jC[this.hM][5], this.jC[this.hM][6], this.jC[this.hM][7], this.jdField_int);
+                    this.bh.a(this.mX[this.hM] - ag.hF, this.mW[this.hM] - ag.hE, this.eX[this.hM], this.kf[this.hM],
+                        this.jC[this.hM][0], this.jC[this.hM][1], this.jC[this.hM][2], this.jC[this.hM][3],
+                        this.jC[this.hM][5], this.jC[this.hM][6], this.jC[this.hM][7], this.jdField_int);
                   }
+                } else if (this.bh.cv == 1) {
+                  this.bh.a(this.mX[this.hM] - ag.hF, this.mW[this.hM] - ag.hE, this.bh.eZ.getWidth() / 2,
+                      this.bh.eZ.getHeight(), this.bh.eZ.getWidth() / 2 * this.eX[this.hM], 0, this.bh.eZ,
+                      this.dQ[this.hM] == 0 ? 2 : 0);
                 }
-                else if (this.bh.cv == 1)
-                {
-                  this.bh.a(this.mX[this.hM] - ag.hF, this.mW[this.hM] - ag.hE, this.bh.eZ.getWidth() / 2, this.bh.eZ.getHeight(), this.bh.eZ.getWidth() / 2 * this.eX[this.hM], 0, this.bh.eZ, this.dQ[this.hM] == 0 ? 2 : 0);
-                }
-                if ((this.bh.dT != 1) && (80 >= h.jdMethod_if(this.bh.cZ.aP, this.mX[this.hM], this.bh.cZ.aM, this.mW[this.hM])))
-                {
+                if ((this.bh.dT != 1)
+                    && (80 >= h.jdMethod_if(this.bh.cZ.aP, this.mX[this.hM], this.bh.cZ.aM, this.mW[this.hM]))) {
                   this.fk += 1;
-                  if (this.fk <= a.J)
-                  {
+                  if (this.fk <= a.J) {
                     m = 0;
                     int i10 = this.mL[this.hM];
                     if ((this.bh.cv != 1) && (this.bh.bY) && (this.fy[this.hM] != null)) {
-                      this.bh.a(this.mX[this.hM], this.mW[this.hM], (byte)(k % 2 == 0 ? 3 : 1), this.gh[this.hM], this.fy[this.hM], m);
+                      this.bh.a(this.mX[this.hM], this.mW[this.hM], (byte) (k % 2 == 0 ? 3 : 1), this.gh[this.hM],
+                          this.fy[this.hM], m);
                     }
                     int n;
-                    if (this.bh.jdMethod_for(this.iy[this.hM]))
-                    {
+                    if (this.bh.jdMethod_for(this.iy[this.hM])) {
                       if (this.jdField_int / 5 % 3 == 0) {
                         n = 0;
                       } else if (this.jdField_int / 5 % 3 == 1) {
@@ -1161,9 +1108,7 @@ public class g
                       } else {
                         n = 3;
                       }
-                    }
-                    else
-                    {
+                    } else {
                       if (i10 != -1) {
                         if (i10 == this.bh.cZ.fL) {
                           n = 1;
@@ -1177,44 +1122,43 @@ public class g
                         n = 6;
                       }
                     }
-                    this.bh.a(this.iy[this.hM], this.mX[this.hM] + 10 - ag.hF, this.mW[this.hM] - 20 - ag.hE, 17, h.b2[n][0]);
+                    this.bh.a(this.iy[this.hM], this.mX[this.hM] + 10 - ag.hF, this.mW[this.hM] - 20 - ag.hE, 17,
+                        h.b2[n][0]);
                     String str = this.bh.jdMethod_if(this.mL[this.hM]);
-                    if ((str != null) && (this.bh.cr))
-                    {
-                      this.bh.a(str, this.mX[this.hM] + 10 - ag.hF, this.mW[this.hM] - 20 - ag.hE - h.eA - 1, 17, m.a[this.bh.jdMethod_try(this.mL[this.hM])]);
-                      this.bh.jdMethod_do(this.mL[this.hM], this.mX[this.hM] + 10 - ag.hF - h.dA.stringWidth(str) / 2 - 17, this.mW[this.hM] - 20 - ag.hE - h.eA - 1);
+                    if ((str != null) && (this.bh.cr)) {
+                      this.bh.a(str, this.mX[this.hM] + 10 - ag.hF, this.mW[this.hM] - 20 - ag.hE - h.eA - 1, 17,
+                          m.a[this.bh.jdMethod_try(this.mL[this.hM])]);
+                      this.bh.jdMethod_do(this.mL[this.hM],
+                          this.mX[this.hM] + 10 - ag.hF - h.dA.stringWidth(str) / 2 - 17,
+                          this.mW[this.hM] - 20 - ag.hE - h.eA - 1);
                     }
-                    if ((h.ek) && (this.k9[this.hM] != 0))
-                    {
+                    if ((h.ek) && (this.k9[this.hM] != 0)) {
                       j -= 12;
                       this.bh.a(j, this.mW[this.hM] - 20 - ag.hE, 24, 12, 288, 0, this.bh.aH[10], 0);
                       j -= 12;
                     }
-                    if (h.I(this.dq[this.hM]))
-                    {
+                    if (h.I(this.dq[this.hM])) {
                       this.bh.a(j, this.mW[this.hM] - 20 - ag.hE, 12, 12, 228, 0, this.bh.aH[10], 0);
                       j -= 12;
                     }
-                    if (h.H(this.dq[this.hM]))
-                    {
+                    if (h.H(this.dq[this.hM])) {
                       this.bh.a(j, this.mW[this.hM] - 20 - ag.hE, 12, 12, 132, 0, this.bh.aH[10], 0);
                       j -= 12;
                     }
-                    if (this.k7[this.hM] >= 0)
-                    {
+                    if (this.k7[this.hM] >= 0) {
                       this.bh.a(j, this.mW[this.hM] - 20 - ag.hE, this.k7[this.hM]);
                       j -= 12;
                     }
-                    if ((this.hD != null) && (this.hD.equals(this.iy[this.hM])))
-                    {
+                    if ((this.hD != null) && (this.hD.equals(this.iy[this.hM]))) {
                       this.bh.a(j, this.mW[this.hM] - 20 - ag.hE, 12, 12, 180, 0, this.bh.aH[10], 0);
                       j -= 12;
                     }
                   }
                 }
               }
-              if ((h.jdMethod_case(this.dq[this.hM])) && (this.mX[this.hM] == this.jq[this.hM]) && (this.mW[this.hM] == this.jo[this.hM])) {
-                a(this.mX[this.hM], this.mW[this.hM], (byte)(h.B(this.dq[this.hM]) ? 1 : 0));
+              if ((h.jdMethod_case(this.dq[this.hM])) && (this.mX[this.hM] == this.jq[this.hM])
+                  && (this.mW[this.hM] == this.jo[this.hM])) {
+                a(this.mX[this.hM], this.mW[this.hM], (byte) (h.B(this.dq[this.hM]) ? 1 : 0));
               }
               if (this.bh.a(this.iy[this.hM])) {
                 this.bh.a(j, this.mW[this.hM] - 20 - ag.hE, 12, 12, 156, 0, this.bh.aH[10], 0);
@@ -1225,8 +1169,7 @@ public class g
       }
       if (this.bh.cv == 0) {
         for (i = 0; i < this.de[0].length; i++) {
-          if (i != 4)
-          {
+          if (i != 4) {
             this.bh.b0.a(this.de[0][i]);
             this.bh.b0.a(this.de[1][i]);
           }
@@ -1234,9 +1177,8 @@ public class g
       }
     }
   }
-  
-  public void a(int paramInt1, int paramInt2, byte paramByte)
-  {
+
+  public void a(int paramInt1, int paramInt2, byte paramByte) {
     int i = paramByte;
     paramInt1 += 1 - ag.hF;
     paramInt2 += 21 - ag.hE;
@@ -1245,113 +1187,110 @@ public class g
     }
     this.bh.a(this.bh.fj, paramInt1, paramInt2, 19, 10, paramByte * 19, 0, this.bh.aH[13], 0);
     if (i == 2) {
-      this.bh.a(paramInt1 + (this.jdField_int / 5 % 16 + 1) * h.jdMethod_new(this.jdField_int % 12 * 30) / 256, paramInt2 + (this.jdField_int / 8 % 8 + 2) * h.jdMethod_do(this.jdField_int % 10 * 30) / 256, 2, this.jdField_int / 2 % 3);
+      this.bh.a(paramInt1 + (this.jdField_int / 5 % 16 + 1) * h.jdMethod_new(this.jdField_int % 12 * 30) / 256,
+          paramInt2 + (this.jdField_int / 8 % 8 + 2) * h.jdMethod_do(this.jdField_int % 10 * 30) / 256, 2,
+          this.jdField_int / 2 % 3);
     }
   }
-  
-  public void P()
-  {
-    synchronized (this.bx)
-    {
-      for (int i = 0; i < this.jF; i = (byte)(i + 1)) {
-        if (h.a(this.jU[i], this.jT[i], 25, 25, ag.hF, ag.hE, h.dU, h.fp))
-        {
-          a(this.jU[i], this.jT[i], (byte)2);
-          if ((this.bh.dT != 1) && (this.bh.cv != 2) && (100 >= h.jdMethod_if(this.bh.cZ.aP, this.jU[i], this.bh.cZ.aM, this.jT[i]))) {
+
+  public void P() {
+    synchronized (this.bx) {
+      for (int i = 0; i < this.jF; i = (byte) (i + 1)) {
+        if (h.a(this.jU[i], this.jT[i], 25, 25, ag.hF, ag.hE, h.dU, h.fp)) {
+          a(this.jU[i], this.jT[i], (byte) 2);
+          if ((this.bh.dT != 1) && (this.bh.cv != 2)
+              && (100 >= h.jdMethod_if(this.bh.cZ.aP, this.jU[i], this.bh.cZ.aM, this.jT[i]))) {
             this.bh.a(this.cp[i], this.jU[i] + 10 - ag.hF, this.jT[i] - 20 - ag.hE, 17, h.b2[0][0]);
           }
         }
       }
     }
   }
-  
-  public void jdMethod_if(int paramInt1, int paramInt2) {}
-  
-  public void a(int paramInt1, int paramInt2) {}
-  
-  public void jdMethod_if(int paramInt)
-  {
+
+  public void jdMethod_if(int paramInt1, int paramInt2) {
+  }
+
+  public void a(int paramInt1, int paramInt2) {
+  }
+
+  public void jdMethod_if(int paramInt) {
     this.bh.B.a(paramInt, true);
   }
-  
-  public void jdMethod_int(int paramInt1, int paramInt2)
-  {
+
+  public void jdMethod_int(int paramInt1, int paramInt2) {
     this.bh.a(paramInt1, paramInt2, this.bh.aH[6].getWidth(), this.bh.aH[6].getHeight(), 0, 0, this.bh.aH[6], 0);
   }
-  
-  public void a(Vector paramVector, boolean paramBoolean)
-  {
+
+  public void a(Vector paramVector, boolean paramBoolean) {
     int i = 35;
     int j = 5;
     if ((this.j1 == 28) || (this.j1 == 16) || (this.j1 == -91)) {
       j = 18;
     }
-    int k = (short)(h.dU - j - 4);
-    this.bh.a((byte)2, 0, 0, h.dU, h.fp, true);
+    int k = (short) (h.dU - j - 4);
+    this.bh.a((byte) 2, 0, 0, h.dU, h.fp, true);
     String str1 = null;
-    switch (this.j1)
-    {
-    case -109: 
-      str1 = "师徒信息";
-      break;
-    case -108: 
-      str1 = "情侣信息";
-      break;
-    case -106: 
-      str1 = "购买方式";
-      break;
-    case -18: 
-      str1 = "金币市场";
-      break;
-    case -30: 
-      str1 = "建筑科技";
-      break;
-    case -36: 
-      str1 = "充值方式";
-      break;
-    case 16: 
-      str1 = "附近玩家";
-      break;
-    case -17: 
-      str1 = "队伍成员";
-      break;
-    case -5: 
-    case 104: 
-      str1 = "公会成员";
-      this.bh.a(h.dU - 5, 15, this.iu, 24);
-      this.bh.a(h.dU - 5 - 21, 15, 5, 7, 50, 0, this.bh.aH[5], 0);
-      this.bh.a(h.dU - 5 - 21, 15, this.lW, 24);
-      break;
-    case -91: 
-      str1 = "公会一览";
-      break;
-    case 28: 
-      str1 = "好友列表";
-      break;
-    case 90: 
-      str1 = "黑名单";
-      break;
-    case 29: 
-      str1 = "请求列表";
-      break;
-    case 14: 
-      str1 = "本星系航线";
-      break;
-    case 52: 
-      str1 = "已学技能";
-      break;
-    case -32: 
-    case -31: 
-      str1 = this.jb;
+    switch (this.j1) {
+      case -109:
+        str1 = "师徒信息";
+        break;
+      case -108:
+        str1 = "情侣信息";
+        break;
+      case -106:
+        str1 = "购买方式";
+        break;
+      case -18:
+        str1 = "金币市场";
+        break;
+      case -30:
+        str1 = "建筑科技";
+        break;
+      case -36:
+        str1 = "充值方式";
+        break;
+      case 16:
+        str1 = "附近玩家";
+        break;
+      case -17:
+        str1 = "队伍成员";
+        break;
+      case -5:
+      case 104:
+        str1 = "公会成员";
+        this.bh.a(h.dU - 5, 15, this.iu, 24);
+        this.bh.a(h.dU - 5 - 21, 15, 5, 7, 50, 0, this.bh.aH[5], 0);
+        this.bh.a(h.dU - 5 - 21, 15, this.lW, 24);
+        break;
+      case -91:
+        str1 = "公会一览";
+        break;
+      case 28:
+        str1 = "好友列表";
+        break;
+      case 90:
+        str1 = "黑名单";
+        break;
+      case 29:
+        str1 = "请求列表";
+        break;
+      case 14:
+        str1 = "本星系航线";
+        break;
+      case 52:
+        str1 = "已学技能";
+        break;
+      case -32:
+      case -31:
+        str1 = this.jb;
     }
     this.bh.fj.setColor(h.b2[2][1]);
     this.bh.fj.drawString(str1, h.dU / 2, 5, 17);
-    this.bh.a((byte)2, 0, 0, h.dU, 30, false);
+    this.bh.a((byte) 2, 0, 0, h.dU, 30, false);
     if (paramVector.isEmpty()) {
       return;
     }
-    if ((this.jdField_do == 26) || (this.jdField_do == -5))
-    {
+    if ((this.jdField_do == 26) || (this.jdField_do == -5)) {
       if ((this.kG) && (++this.be > 12) && (this.jdField_int % 2 == 0)) {
         if (this.ku == 0) {
           L();
@@ -1359,190 +1298,171 @@ public class g
           u();
         }
       }
-    }
-    else {
+    } else {
       this.kG = false;
     }
     String str2 = null;
     short s = 0;
     int m = -1;
-    for (int n = 0; (n < this.dw) && (this.gi + n < paramVector.size()); n++)
-    {
-      str2 = (String)paramVector.elementAt(this.gi + n);
+    for (int n = 0; (n < this.dw) && (this.gi + n < paramVector.size()); n++) {
+      str2 = (String) paramVector.elementAt(this.gi + n);
       if ((this.j1 == 28) || (this.j1 == 16) || (this.j1 == 104) || (this.j1 == -5) || (this.j1 == 14)) {
-        s = ((Short)this.bS.elementAt(this.gi + n)).shortValue();
+        s = ((Short) this.bS.elementAt(this.gi + n)).shortValue();
       } else if (this.j1 == -91) {
-        m = ((Integer)this.bS.elementAt(this.gi + n)).intValue();
+        m = ((Integer) this.bS.elementAt(this.gi + n)).intValue();
       }
       if (this.j1 == 29) {
-        if (0 == ((Byte)this.bS.elementAt(this.gi + n)).byteValue()) {
+        if (0 == ((Byte) this.bS.elementAt(this.gi + n)).byteValue()) {
           str2 = "入队 " + str2;
-        } else if (1 == ((Byte)this.bS.elementAt(this.gi + n)).byteValue()) {
+        } else if (1 == ((Byte) this.bS.elementAt(this.gi + n)).byteValue()) {
           str2 = "入会 " + str2;
-        } else if (2 == ((Byte)this.bS.elementAt(this.gi + n)).byteValue()) {
+        } else if (2 == ((Byte) this.bS.elementAt(this.gi + n)).byteValue()) {
           str2 = "退会 " + str2;
-        } else if (3 == ((Byte)this.bS.elementAt(this.gi + n)).byteValue()) {
+        } else if (3 == ((Byte) this.bS.elementAt(this.gi + n)).byteValue()) {
           str2 = "同盟 " + str2;
-        } else if (4 == ((Byte)this.bS.elementAt(this.gi + n)).byteValue()) {
+        } else if (4 == ((Byte) this.bS.elementAt(this.gi + n)).byteValue()) {
           str2 = "拜师 " + str2;
-        } else if (5 == ((Byte)this.bS.elementAt(this.gi + n)).byteValue()) {
+        } else if (5 == ((Byte) this.bS.elementAt(this.gi + n)).byteValue()) {
           str2 = "求爱 " + str2;
         }
       }
-      if (n == this.hZ - this.gi)
-      {
+      if (n == this.hZ - this.gi) {
         this.bh.fj.setColor(h.b2[2][1]);
         this.bh.fj.fillRect(j - 2, i + n * h.eA - 2, k + 2, h.eA + 2);
         this.bh.fj.setColor(h.b2[2][0]);
-        switch (this.j1)
-        {
-        case -91: 
-          this.bh.jdMethod_do(m, 0, i + n * h.eA);
-          if (m == this.bh.cZ.fL) {
-            this.bh.fj.setColor(h.b2[2][0]);
-          } else if (this.bh.cZ.ge == m) {
-            if (this.bh.cZ.gm == 0) {
-              this.bh.fj.setColor(h.b2[1][0]);
-            } else {
-              this.bh.fj.setColor(h.b2[4][0]);
+        switch (this.j1) {
+          case -91:
+            this.bh.jdMethod_do(m, 0, i + n * h.eA);
+            if (m == this.bh.cZ.fL) {
+              this.bh.fj.setColor(h.b2[2][0]);
+            } else if (this.bh.cZ.ge == m) {
+              if (this.bh.cZ.gm == 0) {
+                this.bh.fj.setColor(h.b2[1][0]);
+              } else {
+                this.bh.fj.setColor(h.b2[4][0]);
+              }
             }
-          }
-          break;
-        case 16: 
-          if (s != -1)
-          {
-            if (h.jdMethod_case(s)) {
+            break;
+          case 16:
+            if (s != -1) {
+              if (h.jdMethod_case(s)) {
+                this.bh.fj.setColor(h.b2[0][0]);
+              }
+              if (h.u(s)) {
+                this.bh.fj.setColor(h.b2[4][0]);
+              }
+              if (h.H(s)) {
+                this.bh.a(3, i + n * h.eA, 12, 12, 132, 0, this.bh.aH[10], 0);
+              } else if (h.I(s)) {
+                this.bh.a(3, i + n * h.eA, 12, 12, 228, 0, this.bh.aH[10], 0);
+              }
+            } else {
+              this.bh.a(3, i + n * h.eA, 2, this.jdField_int / 2 % 3);
               this.bh.fj.setColor(h.b2[0][0]);
             }
-            if (h.u(s)) {
-              this.bh.fj.setColor(h.b2[4][0]);
+            break;
+          case 104:
+            if (s == 1) {
+              this.bh.fj.setColor(16768256);
             }
-            if (h.H(s)) {
-              this.bh.a(3, i + n * h.eA, 12, 12, 132, 0, this.bh.aH[10], 0);
-            } else if (h.I(s)) {
-              this.bh.a(3, i + n * h.eA, 12, 12, 228, 0, this.bh.aH[10], 0);
+            break;
+          case 28:
+            if (s == 1) {
+              if (this.i2[(this.gi + n)] != 0) {
+                this.bh.a(3, i + n * h.eA + 2, 12, 12, 228, 0, this.bh.aH[10], 0);
+              } else {
+                this.bh.a(3, i + n * h.eA, 15, 15, this.gC[(this.gi + n)] == 0 ? 23 : 3, 3, this.bh.aH[7], 0);
+              }
+              this.bh.fj.setColor(16768256);
             }
-          }
-          else
-          {
-            this.bh.a(3, i + n * h.eA, 2, this.jdField_int / 2 % 3);
-            this.bh.fj.setColor(h.b2[0][0]);
-          }
-          break;
-        case 104: 
-          if (s == 1) {
-            this.bh.fj.setColor(16768256);
-          }
-          break;
-        case 28: 
-          if (s == 1)
-          {
-            if (this.i2[(this.gi + n)] != 0) {
-              this.bh.a(3, i + n * h.eA + 2, 12, 12, 228, 0, this.bh.aH[10], 0);
-            } else {
-              this.bh.a(3, i + n * h.eA, 15, 15, this.gC[(this.gi + n)] == 0 ? 23 : 3, 3, this.bh.aH[7], 0);
+            break;
+          case -109:
+            if (s == 1) {
+              if (this.i2[(this.gi + n)] != 0) {
+                this.bh.a(3, i + n * h.eA + 2, 12, 12, 228, 0, this.bh.aH[10], 0);
+              } else {
+                this.bh.a(3, i + n * h.eA, 15, 15, this.gC[(this.gi + n)] == 0 ? 23 : 3, 3, this.bh.aH[7], 0);
+              }
+              this.bh.fj.setColor(16768256);
             }
-            this.bh.fj.setColor(16768256);
-          }
-          break;
-        case -109: 
-          if (s == 1)
-          {
-            if (this.i2[(this.gi + n)] != 0) {
-              this.bh.a(3, i + n * h.eA + 2, 12, 12, 228, 0, this.bh.aH[10], 0);
-            } else {
-              this.bh.a(3, i + n * h.eA, 15, 15, this.gC[(this.gi + n)] == 0 ? 23 : 3, 3, this.bh.aH[7], 0);
+            break;
+          case -5:
+          case 14:
+            if (s == 1) {
+              this.bh.fj.setColor(16768256);
             }
-            this.bh.fj.setColor(16768256);
-          }
-          break;
-        case -5: 
-        case 14: 
-          if (s == 1) {
-            this.bh.fj.setColor(16768256);
-          }
-          break;
+            break;
         }
-        if (h.dA.stringWidth(str2) > k)
-        {
+        if (h.dA.stringWidth(str2) > k) {
           if (this.hi > 10) {
-            this.c4 = ((short)(this.c4 - 3));
+            this.c4 = ((short) (this.c4 - 3));
           } else {
-            this.hi = ((byte)(this.hi + 1));
+            this.hi = ((byte) (this.hi + 1));
           }
           if (this.c4 + h.dA.stringWidth(str2) < 0) {
-            this.c4 = ((short)(h.dU - 5));
+            this.c4 = ((short) (h.dU - 5));
           }
           this.bh.fj.setClip(j, i + n * h.eA - 1, k, h.eA + 1);
           this.bh.fj.drawString(str2, this.c4, i + n * h.eA, 0);
           this.bh.fj.setClip(0, 0, h.dU, h.fp);
-        }
-        else
-        {
+        } else {
           int i10 = j;
           this.bh.fj.drawString(str2, i10, i + n * h.eA, 0);
         }
-      }
-      else
-      {
+      } else {
         this.bh.fj.setColor(h.b2[2][1]);
-        switch (this.j1)
-        {
-        case -91: 
-          this.bh.jdMethod_do(m, 0, i + n * h.eA);
-          if (m == this.bh.cZ.fL) {
-            this.bh.fj.setColor(h.b2[2][0]);
-          } else if (this.bh.cZ.ge == m) {
-            if (this.bh.cZ.gm == 0) {
-              this.bh.fj.setColor(h.b2[1][0]);
-            } else {
-              this.bh.fj.setColor(h.b2[4][0]);
+        switch (this.j1) {
+          case -91:
+            this.bh.jdMethod_do(m, 0, i + n * h.eA);
+            if (m == this.bh.cZ.fL) {
+              this.bh.fj.setColor(h.b2[2][0]);
+            } else if (this.bh.cZ.ge == m) {
+              if (this.bh.cZ.gm == 0) {
+                this.bh.fj.setColor(h.b2[1][0]);
+              } else {
+                this.bh.fj.setColor(h.b2[4][0]);
+              }
             }
-          }
-          break;
-        case 16: 
-          if (s != -1)
-          {
-            if (h.jdMethod_case(s)) {
+            break;
+          case 16:
+            if (s != -1) {
+              if (h.jdMethod_case(s)) {
+                this.bh.fj.setColor(h.b2[0][0]);
+              }
+              if (h.u(s)) {
+                this.bh.fj.setColor(h.b2[4][0]);
+              }
+              if (h.H(s)) {
+                this.bh.a(3, i + n * h.eA, 12, 12, 132, 0, this.bh.aH[10], 0);
+              } else if (h.I(s)) {
+                this.bh.a(3, i + n * h.eA, 12, 12, 228, 0, this.bh.aH[10], 0);
+              }
+            } else {
+              this.bh.a(3, i + n * h.eA, 2, this.jdField_int / 2 % 3);
               this.bh.fj.setColor(h.b2[0][0]);
             }
-            if (h.u(s)) {
-              this.bh.fj.setColor(h.b2[4][0]);
+            break;
+          case 104:
+            if (s == 1) {
+              this.bh.fj.setColor(16768256);
             }
-            if (h.H(s)) {
-              this.bh.a(3, i + n * h.eA, 12, 12, 132, 0, this.bh.aH[10], 0);
-            } else if (h.I(s)) {
-              this.bh.a(3, i + n * h.eA, 12, 12, 228, 0, this.bh.aH[10], 0);
+            break;
+          case 28:
+            if (s == 1) {
+              if (this.i2[(this.gi + n)] != 0) {
+                this.bh.a(3, i + n * h.eA + 2, 12, 12, 228, 0, this.bh.aH[10], 0);
+              } else {
+                this.bh.a(3, i + n * h.eA, 15, 15, this.gC[(this.gi + n)] == 0 ? 23 : 3, 3, this.bh.aH[7], 0);
+              }
+              this.bh.fj.setColor(16768256);
             }
-          }
-          else
-          {
-            this.bh.a(3, i + n * h.eA, 2, this.jdField_int / 2 % 3);
-            this.bh.fj.setColor(h.b2[0][0]);
-          }
-          break;
-        case 104: 
-          if (s == 1) {
-            this.bh.fj.setColor(16768256);
-          }
-          break;
-        case 28: 
-          if (s == 1)
-          {
-            if (this.i2[(this.gi + n)] != 0) {
-              this.bh.a(3, i + n * h.eA + 2, 12, 12, 228, 0, this.bh.aH[10], 0);
-            } else {
-              this.bh.a(3, i + n * h.eA, 15, 15, this.gC[(this.gi + n)] == 0 ? 23 : 3, 3, this.bh.aH[7], 0);
+            break;
+          case -5:
+          case 14:
+            if (s == 1) {
+              this.bh.fj.setColor(16768256);
             }
-            this.bh.fj.setColor(16768256);
-          }
-          break;
-        case -5: 
-        case 14: 
-          if (s == 1) {
-            this.bh.fj.setColor(16768256);
-          }
-          break;
+            break;
         }
         this.bh.fj.setClip(j, i + n * h.eA - 1, k, h.eA + 1);
         this.bh.fj.drawString(str2, j, i + n * h.eA, 0);
@@ -1556,12 +1476,11 @@ public class g
       this.bh.a(h.dU - 16, h.fp - 23 + (this.jdField_int % 6 == 0 ? 1 : -1), 14, 8, 0, 0, this.bh.aH[4], 3);
     }
   }
-  
-  public void a(String paramString1, String paramString2, String paramString3)
-  {
-    this.bh.a(paramString1, -1, (byte)4, false);
-    int i = (short)Math.max(h.dA.stringWidth(paramString2), h.dA.stringWidth(paramString3));
-    this.bh.a((byte)2, (h.dU - i - 30) / 2, h.fp / 2 + 15, i + 30, 50, true);
+
+  public void a(String paramString1, String paramString2, String paramString3) {
+    this.bh.a(paramString1, -1, (byte) 4, false);
+    int i = (short) Math.max(h.dA.stringWidth(paramString2), h.dA.stringWidth(paramString3));
+    this.bh.a((byte) 2, (h.dU - i - 30) / 2, h.fp / 2 + 15, i + 30, 50, true);
     this.mC = ((h.dU - i - 30) / 2 + 20);
     this.mu = (h.fp / 2 + 20 + this.e3 * 20);
     this.mr = (i + 30);
@@ -1577,20 +1496,16 @@ public class g
     jdMethod_int(this.mC - 16 + (this.fn ? -1 : 1), h.fp / 2 + 15 + 5 + 2 + this.e3 * 20);
     this.bh.dk = null;
   }
-  
-  public void jdMethod_if()
-  {
-    if (h.cz)
-    {
+
+  public void jdMethod_if() {
+    if (h.cz) {
       long l = System.currentTimeMillis();
-      if (l - this.lN >= 60000L)
-      {
+      if (l - this.lN >= 60000L) {
         this.lN = l;
         this.bh.aG.jdMethod_new();
       }
     }
-    if (this.bh.fK)
-    {
+    if (this.bh.fK) {
       this.bh.fj.setColor(0);
       this.bh.fj.fillRect(0, 0, h.dU, h.fp);
       this.bh.fj.setColor(h.b2[5][0]);
@@ -1599,41 +1514,37 @@ public class g
       return;
     }
     if (h.fZ != null) {
-      for (int i = 0; i < h.fZ.length; i = (byte)(i + 1)) {
+      for (int i = 0; i < h.fZ.length; i = (byte) (i + 1)) {
         h.a5.a(h.fZ[i]);
       }
     }
     this.bh.fK = false;
     this.kp += 1;
-    if ((this.bh.cZ.he) && (this.bh.cZ.ii < 2000))
-    {
+    if ((this.bh.cZ.he) && (this.bh.cZ.ii < 2000)) {
       ag tmp379_376 = this.bh.cZ;
-      tmp379_376.ii = ((short)(tmp379_376.ii + 1));
+      tmp379_376.ii = ((short) (tmp379_376.ii + 1));
     }
-    if ((!this.bh.cZ.a8) && ((this.jdField_do == 1) || (this.jdField_do == 2) || (this.jdField_do == 26) || (this.jdField_do == 27) || (this.jdField_do == 74) || (this.jdField_do == 15) || (this.jdField_do == 93) || (this.jdField_do == 29) || (this.jdField_do == 13) || (this.jdField_do == 109) || (this.jdField_do == 50)) && (Display.getDisplay(this.bh.fG).getCurrent() == this.bh))
-    {
-      this.g1 = ((short)(this.g1 + 1));
+    if ((!this.bh.cZ.a8)
+        && ((this.jdField_do == 1) || (this.jdField_do == 2) || (this.jdField_do == 26) || (this.jdField_do == 27)
+            || (this.jdField_do == 74) || (this.jdField_do == 15) || (this.jdField_do == 93) || (this.jdField_do == 29)
+            || (this.jdField_do == 13) || (this.jdField_do == 109) || (this.jdField_do == 50))
+        && (Display.getDisplay(this.bh.fG).getCurrent() == this.bh)) {
+      this.g1 = ((short) (this.g1 + 1));
       if (this.g1 > 2000) {
         this.bh.i.jdMethod_case();
       }
-    }
-    else
-    {
+    } else {
       this.g1 = 0;
     }
     this.bh.r();
-    if ((this.jdField_do != 5) && (this.bh.w()))
-    {
+    if ((this.jdField_do != 5) && (this.bh.w())) {
       if ((this.bh.I()) && (this.jdField_int % h.jdMethod_if(5, 6) == 0)) {
-        synchronized (h.co)
-        {
+        synchronized (h.co) {
           this.bh.d();
         }
       }
-      if ((this.bh.jdMethod_goto()) && (this.jdField_int % h.jdMethod_if(5, 6) == 0))
-      {
-        synchronized (h.bG)
-        {
+      if ((this.bh.jdMethod_goto()) && (this.jdField_int % h.jdMethod_if(5, 6) == 0)) {
+        synchronized (h.bG) {
           this.bh.jdMethod_if(h.bG[0], h.ds[0], h.ej[0], h.cy[0], h.ec[0], h.aa[0]);
         }
         this.bh.jdMethod_int();
@@ -1642,28 +1553,22 @@ public class g
     if ((this.bh.cZ.a4 == 10) && (!this.ki) && ((dD == 1) || (dD == 4)) && (dZ == 0) && (this.jdField_int % 10 == 0)) {
       this.bh.cZ.A();
     }
-    if (this.bh.S.ad)
-    {
-      ag.hF = (short)(ag.hF + 2 * (this.jdField_int % 2 == 0 ? -1 : 1));
-      ag.hE = (short)(ag.hE + 3 * (this.jdField_int % 5 < 3 ? -1 : this.jdField_int % 2 == 0 ? -1 : this.jdField_int % 5 < 3 ? 1 : 1));
-      if (ag.hF < 0)
-      {
+    if (this.bh.S.ad) {
+      ag.hF = (short) (ag.hF + 2 * (this.jdField_int % 2 == 0 ? -1 : 1));
+      ag.hE = (short) (ag.hE
+          + 3 * (this.jdField_int % 5 < 3 ? -1 : this.jdField_int % 2 == 0 ? -1 : this.jdField_int % 5 < 3 ? 1 : 1));
+      if (ag.hF < 0) {
         ag.hF = 0;
-      }
-      else if (ag.hF + h.dU >= this.bh.ad)
-      {
-        ag.hF = (short)(this.bh.ad - h.dU);
+      } else if (ag.hF + h.dU >= this.bh.ad) {
+        ag.hF = (short) (this.bh.ad - h.dU);
         if (ag.hF < 0) {
           ag.hF = 0;
         }
       }
-      if (ag.hE < 0)
-      {
+      if (ag.hE < 0) {
         ag.hE = 0;
-      }
-      else if (ag.hE + h.fp > this.bh.dz)
-      {
-        ag.hE = (short)(this.bh.dz - h.fp);
+      } else if (ag.hE + h.fp > this.bh.dz) {
+        ag.hE = (short) (this.bh.dz - h.fp);
         if (ag.hE < 0) {
           ag.hE = 0;
         }
@@ -1675,1421 +1580,1307 @@ public class g
     String str1;
     int i14;
     int i12;
-    switch (this.jdField_do)
-    {
-    case -16: 
-      E();
-      a("确认提交宠物?", "是", "否");
-      this.bh.x();
-      this.bh.c();
-      break;
-    case -19: 
-      E();
-      this.bh.a(this.lr, gf, (byte)4, false);
-      this.bh.x();
-      this.bh.c();
-      break;
-    case -18: 
-      E();
-      a(this.ip, true);
-      this.bh.x();
-      this.bh.c();
-      break;
-    case 78: 
-      switch (this.bh.cZ.gj)
-      {
-      case 1: 
+    switch (this.jdField_do) {
+      case -16:
         E();
-        this.bh.a("输入" + (this.bh.cZ.dN == 0 ? "买1手金" : "卖1手金") + "的单价(1手金=100星币).", -1, (byte)4, false);
-        if (this.bh.cZ.gj == 1) {
-          this.bh.d9.a();
-        }
+        a("确认提交宠物?", "是", "否");
         this.bh.x();
         this.bh.c();
         break;
-      case 3: 
+      case -19:
         E();
-        this.bh.a("输入" + (this.bh.cZ.dN == 0 ? "买1手金" : "卖1手金") + "的数量(1手金=100星币).", -1, (byte)4, false);
-        if (this.bh.cZ.gj == 3) {
-          this.bh.d9.a();
-        }
+        this.bh.a(this.lr, gf, (byte) 4, false);
         this.bh.x();
         this.bh.c();
         break;
-      case 4: 
+      case -18:
         E();
-        this.bh.a("您的交易信息为:" + (this.bh.cZ.dN == 0 ? "买" : "卖") + a3.jdMethod_do(this.bh.cZ.dP, a.C) + "手金,单价" + a3.jdMethod_do(this.bh.cZ.gF, a.C) + "游戏币.是否缴纳押金10星币提交交易请求? (交易不限时长,在线有效)成交则押金不予退还,撤单将扣除2星币平台使用费.", gf, (byte)4, false);
+        a(this.ip, true);
         this.bh.x();
         this.bh.c();
-      }
-      break;
-    case 60: 
-      E();
-      this.bh.a("请选择要进行的操作?", -1, (byte)4, false);
-      this.bh.a((h.dU - 50) / 2, (h.fp - 70) / 2, this.gd, this.c9);
-      this.bh.x();
-      this.bh.c();
-      break;
-    case -13: 
-      E();
-      this.bh.a("选择完成[" + this.bh.bR.jdField_case + "]提交的宠物?", -1, (byte)4, false);
-      this.bh.a((h.dU - 50) / 2, (h.fp - 70) / 2, this.gd, this.c9);
-      this.bh.x();
-      this.bh.c();
-      break;
-    case 107: 
-      E();
-      this.bh.a((byte)2, 0, 0, this.dt.getWidth() + 4, this.dt.getHeight() + 4, true);
-      this.bh.fj.drawImage(this.dt, 2, 2, 0);
-      this.bh.c();
-      break;
-    case 7: 
-      E();
-      a(this.fA, "查看", "返回");
-      break;
-    case 55: 
-      E();
-      this.bh.a(this.nt[this.fF], -1, (byte)4, false);
-      this.bh.a((h.dU - 50) / 2, (h.fp - 70) / 2, this.d7, this.fx[this.fF]);
-      this.bh.x();
-      this.bh.c();
-      break;
-    case 59: 
-      E();
-      if (this.bh.a(this.m7, gf, (byte)4, false))
-      {
-        this.cJ = 4;
-        this.hv = 168;
-        j();
-      }
-      this.bh.x();
-      break;
-    case -29: 
-      E();
-      j = this.bh.cZ.jdMethod_int(this.bh.cZ.bo, this.dF);
-      j = Math.max(1, j);
-      int k = (j + 1) * (j + 1) * (j + 1) * 100;
-      a("是否消耗职业熟练值" + k + "提升本技能?", "是", "否");
-      break;
-    case 34: 
-      switch (this.kH)
-      {
-      case 0: 
-      case 1: 
+        break;
+      case 78:
+        switch (this.bh.cZ.gj) {
+          case 1:
+            E();
+            this.bh.a("输入" + (this.bh.cZ.dN == 0 ? "买1手金" : "卖1手金") + "的单价(1手金=100星币).", -1, (byte) 4, false);
+            if (this.bh.cZ.gj == 1) {
+              this.bh.d9.a();
+            }
+            this.bh.x();
+            this.bh.c();
+            break;
+          case 3:
+            E();
+            this.bh.a("输入" + (this.bh.cZ.dN == 0 ? "买1手金" : "卖1手金") + "的数量(1手金=100星币).", -1, (byte) 4, false);
+            if (this.bh.cZ.gj == 3) {
+              this.bh.d9.a();
+            }
+            this.bh.x();
+            this.bh.c();
+            break;
+          case 4:
+            E();
+            this.bh.a("您的交易信息为:" + (this.bh.cZ.dN == 0 ? "买" : "卖") + a3.jdMethod_do(this.bh.cZ.dP, a.C) + "手金,单价"
+                + a3.jdMethod_do(this.bh.cZ.gF, a.C) + "游戏币.是否缴纳押金10星币提交交易请求? (交易不限时长,在线有效)成交则押金不予退还,撤单将扣除2星币平台使用费.",
+                gf, (byte) 4, false);
+            this.bh.x();
+            this.bh.c();
+        }
+        break;
+      case 60:
         E();
-        a("新物质融合器:\"是否已准备好启动融合?\"", "是", "否");
-      }
-      break;
-    case -125: 
-      E();
-      if (this.gP)
-      {
-        if (this.bh.a(this.i7, gf, (byte)4, false)) {
-          this.gP = false;
-        }
-      }
-      else
-      {
-        a(this.i7, "是", "否");
+        this.bh.a("请选择要进行的操作?", -1, (byte) 4, false);
+        this.bh.a((h.dU - 50) / 2, (h.fp - 70) / 2, this.gd, this.c9);
         this.bh.x();
         this.bh.c();
-      }
-      break;
-    case -124: 
-      E();
-      str1 = "欢迎回到充满未知与激情的星战世界!您已离线超过" + this.bh.bD + "小时,每小时可获得" + this.bh.ey + "点离线经验(等级越高,获得越多),点击确认VIP用户即可获得总计" + this.bh.dl + "点离线经验.";
-      if (this.bh.dL)
-      {
-        if (this.bh.a(str1, gf, (byte)4, false)) {
-          this.bh.dL = false;
-        }
-      }
-      else
-      {
-        a(str1, "是", "否");
+        break;
+      case -13:
+        E();
+        this.bh.a("选择完成[" + this.bh.bR.jdField_case + "]提交的宠物?", -1, (byte) 4, false);
+        this.bh.a((h.dU - 50) / 2, (h.fp - 70) / 2, this.gd, this.c9);
         this.bh.x();
         this.bh.c();
-      }
-      break;
-    case -104: 
-      E();
-      if (this.bh.a(this.dy, gf, (byte)4, false)) {}
-      this.bh.a((byte)2, 0, h.fp - 22, 45, 22, true);
-      this.bh.a((byte)2, h.dU - 45, h.fp - 22, 45, 22, true);
-      this.bh.fj.setColor(0);
-      this.bh.fj.drawString("购买", 22, h.fp - 3, 33);
-      this.bh.fj.setColor(0);
-      this.bh.fj.drawString("取消", h.dU - 22, h.fp - 3, 33);
-      break;
-    case 65: 
-      E();
-      if (this.bh.a(this.fA, gf, (byte)4, false)) {
-        if (this.gI == 0)
-        {
-          this.fA = null;
-          this.fL = null;
-          this.jdField_do = 0;
-        }
-        else
-        {
-          this.e3 = 0;
-          this.jdField_do = 7;
-        }
-      }
-      break;
-    case -101: 
-      E();
-      this.bh.ck.jdMethod_int();
-      a(this.iN ? "查看下一页?" : "查看上一页?", "是", "否");
-      break;
-    case -100: 
-    case -99: 
-    case -98: 
-    case -97: 
-    case -96: 
-    case -95: 
-      this.ea.jdMethod_new();
-      break;
-    case -92: 
-      this.bh.bS.a();
-      break;
-    case -93: 
-    case -90: 
-    case -88: 
-    case -87: 
-      this.bh.fm.jdMethod_do();
-      break;
-    case -85: 
-      E();
-      this.bh.a("设置什么职位?(可通过:系统->帮助->公会->职位 查看管理职位任命要求)", -1, (byte)4, false);
-      this.bh.a((h.dU - 50) / 2, (h.fp - 70) / 2, this.gd, this.c9);
-      this.bh.x();
-      this.bh.c();
-      break;
-    case -94: 
-      E();
-      a(this.bu, "确定", "取消");
-      break;
-    case -86: 
-      E();
-      a(this.bu, "确定", "取消");
-      break;
-    case -75: 
-      E();
-      a("确定使用该颜色?", "确定", "取消");
-      break;
-    case -74: 
-      this.mM.a();
-      this.bh.x();
-      this.bh.c();
-      break;
-    case -51: 
-      this.bh.bf.a();
-      break;
-    case -71: 
-      this.bh.ct.jdMethod_if();
-      break;
-    case -47: 
-      this.iZ.a();
-      break;
-    case -44: 
-    case -43: 
-    case -42: 
-    case -40: 
-      this.bh.b();
-      break;
-    case -84: 
-    case -73: 
-    case -41: 
-      E();
-      a("确定使用?", "确定", "取消");
-      break;
-    case -48: 
-      E();
-      a("确定兑换?", "确定", "取消");
-      break;
-    case -39: 
-      E();
-      this.bh.jdMethod_long();
-      this.bh.x();
-      this.bh.c();
-      break;
-    case -102: 
-    case -38: 
-    case -37: 
-    case -36: 
-      this.bh.bv.jdMethod_do();
-      break;
-    case -69: 
-    case -68: 
-    case -67: 
-    case -66: 
-    case -65: 
-    case -63: 
-    case -62: 
-    case -61: 
-    case -60: 
-    case -59: 
-    case -58: 
-    case -57: 
-    case -56: 
-    case -55: 
-    case -54: 
-    case -53: 
-    case -52: 
-    case -35: 
-    case -34: 
-      this.bh.y();
-      break;
-    case 40: 
-      a("使用唤醒模组?(" + (10 - this.jdField_int / 10 % 10) + ")", "是", "否");
-      if (this.jdField_int > 100)
-      {
-        this.e3 = 1;
-        jdMethod_if(5);
-      }
-      break;
-    case 39: 
-      this.bh.a("使用唤醒模组?", -1, (byte)4, false);
-      if (this.jdField_int > 10)
-      {
-        this.jdField_do = 40;
-        this.jdField_int = 0;
-        this.e3 = 0;
-      }
-      break;
-    case -50: 
-    case -45: 
-    case 18: 
-      E();
-      this.bh.a((byte)2, 0, 0, h.dU, h.fp, false);
-      this.bh.i.jdMethod_do(true);
-      a(this.jdField_do == -50 ? "装备位上是极品装备,强制卸下将导致装备丢弃,确定丢弃?(可使用特殊道具解除绑定)" : "确定丢弃?", "是", "否");
-      break;
-    case -23: 
-      this.bh.k("公会战结束,请稍候...");
-      break;
-    case -22: 
-      this.bh.k("公会战即将开始...");
-      break;
-    case -21: 
-      this.bh.dy.a();
-      break;
-    case -26: 
-    case -25: 
-    case -24: 
-    case -20: 
-    case -14: 
-    case -10: 
-      this.bh.ez.a();
-      break;
-    case 68: 
-    case 84: 
-    case 85: 
-      this.bh.jdField_long.a();
-      break;
-    case -9: 
-    case 47: 
-    case 48: 
-    case 49: 
-    case 54: 
-    case 66: 
-    case 126: 
-      this.bh.e0.jdMethod_if(this.jdField_do);
-      break;
-    case -30: 
-      E();
-      if (this.mZ == 0)
-      {
-        this.bh.a("选择要进行的操作?", -1, (byte)4, false);
-        this.bh.a((h.dU - 50) / 2, (h.fp - 70) / 2 + 20, this.gd, this.cM);
+        break;
+      case 107:
+        E();
+        this.bh.a((byte) 2, 0, 0, this.dt.getWidth() + 4, this.dt.getHeight() + 4, true);
+        this.bh.fj.drawImage(this.dt, 2, 2, 0);
+        this.bh.c();
+        break;
+      case 7:
+        E();
+        a(this.fA, "查看", "返回");
+        break;
+      case 55:
+        E();
+        this.bh.a(this.nt[this.fF], -1, (byte) 4, false);
+        this.bh.a((h.dU - 50) / 2, (h.fp - 70) / 2, this.d7, this.fx[this.fF]);
         this.bh.x();
         this.bh.c();
-      }
-      else if (this.mZ == 1)
-      {
-        this.bh.a(this.eJ, gf, (byte)4, false);
-        jdMethod_do("升级", "返回");
-      }
-      else if (this.mZ == 2)
-      {
-        a(this.ip, true);
-        jdMethod_do("选择", "返回");
-      }
-      else if (this.mZ == 3)
-      {
-        a(this.ip, true);
-        jdMethod_do("使用", "返回");
-      }
-      else if (this.mZ == 4)
-      {
-        a(this.ip, false);
-        this.bh.a(this.lG[this.hZ], gf, (byte)4, false);
-        jdMethod_do("研发", "返回");
-      }
-      else if (this.mZ == 6)
-      {
-        a(this.ip, false);
-        this.bh.a((String)this.ee.elementAt(this.hZ), gf, (byte)4, false);
-        jdMethod_do("使用", "返回");
-      }
-      else if (this.mZ == 5)
-      {
-        a(this.ip, false);
-        a("确定要研发此科技?", "是", "否");
-      }
-      else if (this.mZ == 7)
-      {
-        a(this.ip, false);
-        String str2 = "激活科技需消耗公会贡献度1,是否要激活?(同时只能激活1种科技,若已激活其他科技,将自动解除)";
-        if (this.fG[this.hZ] > 5) {
-          str2 = "确定使用该科技?";
+        break;
+      case 59:
+        E();
+        if (this.bh.a(this.m7, gf, (byte) 4, false)) {
+          this.cJ = 4;
+          this.hv = 168;
+          j();
         }
-        a(str2, "是", "否");
-      }
-      break;
-    case -83: 
-    case 12: 
-      E();
-      this.bh.jdMethod_long();
-      this.bh.a((h.dU - 50) / 2, (h.fp - 70) / 2 + 20, this.gd, new String[] { "购买", "查看", "返回" });
-      this.bh.x();
-      this.bh.c();
-      break;
-    case 86: 
-      this.md.jdMethod_if();
-      this.bh.a(22, h.eA * 2 + 2, this.gd, this.md.jdField_if);
-      break;
-    case 91: 
-      this.md.jdMethod_if();
-      break;
-    case -6: 
-      E();
-      this.bh.a((byte)2, 0, 0, h.dU, h.fp, false);
-      a(this.ip, false);
-      a("确认会长转移给" + this.b5 + "?", "是", "否");
-      break;
-    case -5: 
-      E();
-      this.bh.a((byte)2, 0, 0, h.dU, h.fp, false);
-      a(this.ip, true);
-      this.bh.x();
-      this.bh.c();
-      break;
-    case -4: 
-      E();
-      if (this.mf == 0) {
-        a("强制退会需扣除金钱" + this.eb + ",且将导致公会贡献度清0.确认操作？", "确认", "返回");
-      } else {
-        a("退出公会会将公会贡献度清0,确认退会?", "确认", "返回");
-      }
-      break;
-    case -3: 
-      E();
-      a("选择退会方式?", "申请退会", "强制退会");
-      this.bh.x();
-      this.bh.c();
-      break;
-    case -2: 
-      E();
-      a("选择退会方式?", "会长转移", "强制退会");
-      this.bh.x();
-      this.bh.c();
-      break;
-    case -1: 
-      E();
-      a("公会只有你一人,解散公会?", "是", "否");
-      break;
-    case 121: 
-      E();
-      this.bh.s();
-      a("确定开始合成?", "是", "否");
-      break;
-    case 120: 
-      E();
-      this.bh.s();
-      this.bh.d9.a();
-      break;
-    case 119: 
-      if ((this.jdField_int == 1) && (this.dx == 0))
-      {
-        a("请选择合成主材料", (short)119, false, 20);
-        return;
-      }
-      E();
-      this.bh.s();
-      if (this.dx > 0) {
         this.bh.x();
-      }
-      this.bh.c();
-      break;
-    case 101: 
-      this.bh.a("任务失败!", -1, (byte)4, false);
-      if (this.jdField_int > 15)
-      {
-        this.bh.cZ.T = false;
-        this.bh.cZ.ao = false;
-        this.bh.cZ.hU = false;
-        this.bh.cZ.a4 = 0;
-        this.bh.cZ.jdMethod_if((byte)16, 1);
-        this.bh.o();
-      }
-      break;
-    case 92: 
-      E();
-      if (this.g6.length > 0)
-      {
-        if (this.eq > this.g6.length - 1) {
-          this.eq = ((byte)(this.g6.length - 1));
+        break;
+      case -29:
+        E();
+        j = this.bh.cZ.jdMethod_int(this.bh.cZ.bo, this.dF);
+        j = Math.max(1, j);
+        int k = (j + 1) * (j + 1) * (j + 1) * 100;
+        a("是否消耗职业熟练值" + k + "提升本技能?", "是", "否");
+        break;
+      case 34:
+        switch (this.kH) {
+          case 0:
+          case 1:
+            E();
+            a("新物质融合器:\"是否已准备好启动融合?\"", "是", "否");
         }
-        this.bh.a(27 + (this.jdField_int % 5 == 0 ? 2 : 0), 22 + this.eq * (6 + (h.a9 == 0 ? 3 : h.eA)), this.bh.aH[6].getWidth(), this.bh.aH[6].getHeight(), 0, 0, this.bh.aH[6], 2);
-      }
-      this.bh.x();
-      this.bh.c();
-      break;
-    case 11: 
-    case 67: 
-    case 81: 
-    case 88: 
-    case 100: 
-      this.bh.ck.jdMethod_if();
-      break;
-    case 116: 
-      this.bh.fj.setColor(0);
-      this.bh.fj.fillRect(0, 0, h.dU, h.fp);
-      int m = 8;
-      int n = h.dU / 2 - (72 + 4 * m) / 2;
-      int i10 = h.fp / 2 - (72 + 4 * m) / 2;
-      for (int i11 = 0; i11 < 6; i11 = (byte)(i11 + 1)) {
-        for (i14 = 0; i14 < 6; i14 = (byte)(i14 + 1)) {
-          this.bh.a(n + i11 * (12 + m), i10 + i14 * (12 + m), 12, 12, i11 * 12, i14 * 12, this.bh.aH[8], 0);
+        break;
+      case -125:
+        E();
+        if (this.gP) {
+          if (this.bh.a(this.i7, gf, (byte) 4, false)) {
+            this.gP = false;
+          }
+        } else {
+          a(this.i7, "是", "否");
+          this.bh.x();
+          this.bh.c();
         }
-      }
-      this.bh.fj.setColor(h.b2[5][0]);
-      this.bh.fj.drawRect(n + this.hq * (12 + m) - 4 + this.jdField_int / 2 % 2, i10 + this.hp * (12 + m) - 4 + this.jdField_int / 2 % 2, 18 - 2 * (this.jdField_int / 2 % 2), 18 - 2 * (this.jdField_int / 2 % 2));
-      this.bh.x();
-      this.bh.c();
-      break;
-    case 115: 
-    case 124: 
-      if (this.jdField_int <= 11)
-      {
+        break;
+      case -124:
+        E();
+        str1 = "欢迎回到充满未知与激情的星战世界!您已离线超过" + this.bh.bD + "小时,每小时可获得" + this.bh.ey + "点离线经验(等级越高,获得越多),点击确认VIP用户即可获得总计"
+            + this.bh.dl + "点离线经验.";
+        if (this.bh.dL) {
+          if (this.bh.a(str1, gf, (byte) 4, false)) {
+            this.bh.dL = false;
+          }
+        } else {
+          a(str1, "是", "否");
+          this.bh.x();
+          this.bh.c();
+        }
+        break;
+      case -104:
+        E();
+        if (this.bh.a(this.dy, gf, (byte) 4, false)) {
+        }
+        this.bh.a((byte) 2, 0, h.fp - 22, 45, 22, true);
+        this.bh.a((byte) 2, h.dU - 45, h.fp - 22, 45, 22, true);
         this.bh.fj.setColor(0);
-        this.bh.fj.fillRect(0, 0, h.dU, h.fp);
-        if (this.jdField_int >= 5)
-        {
-          this.bh.fj.setColor(16777215);
-          this.bh.fj.fillRect(0, h.fp / 2, h.dU / 4 * (this.jdField_int - 5), 2);
-        }
-        if (this.jdField_int == 11) {
-          if (this.jdField_do == 124) {
-            this.bh.cZ.a4 = 12;
+        this.bh.fj.drawString("购买", 22, h.fp - 3, 33);
+        this.bh.fj.setColor(0);
+        this.bh.fj.drawString("取消", h.dU - 22, h.fp - 3, 33);
+        break;
+      case 65:
+        E();
+        if (this.bh.a(this.fA, gf, (byte) 4, false)) {
+          if (this.gI == 0) {
+            this.fA = null;
+            this.fL = null;
+            this.jdField_do = 0;
           } else {
-            this.bh.cZ.a4 = 11;
+            this.e3 = 0;
+            this.jdField_do = 7;
           }
         }
-      }
-      else
-      {
+        break;
+      case -101:
         E();
-        if (this.jdField_int > (this.jdField_do == 124 ? 18 : 40)) {
-          a(this.bl, (short)0, true, 9999);
+        this.bh.ck.jdMethod_int();
+        a(this.iN ? "查看下一页?" : "查看上一页?", "是", "否");
+        break;
+      case -100:
+      case -99:
+      case -98:
+      case -97:
+      case -96:
+      case -95:
+        this.ea.jdMethod_new();
+        break;
+      case -92:
+        this.bh.bS.a();
+        break;
+      case -93:
+      case -90:
+      case -88:
+      case -87:
+        this.bh.fm.jdMethod_do();
+        break;
+      case -85:
+        E();
+        this.bh.a("设置什么职位?(可通过:系统->帮助->公会->职位 查看管理职位任命要求)", -1, (byte) 4, false);
+        this.bh.a((h.dU - 50) / 2, (h.fp - 70) / 2, this.gd, this.c9);
+        this.bh.x();
+        this.bh.c();
+        break;
+      case -94:
+        E();
+        a(this.bu, "确定", "取消");
+        break;
+      case -86:
+        E();
+        a(this.bu, "确定", "取消");
+        break;
+      case -75:
+        E();
+        a("确定使用该颜色?", "确定", "取消");
+        break;
+      case -74:
+        this.mM.a();
+        this.bh.x();
+        this.bh.c();
+        break;
+      case -51:
+        this.bh.bf.a();
+        break;
+      case -71:
+        this.bh.ct.jdMethod_if();
+        break;
+      case -47:
+        this.iZ.a();
+        break;
+      case -44:
+      case -43:
+      case -42:
+      case -40:
+        this.bh.b();
+        break;
+      case -84:
+      case -73:
+      case -41:
+        E();
+        a("确定使用?", "确定", "取消");
+        break;
+      case -48:
+        E();
+        a("确定兑换?", "确定", "取消");
+        break;
+      case -39:
+        E();
+        this.bh.jdMethod_long();
+        this.bh.x();
+        this.bh.c();
+        break;
+      case -102:
+      case -38:
+      case -37:
+      case -36:
+        this.bh.bv.jdMethod_do();
+        break;
+      case -69:
+      case -68:
+      case -67:
+      case -66:
+      case -65:
+      case -63:
+      case -62:
+      case -61:
+      case -60:
+      case -59:
+      case -58:
+      case -57:
+      case -56:
+      case -55:
+      case -54:
+      case -53:
+      case -52:
+      case -35:
+      case -34:
+        this.bh.y();
+        break;
+      case 40:
+        a("使用唤醒模组?(" + (10 - this.jdField_int / 10 % 10) + ")", "是", "否");
+        if (this.jdField_int > 100) {
+          this.e3 = 1;
+          jdMethod_if(5);
         }
-      }
-      break;
-    case 114: 
-      this.bh.du.a();
-      break;
-    case 113: 
-      if (this.bh.a(this.bu, gf, (byte)4, false)) {
-        this.bh.a(this, this.bh.s);
-      }
-      break;
-    case 42: 
-      E();
-      if (this.bh.a(this.bu, gf, (byte)4, false)) {
-        this.jdField_do = 0;
-      }
-      break;
-    case 30: 
-    case 31: 
-    case 32: 
-    case 33: 
-    case 45: 
-      this.bh.br.a();
-      break;
-    case -72: 
-      this.bh.ct.jdMethod_if();
-      break;
-    case 75: 
-      E();
-      this.bh.a((byte)2, 0, 0, h.dU, h.fp, false);
-      this.e0.a();
-      this.bh.a(72, 0, this.gd, f1[this.gS]);
-      break;
-    case 74: 
-      this.e0.a();
-      break;
-    case 27: 
-      E();
-      a(this.ip, false);
-      if (this.hu == true) {
-        a(this.nk, true);
-      }
-      if (this.dN == true) {
-        a(this.j8, true);
-      }
-      this.bh.a(h.dU - 46, 0, this.gd, this.c9);
-      break;
-    case 53: 
-      E();
-      this.bh.a((byte)2, 0, 0, h.dU, h.fp, false);
-      a(this.ip, true);
-      a("确定遗忘吗？", "是", "否");
-      break;
-    case 26: 
-      E();
-      this.bh.a((byte)2, 0, 0, h.dU, h.fp, false);
-      a(this.ip, true);
-      this.bh.x();
-      this.bh.c();
-      break;
-    case -70: 
-      this.bh.ct.jdMethod_if();
-      break;
-    case -46: 
-      this.iZ.a();
-      break;
-    case 118: 
-      E();
-      if (this.bh.a(this.bu, gf, (byte)4, false)) {
-        if (this.bK == 1)
-        {
-          if (this.bh.cZ.fL < 0) {
-            this.bh.i.jdMethod_else();
+        break;
+      case 39:
+        this.bh.a("使用唤醒模组?", -1, (byte) 4, false);
+        if (this.jdField_int > 10) {
+          this.jdField_do = 40;
+          this.jdField_int = 0;
+          this.e3 = 0;
+        }
+        break;
+      case -50:
+      case -45:
+      case 18:
+        E();
+        this.bh.a((byte) 2, 0, 0, h.dU, h.fp, false);
+        this.bh.i.jdMethod_do(true);
+        a(this.jdField_do == -50 ? "装备位上是极品装备,强制卸下将导致装备丢弃,确定丢弃?(可使用特殊道具解除绑定)" : "确定丢弃?", "是", "否");
+        break;
+      case -23:
+        this.bh.k("公会战结束,请稍候...");
+        break;
+      case -22:
+        this.bh.k("公会战即将开始...");
+        break;
+      case -21:
+        this.bh.dy.a();
+        break;
+      case -26:
+      case -25:
+      case -24:
+      case -20:
+      case -14:
+      case -10:
+        this.bh.ez.a();
+        break;
+      case 68:
+      case 84:
+      case 85:
+        this.bh.jdField_long.a();
+        break;
+      case -9:
+      case 47:
+      case 48:
+      case 49:
+      case 54:
+      case 66:
+      case 126:
+        this.bh.e0.jdMethod_if(this.jdField_do);
+        break;
+      case -30:
+        E();
+        if (this.mZ == 0) {
+          this.bh.a("选择要进行的操作?", -1, (byte) 4, false);
+          this.bh.a((h.dU - 50) / 2, (h.fp - 70) / 2 + 20, this.gd, this.cM);
+          this.bh.x();
+          this.bh.c();
+        } else if (this.mZ == 1) {
+          this.bh.a(this.eJ, gf, (byte) 4, false);
+          jdMethod_do("升级", "返回");
+        } else if (this.mZ == 2) {
+          a(this.ip, true);
+          jdMethod_do("选择", "返回");
+        } else if (this.mZ == 3) {
+          a(this.ip, true);
+          jdMethod_do("使用", "返回");
+        } else if (this.mZ == 4) {
+          a(this.ip, false);
+          this.bh.a(this.lG[this.hZ], gf, (byte) 4, false);
+          jdMethod_do("研发", "返回");
+        } else if (this.mZ == 6) {
+          a(this.ip, false);
+          this.bh.a((String) this.ee.elementAt(this.hZ), gf, (byte) 4, false);
+          jdMethod_do("使用", "返回");
+        } else if (this.mZ == 5) {
+          a(this.ip, false);
+          a("确定要研发此科技?", "是", "否");
+        } else if (this.mZ == 7) {
+          a(this.ip, false);
+          String str2 = "激活科技需消耗公会贡献度1,是否要激活?(同时只能激活1种科技,若已激活其他科技,将自动解除)";
+          if (this.fG[this.hZ] > 5) {
+            str2 = "确定使用该科技?";
+          }
+          a(str2, "是", "否");
+        }
+        break;
+      case -83:
+      case 12:
+        E();
+        this.bh.jdMethod_long();
+        this.bh.a((h.dU - 50) / 2, (h.fp - 70) / 2 + 20, this.gd, new String[] { "购买", "查看", "返回" });
+        this.bh.x();
+        this.bh.c();
+        break;
+      case 86:
+        this.md.jdMethod_if();
+        this.bh.a(22, h.eA * 2 + 2, this.gd, this.md.jdField_if);
+        break;
+      case 91:
+        this.md.jdMethod_if();
+        break;
+      case -6:
+        E();
+        this.bh.a((byte) 2, 0, 0, h.dU, h.fp, false);
+        a(this.ip, false);
+        a("确认会长转移给" + this.b5 + "?", "是", "否");
+        break;
+      case -5:
+        E();
+        this.bh.a((byte) 2, 0, 0, h.dU, h.fp, false);
+        a(this.ip, true);
+        this.bh.x();
+        this.bh.c();
+        break;
+      case -4:
+        E();
+        if (this.mf == 0) {
+          a("强制退会需扣除金钱" + this.eb + ",且将导致公会贡献度清0.确认操作？", "确认", "返回");
+        } else {
+          a("退出公会会将公会贡献度清0,确认退会?", "确认", "返回");
+        }
+        break;
+      case -3:
+        E();
+        a("选择退会方式?", "申请退会", "强制退会");
+        this.bh.x();
+        this.bh.c();
+        break;
+      case -2:
+        E();
+        a("选择退会方式?", "会长转移", "强制退会");
+        this.bh.x();
+        this.bh.c();
+        break;
+      case -1:
+        E();
+        a("公会只有你一人,解散公会?", "是", "否");
+        break;
+      case 121:
+        E();
+        this.bh.s();
+        a("确定开始合成?", "是", "否");
+        break;
+      case 120:
+        E();
+        this.bh.s();
+        this.bh.d9.a();
+        break;
+      case 119:
+        if ((this.jdField_int == 1) && (this.dx == 0)) {
+          a("请选择合成主材料", (short) 119, false, 20);
+          return;
+        }
+        E();
+        this.bh.s();
+        if (this.dx > 0) {
+          this.bh.x();
+        }
+        this.bh.c();
+        break;
+      case 101:
+        this.bh.a("任务失败!", -1, (byte) 4, false);
+        if (this.jdField_int > 15) {
+          this.bh.cZ.T = false;
+          this.bh.cZ.ao = false;
+          this.bh.cZ.hU = false;
+          this.bh.cZ.a4 = 0;
+          this.bh.cZ.jdMethod_if((byte) 16, 1);
+          this.bh.o();
+        }
+        break;
+      case 92:
+        E();
+        if (this.g6.length > 0) {
+          if (this.eq > this.g6.length - 1) {
+            this.eq = ((byte) (this.g6.length - 1));
+          }
+          this.bh.a(27 + (this.jdField_int % 5 == 0 ? 2 : 0), 22 + this.eq * (6 + (h.a9 == 0 ? 3 : h.eA)),
+              this.bh.aH[6].getWidth(), this.bh.aH[6].getHeight(), 0, 0, this.bh.aH[6], 2);
+        }
+        this.bh.x();
+        this.bh.c();
+        break;
+      case 11:
+      case 67:
+      case 81:
+      case 88:
+      case 100:
+        this.bh.ck.jdMethod_if();
+        break;
+      case 116:
+        this.bh.fj.setColor(0);
+        this.bh.fj.fillRect(0, 0, h.dU, h.fp);
+        int m = 8;
+        int n = h.dU / 2 - (72 + 4 * m) / 2;
+        int i10 = h.fp / 2 - (72 + 4 * m) / 2;
+        for (int i11 = 0; i11 < 6; i11 = (byte) (i11 + 1)) {
+          for (i14 = 0; i14 < 6; i14 = (byte) (i14 + 1)) {
+            this.bh.a(n + i11 * (12 + m), i10 + i14 * (12 + m), 12, 12, i11 * 12, i14 * 12, this.bh.aH[8], 0);
+          }
+        }
+        this.bh.fj.setColor(h.b2[5][0]);
+        this.bh.fj.drawRect(n + this.hq * (12 + m) - 4 + this.jdField_int / 2 % 2,
+            i10 + this.hp * (12 + m) - 4 + this.jdField_int / 2 % 2, 18 - 2 * (this.jdField_int / 2 % 2),
+            18 - 2 * (this.jdField_int / 2 % 2));
+        this.bh.x();
+        this.bh.c();
+        break;
+      case 115:
+      case 124:
+        if (this.jdField_int <= 11) {
+          this.bh.fj.setColor(0);
+          this.bh.fj.fillRect(0, 0, h.dU, h.fp);
+          if (this.jdField_int >= 5) {
+            this.bh.fj.setColor(16777215);
+            this.bh.fj.fillRect(0, h.fp / 2, h.dU / 4 * (this.jdField_int - 5), 2);
+          }
+          if (this.jdField_int == 11) {
+            if (this.jdField_do == 124) {
+              this.bh.cZ.a4 = 12;
+            } else {
+              this.bh.cZ.a4 = 11;
+            }
+          }
+        } else {
+          E();
+          if (this.jdField_int > (this.jdField_do == 124 ? 18 : 40)) {
+            a(this.bl, (short) 0, true, 9999);
+          }
+        }
+        break;
+      case 114:
+        this.bh.du.a();
+        break;
+      case 113:
+        if (this.bh.a(this.bu, gf, (byte) 4, false)) {
+          this.bh.a(this, this.bh.s);
+        }
+        break;
+      case 42:
+        E();
+        if (this.bh.a(this.bu, gf, (byte) 4, false)) {
+          this.jdField_do = 0;
+        }
+        break;
+      case 30:
+      case 31:
+      case 32:
+      case 33:
+      case 45:
+        this.bh.br.a();
+        break;
+      case -72:
+        this.bh.ct.jdMethod_if();
+        break;
+      case 75:
+        E();
+        this.bh.a((byte) 2, 0, 0, h.dU, h.fp, false);
+        this.e0.a();
+        this.bh.a(72, 0, this.gd, f1[this.gS]);
+        break;
+      case 74:
+        this.e0.a();
+        break;
+      case 27:
+        E();
+        a(this.ip, false);
+        if (this.hu == true) {
+          a(this.nk, true);
+        }
+        if (this.dN == true) {
+          a(this.j8, true);
+        }
+        this.bh.a(h.dU - 46, 0, this.gd, this.c9);
+        break;
+      case 53:
+        E();
+        this.bh.a((byte) 2, 0, 0, h.dU, h.fp, false);
+        a(this.ip, true);
+        a("确定遗忘吗？", "是", "否");
+        break;
+      case 26:
+        E();
+        this.bh.a((byte) 2, 0, 0, h.dU, h.fp, false);
+        a(this.ip, true);
+        this.bh.x();
+        this.bh.c();
+        break;
+      case -70:
+        this.bh.ct.jdMethod_if();
+        break;
+      case -46:
+        this.iZ.a();
+        break;
+      case 118:
+        E();
+        if (this.bh.a(this.bu, gf, (byte) 4, false)) {
+          if (this.bK == 1) {
+            if (this.bh.cZ.fL < 0) {
+              this.bh.i.jdMethod_else();
+            } else {
+              this.jdField_do = 0;
+            }
           } else {
             this.jdField_do = 0;
           }
         }
-        else {
+        break;
+      case 22:
+        E();
+        if (this.bh.a(this.bu, gf, (byte) 4, false)) {
+          Display.getDisplay(this.bh.fG).setCurrent(this.bh.i.h);
+        }
+        break;
+      case 3:
+      case 125:
+        this.bh.k("请稍候...");
+        if ((this.jdField_int > 2400) && (this.jdField_do == 3)) {
+          a("打开商店失败.", (short) 0, false, 30);
+        }
+        break;
+      case -105:
+        E();
+        this.bh.a(this.hz, gf, (byte) 4, false);
+        break;
+      case -106:
+        E();
+        a(this.c8, true);
+        this.bh.x();
+        this.bh.c();
+        break;
+      case -123:
+        E();
+        str1 = "您当前还不是VIP用户.VIP用户可获得使用游戏币购买商城道具,登陆获得离线经验,增加现金背包等特权.是否申请成为VIP用户(最低仅需5元/月)?";
+        if (this.bH) {
+          if (this.bh.a(str1, gf, (byte) 4, false)) {
+            this.e3 = 0;
+            this.bH = false;
+          }
+        } else {
+          a(str1, "是", "否");
+          this.bh.x();
+          this.bh.c();
+        }
+        break;
+      case -107:
+        E();
+        if (this.lz == 0) {
+          if (this.bh.a(this.na, gf, (byte) 4, false)) {
+            this.jdField_do = 0;
+          }
+          this.bh.c();
+        } else {
+          a(this.na, "是", "否");
+          this.bh.x();
+          this.bh.c();
+        }
+        break;
+      case -108:
+        E();
+        a(this.j8, true);
+        this.bh.x();
+        this.bh.c();
+        break;
+      case -109:
+        E();
+        a(this.nk, true);
+        this.bh.x();
+        this.bh.c();
+        break;
+      case -120:
+        E();
+        if (this.bh.a(this.na, gf, (byte) 4, false)) {
           this.jdField_do = 0;
         }
-      }
-      break;
-    case 22: 
-      E();
-      if (this.bh.a(this.bu, gf, (byte)4, false)) {
-        Display.getDisplay(this.bh.fG).setCurrent(this.bh.i.h);
-      }
-      break;
-    case 3: 
-    case 125: 
-      this.bh.k("请稍候...");
-      if ((this.jdField_int > 2400) && (this.jdField_do == 3)) {
-        a("打开商店失败.", (short)0, false, 30);
-      }
-      break;
-    case -105: 
-      E();
-      this.bh.a(this.hz, gf, (byte)4, false);
-      break;
-    case -106: 
-      E();
-      a(this.c8, true);
-      this.bh.x();
-      this.bh.c();
-      break;
-    case -123: 
-      E();
-      str1 = "您当前还不是VIP用户.VIP用户可获得使用游戏币购买商城道具,登陆获得离线经验,增加现金背包等特权.是否申请成为VIP用户(最低仅需5元/月)?";
-      if (this.bH)
-      {
-        if (this.bh.a(str1, gf, (byte)4, false))
-        {
-          this.e3 = 0;
-          this.bH = false;
-        }
-      }
-      else
-      {
-        a(str1, "是", "否");
+        break;
+      case -122:
+      case -121:
+        E();
+        a(this.f9, "是", "否");
         this.bh.x();
         this.bh.c();
-      }
-      break;
-    case -107: 
-      E();
-      if (this.lz == 0)
-      {
-        if (this.bh.a(this.na, gf, (byte)4, false)) {
+        break;
+      case 21:
+        this.bh.k("请稍候...");
+        break;
+      case 103:
+        break;
+      case -8:
+        E();
+        if (this.bh.a(this.k2, gf, (byte) 4, false)) {
+          this.k2 = null;
           this.jdField_do = 0;
         }
-        this.bh.c();
-      }
-      else
-      {
-        a(this.na, "是", "否");
-        this.bh.x();
-        this.bh.c();
-      }
-      break;
-    case -108: 
-      E();
-      a(this.j8, true);
-      this.bh.x();
-      this.bh.c();
-      break;
-    case -109: 
-      E();
-      a(this.nk, true);
-      this.bh.x();
-      this.bh.c();
-      break;
-    case -120: 
-      E();
-      if (this.bh.a(this.na, gf, (byte)4, false)) {
-        this.jdField_do = 0;
-      }
-      break;
-    case -122: 
-    case -121: 
-      E();
-      a(this.f9, "是", "否");
-      this.bh.x();
-      this.bh.c();
-      break;
-    case 21: 
-      this.bh.k("请稍候...");
-      break;
-    case 103: 
-      break;
-    case -8: 
-      E();
-      if (this.bh.a(this.k2, gf, (byte)4, false))
-      {
-        this.k2 = null;
-        this.jdField_do = 0;
-      }
-      break;
-    case -7: 
-      this.bh.k("请稍候...");
-      break;
-    case 110: 
-      E();
-      if (this.bh.a("等候超时!", gf, (byte)4, false)) {
-        J();
-      }
-      break;
-    case 108: 
-      this.bh.k("请稍候...");
-      break;
-    case 109: 
-      this.c7.a();
-      break;
-    case 106: 
-      break;
-    case -103: 
-      E();
-      a(this.lt, "确定", "取消");
-      this.bh.x();
-      this.bh.c();
-      break;
-    case -81: 
-    case 46: 
-      E();
-      this.bh.jdMethod_long();
-      a("确定购买?", "是", "否");
-      break;
-    case -82: 
-    case 51: 
-      E();
-      this.bh.jdMethod_long();
-      this.bh.d9.a();
-      break;
-    case -80: 
-    case 10: 
-      E();
-      this.bh.jdMethod_long();
-      if (this.dx > 0) {
-        this.bh.x();
-      }
-      this.bh.c();
-      break;
-    case -78: 
-    case 9: 
-      a("确定摆摊?", "是", "否");
-      break;
-    case -79: 
-    case -77: 
-    case 8: 
-    case 72: 
-      E();
-      this.bh.s();
-      this.bh.d9.a();
-      break;
-    case -76: 
-    case 6: 
-      E();
-      this.bh.s();
-      if (this.dx > 0) {
-        this.bh.x();
-      }
-      this.bh.c();
-      break;
-    case 98: 
-      E();
-      if ((this.bh.a(this.lt, gf, (byte)4, this.jdField_new)) || (this.jdField_int > this.eP))
-      {
-        this.bh.dk = null;
-        this.jdField_do = this.lb;
-      }
-      break;
-    case -27: 
-    case 95: 
-    case 96: 
-    case 97: 
-    case 111: 
-    case 112: 
-      this.bh.as.a();
-      break;
-    case -12: 
-    case 71: 
-    case 82: 
-    case 83: 
-    case 102: 
-      this.bh.aI.jdMethod_if();
-      break;
-    case 99: 
-      E();
-      this.bh.a(this.bh.S.F, gf - 1, (byte)4, false);
-      this.bh.a((h.dU - 50) / 2, (h.fp - 70) / 2 + 20, this.gd, this.cW);
-      break;
-    case 94: 
-      E();
-      if (this.bh.a(this.bh.S.F, gf, (byte)4, false)) {
-        this.jdField_do = 99;
-      }
-      break;
-    case 93: 
-      E();
-      a("进入 " + this.ez + "?", "是", "否");
-      break;
-    case 89: 
-      this.md.jdMethod_for();
-      this.bh.a(20, this.md.jdField_null + 20, this.gd, this.md.jdField_case);
-      break;
-    case 76: 
-      E();
-      this.bh.a("添加新任务!", -1, (byte)4, false);
-      if (this.jdField_int > 20) {
-        jdMethod_if(5);
-      }
-      break;
-    case 77: 
-      E();
-      this.bh.a("该任务结束!", -1, (byte)4, false);
-      if (this.jdField_int > 20) {
-        jdMethod_if(5);
-      }
-      break;
-    case 73: 
-      E();
-      if (this.bh.a(this.jK, gf, (byte)4, false)) {
-        this.jdField_do = 0;
-      }
-      break;
-    case 70: 
-      E();
-      if (this.bh.a(this.fA, gf, (byte)4, false)) {
-        gf = 0;
-      }
-      this.bh.a((byte)2, 0, h.fp - 22, 45, 22, true);
-      this.bh.a((byte)2, h.dU - 45, h.fp - 22, 45, 22, true);
-      this.bh.fj.setColor(0);
-      this.bh.fj.drawString("查看", 22, h.fp - 3, 33);
-      this.bh.fj.setColor(0);
-      this.bh.fj.drawString("退出", h.dU - 22, h.fp - 3, 33);
-      break;
-    case 62: 
-      E();
-      if (this.bh.S.aB != 0)
-      {
-        switch (this.bh.S.W)
-        {
-        case 0: 
-        case 2: 
-          if (this.bh.S.aB - this.bh.S.ac <= 0)
-          {
-            l tmp7850_7847 = this.bh.S.aD;
-            tmp7850_7847.jdField_new = ((short)(tmp7850_7847.jdField_new + this.bh.S.aB * a3.bp[this.bh.S.W]));
-            this.bh.S.aB = 0;
-          }
-          else
-          {
-            l tmp7908_7905 = this.bh.S.aD;
-            tmp7908_7905.jdField_new = ((short)(tmp7908_7905.jdField_new + this.bh.S.ac * a3.bp[this.bh.S.W]));
-            as tmp7949_7946 = this.bh.S;
-            tmp7949_7946.aB = ((short)(tmp7949_7946.aB - this.bh.S.ac));
-          }
-          break;
-        case 1: 
-        case 3: 
-          if (this.bh.S.aB - this.bh.S.ac <= 0)
-          {
-            l tmp8005_8002 = this.bh.S.aD;
-            tmp8005_8002.jdField_try = ((short)(tmp8005_8002.jdField_try + this.bh.S.aB * a3.bq[this.bh.S.W]));
-            this.bh.S.aB = 0;
-          }
-          else
-          {
-            l tmp8063_8060 = this.bh.S.aD;
-            tmp8063_8060.jdField_try = ((short)(tmp8063_8060.jdField_try + this.bh.S.ac * a3.bq[this.bh.S.W]));
-            as tmp8104_8101 = this.bh.S;
-            tmp8104_8101.aB = ((short)(tmp8104_8101.aB - this.bh.S.ac));
-          }
-          break;
+        break;
+      case -7:
+        this.bh.k("请稍候...");
+        break;
+      case 110:
+        E();
+        if (this.bh.a("等候超时!", gf, (byte) 4, false)) {
+          J();
         }
-      }
-      else
-      {
-        this.bh.bV.a(this.bh.S.ar, 0, this.bh.S.aD.a);
-        this.bh.S.a();
-      }
-      break;
-    case 61: 
-      E();
-      if (this.bh.S.aD.a[4] == 0)
-      {
-        this.bh.S.aD.a[4] = 1;
-        as tmp8218_8215 = this.bh.S;
-        tmp8218_8215.G = ((byte)(tmp8218_8215.G + 1));
-        if (this.bh.S.G >= this.bh.S.aQ)
-        {
+        break;
+      case 108:
+        this.bh.k("请稍候...");
+        break;
+      case 109:
+        this.c7.a();
+        break;
+      case 106:
+        break;
+      case -103:
+        E();
+        a(this.lt, "确定", "取消");
+        this.bh.x();
+        this.bh.c();
+        break;
+      case -81:
+      case 46:
+        E();
+        this.bh.jdMethod_long();
+        a("确定购买?", "是", "否");
+        break;
+      case -82:
+      case 51:
+        E();
+        this.bh.jdMethod_long();
+        this.bh.d9.a();
+        break;
+      case -80:
+      case 10:
+        E();
+        this.bh.jdMethod_long();
+        if (this.dx > 0) {
+          this.bh.x();
+        }
+        this.bh.c();
+        break;
+      case -78:
+      case 9:
+        a("确定摆摊?", "是", "否");
+        break;
+      case -79:
+      case -77:
+      case 8:
+      case 72:
+        E();
+        this.bh.s();
+        this.bh.d9.a();
+        break;
+      case -76:
+      case 6:
+        E();
+        this.bh.s();
+        if (this.dx > 0) {
+          this.bh.x();
+        }
+        this.bh.c();
+        break;
+      case 98:
+        E();
+        if ((this.bh.a(this.lt, gf, (byte) 4, this.jdField_new)) || (this.jdField_int > this.eP)) {
+          this.bh.dk = null;
+          this.jdField_do = this.lb;
+        }
+        break;
+      case -27:
+      case 95:
+      case 96:
+      case 97:
+      case 111:
+      case 112:
+        this.bh.as.a();
+        break;
+      case -12:
+      case 71:
+      case 82:
+      case 83:
+      case 102:
+        this.bh.aI.jdMethod_if();
+        break;
+      case 99:
+        E();
+        this.bh.a(this.bh.S.F, gf - 1, (byte) 4, false);
+        this.bh.a((h.dU - 50) / 2, (h.fp - 70) / 2 + 20, this.gd, this.cW);
+        break;
+      case 94:
+        E();
+        if (this.bh.a(this.bh.S.F, gf, (byte) 4, false)) {
+          this.jdField_do = 99;
+        }
+        break;
+      case 93:
+        E();
+        a("进入 " + this.ez + "?", "是", "否");
+        break;
+      case 89:
+        this.md.jdMethod_for();
+        this.bh.a(20, this.md.jdField_null + 20, this.gd, this.md.jdField_case);
+        break;
+      case 76:
+        E();
+        this.bh.a("添加新任务!", -1, (byte) 4, false);
+        if (this.jdField_int > 20) {
+          jdMethod_if(5);
+        }
+        break;
+      case 77:
+        E();
+        this.bh.a("该任务结束!", -1, (byte) 4, false);
+        if (this.jdField_int > 20) {
+          jdMethod_if(5);
+        }
+        break;
+      case 73:
+        E();
+        if (this.bh.a(this.jK, gf, (byte) 4, false)) {
+          this.jdField_do = 0;
+        }
+        break;
+      case 70:
+        E();
+        if (this.bh.a(this.fA, gf, (byte) 4, false)) {
+          gf = 0;
+        }
+        this.bh.a((byte) 2, 0, h.fp - 22, 45, 22, true);
+        this.bh.a((byte) 2, h.dU - 45, h.fp - 22, 45, 22, true);
+        this.bh.fj.setColor(0);
+        this.bh.fj.drawString("查看", 22, h.fp - 3, 33);
+        this.bh.fj.setColor(0);
+        this.bh.fj.drawString("退出", h.dU - 22, h.fp - 3, 33);
+        break;
+      case 62:
+        E();
+        if (this.bh.S.aB != 0) {
+          switch (this.bh.S.W) {
+            case 0:
+            case 2:
+              if (this.bh.S.aB - this.bh.S.ac <= 0) {
+                l tmp7850_7847 = this.bh.S.aD;
+                tmp7850_7847.jdField_new = ((short) (tmp7850_7847.jdField_new + this.bh.S.aB * a3.bp[this.bh.S.W]));
+                this.bh.S.aB = 0;
+              } else {
+                l tmp7908_7905 = this.bh.S.aD;
+                tmp7908_7905.jdField_new = ((short) (tmp7908_7905.jdField_new + this.bh.S.ac * a3.bp[this.bh.S.W]));
+                as tmp7949_7946 = this.bh.S;
+                tmp7949_7946.aB = ((short) (tmp7949_7946.aB - this.bh.S.ac));
+              }
+              break;
+            case 1:
+            case 3:
+              if (this.bh.S.aB - this.bh.S.ac <= 0) {
+                l tmp8005_8002 = this.bh.S.aD;
+                tmp8005_8002.jdField_try = ((short) (tmp8005_8002.jdField_try + this.bh.S.aB * a3.bq[this.bh.S.W]));
+                this.bh.S.aB = 0;
+              } else {
+                l tmp8063_8060 = this.bh.S.aD;
+                tmp8063_8060.jdField_try = ((short) (tmp8063_8060.jdField_try + this.bh.S.ac * a3.bq[this.bh.S.W]));
+                as tmp8104_8101 = this.bh.S;
+                tmp8104_8101.aB = ((short) (tmp8104_8101.aB - this.bh.S.ac));
+              }
+              break;
+          }
+        } else {
           this.bh.bV.a(this.bh.S.ar, 0, this.bh.S.aD.a);
           this.bh.S.a();
         }
-      }
-      break;
-    case 79: 
-      E();
-      if ((this.bh.S.aB != 0) && (this.bh.S.ac > 0))
-      {
-        switch (this.bh.S.W)
-        {
-        case 0: 
-        case 2: 
-          if (this.bh.S.aB - this.bh.S.ac <= 0)
-          {
-            l tmp8402_8399 = this.bh.S.aD;
-            tmp8402_8399.jdField_new = ((short)(tmp8402_8399.jdField_new + this.bh.S.aB * a3.bp[this.bh.S.W]));
-            this.bh.S.aB = 0;
-          }
-          else
-          {
-            l tmp8460_8457 = this.bh.S.aD;
-            tmp8460_8457.jdField_new = ((short)(tmp8460_8457.jdField_new + this.bh.S.ac * a3.bp[this.bh.S.W]));
-            as tmp8501_8498 = this.bh.S;
-            tmp8501_8498.aB = ((short)(tmp8501_8498.aB - this.bh.S.ac));
-          }
-          break;
-        case 1: 
-        case 3: 
-          if (this.bh.S.aB - this.bh.S.ac <= 0)
-          {
-            l tmp8557_8554 = this.bh.S.aD;
-            tmp8557_8554.jdField_try = ((short)(tmp8557_8554.jdField_try + this.bh.S.aB * a3.bq[this.bh.S.W]));
-            this.bh.S.aB = 0;
-          }
-          else
-          {
-            l tmp8615_8612 = this.bh.S.aD;
-            tmp8615_8612.jdField_try = ((short)(tmp8615_8612.jdField_try + this.bh.S.ac * a3.bq[this.bh.S.W]));
-            as tmp8656_8653 = this.bh.S;
-            tmp8656_8653.aB = ((short)(tmp8656_8653.aB - this.bh.S.ac));
-          }
-          break;
-        }
-        as tmp8682_8679 = this.bh.S;
-        tmp8682_8679.ac = ((byte)(tmp8682_8679.ac + this.bh.S.S));
-      }
-      else
-      {
-        this.bh.bV.a(this.bh.S.ar, 0, this.bh.S.aD.a);
-        this.bh.S.a();
-      }
-      break;
-    case 58: 
-      E();
-      if (this.bh.a(this.bh.S.C, gf, (byte)4, false)) {
-        this.jdField_do = 63;
-      }
-      break;
-    case 63: 
-      this.e3 = this.bh.S.av;
-      a(this.bh.S.C, this.bh.S.ai[0], this.bh.S.ai[1]);
-      break;
-    case 57: 
-      if ((ag.hF < 0) || (ag.hE < 0) || (ag.hF + h.dU > this.bh.ad) || (ag.hE + h.fp > this.bh.dz)) {
-        this.bh.S.aC = 0;
-      }
-      if (this.bh.S.aC != 0)
-      {
-        switch (this.bh.cZ.eO)
-        {
-        case 0: 
-        case 2: 
-          if (this.bh.S.aC - this.bh.S.D > 0)
-          {
-            ag.hE = (short)(ag.hE + this.bh.S.D * a3.bp[this.bh.S.A]);
-            as tmp9068_9065 = this.bh.S;
-            tmp9068_9065.aC = ((short)(tmp9068_9065.aC - this.bh.S.D));
-          }
-          else
-          {
-            ag.hE = (short)(ag.hE + this.bh.S.aC * a3.bp[this.bh.S.A]);
-            this.bh.S.aC = 0;
-          }
-          break;
-        case 1: 
-        case 3: 
-          if (this.bh.S.aC - this.bh.S.D > 0)
-          {
-            ag.hF = (short)(ag.hF + this.bh.S.D * a3.bq[this.bh.S.A]);
-            as tmp9217_9214 = this.bh.S;
-            tmp9217_9214.aC = ((short)(tmp9217_9214.aC - this.bh.S.D));
-          }
-          else
-          {
-            ag.hF = (short)(ag.hF + this.bh.S.aC * a3.bq[this.bh.S.A]);
-            this.bh.S.aC = 0;
-          }
-          break;
-        }
+        break;
+      case 61:
         E();
-      }
-      else
-      {
-        this.bh.S.a();
-      }
-      break;
-    case 80: 
-      this.bh.ex.a();
-      break;
-    case -33: 
-      this.bh.dJ.a();
-      break;
-    case 50: 
-      this.jj.a();
-      break;
-    case 44: 
-      this.bh.k("退出中,请稍候...");
-      break;
-    case 43: 
-      E();
-      if (this.bh.a(this.h7, gf, (byte)4, false))
-      {
-        if ((this.jdField_if == 2) && (this.h7.indexOf("疾冲") != -1))
-        {
-          this.je = 2;
-          this.kc = 0;
-          this.jdField_int = 0;
+        if (this.bh.S.aD.a[4] == 0) {
+          this.bh.S.aD.a[4] = 1;
+          as tmp8218_8215 = this.bh.S;
+          tmp8218_8215.G = ((byte) (tmp8218_8215.G + 1));
+          if (this.bh.S.G >= this.bh.S.aQ) {
+            this.bh.bV.a(this.bh.S.ar, 0, this.bh.S.aD.a);
+            this.bh.S.a();
+          }
         }
-        this.h7 = null;
-        this.bh.S.a();
-      }
-      break;
-    case 64: 
-      this.bh.fj.setColor(h.b2[3][1]);
-      this.bh.fj.fillRect(0, 0, h.dU, h.fp);
-      if (this.bh.a(this.fS, gf, (byte)4, false)) {
-        if (this.ns == 0) {
-          this.jdField_do = 0;
+        break;
+      case 79:
+        E();
+        if ((this.bh.S.aB != 0) && (this.bh.S.ac > 0)) {
+          switch (this.bh.S.W) {
+            case 0:
+            case 2:
+              if (this.bh.S.aB - this.bh.S.ac <= 0) {
+                l tmp8402_8399 = this.bh.S.aD;
+                tmp8402_8399.jdField_new = ((short) (tmp8402_8399.jdField_new + this.bh.S.aB * a3.bp[this.bh.S.W]));
+                this.bh.S.aB = 0;
+              } else {
+                l tmp8460_8457 = this.bh.S.aD;
+                tmp8460_8457.jdField_new = ((short) (tmp8460_8457.jdField_new + this.bh.S.ac * a3.bp[this.bh.S.W]));
+                as tmp8501_8498 = this.bh.S;
+                tmp8501_8498.aB = ((short) (tmp8501_8498.aB - this.bh.S.ac));
+              }
+              break;
+            case 1:
+            case 3:
+              if (this.bh.S.aB - this.bh.S.ac <= 0) {
+                l tmp8557_8554 = this.bh.S.aD;
+                tmp8557_8554.jdField_try = ((short) (tmp8557_8554.jdField_try + this.bh.S.aB * a3.bq[this.bh.S.W]));
+                this.bh.S.aB = 0;
+              } else {
+                l tmp8615_8612 = this.bh.S.aD;
+                tmp8615_8612.jdField_try = ((short) (tmp8615_8612.jdField_try + this.bh.S.ac * a3.bq[this.bh.S.W]));
+                as tmp8656_8653 = this.bh.S;
+                tmp8656_8653.aB = ((short) (tmp8656_8653.aB - this.bh.S.ac));
+              }
+              break;
+          }
+          as tmp8682_8679 = this.bh.S;
+          tmp8682_8679.ac = ((byte) (tmp8682_8679.ac + this.bh.S.S));
         } else {
-          try
-          {
-            this.bh.fG.platformRequest("http://gameta.cn/sot_bill_index.jsp?owner=1&user=" + this.bh.dv + "&zone=" + this.bh.fA);
+          this.bh.bV.a(this.bh.S.ar, 0, this.bh.S.aD.a);
+          this.bh.S.a();
+        }
+        break;
+      case 58:
+        E();
+        if (this.bh.a(this.bh.S.C, gf, (byte) 4, false)) {
+          this.jdField_do = 63;
+        }
+        break;
+      case 63:
+        this.e3 = this.bh.S.av;
+        a(this.bh.S.C, this.bh.S.ai[0], this.bh.S.ai[1]);
+        break;
+      case 57:
+        if ((ag.hF < 0) || (ag.hE < 0) || (ag.hF + h.dU > this.bh.ad) || (ag.hE + h.fp > this.bh.dz)) {
+          this.bh.S.aC = 0;
+        }
+        if (this.bh.S.aC != 0) {
+          switch (this.bh.cZ.eO) {
+            case 0:
+            case 2:
+              if (this.bh.S.aC - this.bh.S.D > 0) {
+                ag.hE = (short) (ag.hE + this.bh.S.D * a3.bp[this.bh.S.A]);
+                as tmp9068_9065 = this.bh.S;
+                tmp9068_9065.aC = ((short) (tmp9068_9065.aC - this.bh.S.D));
+              } else {
+                ag.hE = (short) (ag.hE + this.bh.S.aC * a3.bp[this.bh.S.A]);
+                this.bh.S.aC = 0;
+              }
+              break;
+            case 1:
+            case 3:
+              if (this.bh.S.aC - this.bh.S.D > 0) {
+                ag.hF = (short) (ag.hF + this.bh.S.D * a3.bq[this.bh.S.A]);
+                as tmp9217_9214 = this.bh.S;
+                tmp9217_9214.aC = ((short) (tmp9217_9214.aC - this.bh.S.D));
+              } else {
+                ag.hF = (short) (ag.hF + this.bh.S.aC * a3.bq[this.bh.S.A]);
+                this.bh.S.aC = 0;
+              }
+              break;
+          }
+          E();
+        } else {
+          this.bh.S.a();
+        }
+        break;
+      case 80:
+        this.bh.ex.a();
+        break;
+      case -33:
+        this.bh.dJ.a();
+        break;
+      case 50:
+        this.jj.a();
+        break;
+      case 44:
+        this.bh.k("退出中,请稍候...");
+        break;
+      case 43:
+        E();
+        if (this.bh.a(this.h7, gf, (byte) 4, false)) {
+          if ((this.jdField_if == 2) && (this.h7.indexOf("疾冲") != -1)) {
+            this.je = 2;
+            this.kc = 0;
+            this.jdField_int = 0;
+          }
+          this.h7 = null;
+          this.bh.S.a();
+        }
+        break;
+      case 64:
+        this.bh.fj.setColor(h.b2[3][1]);
+        this.bh.fj.fillRect(0, 0, h.dU, h.fp);
+        if (this.bh.a(this.fS, gf, (byte) 4, false)) {
+          if (this.ns == 0) {
+            this.jdField_do = 0;
+          } else {
+            try {
+              this.bh.fG.platformRequest(
+                  "http://gameta.cn/sot_bill_index.jsp?owner=1&user=" + this.bh.dv + "&zone=" + this.bh.fA);
+              J();
+            } catch (Exception localException) {
+            }
+          }
+        }
+        break;
+      case 41:
+        this.bh.fj.setColor(h.b2[3][1]);
+        this.bh.fj.fillRect(0, 0, h.dU, h.fp);
+        if (this.bh.a("网络超时!请重新登录.", gf, (byte) 4, false)) {
+          if (this.gz) {
+            this.bh.a(this, this.bh.s);
+          } else {
             J();
           }
-          catch (Exception localException) {}
         }
-      }
-      break;
-    case 41: 
-      this.bh.fj.setColor(h.b2[3][1]);
-      this.bh.fj.fillRect(0, 0, h.dU, h.fp);
-      if (this.bh.a("网络超时!请重新登录.", gf, (byte)4, false)) {
-        if (this.gz) {
-          this.bh.a(this, this.bh.s);
-        } else {
-          J();
-        }
-      }
-      break;
-    case 36: 
-      a("需要休息?", "是", "否");
-      break;
-    case 37: 
-      this.c3 = ((byte)(this.c3 + 1));
-      if (this.c3 > 15)
-      {
-        this.c3 = 0;
-        for (i12 = 0; i12 < h.dU; i12++) {
-          this.bZ[i12] = -16777216;
-        }
-        this.bh.cZ.N();
-        this.bh.cZ.hh = a3.jdMethod_new(ag.g2, a.t);
-        this.bh.cZ.d();
-        this.bh.cZ.jdField_try = 2;
-        return;
-      }
-      for (i12 = 0; i12 < h.dU; i12++) {
-        this.bZ[i12] += 285212672;
-      }
-      this.bh.a(this.bZ, 0, 0, h.dU, h.fp);
-      break;
-    case 38: 
-      E();
-      this.c3 = ((byte)(this.c3 + 1));
-      if (this.c3 > 6)
-      {
-        this.jdField_do = 0;
-        this.bZ = null;
-        return;
-      }
-      for (i12 = 0; i12 < h.dU; i12++) {
-        this.bZ[i12] -= 570425344;
-      }
-      this.bh.a(this.bZ, 0, 0, h.dU, h.fp);
-      break;
-    case 20: 
-      this.g7.jdMethod_if();
-      break;
-    case 19: 
-      E();
-      this.bh.fj.setColor(16777215);
-      this.bh.fj.fillRect(0, h.fp / 2, h.dU, 20);
-      this.bh.fj.setColor(0);
-      this.bh.fj.drawString("任务失败", h.dU / 2, h.fp / 2 + 1, 17);
-      break;
-    case 15: 
-      this.md.jdMethod_for();
-      break;
-    case -11: 
-    case 123: 
-      E();
-      this.bh.c();
-      break;
-    case 25: 
-      E();
-      this.eZ.a();
-      this.bh.a(72, 0, this.gd, b2);
-      break;
-    case 13: 
-      E();
-      this.bh.a((byte)2, 0, 0, h.dU, h.fp, false);
-      this.eZ.a();
-      if ((this.mz == 0) && ((this.bh.cZ.a((byte)36) > 0) || (this.gn != null))) {
-        this.bh.x();
-      }
-      this.bh.c();
-      break;
-    case 5: 
-      if (this.j0 == 0)
-      {
-        this.bh.k(this.kh);
-      }
-      else
-      {
-        E();
-        this.bh.a(this.kh, -1, (byte)4, false);
-      }
-      if (!this.j5)
-      {
-        this.ca = -1;
-        this.gR = 0;
-        this.j5 = true;
-        if ((h.dc) && (this.bh.F(this.jdField_if) > -1))
-        {
-          this.jl = true;
-        }
-        else if (this.bh.c(this.jdField_if))
-        {
-          this.mY = true;
-          this.jl = true;
-        }
-        i12 = this.bh.A(this.jdField_if);
-        if ((i12 != -1) && (this.bh.d8[this.jdField_if] == i12))
-        {
-          this.bh.am = this.bh.jdMethod_else(this.jdField_if);
-          if (this.bh.am != -1)
-          {
-            //读入地图存档
-            this.lR = this.bh.i(this.bh.am);
-            //如果存档数据不为空 并且 可能是验证存档
-            //已经确认使 this.bo=true 就不会验证存档 可以实现本地修改
-            //修改方法让此处判断为真或者去掉
-            if ((this.lR != null) && (q.a(this.lR, 0, this.lR.length) == this.bh.P(this.jdField_if))) {
-              this.bo = true;
-            } else {
-              this.lR = null;
-            }
+        break;
+      case 36:
+        a("需要休息?", "是", "否");
+        break;
+      case 37:
+        this.c3 = ((byte) (this.c3 + 1));
+        if (this.c3 > 15) {
+          this.c3 = 0;
+          for (i12 = 0; i12 < h.dU; i12++) {
+            this.bZ[i12] = -16777216;
           }
+          this.bh.cZ.N();
+          this.bh.cZ.hh = a3.jdMethod_new(ag.g2, a.t);
+          this.bh.cZ.d();
+          this.bh.cZ.jdField_try = 2;
+          return;
         }
-        //场景切换状态判断?  一共有三个场景数据库 scene1.pak scene2.pak scene3.pak
-        if (this.jdField_if < 4)
-        {
-          //打开数据流 从文件打开
-          DataInputStream localDataInputStream = new DataInputStream(getClass().getResourceAsStream("scene" + this.jdField_if + ".pak"));
-          //用了一个方法来处理
-          a(2508, 0, localDataInputStream);
+        for (i12 = 0; i12 < h.dU; i12++) {
+          this.bZ[i12] += 285212672;
         }
-        else
-        {
-          if (this.jl)
-          {
-            if ((this.bo) && (!this.bh.d7))
-            {
-              this.ca = 0;
-            }
-            else
-            {
-              this.bo = false;
-              this.lR = null;
-              if ((this.l0 = a(this.jdField_if))) {
-                this.ca = 5;
+        this.bh.a(this.bZ, 0, 0, h.dU, h.fp);
+        break;
+      case 38:
+        E();
+        this.c3 = ((byte) (this.c3 + 1));
+        if (this.c3 > 6) {
+          this.jdField_do = 0;
+          this.bZ = null;
+          return;
+        }
+        for (i12 = 0; i12 < h.dU; i12++) {
+          this.bZ[i12] -= 570425344;
+        }
+        this.bh.a(this.bZ, 0, 0, h.dU, h.fp);
+        break;
+      case 20:
+        this.g7.jdMethod_if();
+        break;
+      case 19:
+        E();
+        this.bh.fj.setColor(16777215);
+        this.bh.fj.fillRect(0, h.fp / 2, h.dU, 20);
+        this.bh.fj.setColor(0);
+        this.bh.fj.drawString("任务失败", h.dU / 2, h.fp / 2 + 1, 17);
+        break;
+      case 15:
+        this.md.jdMethod_for();
+        break;
+      case -11:
+      case 123:
+        E();
+        this.bh.c();
+        break;
+      case 25:
+        E();
+        this.eZ.a();
+        this.bh.a(72, 0, this.gd, b2);
+        break;
+      case 13:
+        E();
+        this.bh.a((byte) 2, 0, 0, h.dU, h.fp, false);
+        this.eZ.a();
+        if ((this.mz == 0) && ((this.bh.cZ.a((byte) 36) > 0) || (this.gn != null))) {
+          this.bh.x();
+        }
+        this.bh.c();
+        break;
+      case 5:
+        if (this.j0 == 0) {
+          this.bh.k(this.kh);
+        } else {
+          E();
+          this.bh.a(this.kh, -1, (byte) 4, false);
+        }
+        if (!this.j5) {
+          this.ca = -1;
+          this.gR = 0;
+          this.j5 = true;
+          if ((h.dc) && (this.bh.F(this.jdField_if) > -1)) {
+            this.jl = true;
+          } else if (this.bh.c(this.jdField_if)) {
+            this.mY = true;
+            this.jl = true;
+          }
+          i12 = this.bh.A(this.jdField_if);
+          if ((i12 != -1) && (this.bh.d8[this.jdField_if] == i12)) {
+            this.bh.am = this.bh.jdMethod_else(this.jdField_if);
+            if (this.bh.am != -1) {
+              // 读入地图存档
+              this.lR = this.bh.i(this.bh.am);
+              // 如果存档数据不为空 并且 可能是验证存档
+              // 已经确认使 this.bo=true 就不会验证存档 可以实现本地修改
+              // 修改方法让此处判断为真或者去掉
+              if ((this.lR != null) && (q.a(this.lR, 0, this.lR.length) == this.bh.P(this.jdField_if))) {
+                this.bo = true;
               } else {
-                this.ca = 2;
+                this.lR = null;
               }
             }
           }
-          else if (this.bo) {
-            this.ca = 3;
-          } else if ((this.l0 = a(this.jdField_if))) {
-            this.ca = 4;
+          // 场景切换状态判断? 一共有三个场景数据库 scene1.pak scene2.pak scene3.pak
+          if (this.jdField_if < 4) {
+            // 打开数据流 从文件打开
+            DataInputStream localDataInputStream = new DataInputStream(
+                getClass().getResourceAsStream("scene" + this.jdField_if + ".pak"));
+            // 用了一个方法来处理
+            a(2508, 0, localDataInputStream);
           } else {
-            this.ca = 1;
+            if (this.jl) {
+              if ((this.bo) && (!this.bh.d7)) {
+                this.ca = 0;
+              } else {
+                this.bo = false;
+                this.lR = null;
+                if ((this.l0 = a(this.jdField_if))) {
+                  this.ca = 5;
+                } else {
+                  this.ca = 2;
+                }
+              }
+            } else if (this.bo) {
+              this.ca = 3;
+            } else if ((this.l0 = a(this.jdField_if))) {
+              this.ca = 4;
+            } else {
+              this.ca = 1;
+            }
+            this.bh.x(this.ca);
           }
-          this.bh.x(this.ca);
-        }
-      }
-      else
-      {
-        this.gR += 1;
-        if (this.gR > 120000 / h.bn)
-        {
-          gf = 0;
-          this.jdField_int = 0;
-          this.gz = false;
-          this.jdField_do = 41;
-          return;
-        }
-        if ((this.ca == 0) && (!this.bh.d7))
-        {
-          this.bh.d7 = true;
-          a(2508, 0, null);
-        }
-        if (this.jdField_for) {
-          jdMethod_int((byte)0);
-        }
-      }
-      break;
-    case 4: 
-      break;
-    case 0: 
-      if ((h.cz) && (this.jdField_if == 1))
-      {
-        if (this.bh.aG.jdMethod_int(1002))
-        {
-          this.bh.aG.jdMethod_if("");
-          this.bh.aG.jdMethod_if("");
-          this.bh.aG.jdMethod_if("");
-          this.bh.aG.jdMethod_do(0);
-          this.bh.aG.jdMethod_do(0);
-          this.bh.aG.a(Long.parseLong("13000000000"));
-          this.bh.aG.jdMethod_if("getInitName");
-          this.bh.aG.jdMethod_if();
-        }
-        this.jdField_do = 21;
-        Display.getDisplay(this.bh.fG).setCurrent(this.bh);
-        return;
-      }
-      synchronized (this.hV)
-      {
-        if ((!this.hV.isEmpty()) && (!this.bh.cZ.hU))
-        {
-          this.jK = ((String)this.hV.firstElement());
-          this.hV.removeElementAt(0);
-          gf = 0;
-          this.jdField_do = 73;
-          return;
-        }
-      }
-      if (this.nh)
-      {
-        this.nh = false;
-        gf = 0;
-        this.jdField_do = -104;
-        return;
-      }
-      if (!this.ho)
-      {
-        this.ho = true;
-        gf = 0;
-        this.jdField_do = 65;
-      }
-      if (this.bh.bq)
-      {
-        this.bh.dL = true;
-        this.bh.bq = false;
-        gf = 0;
-        this.e3 = 0;
-        this.jdField_do = -124;
-        return;
-      }
-      if ((h.dc) && (!this.bh.q) && (this.jdField_int % 10 == 0) && (this.bh.dM == null)) {
-        this.bh.S();
-      }
-      if ((this.bh.cZ.a4 != 13) && (this.bh.cZ.a4 != 14) && (this.bh.cZ.a4 != 15) && (this.bh.cZ.a4 != 16) && (!this.bh.cZ.eT) && (!this.bh.cZ.fE) && (!this.bh.cZ.hv) && (this.jdField_int % a.T == 0)) {
-        this.bh.cZ.A();
-      }
-      o();
-      if ((this.jdField_do == 0) && (this.jB != -1) && (!this.eL))
-      {
-        this.eL = true;
-        this.bh.S.a(this.jB, this);
-      }
-      else if (this.jdField_if == 2)
-      {
-        if (this.jdField_int % 200 == 0) {
-          if (this.je == 1) {
-            jdMethod_do("按住确认键或数字5键发动连续攻击，点击数字1、3键使用技能.");
-          } else if (this.je == 2) {
-            jdMethod_do("向同一个方向快速点击两次方向键启动疾冲.");
+        } else {
+          this.gR += 1;
+          if (this.gR > 120000 / h.bn) {
+            gf = 0;
+            this.jdField_int = 0;
+            this.gz = false;
+            this.jdField_do = 41;
+            return;
+          }
+          if ((this.ca == 0) && (!this.bh.d7)) {
+            this.bh.d7 = true;
+            a(2508, 0, null);
+          }
+          if (this.jdField_for) {
+            jdMethod_int((byte) 0);
           }
         }
-        if (this.je == 2)
-        {
-          int i13 = 5;
-          i14 = 30;
-          this.bh.fj.setColor(15724527);
-          this.bh.fj.drawString("完成", i13, i14, 20);
-          i13 = (short)(i13 + (h.eA * 2 + 1));
-          this.bh.fj.setColor(16711680);
-          this.bh.fj.drawString("" + this.kc, i13, i14, 20);
-          i13 = (short)(i13 + (h.dA.stringWidth("" + this.kc) + 1));
-          this.bh.fj.setColor(15724527);
-          this.bh.fj.drawString("次", i13, i14, 20);
+        break;
+      case 4:
+        break;
+      case 0:
+        if ((h.cz) && (this.jdField_if == 1)) {
+          if (this.bh.aG.jdMethod_int(1002)) {
+            this.bh.aG.jdMethod_if("");
+            this.bh.aG.jdMethod_if("");
+            this.bh.aG.jdMethod_if("");
+            this.bh.aG.jdMethod_do(0);
+            this.bh.aG.jdMethod_do(0);
+            this.bh.aG.a(Long.parseLong("13000000000"));
+            this.bh.aG.jdMethod_if("getInitName");
+            this.bh.aG.jdMethod_if();
+          }
+          this.jdField_do = 21;
+          Display.getDisplay(this.bh.fG).setCurrent(this.bh);
+          return;
         }
-      }
-      break;
-    case 122: 
-      E();
-      this.bh.a((byte)2, 0, 0, h.dU, h.fp, false);
-      this.bh.F();
-      this.bh.jdMethod_do(true);
-      this.bh.jdMethod_if(true);
-      this.bh.x();
-      this.bh.c();
-      break;
-    case 127: 
-      E();
-      this.bh.a((byte)2, 0, 0, h.dU, h.fp, false);
-      this.bh.F();
-      this.bh.jdMethod_do(true);
-      this.bh.jdMethod_for(true);
-      this.bh.x();
-      this.bh.c();
-      break;
-    case 56: 
-      E();
-      this.bh.a((byte)2, 0, 0, h.dU, h.fp, false);
-      this.bh.F();
-      this.bh.jdMethod_do(true);
-      this.bh.jdMethod_int(true);
-      this.bh.x();
-      this.bh.c();
-      break;
-    case 1: 
-      E();
-      this.bh.a((byte)2, 0, 0, h.dU, h.fp, false);
-      this.bh.F();
-      this.bh.jdMethod_do(false);
-      this.bh.x();
-      this.bh.c();
-      break;
-    case 2: 
-      E();
-      this.bh.a((byte)2, 0, 0, h.dU, h.fp, false);
-      this.bh.F();
-      this.bh.jdMethod_do(true);
-      if ((this.bh.cZ.gE) && (this.fQ == 2) && (this.f3 == 1)) {
-        this.bh.jdMethod_int(false);
-      }
-      if ((this.fQ == 2) && (this.f3 == 2)) {
-        this.bh.jdMethod_if(false);
-      }
-      if ((this.fQ == 2) && (this.f3 == 5)) {
-        this.bh.jdMethod_for(false);
-      }
-      this.bh.x();
-      this.bh.c();
+        synchronized (this.hV) {
+          if ((!this.hV.isEmpty()) && (!this.bh.cZ.hU)) {
+            this.jK = ((String) this.hV.firstElement());
+            this.hV.removeElementAt(0);
+            gf = 0;
+            this.jdField_do = 73;
+            return;
+          }
+        }
+        if (this.nh) {
+          this.nh = false;
+          gf = 0;
+          this.jdField_do = -104;
+          return;
+        }
+        if (!this.ho) {
+          this.ho = true;
+          gf = 0;
+          this.jdField_do = 65;
+        }
+        if (this.bh.bq) {
+          this.bh.dL = true;
+          this.bh.bq = false;
+          gf = 0;
+          this.e3 = 0;
+          this.jdField_do = -124;
+          return;
+        }
+        if ((h.dc) && (!this.bh.q) && (this.jdField_int % 10 == 0) && (this.bh.dM == null)) {
+          this.bh.S();
+        }
+        if ((this.bh.cZ.a4 != 13) && (this.bh.cZ.a4 != 14) && (this.bh.cZ.a4 != 15) && (this.bh.cZ.a4 != 16)
+            && (!this.bh.cZ.eT) && (!this.bh.cZ.fE) && (!this.bh.cZ.hv) && (this.jdField_int % a.T == 0)) {
+          this.bh.cZ.A();
+        }
+        o();
+        if ((this.jdField_do == 0) && (this.jB != -1) && (!this.eL)) {
+          this.eL = true;
+          this.bh.S.a(this.jB, this);
+        } else if (this.jdField_if == 2) {
+          if (this.jdField_int % 200 == 0) {
+            if (this.je == 1) {
+              jdMethod_do("按住确认键或数字5键发动连续攻击，点击数字1、3键使用技能.");
+            } else if (this.je == 2) {
+              jdMethod_do("向同一个方向快速点击两次方向键启动疾冲.");
+            }
+          }
+          if (this.je == 2) {
+            int i13 = 5;
+            i14 = 30;
+            this.bh.fj.setColor(15724527);
+            this.bh.fj.drawString("完成", i13, i14, 20);
+            i13 = (short) (i13 + (h.eA * 2 + 1));
+            this.bh.fj.setColor(16711680);
+            this.bh.fj.drawString("" + this.kc, i13, i14, 20);
+            i13 = (short) (i13 + (h.dA.stringWidth("" + this.kc) + 1));
+            this.bh.fj.setColor(15724527);
+            this.bh.fj.drawString("次", i13, i14, 20);
+          }
+        }
+        break;
+      case 122:
+        E();
+        this.bh.a((byte) 2, 0, 0, h.dU, h.fp, false);
+        this.bh.F();
+        this.bh.jdMethod_do(true);
+        this.bh.jdMethod_if(true);
+        this.bh.x();
+        this.bh.c();
+        break;
+      case 127:
+        E();
+        this.bh.a((byte) 2, 0, 0, h.dU, h.fp, false);
+        this.bh.F();
+        this.bh.jdMethod_do(true);
+        this.bh.jdMethod_for(true);
+        this.bh.x();
+        this.bh.c();
+        break;
+      case 56:
+        E();
+        this.bh.a((byte) 2, 0, 0, h.dU, h.fp, false);
+        this.bh.F();
+        this.bh.jdMethod_do(true);
+        this.bh.jdMethod_int(true);
+        this.bh.x();
+        this.bh.c();
+        break;
+      case 1:
+        E();
+        this.bh.a((byte) 2, 0, 0, h.dU, h.fp, false);
+        this.bh.F();
+        this.bh.jdMethod_do(false);
+        this.bh.x();
+        this.bh.c();
+        break;
+      case 2:
+        E();
+        this.bh.a((byte) 2, 0, 0, h.dU, h.fp, false);
+        this.bh.F();
+        this.bh.jdMethod_do(true);
+        if ((this.bh.cZ.gE) && (this.fQ == 2) && (this.f3 == 1)) {
+          this.bh.jdMethod_int(false);
+        }
+        if ((this.fQ == 2) && (this.f3 == 2)) {
+          this.bh.jdMethod_if(false);
+        }
+        if ((this.fQ == 2) && (this.f3 == 5)) {
+          this.bh.jdMethod_for(false);
+        }
+        this.bh.x();
+        this.bh.c();
     }
-    if (((this.jdField_do != 20) && (this.jdField_do != 5)) || ((this.jdField_do == 5) && (this.j0 == 1)))
-    {
+    if (((this.jdField_do != 20) && (this.jdField_do != 5)) || ((this.jdField_do == 5) && (this.j0 == 1))) {
       this.bh.h();
       this.bh.k();
     }
-    if (this.lm)
-    {
+    if (this.lm) {
       this.ja += 1;
-      if (this.ja >= 40000 / h.bn)
-      {
+      if (this.ja >= 40000 / h.bn) {
         this.bh.a(this, this.bh.s);
         this.lm = false;
         return;
       }
     }
-    if (0 == this.jdField_int % 40)
-    {
+    if (0 == this.jdField_int % 40) {
       if (this.lm) {
         return;
       }
-      if ((this.jdField_do != 5) && (this.jdField_if > 2))
-      {
+      if ((this.jdField_do != 5) && (this.jdField_if > 2)) {
         this.gO = this.jdField_if;
-        if (this.bh.aG.jdMethod_int(2507))
-        {
+        if (this.bh.aG.jdMethod_int(2507)) {
           j = 0;
           if (this.bh.cZ.jdMethod_else()) {
-            j = (short)(j | 0x1);
+            j = (short) (j | 0x1);
           }
           if (this.bh.cZ.a8) {
-            j = (short)(j | 0x8);
+            j = (short) (j | 0x8);
           }
           if (this.bh.cZ.dU) {
-            j = (short)(j | 0x10);
+            j = (short) (j | 0x10);
           }
           if ((this.bh.cZ.fL >= 0) && (this.bh.cZ.fj == 17)) {
-            j = (short)(j | 0x20);
+            j = (short) (j | 0x20);
           }
           if (this.bh.cZ.he) {
-            j = (short)(j | 0x40);
+            j = (short) (j | 0x40);
           }
           if ((this.bh.fI) || (this.bh.cZ.he)) {
-            j = (short)(j | 0x80);
+            j = (short) (j | 0x80);
           }
           if (this.e7) {
-            j = (short)(j | 0x100);
+            j = (short) (j | 0x100);
           }
           if (this.ki) {
-            j = (short)(j | 0x200);
+            j = (short) (j | 0x200);
           }
           if ((this.bh.cZ.a8) && (this.bh.cZ.d == 1)) {
-            j = (short)(j | 0x400);
+            j = (short) (j | 0x400);
           }
           this.bh.aG.jdMethod_new(j);
-          if (dZ == 0)
-          {
+          if (dZ == 0) {
             if (dD == 2) {
               this.bh.aG.jdMethod_do(1);
             } else if (dD == 4) {
@@ -3097,18 +2888,14 @@ public class g
             } else {
               this.bh.aG.jdMethod_do(this.bh.cv == 2 ? 1 : 0);
             }
-          }
-          else {
+          } else {
             this.bh.aG.jdMethod_do(0);
           }
           this.bh.aG.jdMethod_do(this.bh.b3);
-          if (this.bh.cZ.gR != null)
-          {
+          if (this.bh.cZ.gR != null) {
             this.bh.aG.jdMethod_do(this.bh.jdMethod_if(this.bh.cZ.gR));
             this.bh.aG.jdMethod_if(this.bh.cZ.gR.O);
-          }
-          else
-          {
+          } else {
             this.bh.aG.jdMethod_do(-1);
           }
           this.bh.aG.jdMethod_if();
@@ -3116,8 +2903,7 @@ public class g
       }
     }
     if (this.bh.cZ.gE) {
-      if ((this.jdField_int % (h.ff ? 100 : 100) == 0) && (this.bh.aG.jdMethod_int(3505)))
-      {
+      if ((this.jdField_int % (h.ff ? 100 : 100) == 0) && (this.bh.aG.jdMethod_int(3505))) {
         this.bh.aG.jdMethod_for(this.bh.cZ.gz);
         this.bh.aG.jdMethod_if();
       }
@@ -3125,58 +2911,49 @@ public class g
     if (this.jdField_if > 2) {
       this.b4 += 1;
     }
-    if (this.b4 > 8000)
-    {
+    if (this.b4 > 8000) {
       this.jdField_int = 0;
       gf = 0;
       this.gz = true;
       this.jdField_do = 41;
       return;
     }
-    for (int j = 0; j < this.bh.dS.length; j = (byte)(j + 1)) {
+    for (int j = 0; j < this.bh.dS.length; j = (byte) (j + 1)) {
       this.bh.c0.a(this.bh.dS[j]);
     }
   }
-  
-  public void v()
-  {
+
+  public void v() {
     I();
   }
-  
-  public void a(int paramInt)
-  {
+
+  public void a(int paramInt) {
     this.bh.B.a(paramInt, false);
-    switch (this.jdField_do)
-    {
-    case -5: 
-    case 26: 
-      t();
-      break;
-    case 0: 
-      jdMethod_int(paramInt);
-      break;
-    case 15: 
-      switch (paramInt)
-      {
-      case 1: 
-      case 2: 
-        this.b1 = false;
-      }
-      break;
+    switch (this.jdField_do) {
+      case -5:
+      case 26:
+        t();
+        break;
+      case 0:
+        jdMethod_int(paramInt);
+        break;
+      case 15:
+        switch (paramInt) {
+          case 1:
+          case 2:
+            this.b1 = false;
+        }
+        break;
     }
   }
-  
-  public void a(h paramh)
-  {
-    if (h.a9 == 0)
-    {
+
+  public void a(h paramh) {
+    if (h.a9 == 0) {
       lQ = 6;
       kj = 4;
       f5 = 128;
       l7 = 128;
-    }
-    else
-    {
+    } else {
       lQ = 6;
       kj = 8;
       f5 = 128;
@@ -3184,13 +2961,12 @@ public class g
     }
     this.bh = paramh;
     int i;
-    if (this.bh.c0 == null)
-    {
+    if (this.bh.c0 == null) {
       this.bh.c0 = new x(this.bh);
       this.bh.c0.a("/pet.dat");
       this.bh.a2 = this.bh.jdMethod_goto("/pet.yy");
       this.bh.dS = new int[this.bh.c0.jdField_try.length][5];
-      for (i = 0; i < this.bh.dS.length; i = (byte)(i + 1)) {
+      for (i = 0; i < this.bh.dS.length; i = (byte) (i + 1)) {
         this.bh.c0.a(i, 0, this.bh.dS[i]);
       }
     }
@@ -3234,8 +3010,7 @@ public class g
     }
     this.j0 = 0;
     this.jdField_do = 5;
-    if (this.dH == null)
-    {
+    if (this.dH == null) {
       this.dH = new int[h.dU];
       for (i = 0; i < h.dU; i++) {
         this.dH[i] = -1441254842;
@@ -3245,9 +3020,8 @@ public class g
     this.bh.b0.a(58, 0, this.il);
     this.bh.cZ.hr = true;
   }
-  
-  public void a()
-  {
+
+  public void a() {
     this.fu.clear();
     this.bh.i.jdMethod_if();
     this.bD = null;
@@ -3257,22 +3031,21 @@ public class g
     this.bh.dq = 0;
     this.bh.cY[0] = false;
     this.bh.cY[1] = false;
-    this.bh.S.aJ = ((byte[][])null);
+    this.bh.S.aJ = ((byte[][]) null);
     for (int i = 1; i >= 0; i--) {
       if (this.bh.aH[i] != null) {
         this.bh.aH[i] = null;
       }
     }
     if (this.bh.cl != null) {
-      for (i = 0; i < this.bh.cl.length; i = (byte)(i + 1)) {
+      for (i = 0; i < this.bh.cl.length; i = (byte) (i + 1)) {
         this.bh.cl[i] = null;
       }
     }
     g();
     ar.l();
-    if (this.mN != null)
-    {
-      for (i = 0; i < this.mN.length; i = (byte)(i + 1)) {
+    if (this.mN != null) {
+      for (i = 0; i < this.mN.length; i = (byte) (i + 1)) {
         this.mN[i] = null;
       }
       this.mN = null;
@@ -3283,48 +3056,37 @@ public class g
     this.kT = 0;
     Runtime.getRuntime().gc();
   }
-  
-  public void r()
-  {
-    for (int i = 0; i < this.li.length; i = (byte)(i + 1))
-    {
+
+  public void r() {
+    for (int i = 0; i < this.li.length; i = (byte) (i + 1)) {
       this.li[i].gq = true;
       this.li[i].eN = -1;
       this.li[i].eB = null;
     }
   }
-  
-  public void jdMethod_null()
-  {
-    if (this.bh.fU > 0)
-    {
+
+  public void jdMethod_null() {
+    if (this.bh.fU > 0) {
       jS = new ar[this.bh.fU];
       int j;
-      for (int i = 0; i < jS.length; j = (byte)(i + 1))
-      {
+      for (int i = 0; i < jS.length; j = (byte) (i + 1)) {
         jS[i] = new ar(this.bh, i, i >= jS.length - 2);
         jS[i].p();
       }
       C();
     }
   }
-  
-  public void C()
-  {
-    try
-    {
-      if ((this.jdField_if > 3) && (jS != null) && (dD == 1) && (this.bh.aG.jdMethod_int(1005)))
-      {
+
+  public void C() {
+    try {
+      if ((this.jdField_if > 3) && (jS != null) && (dD == 1) && (this.bh.aG.jdMethod_int(1005))) {
         this.bh.aG.jdMethod_do(6);
         this.bh.aG.jdMethod_new(this.jdField_if);
         this.bh.aG.jdMethod_do(this.bh.fU);
-        for (int i = 0; i < jS.length; i = (byte)(i + 1)) {
-          if (jS[i] == null)
-          {
+        for (int i = 0; i < jS.length; i = (byte) (i + 1)) {
+          if (jS[i] == null) {
             this.bh.aG.jdMethod_do(-1);
-          }
-          else
-          {
+          } else {
             this.bh.aG.jdMethod_do(jS[i].df ? 1 : 0);
             this.bh.aG.jdMethod_do(jS[i].bz ? 1 : 0);
             this.bh.aG.jdMethod_new(jS[i].aP);
@@ -3333,12 +3095,11 @@ public class g
         }
         this.bh.aG.jdMethod_if();
       }
+    } catch (Exception localException) {
     }
-    catch (Exception localException) {}
   }
-  
-  public void g()
-  {
+
+  public void g() {
     if (jS != null) {
       for (int i = 0; i < jS.length; i++) {
         if (jS[i] != null) {
@@ -3348,16 +3109,14 @@ public class g
     }
     jS = null;
   }
-  
-  public void j()
-  {
+
+  public void j() {
     this.jdField_if = this.cJ;
     this.a = this.hv;
     this.bh.a(this, this);
   }
-  
-  public int jdMethod_for(int paramInt1, int paramInt2)
-  {
+
+  public int jdMethod_for(int paramInt1, int paramInt2) {
     if (paramInt1 < 0) {
       paramInt1 = 0;
     }
@@ -3372,27 +3131,24 @@ public class g
     }
     return paramInt1 / h.u + paramInt2 / h.b8 * this.bh.w;
   }
-  
-  public boolean jdMethod_if(String paramString)
-  {
+
+  public boolean jdMethod_if(String paramString) {
     if (this.fr == null) {
       return false;
     }
-    try
-    {
-      synchronized (this.fr)
-      {
+    try {
+      synchronized (this.fr) {
         for (int i = 0; i < this.fr.length; i++) {
           if (this.fr[i].equals(paramString)) {
             return true;
           }
         }
       }
+    } catch (Exception localException) {
     }
-    catch (Exception localException) {}
     return false;
   }
-  
+
   public void k()
   {
     this.bh.N();
@@ -3414,39 +3170,33 @@ public class g
       }
     }
   }
-  
-  public void o()
-  {
+
+  public void o() {
     this.bh.cZ.jdMethod_case();
     k();
     this.bh.i.jdMethod_do();
     int i;
-    if (this.ki)
-    {
-      for (i = 0; i < this.kT; i = (byte)(i + 1)) {
+    if (this.ki) {
+      for (i = 0; i < this.kT; i = (byte) (i + 1)) {
         hm[i].jdMethod_case();
       }
-      for (i = 0; i < this.kT; i = (byte)(i + 1)) {
-        if (hm[i].aM <= this.bh.cZ.aM)
-        {
+      for (i = 0; i < this.kT; i = (byte) (i + 1)) {
+        if (hm[i].aM <= this.bh.cZ.aM) {
           hm[i].jdMethod_char();
           hm[i].a(this.bh);
         }
       }
     }
-    if ((!this.ki) && (this.bD != null))
-    {
+    if ((!this.ki) && (this.bD != null)) {
       this.bD.jdMethod_case();
-      if (this.bD.aM <= this.bh.cZ.aM)
-      {
+      if (this.bD.aM <= this.bh.cZ.aM) {
         this.bD.jdMethod_char();
         this.bD.a(this.bh);
       }
     }
     if ((dD != 0) && (!this.ki) && (!this.e7) && ((dD != 2) || (dZ != 1) || (this.bh.cZ.gE)) && (jS != null)) {
-      for (i = 0; i < jS.length; i = (byte)(i + 1)) {
-        if ((jS[i] != null) && (jS[i].aM <= this.bh.cZ.aM))
-        {
+      for (i = 0; i < jS.length; i = (byte) (i + 1)) {
+        if ((jS[i] != null) && (jS[i].aM <= this.bh.cZ.aM)) {
           jS[i].jdMethod_case();
           jS[i].jdMethod_char();
         }
@@ -3462,23 +3212,20 @@ public class g
     this.bh.cZ.jdMethod_char();
     this.bh.jdMethod_null();
     if (this.ki) {
-      for (i = 0; i < this.kT; i = (byte)(i + 1)) {
-        if (hm[i].aM > this.bh.cZ.aM)
-        {
+      for (i = 0; i < this.kT; i = (byte) (i + 1)) {
+        if (hm[i].aM > this.bh.cZ.aM) {
           hm[i].jdMethod_char();
           hm[i].a(this.bh);
         }
       }
     }
-    if ((!this.ki) && (this.bD != null) && (this.bD.aM > this.bh.cZ.aM))
-    {
+    if ((!this.ki) && (this.bD != null) && (this.bD.aM > this.bh.cZ.aM)) {
       this.bD.jdMethod_char();
       this.bD.a(this.bh);
     }
     if ((dD != 0) && (!this.ki) && (!this.e7) && ((dD != 2) || (dZ != 1) || (this.bh.cZ.gE)) && (jS != null)) {
-      for (i = 0; i < jS.length; i = (byte)(i + 1)) {
-        if ((jS[i] != null) && (jS[i].aM > this.bh.cZ.aM))
-        {
+      for (i = 0; i < jS.length; i = (byte) (i + 1)) {
+        if ((jS[i] != null) && (jS[i].aM > this.bh.cZ.aM)) {
           jS[i].jdMethod_case();
           jS[i].jdMethod_char();
         }
@@ -3491,13 +3238,11 @@ public class g
         }
       }
     }
-    if ((this.jdField_if > 2) && (!this.ki) && (!this.e7))
-    {
+    if ((this.jdField_if > 2) && (!this.ki) && (!this.e7)) {
       e();
       P();
-      for (i = 0; i < this.li.length; i = (byte)(i + 1)) {
-        if (!this.li[i].gq)
-        {
+      for (i = 0; i < this.li.length; i = (byte) (i + 1)) {
+        if (!this.li[i].gq) {
           this.li[i].jdMethod_case();
           this.li[i].jdMethod_char();
           this.li[i].a(this.bh);
@@ -3522,7 +3267,7 @@ public class g
     }
     if (this.e7) {
       i();
-    } else if (this.bh.jdMethod_new((byte)0)) {
+    } else if (this.bh.jdMethod_new((byte) 0)) {
       this.bh.u();
     }
     if ((this.bh.cZ.a4 != 1) && (this.bh.cZ.a4 != 0)) {
@@ -3530,28 +3275,22 @@ public class g
     }
     this.bh.S.jdMethod_if(jdMethod_for(this.bh.cZ.aP + 10, this.bh.cZ.aM + this.bh.cZ.aI + 1), this);
   }
-  
-  public void jdMethod_void()
-  {
-    if (this.bh.cZ.gE)
-    {
+
+  public void jdMethod_void() {
+    if (this.bh.cZ.gE) {
       int i = 2;
       int j = 22;
       int k = 24;
       int m = 25;
       int n = 3;
-      if (h.a9 == 0)
-      {
+      if (h.a9 == 0) {
         k = 3;
-      }
-      else
-      {
-        k = (short)h.eA;
-        j = (short)(j + h.eA);
+      } else {
+        k = (short) h.eA;
+        j = (short) (j + h.eA);
       }
       if (this.g6 != null) {
-        for (int i10 = 0; i10 < this.g6.length; i10 = (byte)(i10 + 1))
-        {
+        for (int i10 = 0; i10 < this.g6.length; i10 = (byte) (i10 + 1)) {
           if ((this.g6[i10] != null) && (h.a9 != 0) && (this.bh.dT != 1)) {
             this.bh.a(this.g6[i10], i, j, 36, h.b2[2][0]);
           }
@@ -3560,14 +3299,13 @@ public class g
           }
           this.bh.a(i, j, m, n, h.b2[4][0], 100L, this.cl[i10]);
           this.bh.a(i, j + n, m, n, h.b2[3][0], 100L, this.no[i10]);
-          j = (short)(j + (n * 2 + k));
+          j = (short) (j + (n * 2 + k));
         }
       }
     }
   }
-  
-  public void i()
-  {
+
+  public void i() {
     if (!this.e7) {
       return;
     }
@@ -3575,9 +3313,8 @@ public class g
     int j = h.dU - 10;
     this.bh.a((h.dU - j) / 2, i + 8, j, 3, 15724527, this.ly, this.ly - this.eE);
   }
-  
-  public void f()
-  {
+
+  public void f() {
     if (!this.ki) {
       return;
     }
@@ -3598,11 +3335,9 @@ public class g
     this.bh.fj.drawRect(m, i, k, 5);
     this.bh.a((h.dU - j) / 2, i + 8, j, 3, 15724527, this.cN, this.cN - this.hL);
   }
-  
-  public void jdMethod_long()
-  {
-    if (this.bh.dT != 1)
-    {
+
+  public void jdMethod_long() {
+    if (this.bh.dT != 1) {
       int i = 24;
       int j = 18;
       int k = 12;
@@ -3614,8 +3349,7 @@ public class g
       m = h.fp - 2 * h.eA - 10 - j - 1;
       n = (h.dU - 2 * k - i * 4) / 4;
       k += n / 2;
-      for (int i10 = 0; i10 < ag.f7; i10 = (byte)(i10 + 1))
-      {
+      for (int i10 = 0; i10 < ag.f7; i10 = (byte) (i10 + 1)) {
         this.bh.fj.setColor(h.b2[0][1]);
         this.bh.fj.drawRect(k + i10 * (i + n) - n / 2, m - 8, i + n, j + 16);
         this.bh.fj.setColor(h.b2[2][1]);
@@ -3625,37 +3359,32 @@ public class g
         this.bh.fj.setColor(h.b2[5][1]);
         this.bh.fj.drawRect(k + i10 * (i + n), m, i, j);
         int i11 = 0;
-        switch (i10)
-        {
-        case 0: 
-          i11 = 1;
-          break;
-        case 1: 
-          i11 = 3;
-          break;
-        case 2: 
-          i11 = 7;
-          break;
-        case 3: 
-          i11 = 9;
+        switch (i10) {
+          case 0:
+            i11 = 1;
+            break;
+          case 1:
+            i11 = 3;
+            break;
+          case 2:
+            i11 = 7;
+            break;
+          case 3:
+            i11 = 9;
         }
         a(k + i10 * (i + n) + 2, m + 5, i11);
         this.bh.a(k + i10 * (i + n) + 8, m + 2, 15, 15, 60, 0, this.bh.fz, 0);
         if (this.bh.cZ.dF[i10][0] >= 0) {
-          if (this.bh.cZ.dF[i10][1] == 0)
-          {
-            this.bh.jdMethod_if(k + i10 * (i + n) + 8, m + 2, (byte)this.bh.cZ.dF[i10][0]);
-          }
-          else
-          {
+          if (this.bh.cZ.dF[i10][1] == 0) {
+            this.bh.jdMethod_if(k + i10 * (i + n) + 8, m + 2, (byte) this.bh.cZ.dF[i10][0]);
+          } else {
             this.bh.a(k + i10 * (i + n) + 8, m + 2, this.bh.cZ.dF[i10][0]);
             int i12 = this.bh.cZ.jdMethod_if(this.bh.cZ.dF[i10][0]);
             this.bh.a(k + i10 * (i + n) + 8 + 15, m + 2 + 15, i12, 40);
           }
         }
       }
-      if ((this.jdField_if > 2) && (!this.ki))
-      {
+      if ((this.jdField_if > 2) && (!this.ki)) {
         this.bh.a("菜单", 2, 25 + (this.bh.eC ? h.eA : 0), 0, h.b2[1][0]);
         this.bh.a("聊天", 2, m, 0, h.b2[1][0]);
         this.bh.a("记录", h.dU - h.dA.stringWidth("记录") - 2, m, 0, h.b2[1][0]);
@@ -3663,14 +3392,12 @@ public class g
       }
     }
   }
-  
-  public void a(int paramInt1, int paramInt2, int paramInt3)
-  {
+
+  public void a(int paramInt1, int paramInt2, int paramInt3) {
     this.bh.a(paramInt1, paramInt2, 5, 7, (17 + paramInt3 / 3) * 5, 0, this.bh.aH[5], 0);
   }
-  
-  public boolean c()
-  {
+
+  public boolean c() {
     if (((this.bh.cZ.he) && (dD != 0)) || ((dZ == 1) && (this.bh.cZ.gE)) || (this.ki)) {
       return true;
     }
@@ -3679,169 +3406,156 @@ public class g
     }
     return dD == 4;
   }
-  
-  public void jdMethod_for(int paramInt)
-  {
-    if ((this.bh.fs == 0) && (this.bh.cZ.ie))
-    {
+
+  public void jdMethod_for(int paramInt) {
+    if ((this.bh.fs == 0) && (this.bh.cZ.ie)) {
       this.bh.cZ.ie = false;
       this.bh.cZ.dv = false;
       if ((paramInt != 1) && (paramInt != 2) && (paramInt != 3) && (paramInt != 4)) {
         return;
       }
       this.bh.cZ.d();
-    }
-    else if ((this.bh.cZ.hU) || (this.bh.cZ.a4 == 112))
-    {
+    } else if ((this.bh.cZ.hU) || (this.bh.cZ.a4 == 112)) {
       return;
     }
-    switch (paramInt)
-    {
-    case 49: 
-      this.bh.cZ.jdMethod_if(paramInt, true);
-      break;
-    case 51: 
-      this.bh.cZ.jdMethod_if(paramInt, false);
-      break;
-    case 55: 
-      this.bh.cZ.jdMethod_if(paramInt, true);
-      break;
-    case 57: 
-      this.bh.cZ.jdMethod_if(paramInt, false);
-      break;
-    case 35: 
-      if (this.e7) {
-        return;
-      }
-      jdMethod_try((byte)30);
-      break;
-    case 42: 
-      jdMethod_for(false);
-      break;
-    case 48: 
-      if (this.e7) {
-        return;
-      }
-      if (c()) {
-        return;
-      }
-      jdMethod_try((byte)33);
-      break;
-    case 6: 
-      if (this.jdField_if <= 2) {
-        return;
-      }
-      if (this.bh.cZ.a4 == 112) {
-        return;
-      }
-      if ((this.ki) || (this.e7)) {
-        return;
-      }
-      if (this.bh.cZ.jdMethod_else()) {
-        return;
-      }
-      if (c()) {
-        return;
-      }
-      this.bh.cZ.d();
-      this.fQ = 0;
-      this.f3 = 0;
-      this.jdField_do = 1;
-      break;
-    case 7: 
-      if (this.jdField_if <= 2) {
-        return;
-      }
-      if (this.e7) {
-        return;
-      }
-      if (c()) {
-        return;
-      }
-      jdMethod_try((byte)31);
-      break;
-    case 1: 
-      this.bh.cZ.jdMethod_long((byte)0);
-      break;
-    case 2: 
-      this.bh.cZ.jdMethod_long((byte)2);
-      break;
-    case 3: 
-      this.bh.cZ.jdMethod_long((byte)3);
-      break;
-    case 4: 
-      this.bh.cZ.jdMethod_long((byte)1);
-      break;
-    case 5: 
-      if (this.bh.cZ.a8) {
-        return;
-      }
-      this.bh.cZ.S();
-    }
-  }
-  
-  public void jdMethod_int(int paramInt)
-  {
-    switch (this.jdField_do)
-    {
-    case 0: 
-      switch (paramInt)
-      {
-      case 5: 
-        this.bh.cZ.ah();
+    switch (paramInt) {
+      case 49:
+        this.bh.cZ.jdMethod_if(paramInt, true);
         break;
-      case 1: 
-      case 2: 
-      case 3: 
-      case 4: 
-        this.bh.cZ.ae();
+      case 51:
+        this.bh.cZ.jdMethod_if(paramInt, false);
         break;
-      case 49: 
-      case 51: 
-      case 55: 
-      case 57: 
+      case 55:
+        this.bh.cZ.jdMethod_if(paramInt, true);
+        break;
+      case 57:
+        this.bh.cZ.jdMethod_if(paramInt, false);
+        break;
+      case 35:
+        if (this.e7) {
+          return;
+        }
+        jdMethod_try((byte) 30);
+        break;
+      case 42:
+        jdMethod_for(false);
+        break;
+      case 48:
+        if (this.e7) {
+          return;
+        }
+        if (c()) {
+          return;
+        }
+        jdMethod_try((byte) 33);
+        break;
+      case 6:
+        if (this.jdField_if <= 2) {
+          return;
+        }
+        if (this.bh.cZ.a4 == 112) {
+          return;
+        }
+        if ((this.ki) || (this.e7)) {
+          return;
+        }
         if (this.bh.cZ.jdMethod_else()) {
           return;
         }
-        if ((this.bh.cZ.dZ) && (paramInt == this.bh.cZ.dI)) {
-          this.bh.cZ.a(this.bh.cZ);
+        if (c()) {
+          return;
         }
+        this.bh.cZ.d();
+        this.fQ = 0;
+        this.f3 = 0;
+        this.jdField_do = 1;
         break;
-      }
-      break;
+      case 7:
+        if (this.jdField_if <= 2) {
+          return;
+        }
+        if (this.e7) {
+          return;
+        }
+        if (c()) {
+          return;
+        }
+        jdMethod_try((byte) 31);
+        break;
+      case 1:
+        this.bh.cZ.jdMethod_long((byte) 0);
+        break;
+      case 2:
+        this.bh.cZ.jdMethod_long((byte) 2);
+        break;
+      case 3:
+        this.bh.cZ.jdMethod_long((byte) 3);
+        break;
+      case 4:
+        this.bh.cZ.jdMethod_long((byte) 1);
+        break;
+      case 5:
+        if (this.bh.cZ.a8) {
+          return;
+        }
+        this.bh.cZ.S();
     }
   }
-  
-  public void l()
-  {
+
+  public void jdMethod_int(int paramInt) {
+    switch (this.jdField_do) {
+      case 0:
+        switch (paramInt) {
+          case 5:
+            this.bh.cZ.ah();
+            break;
+          case 1:
+          case 2:
+          case 3:
+          case 4:
+            this.bh.cZ.ae();
+            break;
+          case 49:
+          case 51:
+          case 55:
+          case 57:
+            if (this.bh.cZ.jdMethod_else()) {
+              return;
+            }
+            if ((this.bh.cZ.dZ) && (paramInt == this.bh.cZ.dI)) {
+              this.bh.cZ.a(this.bh.cZ);
+            }
+            break;
+        }
+        break;
+    }
+  }
+
+  public void l() {
     this.g7 = new s(this.bh);
     this.jdField_do = 20;
   }
-  
-  public void H()
-  {
-    if (this.bh.cZ.a8)
-    {
-      a("摆摊中不能复位.", (short)0, false, 9999);
+
+  public void H() {
+    if (this.bh.cZ.a8) {
+      a("摆摊中不能复位.", (short) 0, false, 9999);
       return;
     }
-    short s1 = (short)(this.bh.fi % this.bh.w * h.u);
-    short s2 = (short)(this.bh.fi / this.bh.w * h.b8);
+    short s1 = (short) (this.bh.fi % this.bh.w * h.u);
+    short s2 = (short) (this.bh.fi / this.bh.w * h.b8);
     this.bh.cZ.jdMethod_do(s1, s2);
     h.f1 = true;
     this.bh.N();
     this.jdField_do = 0;
   }
-  
-  public void jdMethod_do(int paramInt1, int paramInt2)
-  {
+
+  public void jdMethod_do(int paramInt1, int paramInt2) {
     if ((this.el) && (this.jdField_int / 10 % 2 == 0)) {
       this.bh.a(paramInt1, paramInt2, 12, 12, 216, 0, this.bh.aH[10], 0);
     }
   }
-  
-  public void G()
-  {
+
+  public void G() {
     if (this.jdField_if <= 2) {
       return;
     }
@@ -3851,22 +3565,20 @@ public class g
     this.lC = new boolean[5];
     this.jdField_do = 15;
   }
-  
-  public void d()
-  {
+
+  public void d() {
     this.eZ = new t(this.bh);
     this.mz = 0;
     this.e3 = -1;
-    if (this.bh.cZ.a((byte)36) > 0) {
+    if (this.bh.cZ.a((byte) 36) > 0) {
       this.e3 = 1;
     } else if (this.gn != null) {
       this.e3 = 0;
     }
     this.jdField_do = 13;
   }
-  
-  public void jdMethod_for(boolean paramBoolean)
-  {
+
+  public void jdMethod_for(boolean paramBoolean) {
     if (this.jdField_if <= 2) {
       return;
     }
@@ -3887,9 +3599,8 @@ public class g
     this.ip = arrayOfVector[0];
     this.bS = arrayOfVector[1];
   }
-  
-  public void w()
-  {
+
+  public void w() {
     if (!this.bh.cZ.gE) {
       return;
     }
@@ -3901,125 +3612,107 @@ public class g
       this.c9 = new String[] { "私聊", "返回" };
     }
     this.ip.removeAllElements();
-    for (int i = 0; i < this.g6.length; i = (byte)(i + 1)) {
+    for (int i = 0; i < this.g6.length; i = (byte) (i + 1)) {
       this.ip.addElement(this.g6[i]);
     }
     this.jdField_do = 26;
   }
-  
-  public void F()
-  {
+
+  public void F() {
     this.bh.i.jdMethod_for();
     this.j1 = 104;
     this.jdField_do = 21;
     this.fj = 0;
-    if (this.bh.aG.jdMethod_int(3710))
-    {
+    if (this.bh.aG.jdMethod_int(3710)) {
       this.bh.aG.jdMethod_for(this.bh.cZ.fL);
       this.bh.aG.jdMethod_if();
     }
   }
-  
-  public void n()
-  {
+
+  public void n() {
     this.bh.i.jdMethod_for();
     this.j1 = -109;
     this.c9 = new String[] { "私聊", "资料", "赠送", "返回" };
     this.jdField_do = 21;
-    if (this.bh.aG.jdMethod_int(3560))
-    {
+    if (this.bh.aG.jdMethod_int(3560)) {
       this.bh.aG.jdMethod_for(this.kk);
       this.bh.aG.jdMethod_if();
     }
   }
-  
-  public void q()
-  {
+
+  public void q() {
     this.bh.i.jdMethod_for();
     this.j1 = -120;
     this.jdField_do = 21;
-    if (this.bh.aG.jdMethod_int(6721))
-    {
+    if (this.bh.aG.jdMethod_int(6721)) {
       this.bh.aG.jdMethod_do(1);
       this.bh.aG.jdMethod_if();
     }
   }
-  
-  public void b()
-  {
-    if (this.bh.aG.jdMethod_int(6720))
-    {
+
+  public void b() {
+    if (this.bh.aG.jdMethod_int(6720)) {
       this.bh.aG.jdMethod_do(1);
       this.bh.aG.jdMethod_new(this.hP);
       this.bh.aG.jdMethod_if();
     }
     this.jdField_do = 21;
   }
-  
-  public void D()
-  {
+
+  public void D() {
     this.bh.i.jdMethod_for();
     this.j1 = -108;
     this.c9 = new String[] { "私聊", "资料", "赠送", "返回" };
     this.jdField_do = 21;
-    if (this.bh.aG.jdMethod_int(3560))
-    {
+    if (this.bh.aG.jdMethod_int(3560)) {
       this.bh.aG.jdMethod_for(this.kk);
       this.bh.aG.jdMethod_if();
     }
   }
-  
-  public void jdMethod_new(boolean paramBoolean)
-  {
+
+  public void jdMethod_new(boolean paramBoolean) {
     this.d0 = paramBoolean;
     this.bh.i.jdMethod_for();
     this.j1 = 14;
     this.c9 = new String[] { "出发", "返回" };
     this.ip.removeAllElements();
     this.bS.removeAllElements();
-    for (int i = 0; i < h.eK.length - (this.d0 ? 0 : 1); i = (byte)(i + 1))
-    {
+    for (int i = 0; i < h.eK.length - (this.d0 ? 0 : 1); i = (byte) (i + 1)) {
       this.ip.addElement(h.eK[i]);
-      this.bS.addElement(new Short((short)0));
+      this.bS.addElement(new Short((short) 0));
       if (!this.d0) {
-        for (int j = 0; j < this.bh.bR.d.size(); j = (byte)(j + 1))
-        {
-          ao localao = (ao)this.bh.bR.d.elementAt(j);
+        for (int j = 0; j < this.bh.bR.d.size(); j = (byte) (j + 1)) {
+          ao localao = (ao) this.bh.bR.d.elementAt(j);
           if ((localao.j > 0) && (localao.jdField_long > 0) && (localao.j == h.es[i])) {
-            this.bS.setElementAt(new Short((short)1), i);
+            this.bS.setElementAt(new Short((short) 1), i);
           }
         }
       }
-      if ((this.bh.cZ.a((byte)14) == 1) && (i == 0)) {
+      if ((this.bh.cZ.a((byte) 14) == 1) && (i == 0)) {
         break;
       }
     }
     this.jdField_do = 26;
   }
-  
-  public void a(byte paramByte1, byte paramByte2)
-  {
-    if (this.bh.aG.jdMethod_int(7102))
-    {
+
+  public void a(byte paramByte1, byte paramByte2) {
+    if (this.bh.aG.jdMethod_int(7102)) {
       this.bh.aG.jdMethod_do(paramByte1);
       this.bh.aG.jdMethod_do(paramByte2);
       this.bh.aG.jdMethod_if();
     }
     this.jdField_do = 21;
   }
-  
-  public void jdMethod_for(byte paramByte)
-  {
-    if (this.bh.aG.jdMethod_int(7101))
-    {
+
+  public void jdMethod_for(byte paramByte) {
+    if (this.bh.aG.jdMethod_int(7101)) {
       this.bh.aG.jdMethod_do(paramByte);
       this.bh.aG.jdMethod_if();
     }
     this.jdField_do = 21;
   }
-  
-  public void jdMethod_do(short paramShort, boolean paramBoolean)
-  {
+
+  public void jdMethod_do(short paramShort, boolean paramBoolean) {
     this.gL = paramBoolean;
     this.f2 = paramShort;
     this.bh.i.jdMethod_for();
@@ -4033,18 +3726,16 @@ public class g
     this.bS.removeAllElements();
     this.gC = new byte[this.bG];
     this.i2 = new boolean[this.bG];
-    for (int i = 0; i < this.bG; i = (byte)(i + 1))
-    {
+    for (int i = 0; i < this.bG; i = (byte) (i + 1)) {
       this.ip.addElement(this.eA[i]);
-      this.bS.addElement(new Short((short)this.cY[i]));
+      this.bS.addElement(new Short((short) this.cY[i]));
       this.gC[i] = this.eG[i];
       this.i2[i] = this.eg[i];
     }
     this.jdField_do = 26;
   }
-  
-  public void jdMethod_if(short paramShort, boolean paramBoolean)
-  {
+
+  public void jdMethod_if(short paramShort, boolean paramBoolean) {
     this.gL = paramBoolean;
     this.bW = paramShort;
     this.j1 = 90;
@@ -4055,143 +3746,124 @@ public class g
     }
     this.ip.removeAllElements();
     this.bS.removeAllElements();
-    for (int i = 0; i < this.mR; i = (byte)(i + 1)) {
+    for (int i = 0; i < this.mR; i = (byte) (i + 1)) {
       this.ip.addElement(this.k4[i]);
     }
     this.bh.i.jdMethod_for();
     this.jdField_do = 26;
   }
-  
-  public void s()
-  {
+
+  public void s() {
     this.bh.i.jdMethod_for();
     this.j1 = 29;
     this.c9 = new String[] { "批准", "拒绝", "返回" };
     this.jdField_do = 21;
-    if (this.bh.aG.jdMethod_int(3500))
-    {
+    if (this.bh.aG.jdMethod_int(3500)) {
       this.bh.aG.jdMethod_if(this.bh.cZ.O);
       this.bh.aG.jdMethod_if();
     }
   }
-  
-  public void jdMethod_do(byte paramByte)
-  {
+
+  public void jdMethod_do(byte paramByte) {
     this.bh.as = new aa(this.bh);
     this.dc = 0;
-    this.bO = this.bh.cZ.a((byte)0);
+    this.bO = this.bh.cZ.a((byte) 0);
     this.hB = paramByte;
-    if (!this.bh.bR.a((byte)5)) {
-      switch (paramByte)
-      {
-      case 0: 
-        if (this.d4 != null)
-        {
-          this.bh.i.jdMethod_byte();
-        }
-        else
-        {
-          if (this.bh.aG.jdMethod_int(6331))
-          {
-            this.bh.aG.jdMethod_for(this.jdField_if);
-            this.bh.aG.jdMethod_do(0);
-            this.bh.aG.jdMethod_if();
+    if (!this.bh.bR.a((byte) 5)) {
+      switch (paramByte) {
+        case 0:
+          if (this.d4 != null) {
+            this.bh.i.jdMethod_byte();
+          } else {
+            if (this.bh.aG.jdMethod_int(6331)) {
+              this.bh.aG.jdMethod_for(this.jdField_if);
+              this.bh.aG.jdMethod_do(0);
+              this.bh.aG.jdMethod_if();
+            }
+            this.jdField_int = 0;
+            this.jdField_do = 3;
           }
-          this.jdField_int = 0;
-          this.jdField_do = 3;
-        }
-        break;
-      case 1: 
-        this.bh.cZ.y();
-        byte b = 0;
-        short[] arrayOfShort1 = null;
-        for (int i = 0; i < 2; i = (byte)(i + 1))
-        {
-          b = 0;
-          for (j = 0; j < this.bh.cZ.gJ[0]; j = (byte)(j + 1)) {
-            if (!h.o(this.bh.cZ.gw[0][j]))
-            {
-              if (i == 1) {
-                arrayOfShort1[b] = this.bh.cZ.gw[0][j];
+          break;
+        case 1:
+          this.bh.cZ.y();
+          byte b = 0;
+          short[] arrayOfShort1 = null;
+          for (int i = 0; i < 2; i = (byte) (i + 1)) {
+            b = 0;
+            for (j = 0; j < this.bh.cZ.gJ[0]; j = (byte) (j + 1)) {
+              if (!h.o(this.bh.cZ.gw[0][j])) {
+                if (i == 1) {
+                  arrayOfShort1[b] = this.bh.cZ.gw[0][j];
+                }
+                b = (byte) (b + 1);
               }
-              b = (byte)(b + 1);
+            }
+            if (i == 0) {
+              arrayOfShort1 = new short[b];
             }
           }
-          if (i == 0) {
-            arrayOfShort1 = new short[b];
+          this.bh.i.a(1, (byte) 0, b, arrayOfShort1, new short[arrayOfShort1.length]);
+          short[] arrayOfShort2 = new short[this.bh.cZ.gJ[0]];
+          System.arraycopy(this.bh.cZ.gw[0], 0, arrayOfShort2, 0, this.bh.cZ.gJ[0]);
+          this.bh.i.a(arrayOfShort2, true);
+          for (int j = 0; j < this.bs[0]; j = (byte) (j + 1)) {
+            this.lK[0][j] = (this.bh.L(this.nl[0][j]) / 2);
           }
-        }
-        this.bh.i.a(1, (byte)0, b, arrayOfShort1, new short[arrayOfShort1.length]);
-        short[] arrayOfShort2 = new short[this.bh.cZ.gJ[0]];
-        System.arraycopy(this.bh.cZ.gw[0], 0, arrayOfShort2, 0, this.bh.cZ.gJ[0]);
-        this.bh.i.a(arrayOfShort2, true);
-        for (int j = 0; j < this.bs[0]; j = (byte)(j + 1)) {
-          this.lK[0][j] = (this.bh.L(this.nl[0][j]) / 2);
-        }
-        this.jdField_do = 95;
+          this.jdField_do = 95;
       }
     }
   }
-  
-  public void z()
-  {
-    if (!this.bh.cZ.a8)
-    {
-      if (this.bh.cZ.gJ[0] > 0)
-      {
-        this.bO = this.bh.cZ.a((byte)0);
+
+  public void z() {
+    if (!this.bh.cZ.a8) {
+      if (this.bh.cZ.gJ[0] > 0) {
+        this.bO = this.bh.cZ.a((byte) 0);
         this.bh.cZ.y();
         byte b = 0;
         short[] arrayOfShort1 = null;
-        for (int i = 0; i < 2; i = (byte)(i + 1))
-        {
+        for (int i = 0; i < 2; i = (byte) (i + 1)) {
           b = 0;
-          for (j = 0; j < this.bh.cZ.gJ[0]; j = (byte)(j + 1)) {
-            if (!h.o(this.bh.cZ.gw[0][j]))
-            {
+          for (j = 0; j < this.bh.cZ.gJ[0]; j = (byte) (j + 1)) {
+            if (!h.o(this.bh.cZ.gw[0][j])) {
               if (i == 1) {
                 arrayOfShort1[b] = this.bh.cZ.gw[0][j];
               }
-              b = (byte)(b + 1);
+              b = (byte) (b + 1);
             }
           }
           if (i == 0) {
             arrayOfShort1 = new short[b];
           }
         }
-        this.bh.i.a(1, (byte)0, b, arrayOfShort1, new short[arrayOfShort1.length]);
+        this.bh.i.a(1, (byte) 0, b, arrayOfShort1, new short[arrayOfShort1.length]);
         short[] arrayOfShort2 = new short[this.bh.cZ.gJ[0]];
         System.arraycopy(this.bh.cZ.gw[0], 0, arrayOfShort2, 0, this.bh.cZ.gJ[0]);
         this.bh.i.a(arrayOfShort2, true);
-        for (int j = 0; j < this.bs[0]; j = (byte)(j + 1)) {
+        for (int j = 0; j < this.bs[0]; j = (byte) (j + 1)) {
           this.lK[0][j] = (this.bh.L(this.nl[0][j]) / 2);
         }
         this.jdField_do = 6;
-      }
-      else
-      {
+      } else {
         this.lt = "背包里没有能卖的东西.";
-        a(this.lt, (short)0, false, 9999);
+        a(this.lt, (short) 0, false, 9999);
       }
-    }
-    else
-    {
+    } else {
       if ((this.bh.cZ.a8) && (this.bh.cZ.d != 0)) {
         return;
       }
-      if (this.bh.aG.jdMethod_int(6784))
-      {
+      if (this.bh.aG.jdMethod_int(6784)) {
         this.bh.aG.jdMethod_for(this.mw);
         this.bh.aG.jdMethod_if();
       }
       this.jdField_do = 21;
     }
   }
-//其他案例
-  //this.b.a(str + "只允许领取1个任务,必须完成或放弃已接受的任务才能领取新任务.在菜单->个人->任务中查看你要完成的任务.", (short)11, false, 9999);
-  //可能是屏幕绘制文字函数
-  public void a(String paramString, short paramShort, boolean paramBoolean, int paramInt)
-  {
+
+  // 其他案例
+  // this.b.a(str + "只允许领取1个任务,必须完成或放弃已接受的任务才能领取新任务.在菜单->个人->任务中查看你要完成的任务.",
+  // (short)11, false, 9999);
+  // 可能是屏幕绘制文字函数
+  public void a(String paramString, short paramShort, boolean paramBoolean, int paramInt) {
     this.eP = paramInt;
     gf = 0;
     this.lt = paramString;
@@ -4200,249 +3872,225 @@ public class g
     this.jdField_int = 0;
     this.jdField_do = 98;
   }
-  
-  public void jdMethod_try(byte paramByte)
-  {
-    switch (paramByte)
-    {
-    case 0: 
-      this.bh.br = null;
-      this.bh.br = new ac(this.bh);
-      this.jdField_do = 30;
-      break;
-    case 1: 
-      this.e0 = new c(this.bh);
-      this.jdField_do = 74;
-      break;
-    case 2: 
-      if (this.bh.aG.jdMethod_int(1005))
-      {
-        this.bh.aG.jdMethod_do(2);
-        this.bh.aG.jdMethod_if();
-      }
-      this.jdField_do = 21;
-      break;
-    case 3: 
-      if (h.fh == 1)
-      {
-        a("该功能暂时关闭.", (short)0, false, 9999);
-        return;
-      }
-      z();
-      break;
-    case 4: 
-      this.jj = new n(this.bh);
-      this.jdField_do = 50;
-      break;
-    case 5: 
-      p();
-      break;
-    case 10: 
-      this.bh.L();
-      this.mz = 0;
-      this.bf = 0;
-      this.jdField_do = -34;
-      break;
-    case 12: 
-      if (h.aw == 1)
-      {
-        a("该功能暂时关闭.", (short)0, false, 9999);
-        return;
-      }
-      if (!this.bh.cZ.a8)
-      {
-        if (this.bh.jdField_try <= 0) {
-          return;
-        }
-        int i = 0;
-        for (int j = 0; j < this.bh.jdField_try; j = (byte)(j + 1)) {
-          if (this.bh.b7[j].a((byte)12) == 0) {
-            i = 1;
-          }
-        }
-        if (i == 0)
-        {
-          a("没有可用于交易的宠物.(处于封印状态下的宠物才可交易)", (short)0, false, 9999);
-        }
-        else
-        {
-          this.bh.L();
-          this.mz = 0;
-          this.bf = 0;
-          this.bh.ee = new int[this.bh.jdField_try];
-          this.bh.f3 = new boolean[this.bh.jdField_try];
-          this.bh.di = new j(this.bh);
-          this.jdField_do = -58;
-        }
-      }
-      else
-      {
-        if ((this.bh.cZ.a8) && (this.bh.cZ.d != 1)) {
-          return;
-        }
-        if (this.bh.aG.jdMethod_int(4057))
-        {
-          this.bh.aG.jdMethod_for(this.mw);
+
+  public void jdMethod_try(byte paramByte) {
+    switch (paramByte) {
+      case 0:
+        this.bh.br = null;
+        this.bh.br = new ac(this.bh);
+        this.jdField_do = 30;
+        break;
+      case 1:
+        this.e0 = new c(this.bh);
+        this.jdField_do = 74;
+        break;
+      case 2:
+        if (this.bh.aG.jdMethod_int(1005)) {
+          this.bh.aG.jdMethod_do(2);
           this.bh.aG.jdMethod_if();
         }
         this.jdField_do = 21;
-      }
-      break;
-    case 20: 
-      jdMethod_for(false);
-      break;
-    case 21: 
-      if (!this.bh.cZ.gE)
-      {
-        a("你不在组队状态.", (short)0, false, 9999);
-      }
-      else
-      {
-        this.nd = 0;
-        this.jdField_do = 56;
-      }
-      break;
-    case 22: 
-      this.l4 = 0;
-      this.jdField_do = 122;
-      break;
-    case 23: 
-      s();
-      break;
-    case 24: 
-      jdMethod_for((byte)0);
-      break;
-    case 25: 
-      this.kk = 0;
-      this.jdField_do = 127;
-      break;
-    case 30: 
-      if (this.jdField_if > 2) {
-        this.bh.i.jdMethod_if(null, (byte)0);
-      }
-      break;
-    case 31: 
-      jdMethod_do((short)0, false);
-      break;
-    case 32: 
-      jdMethod_if((short)0, false);
-      break;
-    case 33: 
-      G();
-      break;
-    case 40: 
-      this.bh.i.jdMethod_case(0);
-      break;
-    case 41: 
-      this.bh.i.jdMethod_case(1);
-      break;
-    case 42: 
-    case 50: 
-      this.e3 = 0;
-      this.bh.bv = new e(this.bh);
-      this.bh.bv.jdField_do = 0;
-      this.jdField_do = -36;
-      break;
-    case 51: 
-      l();
-      break;
-    case 52: 
-      H();
-      break;
-    case 53: 
-      jdMethod_for((byte)1);
-      break;
-    case 54: 
-      this.bh.i.jdMethod_if("系统", (byte)0);
-      break;
-    case 55: 
-      if (this.bh.aG.jdMethod_int(1016))
-      {
-        this.bh.aG.jdMethod_new(this.jdField_if);
-        this.bh.aG.jdMethod_if();
-      }
-      this.jdField_do = 21;
-      break;
-    case 60: 
-      if (this.bh.aG.jdMethod_int(6718))
-      {
-        this.bh.aG.jdMethod_do(0);
-        this.bh.aG.jdMethod_if();
-      }
-      this.jdField_do = 21;
-      break;
-    case 61: 
-      if (!this.bh.cZ.g4)
-      {
-        this.bH = true;
-        gf = 0;
+        break;
+      case 3:
+        if (h.fh == 1) {
+          a("该功能暂时关闭.", (short) 0, false, 9999);
+          return;
+        }
+        z();
+        break;
+      case 4:
+        this.jj = new n(this.bh);
+        this.jdField_do = 50;
+        break;
+      case 5:
+        p();
+        break;
+      case 10:
+        this.bh.L();
+        this.mz = 0;
+        this.bf = 0;
+        this.jdField_do = -34;
+        break;
+      case 12:
+        if (h.aw == 1) {
+          a("该功能暂时关闭.", (short) 0, false, 9999);
+          return;
+        }
+        if (!this.bh.cZ.a8) {
+          if (this.bh.jdField_try <= 0) {
+            return;
+          }
+          int i = 0;
+          for (int j = 0; j < this.bh.jdField_try; j = (byte) (j + 1)) {
+            if (this.bh.b7[j].a((byte) 12) == 0) {
+              i = 1;
+            }
+          }
+          if (i == 0) {
+            a("没有可用于交易的宠物.(处于封印状态下的宠物才可交易)", (short) 0, false, 9999);
+          } else {
+            this.bh.L();
+            this.mz = 0;
+            this.bf = 0;
+            this.bh.ee = new int[this.bh.jdField_try];
+            this.bh.f3 = new boolean[this.bh.jdField_try];
+            this.bh.di = new j(this.bh);
+            this.jdField_do = -58;
+          }
+        } else {
+          if ((this.bh.cZ.a8) && (this.bh.cZ.d != 1)) {
+            return;
+          }
+          if (this.bh.aG.jdMethod_int(4057)) {
+            this.bh.aG.jdMethod_for(this.mw);
+            this.bh.aG.jdMethod_if();
+          }
+          this.jdField_do = 21;
+        }
+        break;
+      case 20:
+        jdMethod_for(false);
+        break;
+      case 21:
+        if (!this.bh.cZ.gE) {
+          a("你不在组队状态.", (short) 0, false, 9999);
+        } else {
+          this.nd = 0;
+          this.jdField_do = 56;
+        }
+        break;
+      case 22:
+        this.l4 = 0;
+        this.jdField_do = 122;
+        break;
+      case 23:
+        s();
+        break;
+      case 24:
+        jdMethod_for((byte) 0);
+        break;
+      case 25:
+        this.kk = 0;
+        this.jdField_do = 127;
+        break;
+      case 30:
+        if (this.jdField_if > 2) {
+          this.bh.i.jdMethod_if(null, (byte) 0);
+        }
+        break;
+      case 31:
+        jdMethod_do((short) 0, false);
+        break;
+      case 32:
+        jdMethod_if((short) 0, false);
+        break;
+      case 33:
+        G();
+        break;
+      case 40:
+        this.bh.i.jdMethod_case(0);
+        break;
+      case 41:
+        this.bh.i.jdMethod_case(1);
+        break;
+      case 42:
+      case 50:
         this.e3 = 0;
-        this.jdField_do = -123;
-      }
-      else
-      {
-        q();
-      }
-      break;
-    case 62: 
-      a("如何申请VIP?\001 1.您可以通过主菜单->VIP->申请功能,使用星币,激活VIP特殊权限.(如果星币不足,可使用主菜单->系统->充值功能,进行充值.)\001 2.VIP特殊权限有三种激活方式,分别为10元/月,30元/6月,50元/12月,可任选其一进行激活.(激活的时间越久,所获得的优惠幅度越大.)\001 成为VIP有什么好处?\001 1.VIP用户可使用游戏币不限数量的购买商城中的任意商品.使您更加便捷的进行游戏.\001 2.VIP用户每次登陆根据离线时间可获得离线经验的奖励,助你快速升级.\001 3.VIP用户可获得独有的VIP图标,从而彰显你的尊贵.", (short)0, false, 9999);
+        this.bh.bv = new e(this.bh);
+        this.bh.bv.jdField_do = 0;
+        this.jdField_do = -36;
+        break;
+      case 51:
+        l();
+        break;
+      case 52:
+        H();
+        break;
+      case 53:
+        jdMethod_for((byte) 1);
+        break;
+      case 54:
+        this.bh.i.jdMethod_if("系统", (byte) 0);
+        break;
+      case 55:
+        if (this.bh.aG.jdMethod_int(1016)) {
+          this.bh.aG.jdMethod_new(this.jdField_if);
+          this.bh.aG.jdMethod_if();
+        }
+        this.jdField_do = 21;
+        break;
+      case 60:
+        if (this.bh.aG.jdMethod_int(6718)) {
+          this.bh.aG.jdMethod_do(0);
+          this.bh.aG.jdMethod_if();
+        }
+        this.jdField_do = 21;
+        break;
+      case 61:
+        if (!this.bh.cZ.g4) {
+          this.bH = true;
+          gf = 0;
+          this.e3 = 0;
+          this.jdField_do = -123;
+        } else {
+          q();
+        }
+        break;
+      case 62:
+        a("如何申请VIP?\001 1.您可以通过主菜单->VIP->申请功能,使用星币,激活VIP特殊权限.(如果星币不足,可使用主菜单->系统->充值功能,进行充值.)\001 2.VIP特殊权限有三种激活方式,分别为10元/月,30元/6月,50元/12月,可任选其一进行激活.(激活的时间越久,所获得的优惠幅度越大.)\001 成为VIP有什么好处?\001 1.VIP用户可使用游戏币不限数量的购买商城中的任意商品.使您更加便捷的进行游戏.\001 2.VIP用户每次登陆根据离线时间可获得离线经验的奖励,助你快速升级.\001 3.VIP用户可获得独有的VIP图标,从而彰显你的尊贵.",
+            (short) 0, false, 9999);
     }
   }
-  
-  public void jdMethod_new(int paramInt)
-  {
-    switch (paramInt)
-    {
-    case 4: 
-    case 5: 
-    case 6: 
-    case 48: 
-    case 49: 
-    case 51: 
-    case 55: 
-    case 57: 
-      int i = this.bh.jdMethod_do(paramInt, h.dh.length);
-      if (i < 0) {
-        return;
-      }
-      if (i > 0) {
-        this.fQ = ((byte)i);
-      }
-      switch (this.fQ)
-      {
-      case 0: 
-      case 1: 
-      case 2: 
-      case 3: 
-      case 4: 
-      case 5: 
-      case 6: 
-        this.f3 = 0;
-        this.jdField_do = 2;
-      }
-      break;
-    case 7: 
-      this.jdField_do = 0;
-      break;
-    case 2: 
-      this.fQ = ((byte)(this.fQ + 1));
-      if (this.fQ == h.dh.length) {
-        this.fQ = 0;
-      }
-      break;
-    case 1: 
-      this.fQ = ((byte)(this.fQ - 1));
-      if (this.fQ < 0) {
-        this.fQ = ((byte)(h.dh.length - 1));
-      }
-      break;
+
+  public void jdMethod_new(int paramInt) {
+    switch (paramInt) {
+      case 4:
+      case 5:
+      case 6:
+      case 48:
+      case 49:
+      case 51:
+      case 55:
+      case 57:
+        int i = this.bh.jdMethod_do(paramInt, h.dh.length);
+        if (i < 0) {
+          return;
+        }
+        if (i > 0) {
+          this.fQ = ((byte) i);
+        }
+        switch (this.fQ) {
+          case 0:
+          case 1:
+          case 2:
+          case 3:
+          case 4:
+          case 5:
+          case 6:
+            this.f3 = 0;
+            this.jdField_do = 2;
+        }
+        break;
+      case 7:
+        this.jdField_do = 0;
+        break;
+      case 2:
+        this.fQ = ((byte) (this.fQ + 1));
+        if (this.fQ == h.dh.length) {
+          this.fQ = 0;
+        }
+        break;
+      case 1:
+        this.fQ = ((byte) (this.fQ - 1));
+        if (this.fQ < 0) {
+          this.fQ = ((byte) (h.dh.length - 1));
+        }
+        break;
     }
   }
-  
-  public void A()
-  {
-    if (this.bh.aG.jdMethod_int(3507))
-    {
+
+  public void A() {
+    if (this.bh.aG.jdMethod_int(3507)) {
       this.bh.aG.jdMethod_for(this.bh.cZ.gz);
       this.bh.aG.jdMethod_if(this.bh.cZ.O);
       this.bh.aG.jdMethod_if();
@@ -4452,70 +4100,62 @@ public class g
     this.bh.cZ.gE = false;
     this.bh.cZ.dU = false;
   }
-  
-  public void jdMethod_try(int paramInt)
-  {
-    switch (paramInt)
-    {
-    case 3: 
-    case 7: 
-      this.jdField_do = 1;
-      break;
-    case 1: 
-      this.f3 = ((byte)(this.f3 - 1));
-      if (this.f3 < 0) {
-        this.f3 = ((byte)(h.cg[this.fQ].length - 1));
-      }
-      break;
-    case 2: 
-      this.f3 = ((byte)(this.f3 + 1));
-      if (this.f3 > (byte)(h.cg[this.fQ].length - 1)) {
-        this.f3 = 0;
-      }
-      break;
-    case 5: 
-    case 6: 
-    case 48: 
-    case 49: 
-    case 51: 
-    case 55: 
-    case 57: 
-      int i = this.bh.jdMethod_do(paramInt, h.cg[this.fQ].length);
-      if (i < 0) {
-        return;
-      }
-      if (i > 0) {
-        this.f3 = ((byte)i);
-      }
-      if ((h.cz) && (this.fQ == 5)) {
-        this.f3 = ((byte)(this.f3 + 1));
-      }
-      jdMethod_try((byte)(this.fQ * 10 + this.f3));
-      break;
-    case 4: 
-      if (this.fQ == 2) {
-        if ((this.f3 == 1) && (this.bh.cZ.gE))
-        {
-          this.nd = 0;
-          this.jdField_do = 56;
+
+  public void jdMethod_try(int paramInt) {
+    switch (paramInt) {
+      case 3:
+      case 7:
+        this.jdField_do = 1;
+        break;
+      case 1:
+        this.f3 = ((byte) (this.f3 - 1));
+        if (this.f3 < 0) {
+          this.f3 = ((byte) (h.cg[this.fQ].length - 1));
         }
-        else if (this.f3 == 2)
-        {
-          this.l4 = 0;
-          this.jdField_do = 122;
+        break;
+      case 2:
+        this.f3 = ((byte) (this.f3 + 1));
+        if (this.f3 > (byte) (h.cg[this.fQ].length - 1)) {
+          this.f3 = 0;
         }
-        else if (this.f3 == 5)
-        {
-          this.kk = 0;
-          this.jdField_do = 127;
+        break;
+      case 5:
+      case 6:
+      case 48:
+      case 49:
+      case 51:
+      case 55:
+      case 57:
+        int i = this.bh.jdMethod_do(paramInt, h.cg[this.fQ].length);
+        if (i < 0) {
+          return;
         }
-      }
-      break;
+        if (i > 0) {
+          this.f3 = ((byte) i);
+        }
+        if ((h.cz) && (this.fQ == 5)) {
+          this.f3 = ((byte) (this.f3 + 1));
+        }
+        jdMethod_try((byte) (this.fQ * 10 + this.f3));
+        break;
+      case 4:
+        if (this.fQ == 2) {
+          if ((this.f3 == 1) && (this.bh.cZ.gE)) {
+            this.nd = 0;
+            this.jdField_do = 56;
+          } else if (this.f3 == 2) {
+            this.l4 = 0;
+            this.jdField_do = 122;
+          } else if (this.f3 == 5) {
+            this.kk = 0;
+            this.jdField_do = 127;
+          }
+        }
+        break;
     }
   }
-  
-  public void I()
-  {
+
+  public void I() {
     if (this.jdField_do != 0) {
       return;
     }
@@ -4523,74 +4163,67 @@ public class g
       return;
     }
     int i;
-    if (this.bh.aG.jdMethod_int(1018))
-    {
+    if (this.bh.aG.jdMethod_int(1018)) {
       i = 1;
       int j = 0;
       int k = 0;
       int m = 0;
       int n = 0;
-      if ((a3.jdMethod_do(this.gk, a.C) == this.jdField_if) && (a3.jdMethod_do(this.k5, a.C) == this.bh.cZ.aP) && (a3.jdMethod_do(this.k3, a.C) == this.bh.cZ.aM)) {
+      if ((a3.jdMethod_do(this.gk, a.C) == this.jdField_if) && (a3.jdMethod_do(this.k5, a.C) == this.bh.cZ.aP)
+          && (a3.jdMethod_do(this.k3, a.C) == this.bh.cZ.aM)) {
         i = 0;
       }
-      if (i != 0)
-      {
-        n = (byte)(n | 0x1);
+      if (i != 0) {
+        n = (byte) (n | 0x1);
         this.gk = a3.jdMethod_new(this.jdField_if, a.C);
         this.k5 = a3.jdMethod_new(this.bh.cZ.aP, a.C);
         this.k3 = a3.jdMethod_new(this.bh.cZ.aM, a.C);
       }
       if (this.bh.cZ.hv) {
-        n = (byte)(n | 0x2);
+        n = (byte) (n | 0x2);
       }
-      if (this.er != this.bh.cZ.a((byte)16))
-      {
+      if (this.er != this.bh.cZ.a((byte) 16)) {
         j = 1;
-        n = (byte)(n | 0x4);
-        this.er = this.bh.cZ.a((byte)16);
+        n = (byte) (n | 0x4);
+        this.er = this.bh.cZ.a((byte) 16);
       }
-      if (this.da != this.bh.cZ.a((byte)24))
-      {
+      if (this.da != this.bh.cZ.a((byte) 24)) {
         k = 1;
-        n = (byte)(n | 0x8);
-        this.da = this.bh.cZ.a((byte)24);
+        n = (byte) (n | 0x8);
+        this.da = this.bh.cZ.a((byte) 24);
       }
-      if (this.fm != this.bh.cZ.a((byte)12))
-      {
+      if (this.fm != this.bh.cZ.a((byte) 12)) {
         m = 1;
-        n = (byte)(n | 0x10);
-        this.fm = this.bh.cZ.a((byte)12);
+        n = (byte) (n | 0x10);
+        this.fm = this.bh.cZ.a((byte) 12);
       }
       this.bh.aG.jdMethod_do(n);
-      if (i != 0)
-      {
+      if (i != 0) {
         this.bh.aG.jdMethod_new(this.jdField_if);
         this.bh.aG.jdMethod_new(this.bh.cZ.aP);
         this.bh.aG.jdMethod_new(this.bh.cZ.aM);
       }
       if (j != 0) {
-        this.bh.aG.jdMethod_for(this.bh.cZ.a((byte)16));
+        this.bh.aG.jdMethod_for(this.bh.cZ.a((byte) 16));
       }
       if (k != 0) {
-        this.bh.aG.jdMethod_new(this.bh.cZ.a((byte)24));
+        this.bh.aG.jdMethod_new(this.bh.cZ.a((byte) 24));
       }
       if (m != 0) {
-        this.bh.aG.jdMethod_new(this.bh.cZ.a((byte)12));
+        this.bh.aG.jdMethod_new(this.bh.cZ.a((byte) 12));
       }
       this.bh.aG.jdMethod_if();
     }
-    if (this.bh.eO)
-    {
-      if (this.bh.aG.jdMethod_int(1019))
-      {
+    if (this.bh.eO) {
+      if (this.bh.aG.jdMethod_int(1019)) {
         this.bh.aG.jdMethod_do(1);
-        for (i = 0; i < this.bh.cZ.jdField_case.length; i = (byte)(i + 1)) {
+        for (i = 0; i < this.bh.cZ.jdField_case.length; i = (byte) (i + 1)) {
           this.bh.aG.jdMethod_do(this.bh.cZ.jdField_case[i]);
         }
-        for (i = 0; i < h.c7.length; i = (byte)(i + 1)) {
+        for (i = 0; i < h.c7.length; i = (byte) (i + 1)) {
           this.bh.aG.jdMethod_do(h.c7[i] != 0 ? 1 : 0);
         }
-        for (i = 0; i < this.bh.cZ.a7.length; i = (byte)(i + 1)) {
+        for (i = 0; i < this.bh.cZ.a7.length; i = (byte) (i + 1)) {
           this.bh.aG.jdMethod_new(this.bh.cZ.a7[i]);
         }
         this.bh.aG.jdMethod_new(this.bh.cZ.a(0));
@@ -4599,24 +4232,21 @@ public class g
         this.bh.aG.jdMethod_new(this.bh.cZ.a(3));
         this.bh.aG.jdMethod_do(this.bh.cZ.hP);
         this.bh.aG.jdMethod_do(this.bh.cZ.hO);
-        for (i = 0; i < this.bh.cZ.hT.length; i = (byte)(i + 1)) {
+        for (i = 0; i < this.bh.cZ.hT.length; i = (byte) (i + 1)) {
           this.bh.aG.jdMethod_do(this.bh.cZ.hT[i]);
         }
-        if (this.bh.cZ.gR != null)
-        {
+        if (this.bh.cZ.gR != null) {
           this.bh.aG.jdMethod_do(1);
-          this.bh.aG.jdMethod_for(this.bh.cZ.gR.a((byte)0));
-          this.bh.aG.jdMethod_new(this.bh.cZ.gR.a((byte)28));
-          this.bh.aG.jdMethod_new(this.bh.cZ.gR.a((byte)30));
-          this.bh.aG.jdMethod_new(this.bh.cZ.gR.a((byte)32));
-          this.bh.aG.jdMethod_new(this.bh.cZ.gR.a((byte)34));
+          this.bh.aG.jdMethod_for(this.bh.cZ.gR.a((byte) 0));
+          this.bh.aG.jdMethod_new(this.bh.cZ.gR.a((byte) 28));
+          this.bh.aG.jdMethod_new(this.bh.cZ.gR.a((byte) 30));
+          this.bh.aG.jdMethod_new(this.bh.cZ.gR.a((byte) 32));
+          this.bh.aG.jdMethod_new(this.bh.cZ.gR.a((byte) 34));
           this.bh.aG.jdMethod_new(this.bh.a(this.bh.cZ.gR, 0));
           this.bh.aG.jdMethod_new(this.bh.a(this.bh.cZ.gR, 1));
           this.bh.aG.jdMethod_new(this.bh.a(this.bh.cZ.gR, 2));
           this.bh.aG.jdMethod_new(this.bh.a(this.bh.cZ.gR, 3));
-        }
-        else
-        {
+        } else {
           this.bh.aG.jdMethod_do(0);
         }
         this.bh.aG.jdMethod_if();
@@ -4624,11 +4254,9 @@ public class g
       this.bh.eO = false;
     }
   }
-  
-  public void jdMethod_do(String paramString)
-  {
-    synchronized (this.kP)
-    {
+
+  public void jdMethod_do(String paramString) {
+    synchronized (this.kP) {
       String str = "[" + b6[3] + "]" + "系统0:" + paramString;
       if (this.kP.size() > 2) {
         this.kP.insertElementAt(str, 1);
@@ -4637,9 +4265,9 @@ public class g
       }
     }
   }
-  
-  //pak解包程序
-  // a(2508, 0, localDataInputStream);  场景参数
+
+  // pak解包程序
+  // a(2508, 0, localDataInputStream); 场景参数
   public void a(int paramInt1, int paramInt2, DataInputStream paramDataInputStream)
   {
     ;
@@ -8264,15 +7892,13 @@ public class g
       paramDataInputStream = null;
     }
   }
-  
-  public void J()
-  {
-    if (this.bh.aG.jdMethod_int(1007))
-    {
+
+  public void J() {
+    if (this.bh.aG.jdMethod_int(1007)) {
       this.bh.aG.jdMethod_new(this.jdField_if);
       this.bh.aG.jdMethod_new(this.bh.cZ.aP);
       this.bh.aG.jdMethod_new(this.bh.cZ.aM);
-      for (int i = 0; i < this.bh.cZ.jdField_case.length; i = (byte)(i + 1)) {
+      for (int i = 0; i < this.bh.cZ.jdField_case.length; i = (byte) (i + 1)) {
         this.bh.aG.jdMethod_do(this.bh.cZ.jdField_case[i]);
       }
       this.bh.aG.jdMethod_if();
@@ -8281,9 +7907,8 @@ public class g
     this.lm = true;
     this.jdField_do = 44;
   }
-  
-  public void jdMethod_if(byte paramByte)
-  {
+
+  public void jdMethod_if(byte paramByte) {
     this.iG[paramByte] = this.iG[(this.kT - 1)];
     this.mX[paramByte] = this.mX[(this.kT - 1)];
     this.mW[paramByte] = this.mW[(this.kT - 1)];
@@ -8314,14 +7939,16 @@ public class g
     this.k7[paramByte] = this.k7[(this.kT - 1)];
     this.gh[paramByte] = this.gh[(this.kT - 1)];
     this.fy[paramByte] = this.fy[(this.kT - 1)];
-    this.kT = ((short)(this.kT - 1));
+    this.kT = ((short) (this.kT - 1));
   }
-  
-  public void a(int paramInt1, byte paramByte1, byte paramByte2, String paramString1, short paramShort1, short paramShort2, short[] paramArrayOfShort, byte paramByte3, short paramShort3, short paramShort4, short paramShort5, short paramShort6, short paramShort7, short paramShort8, short paramShort9, int paramInt2, byte paramByte4, byte paramByte5, String paramString2, boolean paramBoolean1, boolean paramBoolean2, boolean paramBoolean3, byte paramByte6, byte paramByte7, byte paramByte8)
-  {
-    for (int i = 0; i < this.kT; i = (byte)(i + 1)) {
-      if (paramInt1 == this.co[i])
-      {
+
+  public void a(int paramInt1, byte paramByte1, byte paramByte2, String paramString1, short paramShort1,
+      short paramShort2, short[] paramArrayOfShort, byte paramByte3, short paramShort3, short paramShort4,
+      short paramShort5, short paramShort6, short paramShort7, short paramShort8, short paramShort9, int paramInt2,
+      byte paramByte4, byte paramByte5, String paramString2, boolean paramBoolean1, boolean paramBoolean2,
+      boolean paramBoolean3, byte paramByte6, byte paramByte7, byte paramByte8) {
+    for (int i = 0; i < this.kT; i = (byte) (i + 1)) {
+      if (paramInt1 == this.co[i]) {
         this.dq[i] = paramShort9;
         this.k9[i] = paramBoolean1;
         this.gT[i] = paramBoolean2;
@@ -8346,7 +7973,7 @@ public class g
     this.jn[this.kT] = paramByte7;
     this.jm[this.kT] = paramByte8;
     this.jC[this.kT] = paramArrayOfShort;
-    this.iD[this.kT] = ((short)paramByte3);
+    this.iD[this.kT] = ((short) paramByte3);
     this.fz[this.kT] = paramShort3;
     this.g5[this.kT] = paramShort4;
     this.kA[this.kT] = paramShort5;
@@ -8361,92 +7988,73 @@ public class g
     this.dQ[this.kT] = 0;
     this.en[this.kT] = paramBoolean3;
     this.hQ[this.kT] = paramByte6;
-    this.kT = ((short)(this.kT + 1));
+    this.kT = ((short) (this.kT + 1));
   }
-  
-  public synchronized boolean jdMethod_new(byte paramByte)
-  {
+
+  public synchronized boolean jdMethod_new(byte paramByte) {
     boolean bool = true;
-    try
-    {
-      this.lo = ((MessageConnection)Connector.open("sms://" + dM[paramByte]));
-      TextMessage localTextMessage = (TextMessage)this.lo.newMessage("text");
+    try {
+      this.lo = ((MessageConnection) Connector.open("sms://" + dM[paramByte]));
+      TextMessage localTextMessage = (TextMessage) this.lo.newMessage("text");
       localTextMessage.setPayloadText(eo[paramByte]);
       this.lo.send(localTextMessage);
       this.lo.close();
-      if (this.bh.aG.jdMethod_int(8108))
-      {
+      if (this.bh.aG.jdMethod_int(8108)) {
         this.bh.aG.jdMethod_if(dM[paramByte]);
         this.bh.aG.jdMethod_if();
       }
-    }
-    catch (Exception localException)
-    {
+    } catch (Exception localException) {
       bool = false;
     }
     return bool;
   }
-  
-  public boolean a(short paramShort)
-  {
+
+  public boolean a(short paramShort) {
     DataInputStream localDataInputStream = null;
-    try
-    {
-      localDataInputStream = new DataInputStream(getClass().getResourceAsStream("/local/scene" + paramShort + "_" + "high" + ".local"));
+    try {
+      localDataInputStream = new DataInputStream(
+          getClass().getResourceAsStream("/local/scene" + paramShort + "_" + "high" + ".local"));
       localDataInputStream.skip(2L);
       boolean bool1 = true;
       return bool1;
-    }
-    catch (Exception localException1)
-    {
+    } catch (Exception localException1) {
       boolean bool2 = false;
       return bool2;
-    }
-    finally
-    {
+    } finally {
       if (localDataInputStream != null) {
-        try
-        {
+        try {
           localDataInputStream.close();
+        } catch (Exception localException4) {
         }
-        catch (Exception localException4) {}
       }
       localDataInputStream = null;
     }
   }
-  
-  public void m()
-  {
-    if (this.dg >= this.em)
-    {
-      a("当前页已经是最后一页.", (short)11, false, 9999);
-    }
-    else
-    {
-      this.dg = ((short)(this.dg + 1));
+
+  public void m() {
+    if (this.dg >= this.em) {
+      a("当前页已经是最后一页.", (short) 11, false, 9999);
+    } else {
+      this.dg = ((short) (this.dg + 1));
       this.bh.q(this.bh.ck.jdField_new);
     }
   }
-  
-  public void B()
-  {
-    if (this.dg <= 1)
-    {
-      a("当前页已经是第一页.", (short)11, false, 9999);
-    }
-    else
-    {
-      this.dg = ((short)(this.dg - 1));
+
+  public void B() {
+    if (this.dg <= 1) {
+      a("当前页已经是第一页.", (short) 11, false, 9999);
+    } else {
+      this.dg = ((short) (this.dg - 1));
       this.bh.q(this.bh.ck.jdField_new);
     }
   }
-  
+
   public boolean O()
   {
     this.bh.cZ.f((byte)a.char);
     return (a3.jdMethod_do(this.bh.cZ.hh, a.t) < ag.g2) && (this.bh.cZ.ax());
   }
-  
+
   public boolean N()
   {
     this.bh.cZ.f((byte)a.t);
@@ -8457,25 +8065,21 @@ public class g
     }
     return false;
   }
-  
-  public void jdMethod_do(String paramString1, String paramString2)
-  {
-    if (paramString1 != null)
-    {
-      this.bh.a((byte)2, 0, h.fp - 22, 45, 22, true);
+
+  public void jdMethod_do(String paramString1, String paramString2) {
+    if (paramString1 != null) {
+      this.bh.a((byte) 2, 0, h.fp - 22, 45, 22, true);
       this.bh.fj.setColor(0);
       this.bh.fj.drawString(paramString1, 22, h.fp - 3, 33);
     }
-    if (paramString2 != null)
-    {
-      this.bh.a((byte)2, h.dU - 45, h.fp - 22, 45, 22, true);
+    if (paramString2 != null) {
+      this.bh.a((byte) 2, h.dU - 45, h.fp - 22, 45, 22, true);
       this.bh.fj.setColor(0);
       this.bh.fj.drawString(paramString2, h.dU - 22, h.fp - 3, 33);
     }
   }
-  
-  public void p()
-  {
+
+  public void p() {
     this.gd = 0;
     this.c9 = null;
     if (this.bh.cZ.gH < 0) {
@@ -8485,21 +8089,18 @@ public class g
     }
     this.jdField_do = 60;
   }
-  
-  public boolean M()
-  {
-    this.bh.cZ.f((byte)a.J);
-    return this.bh.cZ.a((byte)24) < a3.jdMethod_do(this.bh.cZ.fW, a.C);
+
+  public boolean M() {
+    this.bh.cZ.f((byte) a.J);
+    return this.bh.cZ.a((byte) 24) < a3.jdMethod_do(this.bh.cZ.fW, a.C);
   }
-  
-  public boolean K()
-  {
-    this.bh.cZ.f((byte)a.L);
+
+  public boolean K() {
+    this.bh.cZ.f((byte) a.L);
     return a3.jdMethod_do(this.bh.cZ.fW, a.C) <= a.ac;
   }
-  
-  public void a(int paramInt1, short paramShort, boolean paramBoolean, int paramInt2)
-  {
+
+  public void a(int paramInt1, short paramShort, boolean paramBoolean, int paramInt2) {
     this.eP = paramInt2;
     gf = 0;
     this.lt = s.a(paramInt1);
@@ -8508,52 +8109,44 @@ public class g
     this.jdField_int = 0;
     this.jdField_do = 98;
   }
-  
-  public boolean y()
-  {
+
+  public boolean y() {
     if ((this.jdField_do == 5) || (this.jdField_do == 21)) {
       return false;
     }
     return (dD != 2) || (dZ != 0);
   }
-  
-  public void a(short paramShort, boolean paramBoolean)
-  {
+
+  public void a(short paramShort, boolean paramBoolean) {
     int i = paramBoolean ? 4416 : 4418;
-    if (this.bh.aG.jdMethod_int(i))
-    {
+    if (this.bh.aG.jdMethod_int(i)) {
       this.bh.aG.jdMethod_for(a3.jdMethod_new(paramShort, 2));
       this.bh.aG.jdMethod_for(a3.jdMethod_new(this.bh.cZ.jdMethod_if(paramShort), 2));
-      this.bh.aG.jdMethod_for(a3.jdMethod_new(this.bh.cZ.a((byte)16), 2));
-      this.bh.aG.jdMethod_for(a3.jdMethod_new(this.bh.cZ.a((byte)24), 2));
+      this.bh.aG.jdMethod_for(a3.jdMethod_new(this.bh.cZ.a((byte) 16), 2));
+      this.bh.aG.jdMethod_for(a3.jdMethod_new(this.bh.cZ.a((byte) 24), 2));
       this.bh.aG.jdMethod_do(0);
       this.bh.aG.jdMethod_if();
     }
   }
-  
-  public void jdMethod_int(boolean paramBoolean)
-  {
+
+  public void jdMethod_int(boolean paramBoolean) {
     int i = -1;
-    if (((i = paramBoolean ? this.bh.cZ.ac() : this.bh.cZ.ai()) > 0) && (this.bh.aG.jdMethod_int(4018)))
-    {
+    if (((i = paramBoolean ? this.bh.cZ.ac() : this.bh.cZ.ai()) > 0) && (this.bh.aG.jdMethod_int(4018))) {
       this.bh.aG.jdMethod_do(paramBoolean ? 0 : 1);
       this.bh.aG.jdMethod_for(a3.jdMethod_new(i, 2));
-      this.bh.aG.jdMethod_for(a3.jdMethod_new(this.bh.cZ.a((byte)16), 2));
-      this.bh.aG.jdMethod_for(a3.jdMethod_new(this.bh.cZ.a((byte)24), 2));
+      this.bh.aG.jdMethod_for(a3.jdMethod_new(this.bh.cZ.a((byte) 16), 2));
+      this.bh.aG.jdMethod_for(a3.jdMethod_new(this.bh.cZ.a((byte) 24), 2));
       this.bh.aG.jdMethod_if();
     }
   }
-  
-  public void a(ag paramag, boolean paramBoolean, int paramInt)
-  {
-    if ((paramag == this.bh.cZ) && (!paramag.fM) && (paramag.dJ == 0))
-    {
+
+  public void a(ag paramag, boolean paramBoolean, int paramInt) {
+    if ((paramag == this.bh.cZ) && (!paramag.fM) && (paramag.dJ == 0)) {
       int i = paramBoolean ? 4419 : 4420;
-      if (this.bh.aG.jdMethod_int(i))
-      {
+      if (this.bh.aG.jdMethod_int(i)) {
         this.bh.aG.jdMethod_for(a3.jdMethod_new(paramag.fm, 2));
-        this.bh.aG.jdMethod_for(a3.jdMethod_new(paramag.a((byte)16), 2));
-        this.bh.aG.jdMethod_for(a3.jdMethod_new(paramag.a((byte)24), 2));
+        this.bh.aG.jdMethod_for(a3.jdMethod_new(paramag.a((byte) 16), 2));
+        this.bh.aG.jdMethod_for(a3.jdMethod_new(paramag.a((byte) 24), 2));
         this.bh.aG.jdMethod_for(a3.jdMethod_new(paramInt, 2));
         this.bh.aG.jdMethod_if();
       }
@@ -8561,8 +8154,7 @@ public class g
   }
 }
 
-
-/* Location:              D:\OneDrive\游戏\客户端SOT觉醒者 - 副本.jar!\g.class
- * Java compiler version: 1 (45.3)
- * JD-Core Version:       0.7.1
+/*
+ * Location: D:\OneDrive\游戏\客户端SOT觉醒者 - 副本.jar!\g.class Java compiler version: 1
+ * (45.3) JD-Core Version: 0.7.1
  */
