@@ -1,4 +1,4 @@
-登陆操作
+docker登陆操作
 
 openRecordStore PLAYER1
 openRecordStore PLAYER2
