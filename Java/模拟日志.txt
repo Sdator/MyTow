@@ -69,7 +69,7 @@ port:9090
 
 openRecordStore RES1
 getRecord RES1_7
-//没有读取到文件报错就卡着无法过图 过图会动起来
+//没有读取到文件报错就卡着无法过图
 >>java.lang.NullPointerException
 >>	at java.io.ByteArrayInputStream.<init>(ByteArrayInputStream.java:89)
 >>	at h.goto(Unknown Source)
