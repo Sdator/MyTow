@@ -16,7 +16,11 @@ class 重写服务(http.SimpleHTTPRequestHandler):
         self.send_header('Server', self.version_string())
         self.send_header('Date', self.date_time_string())
         # 设置缓存的有效时长，单位为秒。可用在请求头和响应头中
-        self.send_header('Cache-Control', "max-age=2,no-cache,no-store")
+        # self.send_header('Cache-Control', "no-store,no-cache")
+        self.send_header('Cache-Control', "max-age=2")
+        # 允许跨域访问
+        self.send_header('Access-Control-Allow-Origin', "*")
+
         print(code, message)
 
     def do_GET(self):
