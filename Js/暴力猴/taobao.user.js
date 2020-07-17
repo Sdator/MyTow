@@ -40,6 +40,58 @@
     print = console.log
 }());
 
+列出基本信息 = () => {
+    const item = {}
+    const 商品信息 = {
+        品牌: "品牌",
+        材质: "材质",
+        成分: "材质成分",
+        销售渠道: "销售渠道类型",
+        大身: "大身材质成分",
+        裆部: "裆部材质成分",
+    }
+    for (const { innerText, title } of $("#J_AttrUL li")) {
+        print(innerText, title)
+        const name = /.*(?=:)/.exec(innerText)[0]
+
+        // item[name] = 商品信息?.[name] ? title:null
+        // item.商品信息?.[name] = title
+        item[name] = item[name] ?? title
+
+        // if (商品信息[name]) 商品信息[name] = title
+        // switch (/.*(?=:)/.exec(innerText)[0]) {
+        //     case 商品信息.品牌:
+        //         item.品牌 = title
+        //         break
+        //     case 商品信息.大身:
+        //         item.大身 = title
+        //         break
+        //     case 商品信息.材质:
+        //         item.材质 = title
+        //         break
+        //     case 商品信息.裆部:
+        //         item.裆部 = title
+        //         break
+        //     case 商品信息.销售渠道:
+        //         item.销售渠道 = title
+        //         break
+        // }
+    }
+
+    // let dom = ""
+    // for (const v of Object.entries(item)) {
+    //     // dom += `<li>${v.join(":")}</li>`
+    //     print(v)
+    // }
+    print(item)
+
+    // $(`<ul>${dom}</ul>`).appendTo("body")
+
+}
+
+
+
+
 $(document).ready(function () {
 
     const data = GM_getValue("地址") || []
@@ -49,26 +101,17 @@ $(document).ready(function () {
     // 天猫
 
     const href = location.href
+    列出基本信息()
 
     // 页面判断
     if (/.*:\/\/list\.tmall\.com\/search_product\.htm/.test(location.href)) {
-
         const arr = $("div .productImg-wrap a")
         const d = arr.map(({ href }) => href)
         // const urls = new Set(...arr.map(({ href }) => href))
-        print(d,121325656571)
-        print(25656571)
-        print(25656555571)
         // print(urls, typeof (urls), 3333333333333, [...data, ...urls])
-
-
-
         // localStorage["地址"] = JSON.stringify(data)
         // GM_setValue("地址", arr)
     }
-
-
-
 
 
     // url = "https://api.bootcdn.cn/libraries/jquery.min.json"
