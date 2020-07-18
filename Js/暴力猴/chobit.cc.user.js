@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name                小H片
+// @name                [絕]小H片
 // @author              絕版大叔丶
 // @namespace           https://github.com/Sdator/MyCode/tree/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4
-// @icon                https://avatars3.githubusercontent.com/u/17621623?s=40&v=4
+// icon                https://avatars3.githubusercontent.com/u/17621623?s=40&v=4
 // @version             1.0
 // @match               *://chobit.cc/*
 // @description         学习
