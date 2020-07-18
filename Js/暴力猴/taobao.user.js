@@ -50,47 +50,71 @@
 
 let css = `
 #item {
-    margin:10px;
-    padding:10px;
     position:fixed;
-    left:0;
-    top:0;
+    left:10px;
+    top:10px;
+
+    padding: 20px;
+   
+
     z-index: 99999;
-    background-image:url("http://localhost:8000/bj.png")
+
+    background-image: url(http://localhost:8000/h.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 6px 2px black;
 }
 
 
 #item ul {
-    background-color: rgba(0,0,0,0.3);
     display: flex;
-    flex-direction:column;
-    align-content:space-around;  
-    min-height:50vh;    
+    flex-direction: column;
+    align-content: space-around;
+
+    min-height: 51vh;
+    padding: 10px;
+    z-index: 1;
+
+    color: #6eff00fc;
+    background-color: rgba(0,0,0,0.3);
+    box-shadow: 0 0 7px 1px black;
+    transform: translate(0, 0);
 }
 
-#item ul:after {
+#item ul:before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255,255,0,0.8);
+    width: 100%;
+    height: 100%;
+
     z-index: -1;
-    filter: blur(20px);
-    background-image:url("http://localhost:8000/bj.png")
+    
+    background-image:url("http://localhost:8000/h.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(255,255,255,0.8);
+
+    filter: blur(2px);
 }
-
-
 
 
 #item li {
     height:20px;
 }
 `
+
+
 /*
+ right: 0;
+    bottom: 0;
+
     height:20px;
     width:100px;
+
+    margin:10px;
+    padding:10px;
 
     width: auto;
     justify-content: center;
@@ -132,7 +156,7 @@ GM_addStyle(css)
     }
 
     // 加入页面
-    $(`<div id="item"><ul >${dom}</ul></div>`).appendTo("body")
+    $(`<div id="item"><ul>${dom}</ul></div>`).appendTo("body")
 
     // $("body").css("background-image", 鸟 + "," + 纸)
 
