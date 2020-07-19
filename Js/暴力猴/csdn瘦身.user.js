@@ -6,13 +6,9 @@
 // @version             1.6.2
 // @match               *://blog.csdn.net/*
 // @description         删除csdn所有广告，保留主题内容
-///// @updateURL           https://github.com/Sdator/MyCode/raw/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4/csdn%E7%98%A6%E8%BA%AB.user.js
-//// @downloadURL         https://github.com/Sdator/MyCode/raw/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4/csdn%E7%98%A6%E8%BA%AB.user.js
+// @updateURL           https://github.com/Sdator/MyCode/raw/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4/csdn%E7%98%A6%E8%BA%AB.user.js
+// @downloadURL         https://github.com/Sdator/MyCode/raw/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4/csdn%E7%98%A6%E8%BA%AB.user.js
 // @grant               GM_addStyle
-
-// @updateURL           http://localhost:8000/csdn瘦身.user.js
-// @downloadURL         http://localhost:8000/csdn瘦身.user.js
-
 // ==/UserScript==
 
 
