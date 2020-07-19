@@ -372,7 +372,7 @@ const info = {
 
     // 本地测试用
     if (info.主机地址 == "localhost") {
-        取商品信息()
+        取商品信息("#J_AttrUL li")
         return
     }
     // 添加css列表
