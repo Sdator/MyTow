@@ -6,48 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #time {
-            margin: 6px;
+        #item {
+            /* margin: 6px; */
             padding: 0;
+            margin: 0;
             position: fixed;
-            left: 90px;
-            top: 10px;
-            width: 20vw;
+            left: 30px;
+            top: 30px;
+            /* width: 20vw; */
             height: 70vh;
-            background-color: bisque;
-            background-image: url(h.jpg);
-            background-size: contain;
-            background-repeat: no-repeat;
+            background-color: rgb(255 160 52);
+            /* background-image: url(h.jpg); */
+            /* background-size: contain; */
+            /* background-repeat: no-repeat; */
+            box-sizing: border-box;
+            color: black;
+            z-index: 9999;
+            font-family: "Microsoft YaHei";
+            font-size: x-large;
         }
 
-        #time ul {
+        #item ul {
             /* display: flex;
             flex-direction: column;
             align-content: space-around; */
+            padding: 18px;
+            margin: 0;
             z-index: 1;
             /* padding: 20px; */
-            /* box-shadow: 0 0 6px 2px black; */
+            box-shadow: 0 0 6px 2px black;
             transform: translate(0, 0);
             list-style-type: none;
+            box-sizing: border-box;
+            background-color: #0030ff;
         }
 
-        #time ul:before {
+        #item ul:before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url(h.jpg);
+            /* background-image: url(h.jpg); */
             background-size: cover;
-            filter: blur(2px);
+            /* filter: blur(2px); */
             z-index: -1;
             box-shadow: 0 0 6px 2px black;
             box-sizing: border-box;
+            background-color: #ea00ff;
         }
 
         li {
-            color: #ff9b04;
+            /* color: #ff9900; */
         }
     </style>
 </head>
