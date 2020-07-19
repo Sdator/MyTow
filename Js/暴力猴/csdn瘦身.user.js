@@ -3,13 +3,11 @@
 // @author              絕版大叔丶
 // @namespace           https://github.com/Sdator/MyCode/tree/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4
 // @icon                https://avatars3.githubusercontent.com/u/17621623?s=40&v=4
-// @version             1.6
+// @version             1.6.1
 // @match               *://blog.csdn.net/*
 // @description         删除csdn所有广告，保留主题内容
 // @updateURL           https://github.com/Sdator/MyCode/raw/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4/csdn%E7%98%A6%E8%BA%AB.user.js
 // @downloadURL         https://github.com/Sdator/MyCode/raw/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4/csdn%E7%98%A6%E8%BA%AB.user.js
-//// @updateURL           http://localhost:8000/csdn瘦身.user.js
-//// @downloadURL         http://localhost:8000/csdn瘦身.user.js
 // @grant               GM_addStyle
 // ==/UserScript==
 
@@ -19,6 +17,7 @@ body {
     background-color: bisque;
     justify-content: center;
     align-items: center;
+    background-image: url();
 }
 #diy {
     margin: auto;
