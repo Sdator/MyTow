@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #time {
+            margin: 6px;
+            padding: 0;
+            position: fixed;
+            left: 90px;
+            top: 10px;
+            width: 20vw;
+            height: 70vh;
+            background-color: bisque;
+            background-image: url(h.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        #time ul {
+            /* display: flex;
+            flex-direction: column;
+            align-content: space-around; */
+            z-index: 1;
+            /* padding: 20px; */
+            /* box-shadow: 0 0 6px 2px black; */
+            transform: translate(0, 0);
+            list-style-type: none;
+        }
+
+        #time ul:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(h.jpg);
+            background-size: cover;
+            filter: blur(2px);
+            z-index: -1;
+            box-shadow: 0 0 6px 2px black;
+            box-sizing: border-box;
+        }
+
+        li {
+            color: #ff9b04;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <body class="HolyGrail">
+        <div class="attributes-list" id="J_AttrList">
+            <p class="attr-list-hd tm-clear"><em>产品参数：</em></p>
+            <ul id="J_AttrUL">
+
+                <li id="J_attrBrandName" title="&nbsp;Lativ">品牌:&nbsp;Lativ</li>
+                <li title="&nbsp;棉">材质:&nbsp;棉</li>
+                <li title="&nbsp;S&nbsp;M&nbsp;L&nbsp;XL">尺码:&nbsp;S&nbsp;M&nbsp;L&nbsp;XL</li>
+                <li title="&nbsp;中腰">腰型:&nbsp;中腰</li>
+                <li title="&nbsp;男">适用性别:&nbsp;男</li>
+                <li title="&nbsp;蓝色条&nbsp;红蓝条&nbsp;灰黑条">颜色分类:&nbsp;蓝色条&nbsp;红蓝条&nbsp;灰黑条</li>
+                <li title="&nbsp;2019年春季">上市时间:&nbsp;2019年春季</li>
+                <li title="&nbsp;40002">款号:&nbsp;40002</li>
+                <li title="&nbsp;纯电商(只在线上销售)">销售渠道类型:&nbsp;纯电商(只在线上销售)</li>
+                <li title="&nbsp;棉93% 聚氨酯弹性纤维(氨纶)7%">裆部材质成分:&nbsp;棉93% 聚氨酯弹性纤维(氨纶)7%</li>
+                <li title="&nbsp;棉93% 聚氨酯弹性纤维(氨纶)7%">大身材质成分:&nbsp;棉93% 聚氨酯弹性纤维(氨纶)7%</li>
+                <li title="&nbsp;1条">条数:&nbsp;1条</li>
+
+                <!-- 健字号相关-->
+            </ul>
+
+        </div>
+
+    </body>
+
+    <script src="./taobao.user.js"></script>
+
+
+</body>
+
+</html>

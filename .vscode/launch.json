@@ -5,10 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "java",
-            "name": "Debug (Launch) - Current File",
+            "name": "Launch Chrome",
             "request": "launch",
-            "mainClass": "${file}"
+            "type": "pwa-chrome",
+            "url": "http://localhost:8000/${fileBasename}",
+            "webRoot": "${fileDirname}"
         }
     ]
 }

@@ -12,12 +12,10 @@
 // @author              -
 // @description         test
 // @description:zh-CN   测试用
-// @require             https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js
 // @compatible          chrome   测试通过
 // @noframes
 // 页面加载结束后运行
 // @run-at              document-end
-
 // ==/UserScript==
 
 // CDN
@@ -36,17 +34,6 @@
     })
     return await data.text()
 }
-
-/**
- *  修复console.log
- */
-
-(function () {
-    var iframe = document.createElement('iframe')
-    document.body.appendChild(iframe)
-    window.console = iframe.contentWindow.console
-    window.print = window.echo = console.log
-}());
 
 let css = `
 #item {
@@ -127,7 +114,15 @@ flex-wrap
 */
 
 // 添加 css 样式
-GM_addStyle(css)
+// GM_addStyle(css)
+
+// document.styleSheets[0].insertRule(css)
+// 直接修改样式表
+// document.styleSheets[0].ownerNode.innerHTML=css
+
+
+
+
 
 
 列出基本信息 = () => {
@@ -159,38 +154,72 @@ GM_addStyle(css)
     $(`<div id="item"><ul>${dom}</ul></div>`).appendTo("body")
 
     // $("body").css("background-image", 鸟 + "," + 纸)
-
     print(item)
     print(333333, dom)
-
 }
 
-$(document).ready(function () {
-    // const data = GM_getValue("地址") || []
-    // //  ? JSON.parse(localStorage["地址"]) : []
-    // //     淘宝
-    // //     const arr = $$("div .pic a")
-    // // 天猫
-    // const href = location.href
-    列出基本信息()
-    // // 页面判断
-    // if (/.*:\/\/list\.tmall\.com\/search_product\.htm/.test(location.href)) {
-    //     const arr = $("div .productImg-wrap a")
-    //     const d = arr.map(({ href }) => href)
-    //     // const urls = new Set(...arr.map(({ href }) => href))
-    //     // print(urls, typeof (urls), 3333333333333, [...data, ...urls])
-    //     // localStorage["地址"] = JSON.stringify(data)
-    //     // GM_setValue("地址", arr)
-    // }
-    // url = "https://api.bootcdn.cn/libraries/jquery.min.json"
-    // url = "https://api.bootcdn.cn/jquery.min.json"
-    // const rev = await fetch(url)
-    // const json = await rev.json()
-    // console.log(json)
-    //     url = "https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.9.3dbf4dd4GdLMHA&id=616344637422&skuId=4344116740786&areaId=445300&user_id=2124444518&cat_id=2&is_b=1&rn=8001c69362cb12ba3b85571fd6568e14"
-    //     data =await 取材质(url)
-    //     print(2222222222,data)
-    //     for (const {href} of arr) {
-    //         print()
-    //     }
-});
+
+/**
+ * 修复console.log
+ * 新增 console.log 别名函数 echo 或 printf
+ */
+(修复log = () => {
+    var iframe = document.createElement('iframe')
+    document.body.appendChild(iframe)
+    window.console = iframe.contentWindow.console
+    window.printf = window.echo = console.log
+})();
+
+
+(async () => {
+    // 动态加载JQ
+    await import("https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js")
+    $ = window?.jQuery ?? window?.$ ?? window.$$
+
+    // 添加css列表
+    $("<style>").text(css).appendTo($("head"));
+
+
+
+
+    $(document).ready(function () {
+
+        
+
+
+
+
+        // 列出基本信息()
+
+        // const data = GM_getValue("地址") || []
+        //  ? JSON.parse(localStorage["地址"]) : []
+        //     淘宝
+        //     const arr = $$("div .pic a")
+        // 天猫
+        // const href = location.href
+
+
+
+        // // 页面判断
+        // if (/.*:\/\/list\.tmall\.com\/search_product\.htm/.test(location.href)) {
+        //     const arr = $("div .productImg-wrap a")
+        //     const d = arr.map(({ href }) => href)
+        //     // const urls = new Set(...arr.map(({ href }) => href))
+        //     // print(urls, typeof (urls), 3333333333333, [...data, ...urls])
+        //     // localStorage["地址"] = JSON.stringify(data)
+        //     // GM_setValue("地址", arr)
+        // }
+        // url = "https://api.bootcdn.cn/libraries/jquery.min.json"
+        // url = "https://api.bootcdn.cn/jquery.min.json"
+        // const rev = await fetch(url)
+        // const json = await rev.json()
+        // console.log(json)
+        //     url = "https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.9.3dbf4dd4GdLMHA&id=616344637422&skuId=4344116740786&areaId=445300&user_id=2124444518&cat_id=2&is_b=1&rn=8001c69362cb12ba3b85571fd6568e14"
+        //     data =await 取材质(url)
+        //     print(2222222222,data)
+        //     for (const {href} of arr) {
+        //         print()
+        //     }
+    });
+
+})()

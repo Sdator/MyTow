@@ -27,7 +27,7 @@ class 重写服务(http.SimpleHTTPRequestHandler):
     def do_GET(self):
         # 当get获取页面时 返回请求内容到客户端
         f = self.send_head()
-
+        
         if f:
             try:
                 self.copyfile(f, self.wfile)
