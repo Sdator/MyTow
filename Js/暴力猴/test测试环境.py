@@ -1,5 +1,6 @@
 import http.server as http
 import os
+import sys
 from functools import partial
 '''
 利用 http.server 实验的服务器
@@ -7,6 +8,7 @@ from functools import partial
 可修改相应头 相应数据的服务 
 
 '''
+
 
 class 重写服务(http.SimpleHTTPRequestHandler):
     # 相应头
@@ -27,7 +29,7 @@ class 重写服务(http.SimpleHTTPRequestHandler):
     def do_GET(self):
         # 当get获取页面时 返回请求内容到客户端
         f = self.send_head()
-        
+
         if f:
             try:
                 self.copyfile(f, self.wfile)
@@ -36,8 +38,9 @@ class 重写服务(http.SimpleHTTPRequestHandler):
 
 
 def main():
-    handler_class = partial(重写服务, directory=os.getcwd())
-
+    # 路径使用当前脚本所在目录
+    # 给函数配置默认参数
+    handler_class = partial(重写服务, directory=sys.path[0])
     http.test(
         HandlerClass=handler_class,
         ServerClass=http.ThreadingHTTPServer,
@@ -46,4 +49,3 @@ def main():
 
 if "__main__" == __name__:
     main()
-    # print(os.getcwd())
