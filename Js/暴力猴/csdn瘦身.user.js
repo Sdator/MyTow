@@ -24,6 +24,7 @@ body {
 #diy {
     padding-top: 30px;
     margin: auto;
+    width: 70vw;
 }
 `
 //css样式
