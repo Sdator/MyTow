@@ -194,11 +194,6 @@ right: 0;
     window.printf = window.echo = console.log
 })()
 
-
-
-
-
-
 const 取商品信息 = (选择器, el) => {
     item = {}
     const 过滤器 = {
@@ -211,7 +206,11 @@ const 取商品信息 = (选择器, el) => {
         上市年份季节: Symbol(),
         厚薄: Symbol(),
         面料: Symbol(),
+    }
 
+    const 关键字 = {
+        差: { msg: "可能是垃圾", reg: ["聚酯", "涤纶", "聚酰胺", "锦纶"], css: `<li style="color:#ff0000;">` },
+        优: { msg: "可能是良品", reg: ["棉", "麻", "丝"], css: `<li style="color:#00ff00;">` },
     }
 
 
@@ -228,25 +227,28 @@ const 取商品信息 = (选择器, el) => {
         // 判断 v 是否过滤器的存在的属性名称
         if (过滤器?.[v[0]]) {
             let li = `<li>${v.join(":")}</li>`
+            for (const v of Object.entries(关键字)) {
+                // printf(v, 111111111)
+                // v[1].includes("聚酰胺")
+
+            }
             // 小提示 给垃圾产品 注释
             // 棉纶 尼龙
             // 涤纶 的确良
-            if (v[1].includes("涤纶") || v[1].includes("聚酰胺") || v[1].includes("锦纶")) {
-                li = `<li style="color:#ff0000;">${v.join(":")}  可能是垃圾货</li>`
-            }
-            // 优质
-            if (v[1].includes("棉") || v[1].includes("麻") || v[1].includes("丝")) {
-                li = `<li style="color:#00ff00;">${v.join(":")}  可能是良品</li>`
-            }
+            // if (v[1].includes("涤纶") || v[1].includes("聚酰胺") || v[1].includes("锦纶")) {
+            //     li = `<li style="color:#ff0000;">${v.join(":")}  可能是垃圾货</li>`
+            // }
+            // // 优质
+            // if (v[1].includes("棉") || v[1].includes("麻") || v[1].includes("丝")) {
+            //     li = `<li style="color:#00ff00;">${v.join(":")}  可能是良品</li>`
+            // }
 
-            
-
-            dom += li
-            printf(v)
+            // dom += li
+            // printf(v)
         }
     }
 
-    // 加入页面
+    // 加入页面  内联置顶
     $(`<div id="item" style="z-index: 999999999;"><ul>${dom}</ul></div>`).appendTo("body")
 
 
