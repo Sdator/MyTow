@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name                [絕]女孩HHH
 // @author              絕版大叔丶
-// @namespace           https://github.com/Sdator/MyCode/tree/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4
+// @namespace           https://sdator.github.io/
 // @icon                https://avatars3.githubusercontent.com/u/17621623?s=40&v=4
 // @version             1.3
 // @match               *://home.twofei.com:7890/*
@@ -103,9 +103,9 @@ GM_addStyle(css)
 
 $(() => {
 
-  $("<div id='img'>").prependTo("body")
-  $("<div id='imgs'>").prependTo("#img")
-  $("<div id='show'>").prependTo("#img")
+    $("<div id='img'>").prependTo("body")
+    $("<div id='imgs'>").prependTo("#img")
+    $("<div id='show'>").prependTo("#img")
 
     $("[href$='.jpg'],[href$='.png']").each(function () {
         let url = window.location.href + $(this).attr("href")
@@ -115,8 +115,8 @@ $(() => {
                 });
             },
             mouseover: function () {
-                let css = $(this).css("background")      
-                $("#show").css("background", css)             
+                let css = $(this).css("background")
+                $("#show").css("background", css)
             },
             mouseout: function () {
             },

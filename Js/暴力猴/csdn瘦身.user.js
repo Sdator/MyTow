@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name                [絕]csdn瘦身
 // @author              絕版大叔丶
-// @namespace           https://github.com/Sdator/MyCode/tree/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4
+// @namespace           https://sdator.github.io/
 // @icon                https://avatars3.githubusercontent.com/u/17621623?s=40&v=4
 // @version             1.6.3
 // @match               *://blog.csdn.net/*
