@@ -140,7 +140,8 @@ class A {
         // await 延迟(roll * 100 + rallBase * 10)
 
         // 1 读取网站源码 如果请求状态不是200-299 抛出异常并输出
-        const rec = await fetch(url)
+        // 设置不跨域 减少报错
+        const rec = await fetch(url, { mode: 'no-cors' })
         if (!rec.ok)
             throw new Error(rec.statusText)
         const body = await rec.text()
