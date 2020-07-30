@@ -1,0 +1,31 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "运行服务器",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "-m",
+                "http.server",
+                "-d",
+                "./Js/暴力猴"
+            ]
+        },
+        {
+            "label": "运行",
+            "type": "shell",
+            "command": "python -m http.server"
+        },
+        {
+            "label": "暴力猴热更新",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "${workspaceFolder}\\Js\\暴力猴\\test测试环境.py"
+            ]
+        }
+    ]
+}
