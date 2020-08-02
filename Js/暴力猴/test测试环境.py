@@ -5,7 +5,7 @@ from functools import partial
 '''
 利用 http.server 实验的服务器
 
-可修改相应头 相应数据的服务 
+可修改相应头 相应数据的服务
 
 '''
 
@@ -19,8 +19,8 @@ class 重写服务(http.SimpleHTTPRequestHandler):
         self.send_header('Date', self.date_time_string())
         # 设置缓存的有效时长，单位为秒。可用在请求头和响应头中
         # self.send_header('Cache-Control', "no-store,no-cache")
-        # self.send_header('Cache-Control', "max-age=2")
-        self.send_header('Cache-Control', "no-cache")
+        self.send_header('Cache-Control', "max-age=1")
+        # self.send_header('Cache-Control', "no-cache")
         # 允许跨域访问
         self.send_header('Access-Control-Allow-Origin', "*")
 
@@ -29,7 +29,6 @@ class 重写服务(http.SimpleHTTPRequestHandler):
     def do_GET(self):
         # 当get获取页面时 返回请求内容到客户端
         f = self.send_head()
-
         if f:
             try:
                 self.copyfile(f, self.wfile)
