@@ -8,6 +8,7 @@
 // @match               *://study.163.com/course/courseLearn.htm*
 // @match               *://study.163.com/course/introduction/*.htm*
 // @match               *://study.163.com/course/courseMain.htm*
+// @match               *://study.163.com/course/introduction.htm?courseId=*
 //更新地址
 // @updateURL
 // @match               输入匹配网页
@@ -25,32 +26,41 @@
 });
 
 class A {
-    async get课程(视频列表id) {
+    课程ID = window.course.id
+    作者ID = window.ownerId
+
+    async get课程(视频列表id = this.课程ID) {
+        console.log(视频列表id, 444444444);
         const time = new Date().getTime()
         if (!视频列表id) throw new Error("没有id")
         // 需要变动
-        const body =
-            `callCount=1
-            scriptSessionId=\${scriptSessionId}190
-            httpSessionId=3f847fddcc124945b1a2148bd4839f41
-            c0-scriptName=PlanNewBean
-            c0-methodName=getPlanCourseDetail
-            c0-id=0
-            c0-param0=string:${视频列表id}
-            c0-param1=number:0
-            c0-param2=null:null
-            batchId=${time}`
+        const body = `callCount=1
+scriptSessionId=\${scriptSessionId}190
+httpSessionId=3f847fddcc124945b1a2148bd4839f41
+c0-scriptName=PlanNewBean
+c0-methodName=getPlanCourseDetail
+c0-id=0
+c0-param0=string:${视频列表id}
+c0-param1=number:0
+c0-param2=null:null
+batchId=${time}`
         // 视频列表
         const url = `https://study.163.com/dwr/call/plaincall/PlanNewBean.getPlanCourseDetail.dwr?${time}`
         const rev = await fetch(url, {
             method: 'POST',
+            headers: {
+                'content-type': 'text/plain',
+                'providerid': this.作者ID
+            },
             body: body
         })
         const txt = await rev.text()
-        // 取前部分字符串
+        // 取前部分字符串 删除后面的字符串 不需要了 现在可以通过window获取到值
         // const newtxt = txt.slice(0, txt.indexOf('dwr.engine._remoteHandleCallback'))
         // 执行字符串  随便加入一个全局变量设置 好拿到返回值
-        const listData = eval(txt + `window['aaa']=s3;window['bbb']=s0;`)
+        const listData = eval(txt + `;window['bbb']=s0;window['aaa']=s3;`)
+        // console.log(listData, 2222222, txt);
+
         // 写到本地
         // localStorage.api = JSON.stringify(listData)
 
@@ -85,7 +95,7 @@ batchId=1596230378140
             method: 'POST',
             headers: {
                 // 补全原有请求的信息 尽量相同
-                "providerid": window.ownerId,
+                "providerid": this.作者ID,//作者ID
                 "content-type": "text/plain"
             },
             body: body
@@ -167,38 +177,36 @@ batchId=1596230378140
             console.log($("source", el), $(el).text().indexOf("mp4"), 44444)
         }
     }
-}
+};
 
-const a = new A()
-try {
-    const 视频列表ID = ["1512007", "1002895002"]
-    // 获取匹配到的 id 没拿到就抛出错误
-    // let 视频列表id
-    // for (const v of 视频列表) {
-    //     if (location.href.includes(v)) {
-    //         视频列表id = v
-    //         break
-    //     }
-    // }
+(async () => {
+    const a = new A()
+    try {
+        const 视频列表ID = ["1512007", "1002895002"]
+        // 获取匹配到的 id 没拿到就抛出错误
+        // let 视频列表id
+        // for (const v of 视频列表) {
+        //     if (location.href.includes(v)) {
+        //         视频列表id = v
+        //         break
+        //     }
+        // }
+        // a.get视频(视频列表ID[0]);
+        // a.get视频信息(1802061, 1512007)
+        const data = await a.get课程()
+        // console.log(data);
 
-    // a.get视频(视频列表ID[0]);
-    a.get视频信息(1802061, 1512007)
 
 
-} catch (error) {
-    console.error(error);
-}
-
+    } catch (error) {
+        console.error(error);
+    }
+})();
 
 
 
 // 广告过滤
 (async () => {
-    // while (true) {
-    //     await 延时()
-    //     $(".ux-modal.component-wechat-attention-modal.ux-modal-fadeIn")?.remove()
-    // }
-
     const rules = [
         "ux-modal component-wechat-attention-modal",//二维码广告
         // "m-basewin m-winmark"//登陆窗口
