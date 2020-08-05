@@ -22,50 +22,50 @@ const css = `
 "backgroundcolor": "rgb(255 120 216)"
 `;
 
-
-
 const 延迟 = (t = 500) => new Promise((resolve) => {
     setTimeout(resolve, t)
-
 });
 
+// 广告过滤
+(async () => {
 
-window.onload = async () => {
-
-    $(`<div/>`, {
-        id: "set",
-    }).appendTo("body")
-
-    const UP黑名单 = ["医生", "皮卡丘"]
-
-    while (true) {
-        await 延迟()
-        el = $(".video-page-card")
-        el.remove()
-        console.log(el, "删除");
-        if (el.length == 0) {
-            console.log(el, "2222222");
-
-            break
-        }
-    }
-
-
-
-
+    // $(`<div/>`, {
+    //     id: "set",
+    // }).appendTo("body")
+    // const UP黑名单 = ["医生", "皮卡丘"]
     // console.log(6666666666, a);
     // $(".video-page-card").each(function () {
     //     console.log(6666666666);
-
     //     // $(this).remove()
     //     // const isUP=
     //     // .find("count up").text().includes("v")
     //     // if (isUP) {
     //     // console.log(121231, v, 11111, $(this));
-
     // })
 
+    const rules = [
+        "video-page-card",//推荐列表
+    ]
+    let isA
 
+    document.body.appendChild = new Proxy(document.body.appendChild, {
+        // 目标对象、上下文、参数
+        async apply(target, ctx, args) {
+            const cName = args[0].className
+            if (!isA) {
+                isA = false
+                console.log(args);
+            }
+            // console.log("className:", cName, cName == true);
+            // if (cName != "" && rules.join().includes(cName)) {
+            //     console.log("命中目标", $('.count.up').text());
+            //     // await 延时(500)
+            //     // 模拟点击播放
+            //     // $(".bbg").click()
+            //     // return
+            // }
+            return Reflect.apply(...arguments);
+        }
+    });
 
-
-}
+})()
