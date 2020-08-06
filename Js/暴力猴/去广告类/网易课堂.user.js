@@ -163,7 +163,7 @@ batchId=1596230378140
             const url = `https://study.163.com/course/courseLearn.htm?courseId=1512007#/learn/video?lessonId=${课程ID}&courseId=1512007`
             data.push(this.get源码(url))
             // 中断操作
-            if (++i % 5 || (data.length - i) < 5) {
+            if (!(++i % 5) || (data.length - i) < 5) {
                 for (const v of data) {
                     await v
                 }

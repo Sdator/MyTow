@@ -1,13 +1,11 @@
 // ==UserScript==
 // @name                [絕]小H片
 // @author              絕版大叔丶
-// @namespace           https://github.com/Sdator/MyCode/tree/master/Js/%E6%9A%B4%E5%8A%9B%E7%8C%B4
-// icon                https://avatars3.githubusercontent.com/u/17621623?s=40&v=4
+// @namespace           https://sdator.github.io/
+// icon
 // @version             1.0
 // @match               *://chobit.cc/*
 // @description         学习
-// @updateURL           http://localhost:8000/chobit.cc.user.js
-// @downloadURL         http://localhost:8000/chobit.cc.user.js
 // @run-at              document-end
 // @grant               GM_addStyle
 // @grant               GM_getValue
@@ -143,7 +141,7 @@ class A {
         // 设置不跨域 减少报错
         const rec = await fetch(url, { mode: 'no-cors' })
         if (!rec.ok)
-            throw new Error(rec.statusText)
+            throw new Error("取源码失败：" + rec.statusText)
         const body = await rec.text()
         // 2 使用虚拟dom包装源码 用于后续解析
         const el = document.createElement('html')
@@ -195,7 +193,7 @@ class A {
      */
     async Get取页面商品(url) {
         echo("读取所有商品...")
-        const el = await this.取源码(url)
+        const rec = await this.取源码(url)
         if (!rec.ok) {
             console.log("页面获取失败:")
             this.页面状态.ERR.push(url)
@@ -203,7 +201,7 @@ class A {
 
         // 判断是否最后一页
         // 读取当前页所有商品连接 并
-        const dom = $$(".work-work-name a", el)
+        const dom = $$(".work-work-name a", rec)
         // 没有读取到 抛出错误并返回
         if (!dom.length) {
             throw new Error("没有商品了")
@@ -315,7 +313,7 @@ class A {
     async 收集网页() {
         // 用于存放 异步 返回数据
         const data = []
-        const 步进 = 2
+        const 步进 = 3
         // 修改开始数值 不用老+1
         for (const page of 无限递增器(1)) {
             // 直接触发异步访问 把异步结果放到 data数组中
@@ -349,8 +347,8 @@ class A {
                     print("中断等待结果")
                 } catch (error) {
                     console.error("没有了", error, "爬完成")
-                    // 删除当前获取失败的元素
-                    data.pop()
+                    // 删除当前获取失败的元素 不准确的写法
+                    // data.pop()
                     break
                     // continue
                 }
@@ -367,7 +365,7 @@ class A {
         // 2 并存放到新的变量中
         // 3 过滤空白的数组
         let urls = []
-        await data.map(async (v, k) => {
+        data.map(async (v, k) => {
             const data = await v
             if (data) {
                 urls[k] = data
@@ -388,7 +386,7 @@ class A {
 
 
 /**
- * 自运行异步fun
+ *  自运行异步fun
  */
 (async () => {
 

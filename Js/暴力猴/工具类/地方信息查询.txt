@@ -1,0 +1,25 @@
+http://gddata.gd.gov.cn/data/dataSet/toDataDetails/29000_51700180
+
+数据项 表头 字段
+    Request URL: http://gddata.gd.gov.cn/data/dataSet/getPreviewDataItem
+    Request Method: POST
+
+    resId=29000%2F51700180
+
+
+返回所有数据
+    POST
+        http://gddata.gd.gov.cn/data/dataSet/getPreviewData
+    data
+        tableName: T3070225300022_000027_V1
+        resId: 29000/51700180
+        record:                     获取条目数量
+
+
+获取元数据 tableName
+    POST
+        http://gddata.gd.gov.cn/data/catalog/selectDataCatalogByResId
+    data
+        resId: 29000/51700180
+    return
+        {sourceTableName}
