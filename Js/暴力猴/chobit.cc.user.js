@@ -142,11 +142,7 @@ class A {
         const rec = await fetch(url, { mode: 'no-cors' })
         if (!rec.ok)
             throw new Error("取源码失败：" + rec.statusText)
-        const body = await rec.text()
-        // 2 使用虚拟dom包装源码 用于后续解析
-        const el = document.createElement('html')
-        el.innerHTML = body
-        return el
+        return await rec.text()
     }
 
     async a取音频() {
@@ -193,21 +189,25 @@ class A {
      */
     async Get取页面商品(url) {
         echo("读取所有商品...")
-        const rec = await this.取源码(url)
-        if (!rec.ok) {
-            console.log("页面获取失败:")
-            this.页面状态.ERR.push(url)
-        }
-
+        const body = await this.取源码(url)
+        // 1 使用虚拟dom包装源码 用于后续解析
+        const dom = document.createElement('html')
+        dom.innerHTML = body
         // 判断是否最后一页
         // 读取当前页所有商品连接 并
-        const dom = $$(".work-work-name a", rec)
+        const els = $$(".work-work-name a", dom)
+        console.log(11111, dom, els);
         // 没有读取到 抛出错误并返回
-        if (!dom.length) {
+        if (!els.length) {
             throw new Error("没有商品了")
         }
+        console.log('=====================');
+        // debugger
         // 返回一个包含所有商品连接的数组
-        return dom.map(({ href, innerText }) => { return { href, innerText } })
+        // $$ 返回的是对象
+        // let a = [...els].map(({ href, innerText }) => { return { href, innerText } })
+        // console.log(2222, a);
+        return els.map((_, { href, innerText }) => { return { href, innerText } })
 
     }
     /**
@@ -318,37 +318,28 @@ class A {
         for (const page of 无限递增器(1)) {
             // 直接触发异步访问 把异步结果放到 data数组中
             // data.push({ "页面": page, "内容": this.Get取页面商品(`https://chobit.cc/s?f_category=vd_2d&s_page=${page + 39}`) })
-            // data[page] = this.Get取页面商品(`https://chobit.cc/s?f_category=vd_2d&s_page=${page + 39}`)
             data.push(this.Get取页面商品(`https://chobit.cc/s?f_category=vd_2d&s_page=${page + 39}`))
 
             this.当前进度 = page
             // 测试限制用
-            print("page", page)
+            print("page 当前进度", page)
 
             // 当页数是 步进 的倍数时候  就中断一次
             if (!(page % 步进)) {
                 try {
-                    // print("直接返回", data)
-                    // 暂停主线程等待异步结果再继续下一次访问
-                    // for (const { 内容 } of data) {
-                    for (const v of data) {
-
-                        const tmp = await v
-                        console.log(tmp, 66666666);
-                        // await 内容
-                        // data.push(111111)
-                        // 如果为空 从数组中删除 并跳过这次循环
-                        // const status = await v
-                        // if (status == undefined) {
-                        //     print("跳过")
-                        //     continue
-                        // }
-                    }
+                    // 暂停主线程等待异步结果再继续下一次访问连接
+                    // 触发所有异步同时进行
                     print("中断等待结果")
+                    console.time();
+                    // let a = await Promise.all(data)
+                    for (const v of data) {
+                        await v
+                        print(v, 1111)
+                    }
+                    console.timeEnd();
+
                 } catch (error) {
                     console.error("没有了", error, "爬完成")
-                    // 删除当前获取失败的元素 不准确的写法
-                    // data.pop()
                     break
                     // continue
                 }
@@ -364,16 +355,25 @@ class A {
         // 1 遍历所有异步完毕的数据
         // 2 并存放到新的变量中
         // 3 过滤空白的数组
-        let urls = []
-        data.map(async (v, k) => {
-            const data = await v
-            if (data) {
-                urls[k] = data
-            }
-        })
+        console.time()
+        for (const v of data) {
+            console.log(await v, 222);
+        }
+        // let urls = await Promise.all(data)
+        // const a = data.map(async (v, k) => {
+        //     const x = await v
+        //     console.log(x, 444);
+        //     // if (data) {
+        //     //     urls[k] = data
+        //     // }
+        // })
+        console.log(urls, 2222222);
+        console.timeEnd()
+        debugger
+
         // 压平并过滤生成相同的键值对 最后扩展加入到数组
         // this.地址.push(...new Set(urls.flat()).entries())
-        this.地址.push(...urls.flat())
+        // this.地址.push(...urls.flat())
 
         // entries
         // abcd = data.filter(v => false)
@@ -393,11 +393,9 @@ class A {
 
     // 改为全局变量用于测试
     const a = new A()
-
     // const data = await a.Get所有视频(40)
-
     await a.收集网页()
-    a.状态写入本地()
+    // a.状态写入本地()
 
     // a.列出本地信息()
 
