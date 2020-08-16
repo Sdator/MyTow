@@ -1,46 +1,30 @@
-// ==UserScript==
-// @name                [絕]小H片
-// @author              絕版大叔丶
-// @namespace           https://sdator.github.io/
-// icon
-// @version             1.0
-// @match               *://chobit.cc/*
-// @description         学习
-// @run-at              document-end
-// @grant               GM_addStyle
-// @grant               GM_getValue
-// @grant               GM_setValue
-// @require             https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js
-// @contributionAmount  10软妹
-// ==/UserScript==
+const fetch = require('node-fetch');
+const $ = cheerio = require('cheerio');
 
 
-
-
-
-// 释放 符号 $ 的占用
-// $?.noConflict()
-
-const $$ = window?.jQuery ?? $
-
-const GetType = Object.prototype.toString
-const echo = print = console.log
-
-
+const http = require('http')
+class WebServer {
+    init() {
+        const server = http.createServer(function (req, res) {
+            res.writeHead(200, { 'Content-Type': 'text/html;charset=UTF-8' });
+            res.end('TEST')
+        })
+        server.listen(3000, "localhost")
+    }
+}
 
 /**
  * 动态加载
  */
-reload = async (url = "http://localhost:8000/chobit.cc.user.js") => {
+async function reload(url = "http://localhost:8000/chobit.cc.user.js") {
     await import(url + "?t=" + Math.random())
 }
 
-
-
-延迟 = (time = 500) => new Promise((resolve) => {
-    setTimeout(resolve, time)
-})
-
+function 延迟(time = 500) {
+    return new Promise((resolve) => {
+        setTimeout(resolve, time)
+    })
+}
 
 // 总结：匿名函数的最主要作用是创建闭包，闭包就是将函数内部和函数外部连接起来的一座桥梁。
 // 内层的函数可以使用外层函数的所有变量，即使外层函数已经执行完毕。闭包可以用来模仿块级作用域等等。
@@ -92,7 +76,8 @@ function 限定递增器(str = 0, end = 5) {
 class A {
     // 把旧的类保存起来
     // 如果本地没有 2D 这条数据 使用空对象代替
-    oldA = JSON.parse(localStorage?.['2D'] ?? "{}")
+    // oldA = JSON.parse(localStorage?.['2D'] ?? "{}")
+    oldA = {}
 
     // 读取本地数据 首次执行没有 需要初始化
     商品状态 = this.oldA?.商品状态 ?? { ERR: [], OK: [] }
@@ -105,9 +90,6 @@ class A {
 
     地址列表 = []
 
-    constructor() {
-        print("对象初始化")
-    }
 
     状态写入本地() {
         // 把当前实例 写进本地
@@ -190,14 +172,7 @@ class A {
     async Get取页面商品(url) {
         echo("读取所有商品...")
         let body = await this.取源码(url)
-        // 加入请求头 文本方式请求 并替换
-        // const handled = `</title>\n<meta http-equiv="content-type" content="text/html; charset=UTF-8">`
-        // body = body.replace(/<\/title>/, handled)
-        // console.log(body);
-        // 1 使用虚拟dom包装源码 用于后续解析
-        // const dom = document.createElement('html')
-        // dom.innerHTML = body
-        // JQ 的解析html文本方法
+        // 文本解析为html对象
         const dom = $.parseHTML(body)
         // 判断是否最后一页
         // 读取当前页所有商品连接 并
@@ -206,12 +181,8 @@ class A {
         if (!els.length) {
             throw new Error("没有商品了")
         }
-        // 返回一个包含所有商品连接的数组对象
-        // $$ 返回的是对象
-        // 遍历jq对象
-
-        return els.map((_, { href, innerText }) => { return { href, innerText } })
-
+        // 返回一个包含所有商品名称和链接的 JQ 节点数组对象
+        return els.map((_, { attribs: { href: 连接 }, children: [{ data: 名字 }] }) => ({ 名字, 连接 }))
     }
     /**
      * 类线程效果
@@ -332,17 +303,11 @@ class A {
                 try {
                     // 暂停主线程等待异步结果再继续下一次访问连接
                     // 触发所有异步同时进行
-                    // print("中断等待结果")
                     console.time("中断等待结果");
-                    const pd = await Promise.all(data)
-                    console.log(pd, 1234);
-                    // for (const v of data) {
-                    //     await v
-                    //     print(v, 2222)
-                    // }
+                    await Promise.all(data)
                     console.timeEnd("中断等待结果");
                 } catch (error) {
-                    console.error("没有了", error, "爬完成")
+                    console.error(error)
                     break
                     // continue
                 }
@@ -354,75 +319,25 @@ class A {
             }
         }
 
-        // 保存某页中所包含的地址
-        // 1 遍历所有异步完毕的数据
-        // 2 并存放到新的变量中
-        // 3 过滤空白的数组
-
-        const list = JSON.parse(localStorage?.地址 ?? '[]')
-
+        const list = []
         let urls = await Promise.all(data)
-        for (const arr of urls) {
-            arr.map((_k, { href, innerText }) => {
-                console.log({ [href]: innerText })
-                list.push({ [href]: innerText })
-            })
-        }
-
-        localStorage.地址 = JSON.stringify(list)
-
-        // 压平并过滤生成相同的键值对 最后扩展加入到数组
-        // this.地址.push(...new Set(urls.flat()).entries())
-        // this.地址.push(...urls.flat())
-
-        // abcd = data.filter(v => false)
-        // this.地址 = urls
-        // print(this.地址, 3333)
+        echo(111)
     }
 
 };
 
 
+const $$ = $;
+const GetType = Object.prototype.toString;
+const echo = print = console.log;
 
 /**
  *  自运行异步fun
  */
-(async () => {
-    const i = Number(localStorage?.num ?? 0) + 1
-    localStorage.num = i
-    console.log("重载次数：" + i);
+(main = async () => {
 
-    // 改为全局变量用于测试
+    // // 改为全局变量用于测试
     const a = new A()
-    // const data = await a.Get所有视频(40)
     await a.收集网页()
-
-    // a.状态写入本地()
-
-    // a.列出本地信息()
-
-    //=================================
-    // 递增器 使用方法
-    // let i = 0
-    // for (const v of 递增器) {
-    //     i++
-    //     if (i > 5) {
-    //         break
-    //     }
-    //     print(v)
-    // }
-    //=================================
-    // 延时测试
-    // num = 0
-    // while (num < 10) {
-    //     console.time("strat")
-    //     const rallBase = Math.random()
-    //     const roll = Math.ceil(Math.random() * 10);
-    //     // await 延迟(roll * 100 + rallBase * 100)
-    //     print(rallBase*1000)
-    //     console.timeEnd("strat")
-    //     num++
-    // }
-    //=================================
 }
 )()
