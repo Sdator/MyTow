@@ -7,8 +7,6 @@
 // @grant               GM_getValue
 // @grant               GM_setValue
 // @grant               GM_addStyle
-// @updateURL           http://localhost:8000/taobao.user.js
-// @downloadURL         http://localhost:8000/taobao.user.js
 // @version             1.3
 // @author              -
 // @description         test
@@ -79,7 +77,7 @@ let css = `
     height: 100%;
 
     z-index: -1;
-    
+
     background-image:url("http://localhost:8000/xsp.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -111,7 +109,7 @@ css = `
     /* background-size: contain; */
     /* background-repeat: no-repeat; */
     box-sizing: border-box;
-    
+
     font-size: x-large;
     font-family:"Microsoft YaHei";
     color: white;
@@ -158,13 +156,13 @@ css = `
 /*
 right: 0;
         bottom: 0;
-    
+
         height:20px;
         width:100px;
-    
+
         margin:10px;
         padding:10px;
-    
+
         width: auto;
         justify-content: center;
         align-items: center;
@@ -172,7 +170,7 @@ right: 0;
     align-items         Y轴
     flex-direction      排列方式    主轴(main-axis)的方向
     flex-wrap
-    
+
     */
 
 // 添加 css 样式
@@ -194,27 +192,35 @@ right: 0;
     window.printf = window.echo = console.log
 })()
 
+const rules = [
+    {
+        质量: "差",
+        msg: "可能是垃圾",
+        关键字: ["聚酯", "涤纶", "聚酰胺", "锦纶"],
+        css: `<li style="color:#ff0000;">`
+    },
+    {
+        质量: "优",
+        msg: "可能是良品",
+        关键字: ["棉", "麻", "丝"],
+        css: `<li style="color:#00ff00;">`
+    }
+]
+
+const 过滤器 = {
+    品牌: Symbol(),
+    材质: Symbol(),
+    销售渠道类型: Symbol(),
+    大身材质成分: Symbol(),
+    裆部材质成分: Symbol(),
+    材质成分: Symbol(),
+    上市年份季节: Symbol(),
+    厚薄: Symbol(),
+    面料: Symbol(),
+}
+
 const 取商品信息 = (选择器, el) => {
     item = {}
-    const 过滤器 = {
-        品牌: Symbol(),
-        材质: Symbol(),
-        销售渠道类型: Symbol(),
-        大身材质成分: Symbol(),
-        裆部材质成分: Symbol(),
-        材质成分: Symbol(),
-        上市年份季节: Symbol(),
-        厚薄: Symbol(),
-        面料: Symbol(),
-    }
-
-    const 关键字 = {
-        差: { msg: "可能是垃圾", reg: ["聚酯", "涤纶", "聚酰胺", "锦纶"], css: `<li style="color:#ff0000;">` },
-        优: { msg: "可能是良品", reg: ["棉", "麻", "丝"], css: `<li style="color:#00ff00;">` },
-    }
-
-
-
     // 商品信息生成对象
     for (const { innerText, title } of $(选择器, el)) {
         const name = /.*(?=:)/.exec(innerText)[0]
@@ -273,7 +279,7 @@ const 取源码 = async (url) => {
 
 }
 
-const 获取所有商品 = async () => {
+async function 获取所有商品() {
     let dom = null
 
     // 手动延迟 直到元素出现
@@ -284,6 +290,8 @@ const 获取所有商品 = async () => {
             break
         }
     }
+
+
 
     // 删除所有推荐物品
     dom.nextAll().remove();
@@ -331,11 +339,13 @@ const 延时 = (t = 2000) => new Promise((resolve) => {
 
 
 
-// 消除 if
+// 消除 if 根据域名来运行对应的方法
+// item.taobao.com   取  A.item 执行
 const 反射 = (v) => {
     printf("域：", v)
     const fun = /\S+?(?=\.)/.exec(v)[0]
     printf(fun, 11111, "A." + fun + "()")
+    // 利用字符串来执行 类方法
     eval("A." + fun + "()")
 }
 
@@ -364,24 +374,53 @@ class A {
 
 const info = {
     完整地址: location.href,
-    主机地址: location.hostname
+    主机地址: location.hostname,
+    origin: location.origin
 };
 
-(async () => {
+
+async function 模拟点击() {
+    while (true) {
+        await 延时(500)
+        console.log(1111);
+        // 按价格排列
+        if ($("[alt=按价格排列]")) {
+            console.log(22222);
+            $('[alt=按价格排列]')[0].click()
+            break
+        }
+    }
+}
+
+(main = async () => {
+    // https://justhappycity.taobao.com/search.htm?spm=a1z10.1-c-s.0.0.74521fdcQMpmDC&search=y
+    console.log(info, 11111);
+    if (info.完整地址.includes("taobao.com/?spm=")) {
+        location.href = info.origin + "/search.htm"
+    }
     // 动态加载JQ
     await import("https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js")
     $ = window?.jQuery ?? window?.$ ?? window.$$
 
+
+    // 注册事件
+    $(() => {
+        模拟点击()
+    })
+
     // 本地测试用
-    if (info.主机地址 == "localhost") {
-        取商品信息("#J_AttrUL li")
-        return
-    }
+    // if (info.主机地址 == "localhost") {
+    //     取商品信息("#J_AttrUL li")
+    //     return
+    // }
+
     // 添加css列表
     $("<style>").text(css).appendTo($("head"));
     // 在开头插入 让其优先度下降  如果没尖括号会取原有的标签 造成替换效果
     // $("head").prepend($("<style>").text(css));
 
     反射(info.主机地址)
+
+
 
 })()
