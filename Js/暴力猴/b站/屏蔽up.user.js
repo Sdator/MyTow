@@ -29,6 +29,17 @@ const 延迟 = (t = 500) => new Promise((resolve) => {
 // 广告过滤
 (async () => {
 
+
+    document.addEventListener('DOMContentLoaded', function (a, b, c) {
+        console.time()
+        // document.removeEventListener('DOMContentLoaded', arguments.callee, false);
+        console.log(...arguments);
+        console.timeEnd()
+
+    }, false)
+
+
+
     // $(`<div/>`, {
     //     id: "set",
     // }).appendTo("body")
@@ -43,29 +54,31 @@ const 延迟 = (t = 500) => new Promise((resolve) => {
     //     // console.log(121231, v, 11111, $(this));
     // })
 
-    const rules = [
-        "video-page-card",//推荐列表
-    ]
-    let isA
+    // const rules = [
+    //     "video-page-card",//推荐列表
+    // ]
+    // let isA
+    // document.ready
 
-    document.body.appendChild = new Proxy(document.body.appendChild, {
-        // 目标对象、上下文、参数
-        async apply(target, ctx, args) {
-            const cName = args[0].className
-            if (!isA) {
-                isA = false
-                console.log(args);
-            }
-            // console.log("className:", cName, cName == true);
-            // if (cName != "" && rules.join().includes(cName)) {
-            //     console.log("命中目标", $('.count.up').text());
-            //     // await 延时(500)
-            //     // 模拟点击播放
-            //     // $(".bbg").click()
-            //     // return
-            // }
-            return Reflect.apply(...arguments);
-        }
-    });
+    // document.body.appendChild = new Proxy(document.body.appendChild, {
+    // document.ready = new Proxy(document.ready, {
+    //     // 目标对象、上下文、参数
+    //     async apply(target, ctx, args) {
+    //         // const cName = args[0].className
+    //         // if (!isA) {
+    //         //     isA = false
+    //         //     console.log(args);
+    //         // }
+    //         // console.log("className:", cName, cName == true);
+    //         // if (cName != "" && rules.join().includes(cName)) {
+    //         //     console.log("命中目标", $('.count.up').text());
+    //         //     // await 延时(500)
+    //         //     // 模拟点击播放
+    //         //     // $(".bbg").click()
+    //         //     // return
+    //         // }
+    //         return Reflect.apply(...arguments);
+    //     }
+    // });
 
 })()
