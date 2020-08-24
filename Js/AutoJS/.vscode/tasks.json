@@ -2,20 +2,45 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "2.0.0",
+    "promptOnClose": true,
+    "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+    },
     "tasks": [
         {
+            // 置顶
+            "label": "投屏",
+            "type": "shell",
+            "command": "scrcpy --always-on-top",
+        },
+        {
             // 1920x1080 會被縮小成 1024x576
-            // --always-on-top  置顶
-            // -w -stay-awake  不休眠 保持清醒
+            // --always-on-top          置顶
+            // -w -stay-awake           不休眠 保持清醒
             // --turn-screen-off  -S    关闭屏幕
             "label": "投屏-小分辨率",
             "type": "shell",
             "command": "scrcpy --always-on-top -Sw --max-size 1024",
         },
         {
-            "label": "投屏-无线",
+            "label": "ADB-链接",
             "type": "shell",
             "command": "adb connect 192.168.3.4:5555",
+        },
+        {
+            "label": "ADB-列出设备",
+            "type": "shell",
+            "command": "adb devices -l",
+        },
+        {
+            "label": "ADB-查看版本",
+            "type": "shell",
+            "command": "adb version",
         },
     ]
 }
