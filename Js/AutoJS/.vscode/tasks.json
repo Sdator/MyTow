@@ -13,6 +13,11 @@
     },
     "tasks": [
         {
+            "label": "界面元素审核工具",
+            "type": "shell",
+            "command": "weditor",
+        },
+        {
             // 置顶
             "label": "投屏",
             "type": "shell",
