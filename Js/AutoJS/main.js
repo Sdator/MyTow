@@ -43,14 +43,17 @@ log("准备点击")
 // });
 
 className("android.view.View").desc("5元寄件券").findOne().click()
-log("延迟")
-sleep(1000)
-className("android.view.View").desc("18时开始").findOne().click()
+// log("延迟")
+// sleep(1000)
+// className("android.view.View").desc("18时开始").findOne().click()
+
+// className("android.view.View").text("20").findOne().click()
+
 log("点击完成")
 
 // const el = className("android.widget.RelativeLayout").depth(15).findOne()
 // // 获取子控件数量
-// log(el.childCount())
+// log(el.childCounadt())
 
 // el.click();
 
