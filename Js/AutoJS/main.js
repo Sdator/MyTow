@@ -8,7 +8,6 @@ const info = {
         宽: device.width,
         高: device.height
     }
-
 }
 
 /**
@@ -31,6 +30,7 @@ function 找到按钮点击(actName, key, callback) {
 // 1. 运行程序
 app.launchApp("菜鸟裹裹");
 
+
 // 2.点击领果酱
 找到按钮点击("com.cainiao.wireless.homepage.view.activity.HomePageActivity", "领果酱", (key) => {
     toastLog("继续");
@@ -51,6 +51,8 @@ app.launchApp("菜鸟裹裹");
         dom = dom.parent()
     }
 })
+
+
 
 // 加点
 找到按钮点击("com.cainiao.wireless.components.hybrid.windvane.activity.GuoGuoNewWebViewActivity", "+", key => {
