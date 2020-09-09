@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "promptOnClose": true,
     "presentation": {
-        "echo": false,
+        "echo": true,
         "reveal": "always",
         "focus": false,
         "panel": "shared",
@@ -15,7 +15,7 @@
         {
             "label": "界面元素审核工具",
             "type": "shell",
-            "command": "weditor",
+            "command": "python -m weditor",
         },
         {
             // 置顶
@@ -46,6 +46,49 @@
             "label": "ADB-查看版本",
             "type": "shell",
             "command": "adb version",
+        },
+        {
+            // 从主机端剔除连接以强制重新连接
+            "label": "ADB-设备断开重连",
+            "type": "shell",
+            "command": "adb reconnect",
+        },
+        {
+            // 重置离线/未经授权的设备以强制重新连接
+            "label": "ADB-设备重连",
+            "type": "shell",
+            "command": "adb reconnect offline",
+        },
+        {
+            // 从设备强制重新连接
+            "label": "ADB-设备强连",
+            "type": "shell",
+            "command": "adb reconnect device",
+        },
+        {
+            "label": "ADB-重启服务",
+            "type": "shell",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "ADB-杀死服务",
+                "ADB-启动服务",
+                "ADB-挂载"
+            ]
+        },
+        {
+            "label": "ADB-杀死服务",
+            "type": "shell",
+            "command": "adb kill-server",
+        },
+        {
+            "label": "ADB-启动服务",
+            "type": "shell",
+            "command": "adb start-server",
+        },
+        {
+            "label": "ADB-挂载",
+            "type": "shell",
+            "command": "adb remount",
         },
     ]
 }
