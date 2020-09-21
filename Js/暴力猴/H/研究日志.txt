@@ -1,0 +1,209 @@
+// 任务1 请求头
+GET / plugin.php ? H_name = tasks & action=ajax & actions=job & cid=14 & nowtime=1599678310215 & verify=e419085d HTTP / 1.1
+Host: www.south - plus.net
+Connection: keep - alive
+Pragma: no - cache
+Cache - Control: no - cache
+Upgrade - Insecure - Requests: 1
+User - Agent: Mozilla / 5.0(Windows NT 10.0; Win64; x64) AppleWebKit / 537.36(KHTML, like Gecko) Chrome / 85.0.4183.83 Safari / 537.36
+Accept: text / html, application / xhtml + xml, application / xml; q = 0.9, image / avif, image / webp, image / apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: iframe
+Referer: https://www.south-plus.net/plugin.php?H_name-tasks.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,zh-CN;q=0.9,zh;q=0.8,und;q=0.7
+Cookie: eb9e6_lastpos=other; eb9e6_cknum=UwUICFACDwVRBDE7BltQUwUOBAQEA1FUA1FTBwEDUQoCUQMEUgNSU1IDVFc%3D; eb9e6_ck_info=%2F%09; eb9e6_winduser=UwMDBVEBADpfUAhTD10BBlBVVFVUAAQAVQdTVFoKUV0FBgsABAgDA28%3D; peacemaker=1; eb9e6_lastvisit=0%091599678235%09%2Fplugin.php%3FH_name-tasks.html; eb9e6_ol_offset=54320
+
+// 任务1 响应头
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 09 Sep 2020 19:05:23 GMT
+Content-Type: text/xml;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.6.40
+Set-Cookie: eb9e6_lastvisit=88%091599678323%09%2Fplugin.php%3FH_name%3Dtasks%26action%3Dajax%26actions%3Djob%26cid%3D14%26nowtime%3D1599678310215%26verify%3De419085d; expires=Thu, 09-Sep-2021 19:05:23 GMT; Max-Age=31536000; path=/; secure; httponly
+Content-Encoding: gzip
+Strict-Transport-Security: max-age=604800; includeSubDomains; preload
+
+
+
+
+
+// 任务2
+GET /plugin.php?H_name=tasks&action=ajax&actions=job&cid=15&nowtime=1599678361116&verify=e419085d HTTP/1.1
+Host: www.south-plus.net
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*; q = 0.8, application / signed - exchange; v = b3; q = 0.9
+Sec - Fetch - Site: same - origin
+Sec - Fetch - Mode: navigate
+Sec - Fetch - User: ?1
+Sec - Fetch - Dest: iframe
+Referer: https://www.south-plus.net/plugin.php?H_name-tasks.html
+Accept - Encoding: gzip, deflate, br
+Accept - Language: en, zh - CN; q = 0.9, zh; q = 0.8, und; q = 0.7
+Cookie: eb9e6_lastpos = other; eb9e6_cknum = UwUICFACDwVRBDE7BltQUwUOBAQEA1FUA1FTBwEDUQoCUQMEUgNSU1IDVFc % 3D; eb9e6_ck_info =% 2F % 09; eb9e6_winduser = UwMDBVEBADpfUAhTD10BBlBVVFVUAAQAVQdTVFoKUV0FBgsABAgDA28 % 3D; peacemaker = 1; eb9e6_ol_offset = 54320; eb9e6_lastvisit = 88 % 091599678323 % 09 % 2Fplugin.php % 3FH_name % 3Dtasks % 26action % 3Dajax % 26actions % 3Djob % 26cid % 3D14 % 26nowtime % 3D1599678310215 % 26verify % 3De419085d
+
+
+// 任务2 响应头
+HTTP / 1.1 200 OK
+Server: nginx
+Date: Wed, 09 Sep 2020 19: 06: 14 GMT
+Content - Type: text / xml; charset = utf - 8
+Transfer - Encoding: chunked
+Connection: keep - alive
+X - Powered - By: PHP / 5.6.40
+Set - Cookie: eb9e6_lastvisit = 139 % 091599678374 % 09 % 2Fplugin.php % 3FH_name % 3Dtasks % 26action % 3Dajax % 26actions % 3Djob % 26cid % 3D15 % 26nowtime % 3D1599678361116 % 26verify % 3De419085d; expires = Thu, 09 - Sep - 2021 19: 06: 14 GMT; Max - Age=31536000; path = /; secure; httponly
+Content - Encoding: gzip
+Strict - Transport - Security: max - age=604800; includeSubDomains; preload
+
+
+fetch("https://www.south-plus.net/plugin.php?H_name=tasks&action=ajax&actions=job&cid=14&nowtime=1599678310215&verify=e419085d", {
+    "headers": {
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "accept-language": "en,zh-CN;q=0.9,zh;q=0.8,und;q=0.7",
+        "cache-control": "no-cache",
+        "pragma": "no-cache",
+        "sec-fetch-dest": "iframe",
+        "sec-fetch-mode": "navigate",
+        "sec-fetch-site": "same-origin",
+        "upgrade-insecure-requests": "1"
+    },
+    "referrer": "https://www.south-plus.net/plugin.php?H_name-tasks.html",
+    "referrerPolicy": "no-referrer-when-downgrade",
+    "body": null,
+    "method": "GET",
+    "mode": "cors",
+    "credentials": "include"
+});
+
+
+
+fetch("https://www.south-plus.net/plugin.php?H_name=tasks&action=ajax&actions=job&cid=15&nowtime=1599678361116&verify=e419085d", {
+    "headers": {
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "accept-language": "en,zh-CN;q=0.9,zh;q=0.8,und;q=0.7",
+        "cache-control": "no-cache",
+        "pragma": "no-cache",
+        "sec-fetch-dest": "iframe",
+        "sec-fetch-mode": "navigate",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-user": "?1",
+        "upgrade-insecure-requests": "1"
+    },
+
+});
+
+
+fetch("https://www.south-plus.net/plugin.php?H_name=tasks&action=ajax&actions=job2&cid=15&nowtime=1599679407786&verify=e419085d", {
+    "headers": {
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "accept-language": "en,zh-CN;q=0.9,zh;q=0.8,und;q=0.7",
+        "cache-control": "no-cache",
+        "pragma": "no-cache",
+        "sec-fetch-dest": "iframe",
+        "sec-fetch-mode": "navigate",
+        "sec-fetch-site": "same-origin",
+        "upgrade-insecure-requests": "1"
+    },
+    "referrer": "https://www.south-plus.net/plugin.php?H_name-tasks-actions-newtasks.html.html",
+    "referrerPolicy": "no-referrer-when-downgrade",
+    "body": null,
+    "method": "GET",
+    "mode": "cors",
+    "credentials": "include"
+});
+
+
+const url = new URL("https://www.south-plus.net/plugin.php")
+
+const data = {
+    H_name: "tasks",
+    action: ajax,
+    cid: 任务ID,
+    actions: 任务操作,
+    nowtime: new Date().getTime(),
+    verify: "e419085d"
+}
+
+
+// 构建url
+for (const v of Object.entries(body)) {
+    url.searchParams.append(...v)
+}
+
+
+?H_name = tasks
+    & action=ajax
+        & actions=job2
+            & cid=15
+                & nowtime=1599679407786
+                    & verify=e419085d
+
+
+https://www.south-plus.net/plugin.php?H_name=tasks
+& action=ajax
+    & actions=job
+        & cid=15
+            & nowtime=1599678361116
+                & verify=e419085d
+
+
+
+https://www.south-plus.net/plugin.php?
+H_name = tasks
+    & action=ajax
+        & cid=14
+            & actions=undefined
+                & nowtime=1599680455007
+                    & verify=e419085d
+
+
+
+POST / search.php HTTP / 1.1
+Host: www.south - plus.net
+Connection: keep - alive
+Content - Length: 105
+Pragma: no - cache
+Cache - Control: no - cache
+Upgrade - Insecure - Requests: 1
+Origin: https://www.south-plus.net
+Content - Type: application / x - www - form - urlencoded
+User - Agent: Mozilla / 5.0(Windows NT 10.0; Win64; x64) AppleWebKit / 537.36(KHTML, like Gecko) Chrome / 85.0.4183.83 Safari / 537.36
+Accept: text / html, application / xhtml + xml, application / xml; q = 0.9, image / avif, image / webp, image / apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://www.south-plus.net/search.php
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,zh-CN;q=0.9,zh;q=0.8,und;q=0.7
+Cookie: eb9e6_lastpos=other; peacemaker=1; eb9e6_cknum=UwUICFAPBQNQBzE7UwABUAECV1NUV1dRAQMCAF4CUVsDBgcFBgRVV1NVAgE%3D; eb9e6_ck_info=%2F%09; eb9e6_winduser=UwMDBVEBADpfUAhTD10BBlBVVFVUAAQAVQdTVFoKUV0FBgsABAgDA28%3D; eb9e6_ol_offset=22407; eb9e6_lastvisit=240%091599683307%09%2Fsearch.php%3F
+
+
+
+fetch("https://www.south-plus.net/search.php?", {
+  "headers": {
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*; q = 0.8, application / signed - exchange; v = b3; q = 0.9",
+"accept-language": "en,zh-CN;q=0.9,zh;q=0.8,und;q=0.7",
+    "cache-control": "no-cache",
+        "content-type": "application/x-www-form-urlencoded",
+            "pragma": "no-cache",
+                "sec-fetch-dest": "document",
+                    "sec-fetch-mode": "navigate",
+                        "sec-fetch-site": "same-origin",
+                            "sec-fetch-user": "?1",
+                                "upgrade-insecure-requests": "1"
+  },
+"referrer": "https://www.south-plus.net/search.php",
+    "referrerPolicy": "no-referrer-when-downgrade",
+        "body": "step=2&keyword=House+Party&method=OR&pwuser=&sch_area=0&f_fid=all&sch_time=all&orderway=postdate&asc=DESC",
+            "method": "POST",
+                "mode": "cors",
+                    "credentials": "include"
+});
