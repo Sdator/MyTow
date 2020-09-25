@@ -11,9 +11,11 @@ const log = echo = print = console.log;
         // await driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
         // 等待窗口标题发生变化
         // await driver.wait(until.titleIs('webdriver - Google Search'), 1000);
+        const title = await driver.getTitle()
 
-        const cheese = await driver.findElement(By.id('su'));
-        console.log(cheese, 11111111);
+        // const cheese = await driver.findElement(By.id('su'));
+
+        console.log(title, 11111111);
 
         // log()
 
