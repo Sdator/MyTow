@@ -1,0 +1,3 @@
+FROM macaca-electron
+EXPOSE 3456 22
+ENTRYPOINT nohup sh -c "Xvfb -ac -screen scrn 1280x2000x24 :9.0 && export DISPLAY=:9.0 & && macaca server /usr/sbin/sshd -D"

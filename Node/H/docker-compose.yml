@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  test:
+    container_name: test
+    image: test
+    build:
+      context: .
+    ports:
+      # ss 多端均衡负载
+      - 11111:3456
+      - 22222:22
+    # volumes:
+    #   - ./config.json:/etc/v2ray/config.json
+    restart: unless-stopped
